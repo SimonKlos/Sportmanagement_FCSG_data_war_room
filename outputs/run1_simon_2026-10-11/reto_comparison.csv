@@ -1,0 +1,12 @@
+id,kpi,scope,reto_value,our_value,unit,abs_diff,rel_diff,n_matches,reto_source,status,note
+R-01,"Catering-Umsatz brutto, Meisterschaft",Liga 2021/22,2800000.0,2820940.6999999997,CHF,20940.69999999972,0.007478821428571329,18.0,DQ S. 4 (≈),übereinstimmend (≤ 5 %),
+R-02,"Catering-Umsatz brutto, Meisterschaft",Liga 2025/26,4000000.0,4000582.75,CHF,582.75,0.0001456875,19.0,DQ S. 4 (≈),übereinstimmend (≤ 5 %),
+R-03,KF brutto (Σ Umsatz / Σ Public),Liga 2021/22,13.68,13.68292726699488,CHF,0.002927266994880995,0.00021398150547375695,18.0,DQ S. 4,übereinstimmend (≤ 5 %),
+R-04,KF brutto (Σ Umsatz / Σ Public),Liga 2025/26,15.27,15.27383038591347,CHF,0.003830385913470735,0.0002508438712161582,19.0,DQ S. 4,übereinstimmend (≤ 5 %),
+R-05,Bons je Public-Anwesendem,Pflicht 2025/26–2026/27,0.95,0.946384973296971,Bons,-0.003615026703028934,-0.0038052912663462464,27.0,DQ S. 4 (≈),übereinstimmend (≤ 5 %),
+R-06,Ø Bon brutto,Pflicht 2025/26–2026/27,16.7,16.875079211130924,CHF,0.1750792111309245,0.01048378509766015,27.0,DQ S. 4 (≈),übereinstimmend (≤ 5 %),
+R-07,Scans vs. IST (Mittel),Pflicht 2025/26–2026/27,-0.004,-0.0043136575432234,Anteil,-0.0003136575432233996,-0.0784143858058499,27.0,DQ S. 3,übereinstimmend (≤ 1 Pp.),
+R-08,Median Ankunft vor Anpfiff,Pflicht 2025/26–2026/27,37.0,38.0,Min.,1.0,0.02702702702702703,27.0,DQ S. 3 (≈),übereinstimmend (≤ 5 %),"Median der Spielmediane (scan-gewichtet), nicht Median aller Scans"
+R-09,Anteil Scans ≥ 45 Min. vorher,Pflicht 2025/26–2026/27,0.41,0.4073028071895342,Anteil,-0.002697192810465765,-0.0065785190499165,27.0,DQ S. 3 (≈),übereinstimmend (≤ 1 Pp.),
+R-10,Anteil Scans letzte 15 Min.,Pflicht 2025/26–2026/27,0.17,0.12908297120681467,Anteil,-0.040917028793185345,-0.24068840466579614,27.0,DQ S. 3 (≈),abweichend – Definition prüfen,"eigene Abgrenzung 0 ≤ Min. < 15 vor Anpfiff (D-008), Scans nach Anpfiff nicht enthalten"
+R-11,Elastizität Catering-Umsatz / Zuschauer,Retos 22 Spiele,1.14,0.9715158689782349,–,-0.16848413102176496,-0.14779309738751314,,DQ S. 4 («Modell»),abweichend – Definition prüfen,"eigener Wert = H1 (log-log, saison-zentriert, alle Pflichtspiele)"

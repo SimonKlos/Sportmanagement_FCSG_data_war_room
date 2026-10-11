@@ -1,0 +1,41 @@
+# HINWEIS: .gitignore verhindert nur Commits, NICHT das Lesen durch Tools/Agenten.
+
+# Umgebung
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Quell-PDFs (vertraulich, nicht committen)
+docs/sources/*.pdf
+
+# Daten und Outputs
+data/
+raw/
+outputs/*
+!outputs/README.md
+*.xlsx
+*.xls
+*.parquet
+*.csv
+# Ausnahme: ausdrücklich künstliche Fixtures
+!tests/fixtures/**/*.csv
+# Ausnahme: öffentliche Referenzdaten (keine Clubdaten)
+!config/reference/*.csv
+
+# Lokale Konfiguration und Geheimnisse
+config/*.local.yaml
+.env
+*.env
+secrets*
+
+# Editor/OS
+.DS_Store
+Thumbs.db
+.vscode/*.local.json
+
+# Ausnahme: geteilte Analyse-Läufe (aggregierte echte Ergebnisse, privates Repo, D-024)
+!outputs/run*_*/
+!outputs/run*_*/**

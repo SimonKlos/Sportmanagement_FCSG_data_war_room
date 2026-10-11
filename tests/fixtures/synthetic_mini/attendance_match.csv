@@ -1,0 +1,7 @@
+data_origin,match_date,season,competition,opponent_label,kickoff_local,soll,ist,ist_vip,ist_guests
+SYNTHETIC_FIXTURE_NOT_CLUB_DATA,2099-08-01,FX1,Liga-Test,Testgegner A,18:00,100,82,5,3
+SYNTHETIC_FIXTURE_NOT_CLUB_DATA,2099-08-15,FX1,Liga-Test,Testgegner B,20:30,120,90,6,4
+SYNTHETIC_FIXTURE_NOT_CLUB_DATA,2099-08-29,FX1,Cup-Test,Testgegner C,14:00,80,70,4,2
+SYNTHETIC_FIXTURE_NOT_CLUB_DATA,2100-08-07,FX2,Liga-Test,Testgegner A,18:00,110,95,5,3
+SYNTHETIC_FIXTURE_NOT_CLUB_DATA,2100-08-21,FX2,Liga-Test,Testgegner D,20:30,130,,6,
+SYNTHETIC_FIXTURE_NOT_CLUB_DATA,2100-09-04,FX2,Liga-Test,Testgegner B,16:00,100,88,5,2

@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fcsg-analysis"
+version = "0.4.0"
+description = "FCSG Phase 1 – Datenaufbereitung, Baseline und Hypothesen (Untapped Business)"
+requires-python = ">=3.12"
+# Keine Lizenzangabe: Lizenz-/Nutzungsrechte sind nicht entschieden (siehe docs/decisions.md).
+dependencies = [
+    "pandas>=3.0",
+    "openpyxl>=3.1",
+    "PyYAML>=6.0",
+    "python-calamine>=0.8",
+    "matplotlib>=3.11",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=9.0"]
+notebook = ["ipykernel>=7.4", "nbconvert>=7.17"]
+briefing = ["pdfplumber>=0.11", "pypdf>=6.0", "pypdfium2>=5.0"]
+
+[project.scripts]
+fcsg = "fcsg.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

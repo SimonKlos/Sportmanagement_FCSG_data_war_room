@@ -1,0 +1,11 @@
+# VORLAGE für die lokale Konfiguration mit ECHTEN Daten.
+# Kopieren nach config/project.local.yaml (diese Datei ist von Git ausgeschlossen) und Pfade anpassen.
+# Datenmodus release_aggregates (D-001 c): erlaubt `prepare-data` und `analyze`; Personenfelder werden nie exportiert.
+
+data_mode: release_aggregates
+input_dir: C:/FCSG_Daten/raw              # Ordner mit der Rohdatenlieferung, z. B. …/raw/20261003_Input Sandro/ darunter
+output_dir: C:/FCSG_Daten/outputs         # Laufordner echter Analysen (ausserhalb des Repos, D-015)
+clean_dir: data/clean                     # bereinigte Tabellen, relativ zum Projektroot (von Git ausgeschlossen)
+timezone: Europe/Zurich
+extra_input_files:
+  - Spielkontext_Tabelle_FCSG_3.xlsx      # Spielkontext-Tabelle des Teams im Projektroot (von Git ausgeschlossen)

@@ -1,0 +1,29 @@
+source,match_date,reason,detail
+catering_match,2026-03-14,Spiel abgesagt – ausgeschlossen,
+catering_match,2021-07-17,kein Pflichtspiel der Historie an diesem Datum (Freundschaftsspiel oder Datumskonflikt),Freundschaftsspiel
+catering_match,2022-07-16,kein Pflichtspiel der Historie an diesem Datum (Freundschaftsspiel oder Datumskonflikt),Meisterschaft
+catering_match,2023-01-15,kein Pflichtspiel der Historie an diesem Datum (Freundschaftsspiel oder Datumskonflikt),Freundschaftsspiel
+catering_match,2023-07-15,kein Pflichtspiel der Historie an diesem Datum (Freundschaftsspiel oder Datumskonflikt),Freundschaftsspiel
+catering_match,2023-07-25,kein Pflichtspiel der Historie an diesem Datum (Freundschaftsspiel oder Datumskonflikt),Freundschaftsspiel
+catering_match,2024-09-24,kein Pflichtspiel der Historie an diesem Datum (Freundschaftsspiel oder Datumskonflikt),Meisterschaft
+catering_match,2025-07-22,kein Pflichtspiel der Historie an diesem Datum (Freundschaftsspiel oder Datumskonflikt),Freundschaftsspiel
+catering_match,2026-07-17,kein Pflichtspiel der Historie an diesem Datum (Freundschaftsspiel oder Datumskonflikt),Freundschaftsspiel
+access_match_summary,2024-09-24,Zutritt an Datum ohne Pflichtspiel der Historie,BSL24/25: FCZ
+context_match,2026-10-31,noch nicht gespielt,
+context_match,2026-11-07,noch nicht gespielt,
+context_match,2026-12-05,noch nicht gespielt,
+context_match,2026-12-12,noch nicht gespielt,
+context_match,2027-01-24,noch nicht gespielt,
+context_match,2027-02-06,noch nicht gespielt,
+context_match,2024-09-24,kein Pflichtspiel der Historie an diesem Datum (Datumskonflikt?),FC Zürich
+context_match,2026-10-11,kein Pflichtspiel der Historie an diesem Datum (Datumskonflikt?),FC Lausanne-Sport
+tickets_single_leadtime,2026-01-26,Ticketdatei ohne Pflichtspiel,
+tickets_hist_leadtime,2021-07-17,Einzelticket-Event ohne Pflichtspiel,
+tickets_hist_leadtime,2022-07-20,Einzelticket-Event ohne Pflichtspiel,
+tickets_hist_leadtime,2023-07-15,Einzelticket-Event ohne Pflichtspiel,
+tickets_hist_leadtime,2023-07-25,Einzelticket-Event ohne Pflichtspiel,
+tickets_hist_leadtime,2024-02-01,Einzelticket-Event ohne Pflichtspiel,
+tickets_hist_leadtime,2024-02-29,Einzelticket-Event ohne Pflichtspiel,
+tickets_hist_leadtime,2024-07-14,Einzelticket-Event ohne Pflichtspiel,
+tickets_hist_leadtime,2024-09-24,Einzelticket-Event ohne Pflichtspiel,
+tickets_hist_leadtime,2025-05-18,Einzelticket-Event ohne Pflichtspiel,

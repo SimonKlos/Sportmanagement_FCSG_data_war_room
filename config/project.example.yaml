@@ -1,0 +1,8 @@
+# Laufkonfiguration – Vorlage für den technischen Vertikalschnitt.
+# Einziger freigegebener Datenmodus: synthetic_fixture (siehe docs/decisions.md, D-001).
+# Lokale Varianten als config/*.local.yaml anlegen (nicht versioniert).
+
+data_mode: synthetic_fixture
+input_dir: tests/fixtures/synthetic_mini   # relativ zum Projektroot
+output_dir: outputs                        # Laufordner outputs/<run_id>/ (nicht versioniert)
+timezone: Europe/Zurich

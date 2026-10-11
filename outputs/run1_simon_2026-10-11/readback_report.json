@@ -1,0 +1,114 @@
+{
+  "xlsx": "FCSG_BASELINE_20261011T195544_baseline_5b22.xlsx",
+  "passed": true,
+  "checks": [
+    {
+      "check_id": "R01",
+      "description": "Keine Formeln im Export",
+      "status": "OK",
+      "detail": "0 Formelzellen"
+    },
+    {
+      "check_id": "R02",
+      "description": "Banner auf jedem Blatt",
+      "status": "OK",
+      "detail": "alle Blätter"
+    },
+    {
+      "check_id": "T-Quellen",
+      "description": "Blatt 'Quellen' = Datenkern",
+      "status": "OK",
+      "detail": "identisch"
+    },
+    {
+      "check_id": "T-Definitionen",
+      "description": "Blatt 'Definitionen' = Datenkern",
+      "status": "OK",
+      "detail": "identisch"
+    },
+    {
+      "check_id": "T-Abdeckung",
+      "description": "Blatt 'Abdeckung' = Datenkern",
+      "status": "OK",
+      "detail": "identisch"
+    },
+    {
+      "check_id": "T-Qualität",
+      "description": "Blatt 'Qualität' = Datenkern",
+      "status": "OK",
+      "detail": "identisch"
+    },
+    {
+      "check_id": "T-Unmatched",
+      "description": "Blatt 'Unmatched' = Datenkern",
+      "status": "OK",
+      "detail": "identisch"
+    },
+    {
+      "check_id": "T-Spiel-Baseline",
+      "description": "Blatt 'Spiel-Baseline' = Datenkern",
+      "status": "OK",
+      "detail": "identisch"
+    },
+    {
+      "check_id": "T-Saison-Baseline",
+      "description": "Blatt 'Saison-Baseline' = Datenkern",
+      "status": "OK",
+      "detail": "identisch"
+    },
+    {
+      "check_id": "T-Reto-Abgleich",
+      "description": "Blatt 'Reto-Abgleich' = Datenkern",
+      "status": "OK",
+      "detail": "identisch"
+    },
+    {
+      "check_id": "T-Quellabgleich",
+      "description": "Blatt 'Quellabgleich' = Datenkern",
+      "status": "OK",
+      "detail": "identisch"
+    },
+    {
+      "check_id": "T-Hypothesen",
+      "description": "Blatt 'Hypothesen' = Datenkern",
+      "status": "OK",
+      "detail": "identisch"
+    },
+    {
+      "check_id": "T-H1-Ausverkauft",
+      "description": "Blatt 'H1-Ausverkauft' = Datenkern",
+      "status": "OK",
+      "detail": "identisch"
+    },
+    {
+      "check_id": "T-H2-Ankunft",
+      "description": "Blatt 'H2-Ankunft' = Datenkern",
+      "status": "OK",
+      "detail": "identisch"
+    },
+    {
+      "check_id": "T-H3-Vorlauf",
+      "description": "Blatt 'H3-Vorlauf' = Datenkern",
+      "status": "OK",
+      "detail": "identisch"
+    },
+    {
+      "check_id": "T-Kontext",
+      "description": "Blatt 'Kontext' = Datenkern",
+      "status": "OK",
+      "detail": "identisch"
+    },
+    {
+      "check_id": "T-Annahmen",
+      "description": "Blatt 'Annahmen' = Datenkern",
+      "status": "OK",
+      "detail": "identisch"
+    },
+    {
+      "check_id": "R03",
+      "description": "Saison-KF brutto aus Spielzeilen neu berechnet = Saison-Blatt",
+      "status": "OK",
+      "detail": "2021/22: 13.7521; 2022/23: 13.3287; 2023/24: 14.8226; 2024/25: 14.8543; 2025/26: 15.2849; 2026/27: 17.8529"
+    }
+  ]
+}

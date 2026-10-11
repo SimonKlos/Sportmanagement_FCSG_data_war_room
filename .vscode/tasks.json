@@ -1,0 +1,67 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "FCSG: Tests ausführen",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "pytest", "-q"],
+      "group": { "kind": "test", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "FCSG: Inventar (Fixture)",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "fcsg.cli", "inventory", "--config", "config/project.example.yaml"],
+      "problemMatcher": []
+    },
+    {
+      "label": "FCSG: Strukturinventar Rohdaten (nur Struktur, keine Inhalte)",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "fcsg.cli", "inventory-raw", "--config", "config/project.local.yaml"],
+      "problemMatcher": []
+    },
+    {
+      "label": "FCSG: Echte Daten bereinigen/aggregieren (data/clean)",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "fcsg.cli", "prepare-data", "--config", "config/project.local.yaml"],
+      "options": { "env": { "PYTHONIOENCODING": "utf-8" } },
+      "problemMatcher": []
+    },
+    {
+      "label": "FCSG: Baseline-Analyse (echte Daten) – Bericht + Excel",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "fcsg.cli", "analyze", "--config", "config/project.local.yaml"],
+      "options": { "env": { "PYTHONIOENCODING": "utf-8" } },
+      "problemMatcher": []
+    },
+    {
+      "label": "FCSG: Lauf + Excel-Export + Readback (Fixture)",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "fcsg.cli", "run", "--config", "config/project.example.yaml"],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "FCSG: Excel für bestehenden Lauf exportieren",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "fcsg.cli", "export", "--config", "config/project.example.yaml", "--run-id", "${input:runId}"],
+      "problemMatcher": []
+    },
+    {
+      "label": "FCSG: Umgebung neu aufsetzen (.venv aus Lockfile)",
+      "type": "shell",
+      "command": "py -3.12 -m venv .venv; .\\.venv\\Scripts\\python.exe -m pip install -r requirements.lock.txt; .\\.venv\\Scripts\\python.exe -m pip install -e . --no-deps",
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    { "id": "runId", "type": "promptString", "description": "Lauf-ID (Ordnername unter outputs/)" }
+  ]
+}

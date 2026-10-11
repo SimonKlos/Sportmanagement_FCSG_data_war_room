@@ -1,0 +1,8 @@
+data_origin,match_date,event_type,event_label,public_attendance,receipts,revenue_gross_chf,revenue_net_chf
+SYNTHETIC_FIXTURE_NOT_CLUB_DATA,2099-08-01,match,Testgegner A,77,70,1100.0,990.0
+SYNTHETIC_FIXTURE_NOT_CLUB_DATA,2099-08-15,match,Testgegner B,84,81,1300.0,1170.0
+SYNTHETIC_FIXTURE_NOT_CLUB_DATA,2100-08-07,match,Testgegner A,90,88,1500.0,1350.0
+SYNTHETIC_FIXTURE_NOT_CLUB_DATA,2100-08-07,public_viewing,Test-Public-Viewing,,20,300.0,270.0
+SYNTHETIC_FIXTURE_NOT_CLUB_DATA,2100-08-21,match,Testgegner D,100,95,1600.0,1440.0
+SYNTHETIC_FIXTURE_NOT_CLUB_DATA,2100-09-04,match,Testgegner B,83,79,1250.0,1125.0
+SYNTHETIC_FIXTURE_NOT_CLUB_DATA,2100-09-18,match,Testgegner X,60,55,800.0,720.0
