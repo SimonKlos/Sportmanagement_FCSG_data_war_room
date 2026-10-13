@@ -2,7 +2,7 @@
 
 Diese Datei synchronisiert die verbindlichen Regeln aus `CLAUDE.md` und `PROJECT_SETUP.md` für alle
 Agenten. Bei Widerspruch gilt: ausdrückliche Anweisung der Projektverantwortlichen > `CLAUDE.md` >
-diese Datei. Änderungen an Regeln immer in **beiden** Dateien nachführen. Stand: 11.10.2026.
+diese Datei. Änderungen an Regeln immer in **beiden** Dateien nachführen. Stand: 13.10.2026.
 
 ## Auftrag
 - Projekt: FC St.Gallen 1879, «Untapped Business», Phase 1 (HSG, Sportmanagement in der Praxis HS26).
@@ -44,6 +44,11 @@ diese Datei. Änderungen an Regeln immer in **beiden** Dateien nachführen. Stan
 - Python-Paket `src/fcsg/` (modular, Docstrings für zentrale Funktionen), CLI `python -m fcsg.cli`,
   Tests `tests/` (pytest), VS-Code-Tasks `.vscode/tasks.json`. Kurze erklärende Notebooks folgen bei Bedarf.
 - README pro Hauptordner; `docs/data_dictionary.md` und `docs/decisions.md` nachführen.
+- **Jede fachliche oder methodische Festlegung** (Definition, Hypothese, Abgrenzung, Annahme) als D-Eintrag in
+  `docs/decisions.md`: Datum, wer entschieden hat (Team oder Agent-Annahme), Quelle. Agent-Annahmen bleiben
+  «offen» bzw. «Arbeitsannahme», bis das Team sie bestätigt (D-027).
+- **Jede grössere Änderung** (neue Analyse, neuer Lauf, geänderte Definition, neue Abhängigkeit, geänderte Regel)
+  erhält einen Eintrag in `CHANGELOG.md`.
 - Fehlermeldungen/Logs ohne Zellinhalte (nur Spaltennamen und Anzahlen).
 - Abhängigkeiten erst nach erfolgreichem Testlauf in `requirements.lock.txt` fixieren.
 

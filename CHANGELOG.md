@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.2 – 13.10.2026
+- Neue Arbeitsregel D-027: Jede fachliche oder methodische Festlegung wird in `docs/decisions.md` erfasst (Datum,
+  wer entschieden hat, Quelle; Agent-Annahmen offen bis Teambestätigung); grössere Änderungen erhalten einen
+  Eintrag in diesem Changelog. Verankert in `CLAUDE.md`, `AGENTS.md` (Stand 13.10.2026) und README §7.
+- D-026 nachgetragen: Hypothesen H1–H3 und K1 aus Run 1 als offene Agent-Annahme erfasst, Bestätigung durch das
+  Team ausstehend.
+- Nur Dokumentation; kein Code, keine Daten, keine Ergebnisse geändert.
+
 ## 0.4.1 – 11.10.2026
 - Vorbereitung erster Push ins private Team-Repo: README für die interne Abstimmung neu geschrieben; Ergebnisordner
   `outputs/run1_simon_2026-10-11/` (Analyse-Artefakte, Bericht-Schnappschuss, Prüfprotokolle der Bereinigung, README);
