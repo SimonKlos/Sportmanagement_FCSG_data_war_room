@@ -133,7 +133,8 @@ Mehr dazu: [src/fcsg/README.md](src/fcsg/README.md), [docs/analysis/README.md](d
   - Keine Kausalsprache, keine «Potenziale».
   - Lücken von KF, Bonsrate und Ø Bon nie addieren.
   - Modellierung erst nach Baseline-Freigabe.
-- **Entscheide** in `docs/decisions.md` nachführen. Neue Logik immer mit Test auf künstlichen Daten.
+- **Entscheide** in `docs/decisions.md` nachführen (auch Hypothesen und Agent-Annahmen, D-027); grössere Änderungen
+  im `CHANGELOG.md` festhalten. Neue Logik immer mit Test auf künstlichen Daten.
 
 ## 8 Vor der Übergabe an den FCSG
 
