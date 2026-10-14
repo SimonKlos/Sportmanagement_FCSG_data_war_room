@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.2 – 14.10.2026
+- D-037: `notebooks/01_baseline_hypothesen.ipynb` als **Auslaufmodell** gekennzeichnet (Hinweis im Notebook und in
+  `notebooks/README.md`); Idee einer Phase-2-Analyse-Werkbank auf Ralfs Rechenkern festgehalten (Bau nach dem
+  Chancenfeld-Workshop).
+
 ## 0.5.1 – 14.10.2026
 - **D-036 entschieden, D-016 ergänzt (Simon):** Frauen-Spiele **und Länderspiele** (Nationalteams, WEURO 2025,
   Nati-Trainings, Public Viewings) werden überall ignoriert.
