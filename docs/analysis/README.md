@@ -1,5 +1,8 @@
 # docs/analysis/ – Analyse und Übergabe (Phase 1)
 
+> **Seit 14.10.2026 ist Ralfs Rechenkern die Zahlenbasis (D-028)** – siehe `ralf/README_REPO.md` und
+> `outputs/run3_kontext-v5_2026-10-14/`. Dieser Ordner beschreibt Simons Pipeline (Bereinigung, Gegenrechnung, Run 1).
+
 Dieser Ordner ist der Einstieg für alle, die die Analyse weiterführen. Ergebnisse:
 **[01_baseline_erste_erkenntnisse.md](01_baseline_erste_erkenntnisse.md)** (Bericht mit Zahlen, Grafiken in `figures/`).
 Interaktiv weiterarbeiten: **[notebooks/01_baseline_hypothesen.ipynb](../../notebooks/01_baseline_hypothesen.ipynb)**.
@@ -80,4 +83,4 @@ Daten in `tests/test_hypotheses.py`; erst dann in den Bericht aufnehmen.
 - D-004/D-005: Definitionen SOLL/IST/Public Netto, Umsatzbasis → Sandro.
 - D-003: Kosten-/Margendaten für den Deckungsbeitrag → Sandro.
 - D-023: Bestätigung von FCSG zur lokalen Verarbeitung.
-- Datenlücken: Zutritt 24/25, Bons vor 23/24, Catering 23/24 (ein Spiel fehlt im Saison-Tab), 6 Kontextspiele 25/26.
+- Datenlücken: Zutritt 24/25, Bons vor 23/24, Catering 23/24 (Simons Parser überspringt 27.09.2023; Ralfs Kern liest es); die 6 Kontextspiele 25/26 sind seit Kontexttabelle v5 ergänzt.

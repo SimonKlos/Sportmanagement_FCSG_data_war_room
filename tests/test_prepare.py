@@ -8,17 +8,13 @@ import pytest
 
 from fcsg.prepare import (
     PrivacyError, _catering_name, _kiesplatz_metric, apply_school_holidays, assert_no_personal_columns,
-    competition_group, drop_women, fmt_time, load_school_holidays, parse_chf, parse_form, parse_table_position,
-    parse_temperature, prepare_access, prepare_ticket_csvs, reader_sector, season_of, to_date, yes_no,
+    competition_group, drop_national_team, drop_women, fmt_time, load_school_holidays, parse_chf, parse_form, prepare_access, prepare_ticket_csvs, reader_sector, season_of, to_date, yes_no,
 )
 
 
 def test_parsers():
     assert parse_chf("5,00\xa0CHF") == 5.0 and parse_chf("1'234,50 CHF") == 1234.5 and np.isnan(parse_chf("\xa0"))
     assert fmt_time(19.3) == "19:30" and fmt_time("9:05") == "09:05" and fmt_time(dt.time(14, 15)) == "14:15"
-    assert parse_temperature("19.9°C (Tagesmittel; 17.2–24.0°C)") == (19.9, 17.2, 24.0)
-    assert parse_table_position("7. Platz, 0 Pkt") == (7.0, 0.0)
-    assert all(np.isnan(v) for v in parse_table_position("– (noch keine SL-Runde)"))
     assert parse_form("S-U-N") == (3.0, 4.0) and np.isnan(parse_form("–")[0])
     assert yes_no("Ja") == 1.0 and yes_no("Nein") == 0.0 and np.isnan(yes_no(None))  # leer bleibt leer
     assert to_date("13.10.2025") == dt.date(2025, 10, 13) and to_date("2022-07-23 17:10:42") == dt.date(2022, 7, 23)
@@ -177,3 +173,22 @@ def test_school_holiday_reference_file():
     assert by_day(dt.date(2024, 8, 11)) == ["Sommerferien"] and by_day(dt.date(2024, 8, 12)) == []  # Schulbeginn
     assert by_day(dt.date(2026, 9, 26)) == ["Herbstferien"]  # Ferienplan: So 27.09.2026 → Samstag davor
     assert set(hol["source_id"]) == {"OD", "FP25", "FP26"}
+
+
+def test_drop_national_team():
+    """D-016: Länderspiele/WEURO/Nati-Trainings weg, FCSG-Spiele mit «Euro» im Namen bleiben."""
+    tables = {
+        "attendance_history": pd.DataFrame({
+            "competition": ["Nationalmannschaft", "WEURO 2025", "Super League", "UEFA Europa League"],
+            "competition_group": ["Andere", "Andere", "Liga", "UEFA"],
+            "match_label": ["Schweiz - Test", "GER - POL", "FCSG - Test", "Euro League Gruppenphase - Test"],
+            "remark": [None, None, "nach der Länderspielpause", None]}),
+        "kiesplatz_event_stand": pd.DataFrame({"event_label": ["WEURO ENG vs. WAL", "FC St.Gallen 1879 vs. FC Basel"]}),
+        "catering_match": pd.DataFrame({"competition": ["Länderspiel", "Meisterschaft"], "event_class": ["anderes_event", "fcsg_herren"],
+                                        "match_label": ["öffentliches Training CH-Nati", "FCSG vs. Test"]}),
+    }
+    checks = drop_national_team(tables)
+    assert list(tables["attendance_history"]["competition_group"]) == ["Liga", "UEFA"]
+    assert list(tables["kiesplatz_event_stand"]["event_label"]) == ["FC St.Gallen 1879 vs. FC Basel"]
+    assert list(tables["catering_match"]["event_class"]) == ["fcsg_herren"]
+    assert {c["check_id"] for c in checks} == {"D016N-attendance_history", "D016N-kiesplatz_event_stand", "D016N-catering_match"}

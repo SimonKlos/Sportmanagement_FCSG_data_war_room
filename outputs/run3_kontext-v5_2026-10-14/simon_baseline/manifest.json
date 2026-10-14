@@ -1,0 +1,41 @@
+{
+  "run_id": "20261014T215526_baseline_24bd",
+  "created_at": "2026-10-14T21:56:11+02:00",
+  "data_mode": "release_aggregates",
+  "clean_run_id": "20261014T215420_clean_0cf1",
+  "config_file": "project.local.yaml",
+  "code_version": "0.4.0",
+  "python": "3.12.10",
+  "packages": {
+    "pandas": "3.0.6",
+    "numpy": "2.5.3",
+    "openpyxl": "3.1.5",
+    "matplotlib": "3.11.2"
+  },
+  "checks": {
+    "total": 17,
+    "fail": 0,
+    "warn": 1
+  },
+  "coverage": {
+    "home_matches": 108,
+    "with_attendance": 108,
+    "with_catering": 105,
+    "with_access": 88
+  },
+  "outputs": {
+    "mart_match.csv": "1 Herren-Pflichtspiel pro Zeile mit Spiel-KPIs (vorläufig)",
+    "season_summary.csv": "gewichtete Saisonwerte (Σ/Σ) mit Stichprobe",
+    "coverage.csv": "Abdeckung je Saison und Stichproben der Hypothesen",
+    "quality_checks.csv": "Prüfprotokoll (Join, Summenerhalt, KPI, Quellabgleich)",
+    "unmatched_report.csv": "nicht zuordenbare oder ausgeschlossene Zeilen",
+    "sources.csv": "Eingangsdateien des bereinigten Laufs (Name, Hash)",
+    "reto_comparison.csv": "Abgleich mit Retos Sichtungswerten (DQ S. 3–4)",
+    "source_total_check.csv": "Spielzeilen vs. Quell-Tab «Entwicklung»",
+    "hypotheses.csv": "Ergebnis je Hypothese (H1–H3, K1)",
+    "h1_sold_out.csv": "H1: KF nach Ausverkauft",
+    "h2_correlations.csv": "H2: Korrelationen Ankunft × Catering",
+    "h3_leadtime.csv": "H3: Eintrittsquote nach Kaufvorlauf",
+    "context_associations.csv": "K1: alle Kontext-Zusammenhänge"
+  }
+}

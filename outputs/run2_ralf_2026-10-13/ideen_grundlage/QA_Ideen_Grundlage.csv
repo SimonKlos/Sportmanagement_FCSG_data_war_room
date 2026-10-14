@@ -1,0 +1,19 @@
+﻿test,bestanden,detail
+Phase-1-Ergebnisse durch die Ideen-Stufe unverändert,True,68 Tabellen geprüft
+Datenschutz: keine Personen- oder ID-Spalten in den Ideen-Tabellen,True,keine
+Datenschutz: Segmente unter 10 Tickets unterdrückt,True,alle Segmente ≥ 10 Tickets
+Keine Summen- oder Gesamtpotenzial-Zeile,True,keine
+"Leitplanken-Pflichtfelder in allen Chancenfeldern ausgefüllt, keine Verletzung",True,9 Chancenfelder
+Jedes Chancenfeld hat 2–5 Leitfragen und ein Pilot-Messdesign,True,
+Alkohol-Proxy: Saisonmittel ±2 Pp. zur Artikelauswertung,True,"2023/24: +0.35 Pp., 2024/25: -0.12 Pp., 2025/26: +0.71 Pp."
+Alkohol-Proxy: Korrelation mit Kiesplatz-Normalsatzanteil innerhalb der Saison > 0.3,True,r = 0.52
+Zweitmarkt: CSV-Tarife = Spalte Zweitmarkt der Historie (jedes Spiel),True,"2025/26: 5716, 2026/27: 1891"
+Tribünen-Kalibrierung: UEFA-Scans je Einzelticket in B/C/D zwischen 0.93 und 1.02,True,"B: 0.968, C: 0.974, D: 0.960"
+"Basis = Phase-1-Saisonwerte (Σ Public-Anwesende, KF exkl.)",True,6 Saisons
+Frühindikator ohne Blick in die Zukunft (Training endet vor jedem Testspiel),True,79 Vorhersagen
+Clustering mit Stabilitätsangabe (Bootstrap-Jaccard),True,
+Fisher-Zerlegung: Preisindex × Mengenindex = Wertverhältnis,True,
+Tribünen 26/27: Zweitmarkt nur einmal gezählt (Plätze = Abos + Einzel − Zweitmarkt),True,
+Hebel-Rechner: Excel-Formeln = Python (hebel_szenario) für alle Hebel,True,6 von 6 Hebeln gleich
+"HTML offline (keine externen Quellen, Grafiken eingebettet)",True,17 eingebettete Grafiken
+Markdown-Tabellen mit konsistenter Spaltenzahl,True,0 fehlerhafte Tabellen

@@ -235,9 +235,9 @@ def test_h3(t: dict[str, pd.DataFrame], m: pd.DataFrame) -> HypothesisResult:
 # ----------------------------------------------------------------------------------------------------
 
 CONTEXT_FEATURES = {
-    "temp_day_mean_c": "Temperatur Tagesmittel (°C)",
-    "precip_day_mm": "Niederschlag Tag (mm)",
-    "wind_day_kmh": "Wind Tag (km/h)",
+    "temp_c": "Temperatur (°C, Basis: weather_basis)",
+    "precip_mm": "Niederschlag (mm, Basis: weather_basis)",
+    "wind_kmh": "Wind (km/h)",
     "kickoff_hour": "Anstosszeit (Stunde)",
     "weekend": "Wochenende (Sa/So)",
     "table_rank_opp": "Tabellenrang Gegner (vor Spiel; hoch = schwach)",
@@ -250,6 +250,7 @@ CONTEXT_FEATURES = {
     "parallel_event": "Parallel-Event Stadt SG",
     "uefa": "UEFA-Spiel",
     "guest_sector_closed": "Gästesektor geschlossen/exkl. (Bemerkung)",
+    "covid_measures": "Covid-Massnahmen (bis 16.02.2022)",
 }
 CONTEXT_TARGETS = {"attendance_rate": "Anwesenheitsquote", "kf_gross_chf": "KF brutto", "ist": "IST Zuschauer"}
 
@@ -290,7 +291,7 @@ def context_associations(m: pd.DataFrame, n_boot: int = 1000) -> HypothesisResul
         hid="K1", link="Spielkontext → Baseline (Ticketing, Catering)",
         statement="Spielkontext (Wetter, Wochentag/Anstosszeit, Gegner- und eigene Stärke, Wettbewerb, Ferien, Free-TV, "
                   "Gästesektor) hängt mit Anwesenheitsquote, IST und KF zusammen.",
-        data_basis=f"{len(d)} Herren-Pflichtspiele 22/23–26/27 mit Spielkontext-Tabelle",
+        data_basis=f"{len(d)} Herren-Pflichtspiele {d['season'].min()}–{d['season'].max()} mit Spielkontext-Tabelle",
         n=len(d),
         method="Je Kontextvariable × Zielgrösse: Spearman-Korrelation mit saison-zentrierter Zielgrösse, Bootstrap-KI; "
                "bei Ja/Nein-Variablen zusätzlich Differenz der Mittelwerte. Explorativ, kein Modell.",
@@ -299,7 +300,7 @@ def context_associations(m: pd.DataFrame, n_boot: int = 1000) -> HypothesisResul
         interpretation=(f"{n_sig} von {len(tab)} Kombinationen mit Konfidenzintervall ohne 0 (bei {len(tab)} Tests sind "
                         f"~{0.05 * len(tab):.0f} zufällige Treffer zu erwarten). Stärkste: {top_txt or '–'}."),
         limitations="Viele Tests → Zufallstreffer möglich; Variablen hängen untereinander zusammen (z. B. Anstosszeit und "
-                    "Wochentag, UEFA und Sommer). Wetter = Tageswerte, nicht Anstosszeit. Schulferien vor 26/27 recherchiert (D-021). "
+                    "Wochentag, UEFA und Sommer). Wetter zur Anstossstunde (Kontexttabelle v5). Schulferien = Stadt SG laut Kontexttabelle (D-034). "
                     "«Gästesektor geschlossen/exkl.» stammt meist aus der Bemerkung «ausverkauft (exkl. Gästesektor)» und ist "
                     "daher eher ein Nachfrage-Indikator als ein Kapazitätseffekt (D-022).",
         next_steps="Sparsames Kontextmodell je Zielgrösse mit zeitbasierter Validierung (nach Baseline-Freigabe); "

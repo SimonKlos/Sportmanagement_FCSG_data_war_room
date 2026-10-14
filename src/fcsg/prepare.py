@@ -9,8 +9,8 @@ Datenmodus ``release_aggregates`` (D-001 c, Entscheid 10.10.2026):
   Name, Anrede, Geburtstag, Alter, Geschlecht, PLZ, Land, Kunden-Nr., Sitz/Reihe, Seatinfo, TicketData
   werden nie gelesen. Ticket-/Rechnungsschlüssel werden nur intern zum Zählen verwendet und nie ausgegeben.
 - Jede Ausgabetabelle wird gegen die Personenbezug-Heuristik geprüft; jede Aggregation auf Summenerhalt.
-- **Scope (D-016, 11.10.2026):** Frauen-Daten fallen ganz weg – Frauen-Dateien werden nicht gelesen,
-  Frauen-Events aus gemischten Quellen entfernt (``drop_women``).
+- **Scope (D-016, 11./14.10.2026):** Frauen-Daten und Länderspiele fallen ganz weg – Frauen-Dateien werden nicht
+  gelesen, Frauen- und Länderspiel-Anlässe aus gemischten Quellen entfernt (``drop_women``, ``drop_national_team``).
 - **Schulferien (D-017 b):** vor 2026/27 durch recherchierte Werte ersetzt (``apply_school_holidays``).
 
 Fachliche Definitionen (SOLL, Public Netto, Umsatzbasis) werden hier **nicht** festgelegt: Werte werden
@@ -116,16 +116,6 @@ def to_num(series: pd.Series) -> tuple[pd.Series, int]:
 RE_FLOAT = r"(-?\d+(?:[.,]\d+)?)"
 
 
-def parse_temperature(s) -> tuple[float, float, float]:
-    """``'19.9°C (Tagesmittel; 17.2–24.0°C)'`` → (19.9, 17.2, 24.0)."""
-    if not isinstance(s, str):
-        return (np.nan, np.nan, np.nan)
-    nums = [float(x.replace(",", ".")) for x in re.findall(RE_FLOAT, s.replace("–", " ").replace("−", "-"))]
-    mean = nums[0] if nums else np.nan
-    lo, hi = (nums[1], nums[2]) if len(nums) >= 3 else (np.nan, np.nan)
-    return (mean, lo, hi)
-
-
 def parse_first_number(s) -> float:
     if isinstance(s, (int, float)) and not (isinstance(s, float) and np.isnan(s)):
         return float(s)
@@ -133,14 +123,6 @@ def parse_first_number(s) -> float:
         return np.nan
     m = re.search(RE_FLOAT, s)
     return float(m.group(1).replace(",", ".")) if m else np.nan
-
-
-def parse_table_position(s) -> tuple[float, float]:
-    """``'7. Platz, 0 Pkt'`` → (7, 0); '–' oder Hinweistext → (NaN, NaN)."""
-    if not isinstance(s, str):
-        return (np.nan, np.nan)
-    m = re.match(r"^\s*(\d+)\.\s*Platz,\s*(\d+)\s*Pkt", s)
-    return (float(m.group(1)), float(m.group(2))) if m else (np.nan, np.nan)
 
 
 def parse_form(s) -> tuple[float, float]:
@@ -201,50 +183,74 @@ def competition_group(s) -> str:
     return "Andere"
 
 
+CONTEXT_COLUMNS_V5 = [
+    "Nr.", "Datum", "Wochentag", "Anstoss (Lokalzeit)", "Wettbewerb", "Spieltag / Runde", "Gegner", "Gegner-Kategorie",
+    "Resultat (FCSG : Gegner)", "Punkte FCSG vor Spiel", "Platzierung FCSG vor Spiel",
+    "Punkteschnitt FCSG vor Spiel (Pkt./Spiel)", "Punkte Gegner vor Spiel", "Platzierung Gegner vor Spiel",
+    "Punkteschnitt Gegner vor Spiel (Pkt./Spiel)", "Form FCSG (letzte 5 SL-Spiele)", "Form Gegner (letzte 5 SL-Spiele)",
+    "TV-Übertragung", "Free-TV (SRF)", "Temperatur Anstossstunde (°C)", "Niederschlag 1 h vor bis 2 h nach Anstoss (mm)",
+    "Wind Anstossstunde (km/h)", "Schulferien Stadt SG", "Feiertag Kt. SG", "Parallelevent Stadt SG", "Covid-Massnahmen",
+    "Quelle / Bemerkungen",
+]
+
+
 def prepare_context(path: Path) -> pd.DataFrame:
-    """Spielkontext-Tabelle des Projektteams (Saison-Tabs, nicht «Übersicht»)."""
+    """Spielkontext-Tabelle des Projektteams, **Version 5** (14.10.2026, vom Team bestätigt, D-034).
+
+    Liest die Saison-Tabs (nicht «Übersicht»/«Modell-Datensatz»). Wetter bezieht sich auf die Anstossstunde
+    (MeteoSchweiz, Station St.Gallen), Niederschlag auf 1 h vor bis 2 h nach Anstoss; Schulferien = Stadt St.Gallen.
+    Leere Zellen und «n/a» bleiben leer (nie «Nein»).
+
+    Raises:
+        ValueError: ein Saison-Tab hat nicht die Spalten der Version 5 (ältere Tabellenversion).
+    """
     sheets = pd.read_excel(path, sheet_name=None, engine=ENGINE)
     frames = []
     for name, df in sheets.items():
         if not re.fullmatch(r"\d{4}-\d{2}", name):
             continue
+        missing = [c for c in CONTEXT_COLUMNS_V5 if c not in df.columns]
+        if missing:
+            raise ValueError(f"Spielkontext-Tabelle, Tab {name}: Spalten der Version 5 fehlen: {missing}")
         df = df.dropna(subset=["Datum"])
         out = pd.DataFrame({
             "match_date": df["Datum"].map(to_date),
             "season": f"{name[:4]}/{name[5:]}",
             "match_no": df["Nr."],
             "weekday": df["Wochentag"],
-            "kickoff": df["Anstosszeit"].map(fmt_time),
+            "kickoff": df["Anstoss (Lokalzeit)"].map(fmt_time),
             "competition": df["Wettbewerb"],
+            "matchday_round": df["Spieltag / Runde"],
             "opponent": df["Gegner"],
-            "result_post_match": df["Resultat"],
+            "opponent_category": df["Gegner-Kategorie"],
+            "result_post_match": df["Resultat (FCSG : Gegner)"],
         })
         out["competition_group"] = out["competition"].map(competition_group)
-
-        def split(series, func, names):
-            out[names] = pd.DataFrame(series.map(func).tolist(), index=out.index, columns=names)
-
-        split(df["Tabellenstand FCSG (vor Spiel)"], parse_table_position, ["table_rank_fcsg", "table_points_fcsg"])
-        split(df["Tabellenstand Gegner (vor Spiel)"], parse_table_position, ["table_rank_opp", "table_points_opp"])
-        form_f, form_o = df["Form FCSG (letzte 5 Spiele)"], df["Form Gegner (letzte 5 Spiele)"]
-        out["form_fcsg"] = form_f.where(form_f.map(lambda s: not np.isnan(parse_form(s)[0])))
-        split(form_f, parse_form, ["form_fcsg_games", "form_fcsg_points"])
-        out["form_opp"] = form_o.where(form_o.map(lambda s: not np.isnan(parse_form(s)[0])))
-        split(form_o, parse_form, ["form_opp_games", "form_opp_points"])
+        for who, label in (("fcsg", "FCSG"), ("opp", "Gegner")):
+            out[f"table_rank_{who}"] = pd.to_numeric(df[f"Platzierung {label} vor Spiel"], errors="coerce")
+            out[f"table_points_{who}"] = pd.to_numeric(df[f"Punkte {label} vor Spiel"], errors="coerce")
+            out[f"ppg_{who}"] = pd.to_numeric(df[f"Punkteschnitt {label} vor Spiel (Pkt./Spiel)"], errors="coerce")
+            form = df[f"Form {label} (letzte 5 SL-Spiele)"]
+            out[f"form_{who}"] = form.where(form.map(lambda s: not np.isnan(parse_form(s)[0])))
+            parsed = pd.DataFrame(form.map(parse_form).tolist(), index=out.index)
+            out[f"form_{who}_games"], out[f"form_{who}_points"] = parsed[0], parsed[1]
         out["tv_raw"] = df["TV-Übertragung"]
-        out["tv_free_srf"] = df["TV-Übertragung"].map(lambda s: float("srf" in s.lower()) if isinstance(s, str) else np.nan)
-        split(df["Temperatur Anstoss (°C)"], parse_temperature, ["temp_day_mean_c", "temp_day_min_c", "temp_day_max_c"])
-        out["precip_day_mm"] = df["Niederschlag (mm)"].map(parse_first_number)
-        out["wind_day_kmh"] = df["Wind (km/h)"].map(parse_first_number)
-        out["school_holiday"] = df["Schulferien Kt. SG"].map(yes_no)
-        out["public_holiday_label"] = df["Feiertag Kt. SG"].where(df["Feiertag Kt. SG"].map(lambda s: isinstance(s, str) and s.strip().lower() != "nein"))
-        out["public_holiday"] = df["Feiertag Kt. SG"].map(lambda s: np.nan if not isinstance(s, str) else float(s.strip().lower() != "nein"))
-        out["parallel_event"] = df["Parallelevents Stadt SG"].map(yes_no)
-        out["special_occasion_raw"] = df["Besondere Anlässe"]
+        out["tv_free_srf"] = df["Free-TV (SRF)"].map(yes_no)
+        out["temp_c"] = pd.to_numeric(df["Temperatur Anstossstunde (°C)"], errors="coerce")
+        out["precip_mm"] = pd.to_numeric(df["Niederschlag 1 h vor bis 2 h nach Anstoss (mm)"], errors="coerce")
+        out["wind_kmh"] = pd.to_numeric(df["Wind Anstossstunde (km/h)"], errors="coerce")
+        out["school_holiday"] = df["Schulferien Stadt SG"].map(yes_no)  # «n/a» → leer
+        feiertag = df["Feiertag Kt. SG"]
+        out["public_holiday_label"] = feiertag.where(feiertag.map(lambda s: isinstance(s, str) and s.strip().lower() != "nein"))
+        out["public_holiday"] = feiertag.map(lambda s: np.nan if not isinstance(s, str) else float(s.strip().lower() != "nein"))
+        out["parallel_event"] = df["Parallelevent Stadt SG"].map(yes_no)
+        out["covid_measures"] = df["Covid-Massnahmen"].map(yes_no)
         out["remark_raw"] = df["Quelle / Bemerkungen"]
         frames.append(out)
+    if not frames:
+        raise ValueError("Spielkontext-Tabelle: keine Saison-Tabs (JJJJ-JJ) gefunden.")
     ctx = pd.concat(frames, ignore_index=True).sort_values("match_date").reset_index(drop=True)
-    ctx["weather_basis"] = "Tageswert (nicht Anstosszeit)"
+    ctx["weather_basis"] = "Anstossstunde (MeteoSchweiz STG); Niederschlag 1 h vor bis 2 h nach Anstoss"
     return ctx
 
 
@@ -681,9 +687,44 @@ def drop_women(tables: dict[str, pd.DataFrame]) -> list[dict]:
     return checks
 
 
+NATIONAL_PATTERN = r"länderspiel|laenderspiel|nationalmannschaft|nationalteam|\bnati\b|weuro"
+# Nur Bezeichnungs-/Wettbewerbsspalten – nie Bemerkungen («nach der Länderspielpause» betrifft FCSG-Spiele).
+NATIONAL_COLUMNS = ("competition", "competition_label", "match_label", "event_label")
+
+
+def drop_national_team(tables: dict[str, pd.DataFrame]) -> list[dict]:
+    """Entfernt Länderspiel-Anlässe (Nationalteams, WEURO 2025, Nati-Trainings) aus allen Tabellen (D-016, 14.10.2026).
+
+    Schutz: Zeilen, die als Herren-Pflichtspiel des FCSG erkannt sind (``competition_group`` Liga/Cup/UEFA oder
+    ``event_class == 'fcsg_herren'``), werden nie entfernt – «EURO PLAYOFF» oder «Euro League» sind FCSG-Spiele.
+
+    Returns:
+        Prüfprotokoll: je Tabelle Anzahl entfernter Zeilen (nur Anzahlen).
+    """
+    checks = []
+    for name, df in tables.items():
+        cols = [c for c in NATIONAL_COLUMNS if c in df.columns]
+        if not cols:
+            continue
+        mask = pd.Series(False, index=df.index)
+        for c in cols:
+            mask |= df[c].astype("string").str.contains(NATIONAL_PATTERN, case=False, regex=True, na=False)
+        if "competition_group" in df.columns:
+            mask &= ~df["competition_group"].isin(["Liga", "Cup", "UEFA"])
+        if "event_class" in df.columns:
+            mask &= df["event_class"] != "fcsg_herren"
+        if mask.any():
+            tables[name] = df[~mask].reset_index(drop=True)
+        checks.append({"check_id": f"D016N-{name}", "description": f"Länderspiel-Anlässe entfernt (D-016) → {name}",
+                       "status": "OK", "detail": f"{int(mask.sum())} von {len(df)} Zeilen entfernt"})
+    return checks
+
+
 SCHOOL_HOLIDAYS_FILE = Path(__file__).resolve().parents[2] / "config" / "reference" / "school_holidays_stadt_sg.csv"
-# D-017 b: Schulferien-Werte des Teams sind nur ab dieser Saison verlässlich recherchiert.
-SCHOOL_HOLIDAY_TEAM_FROM = "2026/27"
+# D-017 b: In Tabellenversion 3 waren die Teamwerte erst ab 2026/27 verlässlich. Version 5 (14.10.2026) führt
+# «Schulferien Stadt SG» für alle Saisons aus denselben Quellen wie die Recherche (D-021/D-034) → Teamwert gilt
+# durchgehend; die Recherche bleibt als Gegenprobe (Prüfung K-SCHOOL-HOLIDAY-XCHECK).
+SCHOOL_HOLIDAY_TEAM_FROM = "2021/22"
 
 
 def load_school_holidays(path: Path = SCHOOL_HOLIDAYS_FILE) -> pd.DataFrame:
@@ -808,10 +849,10 @@ def run_prepare(raw_root: Path, context_file: Path, clean_root: Path, tz: str = 
 
     progress("Spielkontext …")
     tables["context_match"], hol = apply_school_holidays(prepare_context(context_file), load_school_holidays())
-    checks.append({"check_id": "K-SCHOOL-HOLIDAY", "description": "Schulferien vor 2026/27 durch Recherche ersetzt (D-017 b)",
+    checks.append({"check_id": "K-SCHOOL-HOLIDAY", "description": f"Schulferien vor {SCHOOL_HOLIDAY_TEAM_FROM} durch Recherche ersetzt (D-017 b)",
                    "status": "OK", "detail": f"{hol['replaced']} Spiele ersetzt, davon {hol['changed']} geändert; "
                                              f"ohne Abdeckung: {hol['outside_coverage']}"})
-    checks.append({"check_id": "K-SCHOOL-HOLIDAY-XCHECK", "description": "Gegenprobe Teamwerte ab 2026/27 vs. Recherche",
+    checks.append({"check_id": "K-SCHOOL-HOLIDAY-XCHECK", "description": f"Gegenprobe Teamwerte ab {SCHOOL_HOLIDAY_TEAM_FROM} vs. Recherche",
                    "status": "OK" if hol["team_period_differs"] == 0 else "WARN",
                    "detail": f"{hol['team_period_checked']} geprüft, {hol['team_period_differs']} abweichend"})
     progress("Zuschauerhistorie …")
@@ -837,8 +878,9 @@ def run_prepare(raw_root: Path, context_file: Path, clean_root: Path, tz: str = 
     e_out, e_checks = prepare_einzeltickets(raw_root)
     tables.update(e_out)
     checks += e_checks
-    progress("Frauen-Events entfernen (D-016) …")
+    progress("Frauen- und Länderspiel-Anlässe entfernen (D-016) …")
     checks += drop_women(tables)
+    checks += drop_national_team(tables)
     progress("Abdeckungsmatrix …")
     tables["match_coverage"] = build_match_coverage(tables)
 

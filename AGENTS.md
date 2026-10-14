@@ -2,7 +2,7 @@
 
 Diese Datei synchronisiert die verbindlichen Regeln aus `CLAUDE.md` und `PROJECT_SETUP.md` für alle
 Agenten. Bei Widerspruch gilt: ausdrückliche Anweisung der Projektverantwortlichen > `CLAUDE.md` >
-diese Datei. Änderungen an Regeln immer in **beiden** Dateien nachführen. Stand: 13.10.2026.
+diese Datei. Änderungen an Regeln immer in **beiden** Dateien nachführen. Stand: 14.10.2026.
 
 ## Auftrag
 - Projekt: FC St.Gallen 1879, «Untapped Business», Phase 1 (HSG, Sportmanagement in der Praxis HS26).
@@ -41,6 +41,9 @@ diese Datei. Änderungen an Regeln immer in **beiden** Dateien nachführen. Stan
 - Modellierung erst nach Baseline-Freigabe.
 
 ## Code und Dokumentation
+- **Zahlenbasis = Ralfs Rechenkern unter `ralf/`** (D-028; immer aus `ralf/` starten, siehe `ralf/README_REPO.md`).
+  `src/fcsg/` bleibt für Bereinigung, Datenschutzprüfung, Tests und Gegenrechnung (`fcsg.abgleich`).
+  Spielkontext-Tabelle nur **Version 5** (D-034).
 - Python-Paket `src/fcsg/` (modular, Docstrings für zentrale Funktionen), CLI `python -m fcsg.cli`,
   Tests `tests/` (pytest), VS-Code-Tasks `.vscode/tasks.json`. Kurze erklärende Notebooks folgen bei Bedarf.
 - README pro Hauptordner; `docs/data_dictionary.md` und `docs/decisions.md` nachführen.

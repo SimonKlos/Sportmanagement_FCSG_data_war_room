@@ -1,0 +1,1009 @@
+{
+  "run_id": "20261014T215420_clean_0cf1",
+  "created_at": "2026-10-14T21:55:11+02:00",
+  "data_mode": "release_aggregates",
+  "code_version": "0.4.0",
+  "python": "3.12.10",
+  "packages": {
+    "pandas": "3.0.6",
+    "numpy": "2.5.3",
+    "openpyxl": "3.1.5",
+    "python-calamine": "0.8.3"
+  },
+  "inputs": [
+    {
+      "file": "20261003_Input Sandro/Catering/Abrechnung Kiesplatz_Saison 21-22.xlsx",
+      "sha256_16": "f4dc501c2129c961",
+      "bytes": 35285
+    },
+    {
+      "file": "20261003_Input Sandro/Catering/Abrechnung Kiesplatz_Saison 22-23.xlsx",
+      "sha256_16": "1b7a5634c8d3bf52",
+      "bytes": 61504
+    },
+    {
+      "file": "20261003_Input Sandro/Catering/Abrechnung Kiesplatz_Saison 23-24.xlsx",
+      "sha256_16": "57017de13ef43880",
+      "bytes": 63176
+    },
+    {
+      "file": "20261003_Input Sandro/Catering/Abrechnung Kiesplatz_Saison 24-25.xlsx",
+      "sha256_16": "b65c5f217b650a8f",
+      "bytes": 74740
+    },
+    {
+      "file": "20261003_Input Sandro/Catering/Abrechnung Kiesplatz_Saison 25-26.xlsx",
+      "sha256_16": "60eabeb9f59bc47d",
+      "bytes": 61369
+    },
+    {
+      "file": "20261003_Input Sandro/Catering/Abrechnung Kiesplatz_Saison 26-27.xlsx",
+      "sha256_16": "383b95105de6d8a3",
+      "bytes": 47678
+    },
+    {
+      "file": "20261003_Input Sandro/Catering/Artikelauswertung Meisterschaft.xlsx",
+      "sha256_16": "3886b53f76a2edc5",
+      "bytes": 35242
+    },
+    {
+      "file": "20261003_Input Sandro/Catering/Umsatz Public Catering ab Saison 18-19_Neu.xlsx",
+      "sha256_16": "09cc1b6e3ceac8d9",
+      "bytes": 407280
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2021-22/Einzeltickets_2021-22.xlsx",
+      "sha256_16": "e639ef45cc2e6ae7",
+      "bytes": 19907351
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2022-23/Einzeltickets_2022-23.xlsx",
+      "sha256_16": "a74dc602c9f2afb3",
+      "bytes": 26177399
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2023-24/Einzeltickets_2023-24.xlsx",
+      "sha256_16": "1b674ee3bd21dc4a",
+      "bytes": 24586996
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2024-25/Einzeltickets_2024-25.xlsx",
+      "sha256_16": "345909df7fd5c903",
+      "bytes": 19095796
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Frauen/20251101_AWSL_R9_FCZ-Frauen.csv",
+      "sha256_16": "3665c1e178d5b258",
+      "bytes": 962835
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Frauen/20260322_AWSL_R17_FCL-Frauen.csv",
+      "sha256_16": "fbb43b3de6def2fc",
+      "bytes": 605893
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Frauen/20260425_AWSL_PO1-4_FCB.csv",
+      "sha256_16": "43da269c21e172b9",
+      "bytes": 119679
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Herren/20250726_MS1_FCB.csv",
+      "sha256_16": "c0a2a3c42e555561",
+      "bytes": 1578273
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Herren/20250809_MS3_FCW.csv",
+      "sha256_16": "aa9112e04af0f72e",
+      "bytes": 1469837
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Herren/20250824_MS4_FCL.csv",
+      "sha256_16": "20ae6c1bce662cd6",
+      "bytes": 1526503
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Herren/20250913_MS6_LUG.csv",
+      "sha256_16": "65c0915061bf508a",
+      "bytes": 1239162
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Herren/20251004_MS8_FCT.csv",
+      "sha256_16": "87b54823dae55177",
+      "bytes": 1181043
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Herren/20251025_MS10_GCZ.csv",
+      "sha256_16": "c57b35d67bf27d52",
+      "bytes": 1463090
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Herren/20251109_MS13_YB.csv",
+      "sha256_16": "37769c0d26f80de0",
+      "bytes": 1428273
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Herren/20251123_MS14_LS.csv",
+      "sha256_16": "99f1f5b5f27ad400",
+      "bytes": 776251
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Herren/20251206_MS16_FCZ.csv",
+      "sha256_16": "0729f8ae9860014b",
+      "bytes": 1372540
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Herren/20251216_MS18_SIO.csv",
+      "sha256_16": "f4b3844e8f3c4d93",
+      "bytes": 706213
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Herren/20260126_MS21_SFC.csv",
+      "sha256_16": "7642f35b49e2ad1a",
+      "bytes": 597145
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Herren/20260211_MS24_YB.csv",
+      "sha256_16": "8664ec216a04fafe",
+      "bytes": 448301
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Herren/20260214_MS25_GCZ.csv",
+      "sha256_16": "26a57d413d017e11",
+      "bytes": 741353
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Herren/20260228_MS27_FCW.csv",
+      "sha256_16": "73e85efdd8a458eb",
+      "bytes": 1049941
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Herren/20260308_MS29_FCB.csv",
+      "sha256_16": "8d57b5dae47fe20a",
+      "bytes": 1423441
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Herren/20260317_MS30_LUG.csv",
+      "sha256_16": "805bc791cc4eb032",
+      "bytes": 880498
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Herren/20260406_MS32_FCZ.csv",
+      "sha256_16": "2b4fea0eede9f3ae",
+      "bytes": 1661293
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Herren/20260503_MS35_SIO.csv",
+      "sha256_16": "4bb8a4acede569d1",
+      "bytes": 1300163
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2025-26/MS_Herren/20260517_MS38_FCT.csv",
+      "sha256_16": "9aafa658f2b5f6b1",
+      "bytes": 1326690
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2026-27/Europacup/20260723_UEL-Q2_SLBenfica.csv",
+      "sha256_16": "cd0b46232e3a5374",
+      "bytes": 3461654
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2026-27/Europacup/20260813_UECL-Q3_SheriffTiraspol.csv",
+      "sha256_16": "a91fa8ab1e9601ad",
+      "bytes": 2448011
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2026-27/Europacup/20260827_UECL-PO_Nordsjaelland.csv",
+      "sha256_16": "9339aadc00f24395",
+      "bytes": 2632065
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2026-27/MS_Frauen/20260909_MS5_FCA.csv",
+      "sha256_16": "f70688ff42b9813e",
+      "bytes": 32367
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2026-27/MS_Frauen/20260919_MS7_GCZ.csv",
+      "sha256_16": "c3a831d481c9128f",
+      "bytes": 466716
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2026-27/MS_Frauen/202706030_SaisonabosFrauen.csv",
+      "sha256_16": "fdadf74c9174ce03",
+      "bytes": 149783
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2026-27/MS_Herren/20260726_MS1_FCZ.csv",
+      "sha256_16": "2a07cc8df73459d9",
+      "bytes": 1370620
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2026-27/MS_Herren/20260809_MS3_FCL.csv",
+      "sha256_16": "c659045c34fd9361",
+      "bytes": 1283551
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2026-27/MS_Herren/20260830_MS5_FCT.csv",
+      "sha256_16": "c102e85fdee4cd55",
+      "bytes": 1071422
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2026-27/MS_Herren/20260912_MS8_SIO.csv",
+      "sha256_16": "04038b0fc0869fc7",
+      "bytes": 1050110
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/2026-27/MS_Herren/20260930_SaisonabosHerren.csv",
+      "sha256_16": "72429d3c9387f1c1",
+      "bytes": 2692171
+    },
+    {
+      "file": "20261003_Input Sandro/Ticketing/Ticketing-Zuschauerzahlen-Historie.xlsx",
+      "sha256_16": "441ec6fd469f8da4",
+      "bytes": 68668
+    },
+    {
+      "file": "20261003_Input Sandro/Zutritt/ErlaubteZutritteHerren.xlsx",
+      "sha256_16": "a6ebf8c9794ddc53",
+      "bytes": 24500647
+    },
+    {
+      "file": "20261003_Input Sandro/Zutritt/zugangsdaten_frauenequipe_alleSpiele.txt",
+      "sha256_16": "bd1826e5c02a7cc4",
+      "bytes": 1964962
+    },
+    {
+      "file": "20261003_Input Sandro/Zutritt/zugangsdaten_herren_alteSaisons.txt",
+      "sha256_16": "76e88c1ba0fa259a",
+      "bytes": 25554546
+    },
+    {
+      "file": "20261003_Input Sandro/Zutritt/zugangsdaten_herren_inhouse.csv",
+      "sha256_16": "4ad82d5f98c555c4",
+      "bytes": 103283761
+    },
+    {
+      "file": "projekt/Spielkontext_Tabelle_FCSG_5.xlsx",
+      "sha256_16": "a04128384abca267",
+      "bytes": 359532
+    },
+    {
+      "file": "projekt/config/reference/school_holidays_stadt_sg.csv",
+      "sha256_16": "3ef00f05f8c1d6f8",
+      "bytes": 1305
+    }
+  ],
+  "outputs": {
+    "context_match": {
+      "rows": 114,
+      "columns": [
+        "match_date",
+        "season",
+        "match_no",
+        "weekday",
+        "kickoff",
+        "competition",
+        "matchday_round",
+        "opponent",
+        "opponent_category",
+        "result_post_match",
+        "competition_group",
+        "table_rank_fcsg",
+        "table_points_fcsg",
+        "ppg_fcsg",
+        "form_fcsg",
+        "form_fcsg_games",
+        "form_fcsg_points",
+        "table_rank_opp",
+        "table_points_opp",
+        "ppg_opp",
+        "form_opp",
+        "form_opp_games",
+        "form_opp_points",
+        "tv_raw",
+        "tv_free_srf",
+        "temp_c",
+        "precip_mm",
+        "wind_kmh",
+        "school_holiday",
+        "public_holiday_label",
+        "public_holiday",
+        "parallel_event",
+        "covid_measures",
+        "remark_raw",
+        "weather_basis",
+        "school_holiday_team",
+        "school_holiday_research",
+        "school_holiday_period",
+        "school_holiday_source"
+      ]
+    },
+    "attendance_history": {
+      "rows": 366,
+      "columns": [
+        "season",
+        "competition",
+        "match_date",
+        "weekday",
+        "kickoff_raw",
+        "match_label",
+        "soll",
+        "ist",
+        "ist_vip",
+        "ist_guests",
+        "secondary_market",
+        "no_show_rate_reported",
+        "no_show_impact_secondary_reported",
+        "utilization_excl_guests_reported",
+        "sold_out",
+        "remark",
+        "kickoff",
+        "competition_group"
+      ]
+    },
+    "catering_match": {
+      "rows": 220,
+      "columns": [
+        "source_tab",
+        "match_date",
+        "match_label",
+        "competition",
+        "public_attendance",
+        "rev_public",
+        "rev_matchbar",
+        "revenue_total_gross",
+        "revenue_total_net",
+        "kf_gross_reported",
+        "kf_net_reported",
+        "kickoff",
+        "rev_stadion_gross",
+        "rev_stadion_net",
+        "rev_matchbar_gross",
+        "rev_matchbar_net",
+        "weather_text",
+        "result",
+        "remark",
+        "x_contrailer_bbq_1_gross",
+        "x_contrailer_bbq_1_net",
+        "x_contrailer_bbq_2_gross",
+        "x_contrailer_bbq_2_net",
+        "x_bier_1_gross",
+        "x_bier_1_net",
+        "x_contrailer_getraenke_gross",
+        "x_contrailer_getraenke_net",
+        "x_contrailer_pommes_gross",
+        "x_contrailer_pommes_net",
+        "x_fanshop_bar_gross",
+        "x_fanshop_bar_net",
+        "x_bier_2_gross",
+        "x_bier_2_net",
+        "x_bier_3_sektor_c_gross",
+        "x_bier_3_sektor_c_net",
+        "rev_contrailer_gross",
+        "rev_contrailer_net",
+        "rev_payfix_gross",
+        "rev_payfix_net",
+        "rev_just_eat_gross",
+        "rev_just_eat_net",
+        "fee_stadion_gross",
+        "fee_stadion_net",
+        "fee_matchbar_gross",
+        "fee_matchbar_net",
+        "transactions",
+        "rev_nicht_verbuchter_transaktionen_gross",
+        "rev_nicht_verbuchter_transaktionen_net",
+        "rev_extern_gross",
+        "rev_extern_net",
+        "avg_receipt_gross_reported",
+        "avg_receipt_net_reported",
+        "guest_sector_attendance",
+        "rev_pick_up_gross",
+        "rev_pick_up_net",
+        "event_class",
+        "cancelled_flag",
+        "season"
+      ]
+    },
+    "catering_season_summary": {
+      "rows": 73,
+      "columns": [
+        "competition_label",
+        "season",
+        "n_events",
+        "attendance",
+        "revenue_total_gross",
+        "revenue_total_net",
+        "revenue_per_event_gross",
+        "revenue_per_event_net",
+        "kf_gross_avg_reported",
+        "kf_net_avg_reported",
+        "avg_receipt_gross_reported",
+        "avg_receipt_net_reported"
+      ]
+    },
+    "kiesplatz_event_stand": {
+      "rows": 6921,
+      "columns": [
+        "season_file",
+        "sheet",
+        "match_date",
+        "kickoff",
+        "event_label",
+        "stand",
+        "metric_raw",
+        "metric",
+        "value"
+      ]
+    },
+    "article_season": {
+      "rows": 216,
+      "columns": [
+        "section",
+        "item_label",
+        "season",
+        "qty_total",
+        "qty_avg_per_match",
+        "revenue_net_total",
+        "revenue_net_avg_per_match",
+        "revenue_share",
+        "n_matches_reported"
+      ]
+    },
+    "access_match_summary": {
+      "rows": 108,
+      "columns": [
+        "source_file",
+        "team",
+        "match_date",
+        "match_label",
+        "scans",
+        "n_distinct_tickets",
+        "first_scan",
+        "last_scan",
+        "n_readers",
+        "venue_messages",
+        "scans_per_ticket",
+        "season"
+      ]
+    },
+    "access_sector_minute": {
+      "rows": 36289,
+      "columns": [
+        "source_file",
+        "team",
+        "match_date",
+        "sector",
+        "scan_minute",
+        "scans"
+      ]
+    },
+    "access_reader": {
+      "rows": 3249,
+      "columns": [
+        "source_file",
+        "team",
+        "match_date",
+        "reader",
+        "sector",
+        "scans",
+        "first_scan",
+        "last_scan"
+      ]
+    },
+    "access_coding": {
+      "rows": 1768,
+      "columns": [
+        "source_file",
+        "team",
+        "match_date",
+        "sector",
+        "coding",
+        "scans"
+      ]
+    },
+    "tickets_single_agg": {
+      "rows": 8944,
+      "columns": [
+        "source_file",
+        "season_folder",
+        "folder",
+        "team",
+        "match_date",
+        "event_code",
+        "tribune",
+        "block",
+        "tarif",
+        "channel",
+        "delivery",
+        "n_tickets",
+        "revenue_chf",
+        "n_price_missing"
+      ]
+    },
+    "tickets_single_leadtime": {
+      "rows": 5133,
+      "columns": [
+        "source_file",
+        "season_folder",
+        "folder",
+        "team",
+        "match_date",
+        "event_code",
+        "tribune",
+        "channel",
+        "lead_days",
+        "n_tickets",
+        "revenue_chf"
+      ]
+    },
+    "tickets_single_purchase_size": {
+      "rows": 257,
+      "columns": [
+        "source_file",
+        "season_folder",
+        "folder",
+        "team",
+        "match_date",
+        "event_code",
+        "tickets_in_purchase",
+        "n_purchases",
+        "n_tickets_approx"
+      ]
+    },
+    "season_ticket_snapshot_agg": {
+      "rows": 943,
+      "columns": [
+        "source_file",
+        "team",
+        "tribune",
+        "block",
+        "tarif",
+        "channel",
+        "delivery",
+        "sale_month",
+        "n_seats",
+        "revenue_chf"
+      ]
+    },
+    "tickets_hist_agg": {
+      "rows": 19778,
+      "columns": [
+        "source_file",
+        "season_label",
+        "event_date",
+        "event_id",
+        "event_label",
+        "opponent",
+        "is_match",
+        "price_category",
+        "channel",
+        "seat_group",
+        "tarif",
+        "delivery",
+        "goods_type",
+        "cancel_status",
+        "sale_status",
+        "entered",
+        "n_rows",
+        "n_tickets",
+        "revenue_chf"
+      ]
+    },
+    "tickets_hist_leadtime": {
+      "rows": 30456,
+      "columns": [
+        "source_file",
+        "season_label",
+        "event_date",
+        "event_id",
+        "event_label",
+        "opponent",
+        "is_match",
+        "channel",
+        "seat_group",
+        "lead_days",
+        "n_rows",
+        "n_tickets",
+        "n_entered"
+      ]
+    },
+    "tickets_hist_entry_minute": {
+      "rows": 7861,
+      "columns": [
+        "source_file",
+        "season_label",
+        "event_date",
+        "event_id",
+        "event_label",
+        "opponent",
+        "is_match",
+        "entry_minute",
+        "n_entries"
+      ]
+    },
+    "match_coverage": {
+      "rows": 130,
+      "columns": [
+        "match_date",
+        "context",
+        "has_context",
+        "history",
+        "has_history",
+        "catering",
+        "has_catering",
+        "access_scans",
+        "has_access_scans",
+        "ticket_csv",
+        "has_ticket_csv",
+        "einzeltickets",
+        "has_einzeltickets",
+        "season",
+        "n_sources",
+        "history_ist",
+        "scans_vs_ist_rate",
+        "access_complete"
+      ]
+    }
+  },
+  "checks": [
+    {
+      "check_id": "K-SCHOOL-HOLIDAY",
+      "description": "Schulferien vor 2021/22 durch Recherche ersetzt (D-017 b)",
+      "status": "OK",
+      "detail": "0 Spiele ersetzt, davon 0 geändert; ohne Abdeckung: 18"
+    },
+    {
+      "check_id": "K-SCHOOL-HOLIDAY-XCHECK",
+      "description": "Gegenprobe Teamwerte ab 2021/22 vs. Recherche",
+      "status": "OK",
+      "detail": "96 geprüft, 0 abweichend"
+    },
+    {
+      "check_id": "A-ErlaubteZutritteHerren.xlsx",
+      "description": "Zutrittsdatei gelesen",
+      "status": "OK",
+      "detail": "393739 Scans; ohne Zeitstempel: 0"
+    },
+    {
+      "check_id": "A-zugangsdaten_herren_alteSaisons.txt",
+      "description": "Zutrittsdatei gelesen",
+      "status": "OK",
+      "detail": "128551 Scans; ohne Zeitstempel: 0"
+    },
+    {
+      "check_id": "A-zugangsdaten_herren_inhouse.csv",
+      "description": "Zutrittsdatei gelesen",
+      "status": "OK",
+      "detail": "523725 Scans; ohne Zeitstempel: 0"
+    },
+    {
+      "check_id": "A-SUM-summary",
+      "description": "Summenerhalt Zutritt → summary",
+      "status": "OK",
+      "detail": "1046015 / 1046015"
+    },
+    {
+      "check_id": "A-SUM-sector_minute",
+      "description": "Summenerhalt Zutritt → sector_minute",
+      "status": "OK",
+      "detail": "1046015 / 1046015"
+    },
+    {
+      "check_id": "A-SUM-reader",
+      "description": "Summenerhalt Zutritt → reader",
+      "status": "OK",
+      "detail": "1046015 / 1046015"
+    },
+    {
+      "check_id": "A-SUM-coding",
+      "description": "Summenerhalt Zutritt → coding",
+      "status": "OK",
+      "detail": "1046015 / 1046015"
+    },
+    {
+      "check_id": "D016-ticket_csv",
+      "description": "Frauen-Ticketdateien nicht gelesen (D-016)",
+      "status": "OK",
+      "detail": "6 Dateien übersprungen"
+    },
+    {
+      "check_id": "T-SUM-tickets_single_agg",
+      "description": "Summenerhalt Tickets → tickets_single_agg",
+      "status": "OK",
+      "detail": "180167 / 180167"
+    },
+    {
+      "check_id": "T-SUM-tickets_single_leadtime",
+      "description": "Summenerhalt Tickets → tickets_single_leadtime",
+      "status": "OK",
+      "detail": "180167 / 180167"
+    },
+    {
+      "check_id": "T-PURCHASE",
+      "description": "Kaufgrössen: Anzahl Käufe aus Rechnungsnummern (nur gezählt)",
+      "status": "OK",
+      "detail": "82094 Käufe; ab 10 Tickets gekappt"
+    },
+    {
+      "check_id": "T-SUM-abo",
+      "description": "Summenerhalt Saisonabos",
+      "status": "OK",
+      "detail": "13052 Abo-Sitze"
+    },
+    {
+      "check_id": "E-Einzeltickets_2021-22.xlsx",
+      "description": "Einzelticket-Export gelesen (Tabs zusammengeführt)",
+      "status": "OK",
+      "detail": "107791 Zeilen aus 2 Tabs"
+    },
+    {
+      "check_id": "E-Einzeltickets_2022-23.xlsx",
+      "description": "Einzelticket-Export gelesen (Tabs zusammengeführt)",
+      "status": "OK",
+      "detail": "139747 Zeilen aus 3 Tabs"
+    },
+    {
+      "check_id": "E-Einzeltickets_2023-24.xlsx",
+      "description": "Einzelticket-Export gelesen (Tabs zusammengeführt)",
+      "status": "OK",
+      "detail": "132439 Zeilen aus 3 Tabs"
+    },
+    {
+      "check_id": "E-Einzeltickets_2024-25.xlsx",
+      "description": "Einzelticket-Export gelesen (Tabs zusammengeführt)",
+      "status": "OK",
+      "detail": "108316 Zeilen aus 2 Tabs"
+    },
+    {
+      "check_id": "E-SUM-tickets_hist_agg",
+      "description": "Summenerhalt Einzeltickets → tickets_hist_agg",
+      "status": "OK",
+      "detail": "488293 / 488293"
+    },
+    {
+      "check_id": "E-SUM-tickets_hist_leadtime",
+      "description": "Summenerhalt Einzeltickets → tickets_hist_leadtime",
+      "status": "OK",
+      "detail": "488293 / 488293"
+    },
+    {
+      "check_id": "E-SUM-entry",
+      "description": "Summenerhalt Eintritte → Minutenprofil",
+      "status": "OK",
+      "detail": "290115 Eintritte"
+    },
+    {
+      "check_id": "D016-context_match",
+      "description": "Frauen-Events entfernt (D-016) → context_match",
+      "status": "OK",
+      "detail": "0 von 114 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016-attendance_history",
+      "description": "Frauen-Events entfernt (D-016) → attendance_history",
+      "status": "OK",
+      "detail": "13 von 401 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016-catering_match",
+      "description": "Frauen-Events entfernt (D-016) → catering_match",
+      "status": "OK",
+      "detail": "41 von 277 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016-catering_season_summary",
+      "description": "Frauen-Events entfernt (D-016) → catering_season_summary",
+      "status": "OK",
+      "detail": "6 von 88 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016-kiesplatz_event_stand",
+      "description": "Frauen-Events entfernt (D-016) → kiesplatz_event_stand",
+      "status": "OK",
+      "detail": "126 von 7236 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016-access_match_summary",
+      "description": "Frauen-Events entfernt (D-016) → access_match_summary",
+      "status": "OK",
+      "detail": "0 von 108 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016-access_sector_minute",
+      "description": "Frauen-Events entfernt (D-016) → access_sector_minute",
+      "status": "OK",
+      "detail": "0 von 36289 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016-access_reader",
+      "description": "Frauen-Events entfernt (D-016) → access_reader",
+      "status": "OK",
+      "detail": "0 von 3249 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016-access_coding",
+      "description": "Frauen-Events entfernt (D-016) → access_coding",
+      "status": "OK",
+      "detail": "0 von 1768 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016-tickets_single_agg",
+      "description": "Frauen-Events entfernt (D-016) → tickets_single_agg",
+      "status": "OK",
+      "detail": "0 von 8944 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016-tickets_single_leadtime",
+      "description": "Frauen-Events entfernt (D-016) → tickets_single_leadtime",
+      "status": "OK",
+      "detail": "0 von 5133 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016-tickets_single_purchase_size",
+      "description": "Frauen-Events entfernt (D-016) → tickets_single_purchase_size",
+      "status": "OK",
+      "detail": "0 von 257 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016-season_ticket_snapshot_agg",
+      "description": "Frauen-Events entfernt (D-016) → season_ticket_snapshot_agg",
+      "status": "OK",
+      "detail": "0 von 943 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016-tickets_hist_agg",
+      "description": "Frauen-Events entfernt (D-016) → tickets_hist_agg",
+      "status": "OK",
+      "detail": "134 von 19912 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016-tickets_hist_leadtime",
+      "description": "Frauen-Events entfernt (D-016) → tickets_hist_leadtime",
+      "status": "OK",
+      "detail": "113 von 30569 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016-tickets_hist_entry_minute",
+      "description": "Frauen-Events entfernt (D-016) → tickets_hist_entry_minute",
+      "status": "OK",
+      "detail": "224 von 8085 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016N-context_match",
+      "description": "Länderspiel-Anlässe entfernt (D-016) → context_match",
+      "status": "OK",
+      "detail": "0 von 114 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016N-attendance_history",
+      "description": "Länderspiel-Anlässe entfernt (D-016) → attendance_history",
+      "status": "OK",
+      "detail": "22 von 388 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016N-catering_match",
+      "description": "Länderspiel-Anlässe entfernt (D-016) → catering_match",
+      "status": "OK",
+      "detail": "16 von 236 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016N-catering_season_summary",
+      "description": "Länderspiel-Anlässe entfernt (D-016) → catering_season_summary",
+      "status": "OK",
+      "detail": "9 von 82 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016N-kiesplatz_event_stand",
+      "description": "Länderspiel-Anlässe entfernt (D-016) → kiesplatz_event_stand",
+      "status": "OK",
+      "detail": "189 von 7110 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016N-access_match_summary",
+      "description": "Länderspiel-Anlässe entfernt (D-016) → access_match_summary",
+      "status": "OK",
+      "detail": "0 von 108 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016N-tickets_hist_agg",
+      "description": "Länderspiel-Anlässe entfernt (D-016) → tickets_hist_agg",
+      "status": "OK",
+      "detail": "0 von 19778 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016N-tickets_hist_leadtime",
+      "description": "Länderspiel-Anlässe entfernt (D-016) → tickets_hist_leadtime",
+      "status": "OK",
+      "detail": "0 von 30456 Zeilen entfernt"
+    },
+    {
+      "check_id": "D016N-tickets_hist_entry_minute",
+      "description": "Länderspiel-Anlässe entfernt (D-016) → tickets_hist_entry_minute",
+      "status": "OK",
+      "detail": "0 von 7861 Zeilen entfernt"
+    },
+    {
+      "check_id": "P-01",
+      "description": "Keine Ausgabespalte mit Personenbezug (Heuristik)",
+      "status": "OK",
+      "detail": "18 Tabellen geprüft"
+    }
+  ],
+  "source_reports": {
+    "attendance_history": {
+      "rows_without_date": 2,
+      "non_numeric": {}
+    },
+    "catering": {
+      "2018-2019": {
+        "rows": 23,
+        "rows_skipped_no_date": 1,
+        "non_numeric_cells": {}
+      },
+      "2019-2020": {
+        "rows": 25,
+        "rows_skipped_no_date": 1,
+        "non_numeric_cells": {}
+      },
+      "2020-2021": {
+        "rows": 6,
+        "rows_skipped_no_date": 1,
+        "non_numeric_cells": {}
+      },
+      "2021-2022": {
+        "rows": 29,
+        "rows_skipped_no_date": 2,
+        "non_numeric_cells": {
+          "kf_gross_reported": 6,
+          "kf_net_reported": 6
+        }
+      },
+      "2022-2023": {
+        "rows": 46,
+        "rows_skipped_no_date": 5,
+        "non_numeric_cells": {
+          "kf_gross_reported": 13,
+          "kf_net_reported": 13
+        }
+      },
+      "2023-2024": {
+        "rows": 43,
+        "rows_skipped_no_date": 5,
+        "non_numeric_cells": {
+          "public_attendance": 5,
+          "transactions": 1,
+          "kf_gross_reported": 7,
+          "kf_net_reported": 7,
+          "avg_receipt_gross_reported": 1,
+          "avg_receipt_net_reported": 1
+        }
+      },
+      "2024-2025": {
+        "rows": 48,
+        "rows_skipped_no_date": 3,
+        "non_numeric_cells": {
+          "guest_sector_attendance": 13,
+          "public_attendance": 9,
+          "kf_gross_reported": 9,
+          "kf_net_reported": 9,
+          "avg_receipt_gross_reported": 1,
+          "avg_receipt_net_reported": 1
+        }
+      },
+      "2025-2026": {
+        "rows": 45,
+        "rows_skipped_no_date": 5,
+        "non_numeric_cells": {
+          "guest_sector_attendance": 13,
+          "public_attendance": 4,
+          "kf_gross_reported": 4,
+          "kf_net_reported": 4
+        }
+      },
+      "2026-2027": {
+        "rows": 12,
+        "rows_skipped_no_date": 41,
+        "non_numeric_cells": {}
+      }
+    }
+  }
+}

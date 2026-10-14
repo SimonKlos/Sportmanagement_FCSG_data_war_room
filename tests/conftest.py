@@ -83,8 +83,9 @@ def make_clean_tables() -> dict[str, pd.DataFrame]:
             rows_k.append({"match_date": date, "season": season, "opponent": f"Test {g}", "table_rank_fcsg": 5.0,
                            "table_rank_opp": float(1 + g), "table_points_opp": float(30 - g), "form_fcsg_points": 7.0,
                            "form_opp_points": float(rng.integers(0, 15)), "tv_free_srf": float(g % 2),
-                           "temp_day_mean_c": 10.0 + g, "precip_day_mm": float(rng.integers(0, 5)),
-                           "wind_day_kmh": 10.0, "school_holiday": float(g % 3 == 0), "school_holiday_source": "team",
+                           "temp_c": 10.0 + g, "precip_mm": float(rng.integers(0, 5)),
+                           "wind_kmh": 10.0, "weather_basis": "Anstossstunde", "covid_measures": 0.0,
+                           "opponent_category": "Übrige", "school_holiday": float(g % 3 == 0), "school_holiday_source": "team",
                            "public_holiday": 0.0, "parallel_event": 0.0})
             if s_i == 1:
                 rows_sl += [{"source_file": "x.csv", "season_folder": "2099", "folder": "MS", "team": "Herren",

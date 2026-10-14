@@ -8,4 +8,4 @@ output_dir: C:/FCSG_Daten/outputs         # Laufordner echter Analysen (ausserha
 clean_dir: data/clean                     # bereinigte Tabellen, relativ zum Projektroot (von Git ausgeschlossen)
 timezone: Europe/Zurich
 extra_input_files:
-  - Spielkontext_Tabelle_FCSG_3.xlsx      # Spielkontext-Tabelle des Teams im Projektroot (von Git ausgeschlossen)
+  - Spielkontext_Tabelle_FCSG_5.xlsx      # Spielkontext-Tabelle des Teams im Projektroot (von Git ausgeschlossen)
