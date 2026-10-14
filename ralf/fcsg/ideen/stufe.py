@@ -213,14 +213,19 @@ def kennzahlen(e: dict[str, pd.DataFrame], res: dict) -> dict:
     kz["aus_anw_montag"] = int((apa["wochentag"] == "Montag").sum())
     kz["aus_anw_n"] = len(apa)
 
-    fr = e["randfelder_frauen"]
-    fd = fr[fr["familyday"]]
-    kz["fr_fd_ist_min"], kz["fr_fd_ist_max"] = fd["ist"].min(), fd["ist"].max()
-    kz["fr_fd_ns_max"] = fd["noshow_quote"].max()
-    kz["fr_fd_kf_min"], kz["fr_fd_kf_max"] = fd["kf_inkl"].min(), fd["kf_inkl"].max()
+    # Randfelder ohne Frauen und Länderspiele (D-016/D-036)
     rk = e["randfelder_kategorien"]
-    nati = rk[rk["kategorie"].str.startswith("Länderspiele")]
-    kz["nati_kf"] = (nati["umsatz_inkl"].sum() / nati["public_anwesende"].sum()) if len(nati) else np.nan
+
+    def _kf(kat):
+        g = rk[rk["kategorie"] == kat]
+        return (g["umsatz_inkl"].sum() / g["public_anwesende"].sum()) if len(g) and g["public_anwesende"].sum() > 0 else np.nan
+
+    kz["rf_kf_herren_sl"] = _kf("Herren Meisterschaft")
+    kz["rf_kf_test"] = _kf("Testspiele")
+    kz["rf_kf_u21"] = _kf("U21")
+    ev = rk[rk["kategorie"] == "Events ohne Spiel"]["anteil_am_catering_umsatz"]
+    kz["rf_event_anteil_min"], kz["rf_event_anteil_max"] = ev.min(), ev.max()
+    kz["rf_test_anlaesse"] = int(rk.loc[rk["kategorie"] == "Testspiele", "anlaesse"].sum())
 
     mx = res["kontext_effekt_matrix"].set_index(["zielgroesse", "variable"])["effekt"]
     kz["ktx_abend_anw"] = mx.get(("Anwesenheitsquote (IST/SOLL)", abend))

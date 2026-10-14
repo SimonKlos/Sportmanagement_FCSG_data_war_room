@@ -4,7 +4,7 @@ Stand 14.10.2026 · erstellt von Simon (mit Claude Code) · intern, vertraulich 
 Team, nichts davon ist entschieden** (Entscheide → `docs/decisions.md`, D-027).
 
 Grundlage: Run 3 (`outputs/run3_kontext-v5_2026-10-14/`, Ralfs Kern mit Kontexttabelle v5 = Zahlenbasis, D-028),
-Ralfs Ideen-Grundlage (`outputs/run2_ralf_2026-10-13/ideen_grundlage/`), Abgleich Simon/Ralf
+Ralfs Ideen-Grundlage (`outputs/run3_kontext-v5_2026-10-14/ralf_ideen_grundlage/`, ohne Frauen und Länderspiele), Abgleich Simon/Ralf
 (`docs/team/2026-10-14_abgleich_ralf_und_entscheide.md`).
 
 ---
@@ -66,7 +66,7 @@ Wetter-/Kiesplatz-Playbook und ein Angebot für späte Ankünfte an Werktagen. *
 Einstandspreise/Marge (Datenanfrage 5). Ohne sie gibt es **keinen Deckungsbeitrag** (D-003).
 
 **Nachrangig:** Chancenfeld 8 «Erfolgsmuster» (schwache Evidenz: 11 von 12 KF-Spitzenspielen samstags, 10 davon um
-18:00) und Chancenfeld 9 «Nicht-Herren-Tage» (erst D-036 entscheiden).
+18:00) und Chancenfeld 9 «weitere Anlässe» (Testspiele, U21, Events; Frauen und Länderspiele ausgeklammert, D-036).
 
 ## 3. Was in Phase 1 noch fehlt (Vorschlag, priorisiert)
 
@@ -74,10 +74,10 @@ Einstandspreise/Marge (Datenanfrage 5). Ohne sie gibt es **keinen Deckungsbeitra
 |---|---|---|---|
 | 1 | **Termin Sandro 16.10.:** SOLL/IST/VIP/Public Netto (D-004), Umsatz-/MwSt-Basis inkl. CHF 14.51 = KF exkl. MwSt (D-005), Pseudonym-IDs (D-035), Information über die 6 Datumskorrekturen (D-030), Datenanfragen 1–7 priorisiert übergeben | Simon, Reto | 16.10. |
 | 2 | **Steuerungsgrösse klären:** D-003 (DB) und Ralfs Rechnung auf Umsatz (D-029) widersprechen sich formal. Vorschlag: Phase 1 = Umsatz als belastbare Basis, DB-Ziel bleibt, sobald Kosten und Beteiligungsmodell vorliegen | Team | 23.10. |
-| 3 | **Offene Methodenentscheide** D-031 (externe Daten), D-032 (Abgrenzung «letzte 15 Min.»), D-033 (Variablen und Schwellen, u. a. Anstosszeit als Slots: Sa 18:00), D-036 (Frauen in der Ideen-Grundlage), D-026 (unsere H1–H3 in Ralfs Effekt-Matrix überführen oder archivieren) | Team mit Ralf | 23.10. |
+| 3 | **Offene Methodenentscheide** D-031 (externe Daten), D-032 (Abgrenzung «letzte 15 Min.»), D-033 (Variablen und Schwellen, u. a. Anstosszeit als Slots: Sa 18:00), D-026 (unsere H1–H3 in Ralfs Effekt-Matrix überführen oder archivieren) | Team mit Ralf | 23.10. |
 | 4 | **Baseline-Freigabe dokumentieren** (neuer D-Eintrag), dann Kontextmodelle und Diagnosekarte als Phase-1-Ergebnis final; die Diagnosekarte nur als Prüfkandidaten, ohne Potenzialsumme | Team | 06.11. |
 | 5 | **Technik:** Ralfs Einverständnis zur Übernahme dokumentieren; unsere Tests mit künstlichen Daten auf Ralfs Kern übertragen (laufen ohne Rohdaten, auch auf dem Mac); Notebook auf Ralfs `mart_match` umstellen; unsere Analyse-Pipeline danach stilllegen, Bereinigung und Datenschutzprüfung behalten. Bekannte Schwäche unserer Pipeline: Datumsparser (27.09.2023 übersprungen) | Simon | 30.10. |
-| 6 | **Ideen-Grundlage neu rechnen**, sobald D-036 entschieden ist (heute noch auf Kontexttabelle v3, Phase 1 unverändert) | Simon | nach D-036 |
+| 6 | ~~Ideen-Grundlage neu rechnen~~ – erledigt 14.10.2026 (Run 3, ohne Frauen und Länderspiele, QA 18/18) | Simon | ✅ |
 
 ## 4. Übergang in Phase 2 (09.–20.11.)
 

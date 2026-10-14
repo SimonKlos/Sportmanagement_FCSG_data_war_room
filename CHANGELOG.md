@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.5.1 – 14.10.2026
+- **D-036 entschieden, D-016 ergänzt (Simon):** Frauen-Spiele **und Länderspiele** (Nationalteams, WEURO 2025,
+  Nati-Trainings, Public Viewings) werden überall ignoriert.
+  - Ralfs Ideen-Grundlage angepasst (`ralf/fcsg/ideen/`: Randfelder ohne Frauen/Länderspiele, Blatt F2 entfällt,
+    Chancenfeld 9 neu «Das Stadion an weiteren Anlässen») und in Run 3 neu gerechnet (`ralf_ideen_grundlage/`, QA 18/18).
+  - Simons Bereinigung: neuer Filter `drop_national_team` (Prüfungen `D016N-*`, Herren-Pflichtspiele geschützt) + Test;
+    entfernt 22 Historie-, 16 Catering-, 9 Saisonsummen- und 189 Kiesplatz-Zeilen. Analyse-Ergebnisse unverändert.
+  - Run 3 aktualisiert (Gegenrechnung mit bereinigtem Lauf `20261014T215420_clean_0cf1`); Phase 1 von Ralf identisch.
+
 ## 0.5.0 – 14.10.2026
 - **Ralfs Rechenkern übernommen (D-028 entschieden, Simon):** Code v1.1.0 unter `ralf/` (inkl. Tests, Korrekturen,
   öffentliche Zusatzdaten), Einbindung beschrieben in `ralf/README_REPO.md`. Einzige Codeänderung am Kern: Einlesen der

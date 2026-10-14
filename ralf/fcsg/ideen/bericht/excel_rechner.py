@@ -69,8 +69,7 @@ BLAETTER = [
     ("ausreisser_zaehlung", "D1_Ausreisser_Zaehlung", "Spiele ausserhalb des 80 %-Bands vs. Zufallserwartung."),
     ("ausreisser_positiv", "D2_Ausreisser_Positiv", "Positive Ausreisser mit Merkmalen."),
     ("ausreisser_merkmale", "D3_Ausreisser_Merkmale", "Merkmalsvergleich positive Ausreisser vs. übrige."),
-    ("randfelder_kategorien", "F1_Randfelder_Kategorien", "Catering nach Anlass-Kategorie (inkl. Frauen, Länderspiele, Events)."),
-    ("randfelder_frauen", "F2_Randfelder_Frauen", "Frauen-Spiele: Ort, Familyday, Promo, No-Show, KF."),
+    ("randfelder_kategorien", "F1_Randfelder_Kategorien", "Catering nach Anlass-Kategorie (ohne Frauen und Länderspiele, D-016)."),
     ("grafiken_ideen", "G1_Grafiken", "Verzeichnis der Grafiken mit Kernaussage und Datenblatt."),
     ("qa_ideen", "Q1_Qualitaetspruefung", "Automatisierte Prüfungen der Ideen-Grundlage."),
 ]

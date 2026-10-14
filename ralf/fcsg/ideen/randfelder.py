@@ -1,18 +1,19 @@
-"""Randfelder ausserhalb des Phase-1-Kernscopes (explorativ): Frauen, Länderspiele/WEURO, Testspiele und Events.
+"""Randfelder ausserhalb des Phase-1-Kernscopes (explorativ): Testspiele, U21, Fremdclubs und Events.
 
 Phase 1 schliesst diese Anlässe dokumentiert aus (Unmatched-Report). Für die Ideenfindung zeigen sie, wie das Stadion
-an Nicht-Herren-Tagen genutzt wird. Nur Aggregate; kleine Anlässe sind teils im Espenmoos (nicht kybunpark).
+an weiteren Anlässen genutzt wird. Nur Aggregate.
+
+**Team-Repo (D-016/D-036, 14.10.2026):** Frauen-Spiele und Länderspiele (inkl. WEURO 2025) werden ignoriert – sie
+erscheinen weder als Kategorie noch in einer eigenen Auswertung (früher Blatt F2_Randfelder_Frauen).
 """
 from __future__ import annotations
-
-import re
 
 import numpy as np
 import pandas as pd
 
-KATEGORIE = {"SL": "Herren Meisterschaft", "Cup": "Herren Cup", "UEFA": "Herren UEFA", "Frauen": "Frauen",
-             "Nati": "Länderspiele (inkl. WEURO 2025)", "Test": "Testspiele", "Event": "Events ohne Spiel", "U21": "U21",
-             "Fremdclub": "Fremdclubs"}
+# Frauen ("Frauen") und Länderspiele ("Nati", "Nati Frauen") bewusst nicht enthalten (D-016/D-036).
+KATEGORIE = {"SL": "Herren Meisterschaft", "Cup": "Herren Cup", "UEFA": "Herren UEFA", "Test": "Testspiele",
+             "Event": "Events ohne Spiel", "U21": "U21", "Fremdclub": "Fremdclubs"}
 
 
 def kategorien(r) -> pd.DataFrame:
@@ -36,39 +37,6 @@ def kategorien(r) -> pd.DataFrame:
     return out
 
 
-def _promo(text) -> float:
-    m = re.search(r"Promo-Tickets:\s*([\d']+)", str(text or ""))
-    return float(m.group(1).replace("'", "")) if m else np.nan
-
-
-def frauen(r) -> pd.DataFrame:
-    h = r.historie[(r.historie["wettbewerb"] == "Frauen") & (r.historie["saison"] >= "2022/23")]
-    c = r.catering[(r.catering["wettbewerb"] == "Frauen") & (r.catering["saison"] >= "2022/23")]
-    z = r.zutritt_frauen.set_index("datum")["besucher"] if not r.zutritt_frauen.empty else pd.Series(dtype=float)
-    rows = []
-    for _, x in c.iterrows():
-        hh = h[h["datum"] == x["datum"]]
-        bem = str(x.get("bemerkung") or "")
-        if "espenmoos" in bem.lower():
-            ort = "Espenmoos"
-        elif not pd.isna(z.get(x["datum"], np.nan)) or re.search(r"kybunpark|sektor|stand|haupttribüne|plattform|\b[abcd]\d\b", bem, re.I):
-            ort = "kybunpark"
-        else:
-            ort = "unbekannt"
-        hz = hh.iloc[0] if len(hh) else None
-        rows.append({"datum": x["datum"], "saison": x["saison"], "spiel": x["spiel"], "ort": ort,
-                     "familyday": bool(re.search(r"family ?day", bem + " " + str(hz["bemerkung"] if hz is not None else ""), re.I)),
-                     "soll": hz["soll"] if hz is not None else np.nan, "ist": hz["ist"] if hz is not None else np.nan,
-                     "scans": z.get(x["datum"], np.nan),
-                     "promo_tickets": _promo(hz["bemerkung"]) if hz is not None else np.nan,
-                     "public_anwesende_catering": x["public_netto"], "umsatz_inkl": x["umsatz_inkl"],
-                     "kf_inkl": x["umsatz_inkl"] / x["public_netto"] if x["public_netto"] and x["public_netto"] > 0 else np.nan,
-                     "bons_pro_anwesende": x["transaktionen"] / x["public_netto"] if x["public_netto"] and x["public_netto"] > 0 else np.nan})
-    out = pd.DataFrame(rows).sort_values("datum")
-    out["noshow_quote"] = 1 - out["ist"] / out["soll"]
-    out["hinweis"] = "ausserhalb Kernscope; Espenmoos = kleines Stadion ohne Zutrittsdaten; Promo-Tickets laut Bemerkung Historie"
-    return out
-
 
 def rechne(r) -> dict[str, pd.DataFrame]:
-    return {"randfelder_kategorien": kategorien(r), "randfelder_frauen": frauen(r)}
+    return {"randfelder_kategorien": kategorien(r)}

@@ -1,5 +1,5 @@
 # Methodennotiz Phase 1 – Datenverknüpfung & Kontextbereinigung
-*FCSG «Untapped Business» · Auswertung v1.1.0 · erstellt 2026-10-14 21:32:09 · Datenstand: letztes Spiel mit IST 12.09.2026*
+*FCSG «Untapped Business» · Auswertung v1.1.0 · erstellt 2026-10-14 21:50:41 · Datenstand: letztes Spiel mit IST 12.09.2026*
 
 > Umsetzung des «Arbeitsauftrags Modellierung» (Pakete A–E) auf Basis von Retos Datenquellen-Übersicht. Alle Zahlen stammen aus den Projektdateien und werden beim Lauf von `run_all.py` neu berechnet. Ausgegeben werden nur Aggregate; Personenfelder werden beim Einlesen verworfen.
 

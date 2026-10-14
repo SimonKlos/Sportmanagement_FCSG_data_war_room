@@ -7,13 +7,13 @@
 
 | Teil | Befehl | Lauf-ID / Stand | Prüfstatus |
 |---|---|---|---|
-| `ralf_kern_phase1/` | `cd ralf; run_all.py --daten <Lieferung> --kontext Spielkontext_Tabelle_FCSG_5.xlsx --ausgabe … --ohne-ideen` | 14.10.2026, Code v1.1.0 + Anpassung Kontext v5 | Importtests 19/19; 6 Datumskorrekturen angewendet (D-030); 35 Befunde (7 hoch = Korrekturen + Kiesplatz-Doppelzählungshinweis) |
-| `simon_baseline/` | `fcsg.cli prepare-data` + `fcsg.cli analyze` | bereinigt `20261014T213035_clean_982b`, Analyse `20261014T213203_baseline_ddcd` | Analyse 16 OK / 1 WARN (Q01 Catering 23/24), Readback bestanden |
+| `ralf_kern_phase1/` + `ralf_ideen_grundlage/` | `cd ralf; run_all.py --daten <Lieferung> --kontext Spielkontext_Tabelle_FCSG_5.xlsx --ausgabe …/ralf_kern_phase1 --ideen-ausgabe …/ralf_ideen_grundlage` | 14.10.2026 21:50, Code v1.1.0 + Anpassungen Kontext v5 (D-034) und ohne Frauen/Länderspiele (D-036) | Importtests 19/19; 6 Datumskorrekturen angewendet (D-030); 35 Befunde (7 hoch = Korrekturen + Kiesplatz-Doppelzählungshinweis) |
+| `simon_baseline/` | `fcsg.cli prepare-data` + `fcsg.cli analyze` | bereinigt `20261014T215420_clean_0cf1` (ohne Frauen und Länderspiele), Analyse `20261014T215526_baseline_24bd` | Analyse 16 OK / 1 WARN (Q01 Catering 23/24), Readback bestanden |
 | `abgleich_simon_ralf/` | `python -m fcsg.abgleich …` | – | siehe unten |
 
 - **Rohdaten:** Lieferung «20261003_Input Sandro» (unverändert; Prüfsummen in `ralf_kern_phase1/Laufprotokoll.json` und `simon_baseline/bereinigung/manifest.json`).
 - **Spielkontext:** `Spielkontext_Tabelle_FCSG_5.xlsx` (SHA-256 `a04128384abca267`, D-034): 114 Heimspiele 21/22–26/27, 108 gespielt.
-- **Ideen-Grundlage** nicht neu gerechnet (D-036 offen) → weiterhin `../run2_ralf_2026-10-13/ideen_grundlage/`.
+- **Ideen-Grundlage** neu gerechnet (`ralf_ideen_grundlage/`, QA 18/18): **ohne Frauen und Länderspiele** (D-016/D-036); Chancenfeld 9 heisst jetzt «Das Stadion an weiteren Anlässen» (Testspiele, U21, Events). Kein PDF (kein Chrome/Edge auf dem Rechner) – `Ideen_Grundlage_FCSG.html` im Browser öffnen und bei Bedarf als PDF drucken. Phase 1 durch den erneuten Lauf unverändert (alle Tabellen identisch, nur Zeitstempel).
 
 ## Ergebnis 1: Version 5 bestätigt Run 2 (Ralf, Version 3)
 

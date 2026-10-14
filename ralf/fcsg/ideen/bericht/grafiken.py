@@ -447,17 +447,15 @@ def ausreisser(e, kz, res, ordner, liste):
 
 
 def randfelder(e, kz, ordner, liste):
+    """KF je Anlass-Kategorie ohne Frauen und Länderspiele (D-016/D-036)."""
     rk = e["randfelder_kategorien"]
-    fr = e["randfelder_frauen"]
     sl = rk[(rk["kategorie"] == "Herren Meisterschaft") & (rk["saison"] == "2025/26")]
-    nati = rk[rk["kategorie"].str.startswith("Länderspiele")]
-    fd = fr[fr["familyday"]]
-    fo = fr[~fr["familyday"] & (fr["ort"] == "kybunpark")]
-    werte = [("Herren Meisterschaft 2025/26", sl["umsatz_inkl"].sum() / sl["public_anwesende"].sum(), GRAU),
-             ("Länderspiele / WEURO", nati["umsatz_inkl"].sum() / nati["public_anwesende"].sum(), BLAU),
-             ("Frauen – Familyday (kybunpark)", fd["umsatz_inkl"].sum() / fd["public_anwesende_catering"].sum(), BLAU),
-             ("Frauen – übrige Spiele (kybunpark)", fo["umsatz_inkl"].sum() / fo["public_anwesende_catering"].sum(), BLAU)]
-    fig, ax = plt.subplots(figsize=(7.6, 2.8))
+    werte = [("Herren Meisterschaft 2025/26", sl["umsatz_inkl"].sum() / sl["public_anwesende"].sum(), GRAU)]
+    for kat in ("Testspiele", "U21", "Fremdclubs"):
+        g = rk[rk["kategorie"] == kat]
+        if len(g) and g["public_anwesende"].sum() > 0:
+            werte.append((f"{kat} (2022/23–)", g["umsatz_inkl"].sum() / g["public_anwesende"].sum(), BLAU))
+    fig, ax = plt.subplots(figsize=(7.6, 0.6 + 0.55 * len(werte)))
     y = np.arange(len(werte))[::-1]
     for yi, (label, wert, farbe) in zip(y, werte):
         ax.barh(yi, wert, color=farbe, height=0.55)
@@ -468,10 +466,10 @@ def randfelder(e, kz, ordner, liste):
     ax.xaxis.set_major_formatter(mtick.FuncFormatter(lambda v, _: f"{v:.0f}"))
     ax.set_xlabel("Kundenfranken inkl. MwSt in CHF (Summe Umsatz / Summe Public-Anwesende)")
     _hbar_raster(ax)
-    ax.set_title("Kundenfranken an Nicht-Herren-Tagen (ausserhalb Kernscope, explorativ)")
-    _speichern(fig, ordner, "abb_i17_randfelder.png", "Nicht-Herren-Tage",
-               "Länderspiele erreichen Herren-Niveau; Frauen-Spiele liegen tiefer, Familydays füllen das Stadion mit Promo-Tickets.",
-               "Randfelder_Kategorien, Randfelder_Frauen", liste)
+    ax.set_title("Kundenfranken an weiteren Anlässen (ausserhalb Kernscope, explorativ)")
+    _speichern(fig, ordner, "abb_i17_randfelder.png", "Weitere Anlässe",
+               "Test- und U21-Spiele im Vergleich zur Herren-Meisterschaft; Frauen und Länderspiele ausgeklammert (D-016).",
+               "Randfelder_Kategorien", liste)
 
 
 def erstelle(e: dict, kz: dict, res: dict, ordner: Path) -> pd.DataFrame:

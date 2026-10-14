@@ -19,6 +19,7 @@
 | `phase1/Tabellen/`, `phase1/Abbildungen/` | wichtigste Tabellen als CSV, 13 Grafiken |
 | `ideen_grundlage/Ideen_Grundlage_FCSG.html` / `.pdf` / `.md` / `.xlsx` | 9 Chancenfelder mit Evidenz, Steuerbarkeit, Leitfragen; Hebel-Rechner und Szenarien (Excel); Reto-Check |
 
-**Hinweis D-036:** Die Ideen-Grundlage enthält Auswertungen zu Frauen-Spielen (Blätter F1/F2, Chancenfeld 9). Das
-widerspricht D-016 («Frauen-Daten fallen ganz weg») und ist als offener Entscheid erfasst. Die CHF-Werte der
+**Hinweis D-036 (entschieden 14.10.2026):** Diese Fassung enthält noch Auswertungen zu Frauen-Spielen und Länderspielen
+(Blätter F1/F2, Chancenfeld 9). Gültig ist die neu gerechnete Fassung ohne Frauen und Länderspiele in
+`../run3_kontext-v5_2026-10-14/ralf_ideen_grundlage/`; diese hier bleibt nur als unveränderter Schnappschuss. Die CHF-Werte der
 Ideen-Grundlage sind Caterer-Umsatz exkl. MwSt (kein Club-Ertrag), Hebel nicht addierbar.

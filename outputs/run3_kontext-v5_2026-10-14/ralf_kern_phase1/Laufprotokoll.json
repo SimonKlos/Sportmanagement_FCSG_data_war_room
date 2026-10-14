@@ -1,8 +1,8 @@
 {
-  "zeitpunkt": "2026-10-14 21:32:09",
+  "zeitpunkt": "2026-10-14 21:50:41",
   "version_auswertung": "1.1.0",
   "datenstand_letztes_spiel_mit_ist": "12.09.2026",
-  "laufzeit_sekunden": 84.7,
+  "laufzeit_sekunden": 73.2,
   "python": "3.12.10",
   "pakete": {
     "pandas": "3.0.6",

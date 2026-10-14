@@ -8,7 +8,7 @@ import pytest
 
 from fcsg.prepare import (
     PrivacyError, _catering_name, _kiesplatz_metric, apply_school_holidays, assert_no_personal_columns,
-    competition_group, drop_women, fmt_time, load_school_holidays, parse_chf, parse_form, prepare_access, prepare_ticket_csvs, reader_sector, season_of, to_date, yes_no,
+    competition_group, drop_national_team, drop_women, fmt_time, load_school_holidays, parse_chf, parse_form, prepare_access, prepare_ticket_csvs, reader_sector, season_of, to_date, yes_no,
 )
 
 
@@ -173,3 +173,22 @@ def test_school_holiday_reference_file():
     assert by_day(dt.date(2024, 8, 11)) == ["Sommerferien"] and by_day(dt.date(2024, 8, 12)) == []  # Schulbeginn
     assert by_day(dt.date(2026, 9, 26)) == ["Herbstferien"]  # Ferienplan: So 27.09.2026 → Samstag davor
     assert set(hol["source_id"]) == {"OD", "FP25", "FP26"}
+
+
+def test_drop_national_team():
+    """D-016: Länderspiele/WEURO/Nati-Trainings weg, FCSG-Spiele mit «Euro» im Namen bleiben."""
+    tables = {
+        "attendance_history": pd.DataFrame({
+            "competition": ["Nationalmannschaft", "WEURO 2025", "Super League", "UEFA Europa League"],
+            "competition_group": ["Andere", "Andere", "Liga", "UEFA"],
+            "match_label": ["Schweiz - Test", "GER - POL", "FCSG - Test", "Euro League Gruppenphase - Test"],
+            "remark": [None, None, "nach der Länderspielpause", None]}),
+        "kiesplatz_event_stand": pd.DataFrame({"event_label": ["WEURO ENG vs. WAL", "FC St.Gallen 1879 vs. FC Basel"]}),
+        "catering_match": pd.DataFrame({"competition": ["Länderspiel", "Meisterschaft"], "event_class": ["anderes_event", "fcsg_herren"],
+                                        "match_label": ["öffentliches Training CH-Nati", "FCSG vs. Test"]}),
+    }
+    checks = drop_national_team(tables)
+    assert list(tables["attendance_history"]["competition_group"]) == ["Liga", "UEFA"]
+    assert list(tables["kiesplatz_event_stand"]["event_label"]) == ["FC St.Gallen 1879 vs. FC Basel"]
+    assert list(tables["catering_match"]["event_class"]) == ["fcsg_herren"]
+    assert {c["check_id"] for c in checks} == {"D016N-attendance_history", "D016N-kiesplatz_event_stand", "D016N-catering_match"}

@@ -91,8 +91,7 @@ def chancenfelder(kz: dict) -> list[Chancenfeld]:
              f"gratis {p(kz['seg_inhouse10_quote_gratis'])}; Online-Shop mit 2–4 Tickets nur {p(kz['seg_online24_quote'], 1)}.",
              f"Je Spiel rund {z(kz['seg_inhouse10_tickets_spiel'])} Tickets aus solchen Bestellungen, davon rund "
              f"{z(kz['seg_inhouse10_noshows_spiel'])} leer.",
-             f"Gratis-/Promotickets haben generell tiefere Nutzung ({p(kz['tarif_gratis'])} statt {p(kz['tarif_voll'])} bei Vollpreis). "
-             f"An Frauen-Familydays mit Promo-Tickets blieben bis {p(kz['fr_fd_ns_max'])} der Plätze leer."],
+             f"Gratis-/Promotickets haben generell tiefere Nutzung ({p(kz['tarif_gratis'])} statt {p(kz['tarif_voll'])} bei Vollpreis)."],
             "mittel", "Klare Muster, aber nur für 2021/22–2022/23 messbar (Eintritt je Ticket danach nicht erfasst); 21/22 COVID-geprägt.",
             "hoch", "Vergabe und Bestätigung von Gruppen-/Gratiskontingenten, Rückgabe ungenutzter Tickets",
             "alle Spiele mit Gruppenkontingenten", "Prüfung mit aktuellen Eintrittsdaten je Bestellkanal nötig",
@@ -254,21 +253,23 @@ def chancenfelder(kz: dict) -> list[Chancenfeld]:
             "Spieltags-Checkliste je Spiel erfassen und Abweichungen von der Erwartung danach auswerten.",
             "abb_i16_ausreisser.png", "Blätter Ausreisser_*"),
         Chancenfeld(
-            9, "Das Stadion an Nicht-Herren-Tagen", "Randfeld (ausserhalb Kernscope)",
-            f"Frauen-Familydays im kybunpark: {z(kz['fr_fd_ist_min'])}–{z(kz['fr_fd_ist_max'])} Zuschauer, KF CHF "
-            f"{dez(kz['fr_fd_kf_min'])}–{dez(kz['fr_fd_kf_max'])} inkl. MwSt – aber bis {p(kz['fr_fd_ns_max'])} No-Show.",
-            [f"Länderspiele/WEURO 2025: KF ≈ CHF {dez(kz['nati_kf'])} inkl. MwSt – auf Herren-Niveau.",
-             "Frauen-Spiele ohne Familyday: wenige hundert Zuschauer, teils im Espenmoos.",
-             "Events ohne Spiel tragen 3–9 % zum Catering-Umsatz bei (KF dort wenig aussagekräftig)."],
+            9, "Das Stadion an weiteren Anlässen", "Randfeld (ausserhalb Kernscope)",
+            f"Testspiele ({z(kz['rf_test_anlaesse'])} Anlässe seit 2022/23): KF CHF {dez(kz['rf_kf_test'])} inkl. MwSt gegenüber "
+            f"CHF {dez(kz['rf_kf_herren_sl'])} in der Herren-Meisterschaft.",
+            [f"U21-Spiele: KF CHF {dez(kz['rf_kf_u21'])} inkl. MwSt (wenige Anlässe).",
+             f"Events ohne Spiel tragen {p(kz['rf_event_anteil_min'])}–{p(kz['rf_event_anteil_max'])} zum Catering-Umsatz bei "
+             "(KF dort wenig aussagekräftig, Zuschauerzahl oft geschätzt).",
+             "Frauen-Spiele und Länderspiele sind gemäss Teamentscheid ausgeklammert (D-016/D-036)."],
             "schwach", "Explorativ, kleine Fallzahlen, ausserhalb des Phase-1-Kernscopes.",
-            "hoch", "Format und Vergabe von Promo-Tickets an Frauen-Spielen, Catering-Angebot an Familientagen",
+            "hoch", "Catering-Angebot und Standbesetzung an Test- und Eventtagen",
             "einzelne Anlässe", "heute nutzbar (Aggregate)",
-            "Klein gegenüber Herren-Spieltagen; Bedeutung eher strategisch (Publikum von morgen).",
+            "Klein gegenüber Herren-Pflichtspielen.",
             _lp(**{"Personensegmentierung": "nur Anlass-Ebene"}),
-            "Ticketing/Zutritt der Frauen-Spiele vollständig; Ziel des Clubs für Frauen-Spieltage.",
-            ["Wie könnten Promo-Tickets an Frauen-Familydays verbindlicher werden?",
-             "Welche Catering-Formate passen zu Familientagen im kybunpark?"],
-            "Familyday-Varianten vergleichen (No-Show, KF je Anlass).", "abb_i17_randfelder.png", "Blätter Randfelder_*"),
+            "Verlässliche Zuschauerzahlen bei Events; Ziel des Clubs für Nicht-Pflichtspiel-Tage.",
+            ["Welche Catering-Formate passen zu Testspielen und Events im kybunpark?",
+             "Lohnt sich an kleinen Anlässen ein reduziertes Standangebot?"],
+            "Format-Varianten an Test-/Eventtagen vergleichen (KF, Bons je Anwesendem).",
+            "abb_i17_randfelder.png", "Blatt F1_Randfelder_Kategorien"),
     ]
     return felder
 

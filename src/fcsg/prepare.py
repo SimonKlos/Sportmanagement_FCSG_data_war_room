@@ -9,8 +9,8 @@ Datenmodus ``release_aggregates`` (D-001 c, Entscheid 10.10.2026):
   Name, Anrede, Geburtstag, Alter, Geschlecht, PLZ, Land, Kunden-Nr., Sitz/Reihe, Seatinfo, TicketData
   werden nie gelesen. Ticket-/Rechnungsschlüssel werden nur intern zum Zählen verwendet und nie ausgegeben.
 - Jede Ausgabetabelle wird gegen die Personenbezug-Heuristik geprüft; jede Aggregation auf Summenerhalt.
-- **Scope (D-016, 11.10.2026):** Frauen-Daten fallen ganz weg – Frauen-Dateien werden nicht gelesen,
-  Frauen-Events aus gemischten Quellen entfernt (``drop_women``).
+- **Scope (D-016, 11./14.10.2026):** Frauen-Daten und Länderspiele fallen ganz weg – Frauen-Dateien werden nicht
+  gelesen, Frauen- und Länderspiel-Anlässe aus gemischten Quellen entfernt (``drop_women``, ``drop_national_team``).
 - **Schulferien (D-017 b):** vor 2026/27 durch recherchierte Werte ersetzt (``apply_school_holidays``).
 
 Fachliche Definitionen (SOLL, Public Netto, Umsatzbasis) werden hier **nicht** festgelegt: Werte werden
@@ -687,6 +687,39 @@ def drop_women(tables: dict[str, pd.DataFrame]) -> list[dict]:
     return checks
 
 
+NATIONAL_PATTERN = r"länderspiel|laenderspiel|nationalmannschaft|nationalteam|\bnati\b|weuro"
+# Nur Bezeichnungs-/Wettbewerbsspalten – nie Bemerkungen («nach der Länderspielpause» betrifft FCSG-Spiele).
+NATIONAL_COLUMNS = ("competition", "competition_label", "match_label", "event_label")
+
+
+def drop_national_team(tables: dict[str, pd.DataFrame]) -> list[dict]:
+    """Entfernt Länderspiel-Anlässe (Nationalteams, WEURO 2025, Nati-Trainings) aus allen Tabellen (D-016, 14.10.2026).
+
+    Schutz: Zeilen, die als Herren-Pflichtspiel des FCSG erkannt sind (``competition_group`` Liga/Cup/UEFA oder
+    ``event_class == 'fcsg_herren'``), werden nie entfernt – «EURO PLAYOFF» oder «Euro League» sind FCSG-Spiele.
+
+    Returns:
+        Prüfprotokoll: je Tabelle Anzahl entfernter Zeilen (nur Anzahlen).
+    """
+    checks = []
+    for name, df in tables.items():
+        cols = [c for c in NATIONAL_COLUMNS if c in df.columns]
+        if not cols:
+            continue
+        mask = pd.Series(False, index=df.index)
+        for c in cols:
+            mask |= df[c].astype("string").str.contains(NATIONAL_PATTERN, case=False, regex=True, na=False)
+        if "competition_group" in df.columns:
+            mask &= ~df["competition_group"].isin(["Liga", "Cup", "UEFA"])
+        if "event_class" in df.columns:
+            mask &= df["event_class"] != "fcsg_herren"
+        if mask.any():
+            tables[name] = df[~mask].reset_index(drop=True)
+        checks.append({"check_id": f"D016N-{name}", "description": f"Länderspiel-Anlässe entfernt (D-016) → {name}",
+                       "status": "OK", "detail": f"{int(mask.sum())} von {len(df)} Zeilen entfernt"})
+    return checks
+
+
 SCHOOL_HOLIDAYS_FILE = Path(__file__).resolve().parents[2] / "config" / "reference" / "school_holidays_stadt_sg.csv"
 # D-017 b: In Tabellenversion 3 waren die Teamwerte erst ab 2026/27 verlässlich. Version 5 (14.10.2026) führt
 # «Schulferien Stadt SG» für alle Saisons aus denselben Quellen wie die Recherche (D-021/D-034) → Teamwert gilt
@@ -845,8 +878,9 @@ def run_prepare(raw_root: Path, context_file: Path, clean_root: Path, tz: str = 
     e_out, e_checks = prepare_einzeltickets(raw_root)
     tables.update(e_out)
     checks += e_checks
-    progress("Frauen-Events entfernen (D-016) …")
+    progress("Frauen- und Länderspiel-Anlässe entfernen (D-016) …")
     checks += drop_women(tables)
+    checks += drop_national_team(tables)
     progress("Abdeckungsmatrix …")
     tables["match_coverage"] = build_match_coverage(tables)
 

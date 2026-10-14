@@ -36,4 +36,13 @@ D016-season_ticket_snapshot_agg,Frauen-Events entfernt (D-016) → season_ticket
 D016-tickets_hist_agg,Frauen-Events entfernt (D-016) → tickets_hist_agg,OK,134 von 19912 Zeilen entfernt
 D016-tickets_hist_leadtime,Frauen-Events entfernt (D-016) → tickets_hist_leadtime,OK,113 von 30569 Zeilen entfernt
 D016-tickets_hist_entry_minute,Frauen-Events entfernt (D-016) → tickets_hist_entry_minute,OK,224 von 8085 Zeilen entfernt
+D016N-context_match,Länderspiel-Anlässe entfernt (D-016) → context_match,OK,0 von 114 Zeilen entfernt
+D016N-attendance_history,Länderspiel-Anlässe entfernt (D-016) → attendance_history,OK,22 von 388 Zeilen entfernt
+D016N-catering_match,Länderspiel-Anlässe entfernt (D-016) → catering_match,OK,16 von 236 Zeilen entfernt
+D016N-catering_season_summary,Länderspiel-Anlässe entfernt (D-016) → catering_season_summary,OK,9 von 82 Zeilen entfernt
+D016N-kiesplatz_event_stand,Länderspiel-Anlässe entfernt (D-016) → kiesplatz_event_stand,OK,189 von 7110 Zeilen entfernt
+D016N-access_match_summary,Länderspiel-Anlässe entfernt (D-016) → access_match_summary,OK,0 von 108 Zeilen entfernt
+D016N-tickets_hist_agg,Länderspiel-Anlässe entfernt (D-016) → tickets_hist_agg,OK,0 von 19778 Zeilen entfernt
+D016N-tickets_hist_leadtime,Länderspiel-Anlässe entfernt (D-016) → tickets_hist_leadtime,OK,0 von 30456 Zeilen entfernt
+D016N-tickets_hist_entry_minute,Länderspiel-Anlässe entfernt (D-016) → tickets_hist_entry_minute,OK,0 von 7861 Zeilen entfernt
 P-01,Keine Ausgabespalte mit Personenbezug (Heuristik),OK,18 Tabellen geprüft

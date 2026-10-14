@@ -4,8 +4,8 @@
 
 | | |
 |---|---|
-| Analyse-Lauf | `20261014T213203_baseline_ddcd` (erstellt 2026-10-14T21:32:54+02:00) |
-| Datenbasis | bereinigter Lauf `20261014T213035_clean_982b` (Lieferung «20261003_Input Sandro» + Spielkontext-Tabelle) |
+| Analyse-Lauf | `20261014T215526_baseline_24bd` (erstellt 2026-10-14T21:56:11+02:00) |
+| Datenbasis | bereinigter Lauf `20261014T215420_clean_0cf1` (Lieferung «20261003_Input Sandro» + Spielkontext-Tabelle) |
 | Umfang | 108 Herren-Pflichtspiele (Liga, Cup, UEFA) 2021/22 bis heute |
 | Prüfungen | 17 gesamt · 0 FAIL · 1 WARN (Details: `quality_checks.csv` im Laufordner bzw. Excel-Blatt «Qualität») |
 | Code | `fcsg` 0.4.0, Python 3.12.10; neu rechnen: `python -m fcsg.cli analyze --config config/project.local.yaml` |
@@ -28,7 +28,7 @@ Alle Aussagen beschreiben Zusammenhänge auf Spielebene, keine Ursachen. Sie sin
    Ankunft – Brutto und Netto getrennt, Saisonwerte gewichtet (Σ/Σ). **Deckungsbeitrag nicht berechenbar** (keine
    Kosten-/Margendaten, D-003).
 3. **Abgleich mit Retos Sichtung** und mit dem Quell-Tab «Entwicklung» (Schritt 3).
-4. **Excel-Export mit Readback** (Schritt 4): liegt ausserhalb des Repos unter `<output_dir>/20261014T213203_baseline_ddcd/`.
+4. **Excel-Export mit Readback** (Schritt 4): liegt ausserhalb des Repos unter `<output_dir>/20261014T215526_baseline_24bd/`.
 5. **Drei Hypothesen** zur Verknüpfung der Datenbasen + **Kontextverbindung** (unten).
 
 ## 2 Abdeckung (gemeinsame Stichproben)
