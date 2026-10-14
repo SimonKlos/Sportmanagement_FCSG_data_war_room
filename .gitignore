@@ -39,3 +39,12 @@ Thumbs.db
 # Ausnahme: geteilte Analyse-Läufe (aggregierte echte Ergebnisse, privates Repo, D-024)
 !outputs/run*_*/
 !outputs/run*_*/**
+
+# Ralfs Rechenkern (ralf/): öffentliche Zusatzdaten und belegte Korrekturen versionieren (D-028, D-031)
+!ralf/external/*.csv
+!ralf/overrides/*.csv
+# Standard-Ausgabeordner von ralf/run_all.py (Läufe stattdessen mit --ausgabe nach outputs/runN_…)
+Ergebnisse_Phase1/
+Ergebnisse_Ideen_Grundlage/
+# lokale Kopie des Übergabe-ZIPs
+FCSG_Uebergabe_*/

@@ -1,0 +1,288 @@
+{
+  "zeitpunkt": "2026-10-13 19:06:02",
+  "version_auswertung": "1.1.0",
+  "datenstand_letztes_spiel_mit_ist": "12.09.2026",
+  "laufzeit_sekunden": 36.1,
+  "python": "3.12.13",
+  "pakete": {
+    "pandas": "3.0.6",
+    "numpy": "2.5.4",
+    "openpyxl": "3.1.5",
+    "python-calamine": "0.8.3",
+    "statsmodels": "0.15.0",
+    "matplotlib": "3.11.2",
+    "xlsxwriter": "3.2.9"
+  },
+  "eingabedateien": [
+    {
+      "datei": "1. Daten FCSG/Catering/Abrechnung Kiesplatz_Saison 21-22.xlsx",
+      "bytes": 35285,
+      "md5": "cdd94eb4c34648ccd233bf1a90f4e6c3"
+    },
+    {
+      "datei": "1. Daten FCSG/Catering/Abrechnung Kiesplatz_Saison 22-23.xlsx",
+      "bytes": 61504,
+      "md5": "2e990b4a50be01188b6fd03eb2d1607e"
+    },
+    {
+      "datei": "1. Daten FCSG/Catering/Abrechnung Kiesplatz_Saison 23-24.xlsx",
+      "bytes": 63176,
+      "md5": "416c0e838ff74c4f255a2b0cef9552d1"
+    },
+    {
+      "datei": "1. Daten FCSG/Catering/Abrechnung Kiesplatz_Saison 24-25.xlsx",
+      "bytes": 74740,
+      "md5": "659474406110526b8304a60681e343ed"
+    },
+    {
+      "datei": "1. Daten FCSG/Catering/Abrechnung Kiesplatz_Saison 25-26.xlsx",
+      "bytes": 61369,
+      "md5": "f15f22479f14546e555567e6a8098c95"
+    },
+    {
+      "datei": "1. Daten FCSG/Catering/Abrechnung Kiesplatz_Saison 26-27.xlsx",
+      "bytes": 47678,
+      "md5": "82ccb0ed2e7865509bcd2f58d1841000"
+    },
+    {
+      "datei": "1. Daten FCSG/Catering/Artikelauswertung Meisterschaft.xlsx",
+      "bytes": 35242,
+      "md5": "8af10ea2e8da4a3e81a08c2b26a27ebd"
+    },
+    {
+      "datei": "1. Daten FCSG/Catering/Umsatz Public Catering ab Saison 18-19_Neu.xlsx",
+      "bytes": 407280,
+      "md5": "b902774827ab9a29c729372196d70855"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2021-22/Einzeltickets_2021-22.xlsx",
+      "bytes": 19907351,
+      "md5": "890bc4c54d805639076040ca7747a44d"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2022-23/Einzeltickets_2022-23.xlsx",
+      "bytes": 26177399,
+      "md5": "d5cdf1816cd2aaf6096687a5916daf3b"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2023-24/Einzeltickets_2023-24.xlsx",
+      "bytes": 24586996,
+      "md5": "539a6bc236327129dc31207cc02b76c8"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2024-25/Einzeltickets_2024-25.xlsx",
+      "bytes": 19095796,
+      "md5": "7350b7eceb221c139ee6eeeb652ddab0"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Frauen/20251101_AWSL_R9_FCZ-Frauen.csv",
+      "bytes": 962835,
+      "md5": "2aa01110a2d5977c9992efa05462ace0"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Frauen/20260322_AWSL_R17_FCL-Frauen.csv",
+      "bytes": 605893,
+      "md5": "08a2b0616fc3eb516015961900ac41f7"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Frauen/20260425_AWSL_PO1-4_FCB.csv",
+      "bytes": 119679,
+      "md5": "d6613c26aed33128f9812f9f6ec55683"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Herren/20250726_MS1_FCB.csv",
+      "bytes": 1578273,
+      "md5": "a1bffb402de662bec0838f52098013b1"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Herren/20250809_MS3_FCW.csv",
+      "bytes": 1469837,
+      "md5": "6ddd816a337a4052ec455f135fbc400e"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Herren/20250824_MS4_FCL.csv",
+      "bytes": 1526503,
+      "md5": "bda40edae68cfee5ef2a7ac8eabd1b96"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Herren/20250913_MS6_LUG.csv",
+      "bytes": 1239162,
+      "md5": "f417b44a0b9a3f5cac6703287309a1d3"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Herren/20251004_MS8_FCT.csv",
+      "bytes": 1181043,
+      "md5": "796bf8030db90fd867a5f8bb50f64ce9"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Herren/20251025_MS10_GCZ.csv",
+      "bytes": 1463090,
+      "md5": "8ca6d47af82669894274160f4b2eb109"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Herren/20251109_MS13_YB.csv",
+      "bytes": 1428273,
+      "md5": "60f0c2271bfe6cfd93e787df871f9d96"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Herren/20251123_MS14_LS.csv",
+      "bytes": 776251,
+      "md5": "d7b9dda9c588690b0ad36b8e444db49d"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Herren/20251206_MS16_FCZ.csv",
+      "bytes": 1372540,
+      "md5": "077a31d817b103e4b99ab1faa97b20f7"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Herren/20251216_MS18_SIO.csv",
+      "bytes": 706213,
+      "md5": "757f1dfaeeb009cf3ebc6bb5d665b6b1"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Herren/20260126_MS21_SFC.csv",
+      "bytes": 597145,
+      "md5": "7412d3a548e44ec7bbf52040a146b6f3"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Herren/20260211_MS24_YB.csv",
+      "bytes": 448301,
+      "md5": "e835e9a4473f55664f856f93f4fb1bda"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Herren/20260214_MS25_GCZ.csv",
+      "bytes": 741353,
+      "md5": "7bd63b9c110a632cb0037f756485e1d0"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Herren/20260228_MS27_FCW.csv",
+      "bytes": 1049941,
+      "md5": "4da743e4269d8423af1ae7cc2793c53d"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Herren/20260308_MS29_FCB.csv",
+      "bytes": 1423441,
+      "md5": "4cd95f8b171c30d280f245a4a810369d"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Herren/20260317_MS30_LUG.csv",
+      "bytes": 880498,
+      "md5": "70db82a2f8458f833c6947e907a148f8"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Herren/20260406_MS32_FCZ.csv",
+      "bytes": 1661293,
+      "md5": "49c979da4f24eb4563807e2c30a87f59"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Herren/20260503_MS35_SIO.csv",
+      "bytes": 1300163,
+      "md5": "6d19d7be12b9b69b4725077c780bc773"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2025-26/MS_Herren/20260517_MS38_FCT.csv",
+      "bytes": 1326690,
+      "md5": "47c5089ff3cde34bbadde6d197031828"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2026-27/Europacup/20260723_UEL-Q2_SLBenfica.csv",
+      "bytes": 3461654,
+      "md5": "00c361d86424fd5683a1a8d884e5b48d"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2026-27/Europacup/20260813_UECL-Q3_SheriffTiraspol.csv",
+      "bytes": 2448011,
+      "md5": "4bb05ceb4b3b5c46ac404483ed2f2731"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2026-27/Europacup/20260827_UECL-PO_Nordsjaelland.csv",
+      "bytes": 2632065,
+      "md5": "f7aa809f60979d5b9f2a8767750c48fc"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2026-27/MS_Frauen/20260909_MS5_FCA.csv",
+      "bytes": 32367,
+      "md5": "018b0a0f5c92f9f545c1f20beed75907"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2026-27/MS_Frauen/20260919_MS7_GCZ.csv",
+      "bytes": 466716,
+      "md5": "e1b760fec8ba6de368587350d9447483"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2026-27/MS_Frauen/202706030_SaisonabosFrauen.csv",
+      "bytes": 149783,
+      "md5": "77e5ec96951ac6d4812df216b1e4c03c"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2026-27/MS_Herren/20260726_MS1_FCZ.csv",
+      "bytes": 1370620,
+      "md5": "5eb509e0a0f7070e8fb53bdf27030f56"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2026-27/MS_Herren/20260809_MS3_FCL.csv",
+      "bytes": 1283551,
+      "md5": "48d3d0fe4cfc469975511082c181bbce"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2026-27/MS_Herren/20260830_MS5_FCT.csv",
+      "bytes": 1071422,
+      "md5": "37b64186735a14ea7e7a2113c7add8a7"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2026-27/MS_Herren/20260912_MS8_SIO.csv",
+      "bytes": 1050110,
+      "md5": "44366162d75fc08331bd2c042aabaeb1"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/2026-27/MS_Herren/20260930_SaisonabosHerren.csv",
+      "bytes": 2692171,
+      "md5": "46add2a58d0670d799fc4c5acf5e8085"
+    },
+    {
+      "datei": "1. Daten FCSG/Ticketing/Ticketing-Zuschauerzahlen-Historie.xlsx",
+      "bytes": 68668,
+      "md5": "08f2c75ef7dc0a35ad0f87c1553ddcc9"
+    },
+    {
+      "datei": "1. Daten FCSG/Zutritt/ErlaubteZutritteHerren.xlsx",
+      "bytes": 24500647,
+      "md5": "e480ba612a3ed59e9a568e59e9fae720"
+    },
+    {
+      "datei": "1. Daten FCSG/Zutritt/zugangsdaten_frauenequipe_alleSpiele.txt",
+      "bytes": 1964962,
+      "md5": "3748ef9f4d3d7099f29585b2b89a91f2"
+    },
+    {
+      "datei": "1. Daten FCSG/Zutritt/zugangsdaten_herren_alteSaisons.txt",
+      "bytes": 25554546,
+      "md5": "8983c369449411c196b9727b32551ef0"
+    },
+    {
+      "datei": "1. Daten FCSG/Zutritt/zugangsdaten_herren_inhouse.csv",
+      "bytes": 103283761,
+      "md5": "d0d2252819169fae7085b0a6ef69b5d2"
+    },
+    {
+      "datei": "2. Modellierung/Spielkontext_Tabelle_FCSG_3.xlsx",
+      "bytes": 445024,
+      "md5": "0fdbdd7870770acf255a661d7afdbc05"
+    },
+    {
+      "datei": "2. Modellierung/Python_Auswertung/external/meteoschweiz_stg_stuendlich.csv",
+      "bytes": 2913224,
+      "md5": "42616b31e75e6f97c700183e07f5dbee"
+    },
+    {
+      "datei": "2. Modellierung/Python_Auswertung/external/football_data_super_league.csv",
+      "bytes": 83550,
+      "md5": "c54fa586b60a03d619185251208f5e79"
+    },
+    {
+      "datei": "2. Modellierung/Python_Auswertung/overrides/korrekturen.csv",
+      "bytes": 1780,
+      "md5": "179c9d8d46deabd1ef05cba4101511ec"
+    }
+  ]
+}

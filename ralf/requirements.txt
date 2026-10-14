@@ -1,0 +1,10 @@
+# Python >= 3.10 (getestet mit 3.12). Installation: pip install -r requirements.txt
+pandas>=2.2,<4
+numpy>=1.26
+openpyxl>=3.1
+python-calamine>=0.2.3
+statsmodels>=0.14
+scipy>=1.8          # direkt genutzt in fcsg/ideen (Tests, Clustering); kommt ohnehin mit statsmodels
+matplotlib>=3.8
+xlsxwriter>=3.1
+pytest>=8

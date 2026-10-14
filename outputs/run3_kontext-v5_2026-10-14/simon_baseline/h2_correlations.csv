@@ -1,0 +1,7 @@
+x,y,spearman_within_season,n
+share_arrived_45min_before,receipts_per_public,0.0038418850849483476,52
+share_arrived_45min_before,avg_receipt_gross_chf,0.30624092888243826,52
+share_arrived_45min_before,kf_gross_chf,0.2646631947408862,52
+share_last_15min,receipts_per_public,-0.048151626398019294,52
+share_last_15min,avg_receipt_gross_chf,-0.3638692051566635,52
+share_last_15min,kf_gross_chf,-0.34124477076752324,52

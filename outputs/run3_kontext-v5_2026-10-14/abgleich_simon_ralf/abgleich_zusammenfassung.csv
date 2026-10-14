@@ -1,0 +1,12 @@
+kennzahl,abweichend,beide leer,gleich,nur Ralf,nur Simon
+SOLL,0,0,108,1,0
+IST,0,0,108,1,0
+IST VIP,0,64,44,1,0
+Public Netto,0,0,105,4,0
+Transaktionen,0,38,68,3,0
+Umsatz inkl. MwSt,0,0,105,4,0
+Umsatz exkl. MwSt,0,0,105,4,0
+KF inkl. MwSt,0,0,105,4,0
+Scans,0,19,88,2,0
+Anteil Ankunft ≥ 45 Min.,65,20,6,1,17
+Eintrittsquote Einzeltickets,0,35,37,37,0

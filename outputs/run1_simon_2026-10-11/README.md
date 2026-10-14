@@ -1,5 +1,7 @@
 # Run 1 · Simon · 11.10.2026 – erste Baseline-Analyse (vorläufig)
 
+> **Nachtrag 14.10.2026:** Zahlenbasis ist seit D-028 Ralfs Rechenkern (`../run3_kontext-v5_2026-10-14/`). Die WARN Q01 («Catering 23/24: ein Spiel fehlt») ist ein **Parserfehler dieses Laufs**: Die Zeile vom 27.09.2023 steht in der Quelle, wurde hier aber mangels lesbarem Datum übersprungen (Ralfs Kern liest sie). Keine Frage an Sandro nötig.
+
 > **Vertraulich – echte FCSG-Daten, aggregiert (keine Personendaten), nur Herren-Pflichtspiele.** Nur für die
 > interne Abstimmung im Projektteam (privates Repo, D-024). Alle Kennzahlen sind **vorläufig**, weil die Definitionen
 > SOLL/IST/Public Netto und die Umsatzbasis noch offen sind (D-004/D-005).

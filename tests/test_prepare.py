@@ -8,17 +8,13 @@ import pytest
 
 from fcsg.prepare import (
     PrivacyError, _catering_name, _kiesplatz_metric, apply_school_holidays, assert_no_personal_columns,
-    competition_group, drop_women, fmt_time, load_school_holidays, parse_chf, parse_form, parse_table_position,
-    parse_temperature, prepare_access, prepare_ticket_csvs, reader_sector, season_of, to_date, yes_no,
+    competition_group, drop_women, fmt_time, load_school_holidays, parse_chf, parse_form, prepare_access, prepare_ticket_csvs, reader_sector, season_of, to_date, yes_no,
 )
 
 
 def test_parsers():
     assert parse_chf("5,00\xa0CHF") == 5.0 and parse_chf("1'234,50 CHF") == 1234.5 and np.isnan(parse_chf("\xa0"))
     assert fmt_time(19.3) == "19:30" and fmt_time("9:05") == "09:05" and fmt_time(dt.time(14, 15)) == "14:15"
-    assert parse_temperature("19.9°C (Tagesmittel; 17.2–24.0°C)") == (19.9, 17.2, 24.0)
-    assert parse_table_position("7. Platz, 0 Pkt") == (7.0, 0.0)
-    assert all(np.isnan(v) for v in parse_table_position("– (noch keine SL-Runde)"))
     assert parse_form("S-U-N") == (3.0, 4.0) and np.isnan(parse_form("–")[0])
     assert yes_no("Ja") == 1.0 and yes_no("Nein") == 0.0 and np.isnan(yes_no(None))  # leer bleibt leer
     assert to_date("13.10.2025") == dt.date(2025, 10, 13) and to_date("2022-07-23 17:10:42") == dt.date(2022, 7, 23)

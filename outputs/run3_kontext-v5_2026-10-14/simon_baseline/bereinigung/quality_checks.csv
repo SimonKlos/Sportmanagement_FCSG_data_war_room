@@ -1,0 +1,39 @@
+check_id,description,status,detail
+K-SCHOOL-HOLIDAY,Schulferien vor 2021/22 durch Recherche ersetzt (D-017 b),OK,"0 Spiele ersetzt, davon 0 geändert; ohne Abdeckung: 18"
+K-SCHOOL-HOLIDAY-XCHECK,Gegenprobe Teamwerte ab 2021/22 vs. Recherche,OK,"96 geprüft, 0 abweichend"
+A-ErlaubteZutritteHerren.xlsx,Zutrittsdatei gelesen,OK,393739 Scans; ohne Zeitstempel: 0
+A-zugangsdaten_herren_alteSaisons.txt,Zutrittsdatei gelesen,OK,128551 Scans; ohne Zeitstempel: 0
+A-zugangsdaten_herren_inhouse.csv,Zutrittsdatei gelesen,OK,523725 Scans; ohne Zeitstempel: 0
+A-SUM-summary,Summenerhalt Zutritt → summary,OK,1046015 / 1046015
+A-SUM-sector_minute,Summenerhalt Zutritt → sector_minute,OK,1046015 / 1046015
+A-SUM-reader,Summenerhalt Zutritt → reader,OK,1046015 / 1046015
+A-SUM-coding,Summenerhalt Zutritt → coding,OK,1046015 / 1046015
+D016-ticket_csv,Frauen-Ticketdateien nicht gelesen (D-016),OK,6 Dateien übersprungen
+T-SUM-tickets_single_agg,Summenerhalt Tickets → tickets_single_agg,OK,180167 / 180167
+T-SUM-tickets_single_leadtime,Summenerhalt Tickets → tickets_single_leadtime,OK,180167 / 180167
+T-PURCHASE,Kaufgrössen: Anzahl Käufe aus Rechnungsnummern (nur gezählt),OK,82094 Käufe; ab 10 Tickets gekappt
+T-SUM-abo,Summenerhalt Saisonabos,OK,13052 Abo-Sitze
+E-Einzeltickets_2021-22.xlsx,Einzelticket-Export gelesen (Tabs zusammengeführt),OK,107791 Zeilen aus 2 Tabs
+E-Einzeltickets_2022-23.xlsx,Einzelticket-Export gelesen (Tabs zusammengeführt),OK,139747 Zeilen aus 3 Tabs
+E-Einzeltickets_2023-24.xlsx,Einzelticket-Export gelesen (Tabs zusammengeführt),OK,132439 Zeilen aus 3 Tabs
+E-Einzeltickets_2024-25.xlsx,Einzelticket-Export gelesen (Tabs zusammengeführt),OK,108316 Zeilen aus 2 Tabs
+E-SUM-tickets_hist_agg,Summenerhalt Einzeltickets → tickets_hist_agg,OK,488293 / 488293
+E-SUM-tickets_hist_leadtime,Summenerhalt Einzeltickets → tickets_hist_leadtime,OK,488293 / 488293
+E-SUM-entry,Summenerhalt Eintritte → Minutenprofil,OK,290115 Eintritte
+D016-context_match,Frauen-Events entfernt (D-016) → context_match,OK,0 von 114 Zeilen entfernt
+D016-attendance_history,Frauen-Events entfernt (D-016) → attendance_history,OK,13 von 401 Zeilen entfernt
+D016-catering_match,Frauen-Events entfernt (D-016) → catering_match,OK,41 von 277 Zeilen entfernt
+D016-catering_season_summary,Frauen-Events entfernt (D-016) → catering_season_summary,OK,6 von 88 Zeilen entfernt
+D016-kiesplatz_event_stand,Frauen-Events entfernt (D-016) → kiesplatz_event_stand,OK,126 von 7236 Zeilen entfernt
+D016-access_match_summary,Frauen-Events entfernt (D-016) → access_match_summary,OK,0 von 108 Zeilen entfernt
+D016-access_sector_minute,Frauen-Events entfernt (D-016) → access_sector_minute,OK,0 von 36289 Zeilen entfernt
+D016-access_reader,Frauen-Events entfernt (D-016) → access_reader,OK,0 von 3249 Zeilen entfernt
+D016-access_coding,Frauen-Events entfernt (D-016) → access_coding,OK,0 von 1768 Zeilen entfernt
+D016-tickets_single_agg,Frauen-Events entfernt (D-016) → tickets_single_agg,OK,0 von 8944 Zeilen entfernt
+D016-tickets_single_leadtime,Frauen-Events entfernt (D-016) → tickets_single_leadtime,OK,0 von 5133 Zeilen entfernt
+D016-tickets_single_purchase_size,Frauen-Events entfernt (D-016) → tickets_single_purchase_size,OK,0 von 257 Zeilen entfernt
+D016-season_ticket_snapshot_agg,Frauen-Events entfernt (D-016) → season_ticket_snapshot_agg,OK,0 von 943 Zeilen entfernt
+D016-tickets_hist_agg,Frauen-Events entfernt (D-016) → tickets_hist_agg,OK,134 von 19912 Zeilen entfernt
+D016-tickets_hist_leadtime,Frauen-Events entfernt (D-016) → tickets_hist_leadtime,OK,113 von 30569 Zeilen entfernt
+D016-tickets_hist_entry_minute,Frauen-Events entfernt (D-016) → tickets_hist_entry_minute,OK,224 von 8085 Zeilen entfernt
+P-01,Keine Ausgabespalte mit Personenbezug (Heuristik),OK,18 Tabellen geprüft

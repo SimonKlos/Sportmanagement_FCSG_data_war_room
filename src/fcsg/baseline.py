@@ -217,8 +217,9 @@ def build_mart_match_real(t: dict[str, pd.DataFrame], today: str | None = None) 
     unmatched.append(_unmatched_rows(ctx[~future], "match_date", spine, "context_match",
                                      "kein Pflichtspiel der Historie an diesem Datum (Datumskonflikt?)", ctx["opponent"]))
     ctx_cols = ctx[["match_date", "opponent", "table_rank_fcsg", "table_rank_opp", "table_points_opp", "form_fcsg_points",
-                    "form_opp_points", "tv_free_srf", "temp_day_mean_c", "precip_day_mm", "wind_day_kmh", "school_holiday",
-                    "school_holiday_source", "public_holiday", "parallel_event"]].copy()
+                    "form_opp_points", "tv_free_srf", "temp_c", "precip_mm", "wind_kmh", "weather_basis", "school_holiday",
+                    "school_holiday_source", "public_holiday", "parallel_event", "covid_measures",
+                    "opponent_category"]].copy()
     ctx_cols["has_context"] = True
 
     # --- Einzeltickets 25/26+ (Ticket-CSVs) -----------------------------------------------------------

@@ -10,7 +10,7 @@ Praxis HS26). Phase 1: Ticketing-, Zutritts- und Catering-Daten je Heimspiel ver
 und den Spielkontext einbeziehen. Steuerungsgrösse ist der **Deckungsbeitrag** (D-003); dafür fehlen noch Kostendaten,
 deshalb arbeitet die Baseline vorerst auf Umsatzebene. Fachliche Grundlage: `docs/briefing/` (Arbeitsfassungen der 3 PDFs).
 
-## 1 Stand (11.10.2026)
+## 1 Stand (14.10.2026)
 
 | Schritt | Stand | Wo |
 |---|---|---|
@@ -19,13 +19,17 @@ deshalb arbeitet die Baseline vorerst auf Umsatzebene. Fachliche Grundlage: `doc
 | Baseline je Spiel und Saison + Abgleich mit Retos Sichtung | ✅ vorläufig | [Bericht](docs/analysis/01_baseline_erste_erkenntnisse.md) |
 | Hypothesen H1–H3 (Verknüpfung der 3 Datenbasen) + K1 (Spielkontext) | ✅ explorativ | Bericht §5–§6 |
 | Ergebnisse Run 1 zum Nachprüfen | ✅ | [outputs/run1_simon_2026-10-11/](outputs/run1_simon_2026-10-11/) |
-| Kontextmodelle, Diagnosekarte, Deckungsbeitrag | ⏳ erst nach Baseline-Freigabe bzw. Kostendaten | [docs/decisions.md](docs/decisions.md) |
+| **Ralfs Rechenkern übernommen = Zahlenbasis** (D-028) | ✅ | [ralf/README_REPO.md](ralf/README_REPO.md) |
+| Spielkontext-Tabelle **Version 5** (D-034), Neuberechnung beider Pipelines + Abgleich | ✅ Kernzahlen identisch | [outputs/run3_kontext-v5_2026-10-14/](outputs/run3_kontext-v5_2026-10-14/README.md) |
+| Kontextmodelle und Diagnosekarte (Ralf) | ✅ gerechnet, Freigabe offen | `outputs/run3_…/ralf_kern_phase1/` |
+| Vorschlag nächste Schritte Phase 1 → Phase 2 | 💬 zur Diskussion | [docs/team/2026-10-14_vorschlag_naechste_schritte.md](docs/team/2026-10-14_vorschlag_naechste_schritte.md) |
+| Deckungsbeitrag | ⏳ Kostendaten fehlen (D-003/D-029) | [docs/decisions.md](docs/decisions.md) |
 
 ## 2 Einstieg – drei Wege
 
 | Ich will … | Dann … | Rohdaten nötig? |
 |---|---|---|
-| **verstehen, was rauskam** | [Bericht](docs/analysis/01_baseline_erste_erkenntnisse.md) lesen (Kernaussagen oben), dann [Run-1-README](outputs/run1_simon_2026-10-11/README.md) | nein |
+| **verstehen, was rauskam** | [Run-3-README](outputs/run3_kontext-v5_2026-10-14/README.md), dann Ralfs `Methodennotiz_Phase1.md` (Run 3) und die [Vorschläge](docs/team/2026-10-14_vorschlag_naechste_schritte.md); Simons erster Bericht: [Run 1](docs/analysis/01_baseline_erste_erkenntnisse.md) | nein |
 | **mit den Ergebnissen weiterrechnen** (neue Hypothesen auf Spielebene) | [Notebook](notebooks/01_baseline_hypothesen.ipynb) öffnen, Kernel `.venv`. Ohne lokale Config läuft es automatisch im **Repo-Modus** auf `outputs/run1_…/mart_match.csv` | nein |
 | **alles neu rechnen** (andere Definitionen, neue Aggregationen, neue Lieferung, H3 neu) | Rohdaten lokal ablegen, `config/project.local.example.yaml` → `config/project.local.yaml` kopieren, dann [§5](#5-befehle-und-wichtigste-funktionen) | **ja** |
 
@@ -83,7 +87,7 @@ Code: [src/fcsg/prepare.py](src/fcsg/prepare.py) · Details: [docs/data_inventor
   - Bons gibt es erst ab 23/24.
   - Das Eintrittsfeld der Einzeltickets ist nur 21/22–22/23 befüllt.
   - Für 6 Spiele aus 25/26 fehlt der Spielkontext.
-  - Im Catering-Saison-Tab 23/24 fehlt ein Spiel.
+  - Simons Einleser überspringt im Catering-Tab 23/24 die Zeile vom 27.09.2023 (Datum nicht lesbar); Ralfs Kern liest sie.
 
 ## 5 Befehle und wichtigste Funktionen
 

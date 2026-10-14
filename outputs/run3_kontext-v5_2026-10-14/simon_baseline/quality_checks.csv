@@ -1,0 +1,18 @@
+check_id,description,status,detail
+J01,"Spielkalender: Herren-Pflichtspiele ab 21/22, Datum eindeutig",OK,108 Spiele
+A01,Zutritt: Datum in mehreren Dateien → Datei mit den meisten Scans,OK,19 Daten doppelt; 211 Scans der Zweitdatei nicht addiert (von 1046015)
+E01,Eintrittsfeld Einzeltickets: verwendete Saisons (≥ 80 % befüllt),OK,2021/2022: 89%; 2022/2023: 88%; 2023/2024: 54%; 2024/2025: 0%
+J02,Spieltabelle: Zeilen = Pflichtspiele (1:1-Join),OK,108 Zeilen
+S01,Summenerhalt Catering-Umsatz brutto (Quelle → Spieltabelle),OK,"Quelle 20,822,556.84 / Spieltabelle 20,822,556.84"
+S02,Summenerhalt Catering-Umsatz netto (Quelle → Spieltabelle),OK,"Quelle 19,724,288.33 / Spieltabelle 19,724,288.33"
+S03,Summenerhalt Catering-Transaktionen (Quelle → Spieltabelle),OK,"Quelle 855,810.00 / Spieltabelle 855,810.00"
+S04,Summenerhalt Scans (gewählte Datei) (Quelle → Spieltabelle),OK,"Quelle 1,045,796.00 / Spieltabelle 1,045,796.00"
+S05,Summenerhalt Scans Ankunftsprofil = Scans Zusammenfassung (Quelle → Spieltabelle),OK,"Quelle 1,045,796.00 / Spieltabelle 1,045,796.00"
+S06,Summenerhalt Einzeltickets 25/26+ (Quelle → Spieltabelle),OK,"Quelle 177,111.00 / Spieltabelle 177,111.00"
+S07,Summenerhalt Einzelticket-Positionen 21/22–24/25 (Quelle → Spieltabelle),OK,"Quelle 451,031.00 / Spieltabelle 451,031.00"
+U01,Unmatched-Report erzeugt (Pflichtoutput),OK,28 Einträge
+K01,Identität KF = Bons/Public × Ø Bon (brutto),OK,68 Spiele geprüft
+K02,KF brutto = von der Quelle berechneter KF (± 0.05 CHF),OK,105 Spiele; max. Abweichung 0.000 CHF
+K03,"Anwesenheitsquote im Bereich [0, 1]",OK,108 Spiele; Spanne 0.624–0.958
+K04,Bons erst ab 23/24 vorhanden (D-019),OK,0 Spiele vor 23/24 mit Bons
+Q01,"Catering-Spielzeilen = Quell-Tab «Entwicklung» (Meisterschaft, ab 21/22)",WARN,2023/24: -5.2% (18 vs. 19 Spiele)
