@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.4.3 – 14.10.2026
+- Neuer Ordner `docs/team/` für die Team-Abstimmung:
+  - `2026-10-14_abgleich_ralf_und_entscheide.md`: Abgleich Simon Run 1 vs. Ralf v1.1.0 (Übereinstimmungen,
+    Abweichungen mit Grund, von Ralf geklärte Punkte), offene Entscheide E-1 bis E-8 mit Vorschlag,
+    Integrationsplan (technisch, Phase 1, Phase 2), Begründbarkeit und Zeitplan bis 25.11.
+  - `2026-10-14_fragen_sandro_v2.md`: überarbeitete Fragen an Sandro für den Termin vom 16.10. (Folie 8 + Backup).
+- `docs/decisions.md`: D-028 bis D-035 als **offene** Entscheide erfasst (Vorschläge, noch nicht entschieden).
+- Nur Dokumentation; kein Code, keine Daten, keine Ergebnisse geändert. Ralfs Paket ist nicht im Repo.
+
 ## 0.4.2 – 13.10.2026
 - Neue Arbeitsregel D-027: Jede fachliche oder methodische Festlegung wird in `docs/decisions.md` erfasst (Datum,
   wer entschieden hat, Quelle; Agent-Annahmen offen bis Teambestätigung); grössere Änderungen erhalten einen
