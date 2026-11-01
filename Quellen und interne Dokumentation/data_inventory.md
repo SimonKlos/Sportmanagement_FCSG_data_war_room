@@ -60,7 +60,7 @@ Gemeinsame Stichprobe **Historie + Catering + Kontext: 80 Spiele**; zusätzlich 
 3. **Zutritt 24/25 unvollständig:** nur 9 von 24 Spielen mit plausibler Scanzahl; die übrigen haben nur einzelne Scans. 22/23: 3 Spiele, 23/24: 2 Spiele deutlich unter IST.
 4. **Scans pro Ticket = 1.00:** keine Mehrfachscans im Datensatz (Mehrfacheintritt offenbar nicht enthalten oder schon gefiltert).
 5. **Feld «Coding»** (6 Codes, z. B. 270 = 77 % der Scans): Bedeutung unbekannt – möglicherweise Ticket-Typ (Abo/Einzel) → wäre für Ankunft nach Ticket-Typ wertvoll.
-6. **Zwei Stadionnamen:** «kybunpark» und bei 9 Spielen aus `ErlaubteZutritteHerren` (25/26–26/27) «Berit Sitterstadion» (Begrüssungstext) – vermutlich Umbenennung; nicht geprüft, ob sich die Leser unterscheiden.
+6. **Zwei Stadionnamen:** «kybunpark» und bei 9 Spielen aus `ErlaubteZutritteHerren` (25/26–26/27) «Berit Sitterstadion» (Begrüssungstext) – Umbenennung bestätigt (Reto, 02.11.2026; D-044): Das Stadion heisst heute «Berit Sitterstadion». Nicht geprüft, ob sich die Leser unterscheiden.
 7. **Einzeltickets-Exporte:** nur Status «Aktuell/verkauft» → Stornos/Rückgaben nicht enthalten. Pro Spiel zusätzlich eine «+1 Minute»-Veranstaltung mit ~100 Tickets (separates Kontingent); Nicht-Spiel-Events (Mitgliedschaft, Testspiel, Kids Camp) als `is_match = False` getrennt.
 8. **Spielkontext Schulferien:** für alle Saisons Ja/Nein befüllt, laut Anleitung aber nur 26/27 recherchiert → Team klären, ob Werte vor 26/27 verlässlich sind.
 9. **Catering:** 15 Länderspiele (WEURO 2025), 57 «Diverse Events», 5 Spiele anderer Clubs → als `anderes_event` getrennt; 36 Frauen-, 2 U21-Spiele separat. Einzelne KF-Zellen nicht numerisch (Events ohne Zuschauerzahl).
@@ -75,4 +75,4 @@ Gemeinsame Stichprobe **Historie + Catering + Kontext: 80 Spiele**; zusätzlich 
 3. Sind Bons/Transaktionen vor 23/24 verfügbar?
 4. Ist «Zuschauerzahlen Public Netto» = IST − VIP oder anders abgegrenzt?
 5. Datum Servette-Spiel (25. oder 26.01.2026) und 24.08. vs. 24.09.2024 in der Historie.
-6. «Berit Sitterstadion» = Umbenennung des kybunpark?
+6. ~~«Berit Sitterstadion» = Umbenennung des kybunpark?~~ Geklärt: ja (Reto, 02.11.2026; D-044).

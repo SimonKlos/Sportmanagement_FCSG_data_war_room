@@ -77,6 +77,12 @@ Quelle: Simon, Chat. Interner Produktions-/Prüfstand unter `delivery/`; Datenra
 
 Frühere Hinweise, die technischen Rechenkern-/Notebook-Roots unverändert zu lassen (D-042), sind durch diese ausdrückliche Freigabe überholt. Bereinigungspaket `src`, Root-Tests und Konfiguration bleiben bestehen. Ein Python-Paketname `fcsg` existiert weiterhin in beiden Pipelines; daher den kanonischen Kern aus seinem eigenen Ordner starten. Quelle: Simon, Chat; Umsetzung/Prüfung im Changelog und internen Migrationsprotokoll.
 
+## D-044 – Stadionbezeichnung in externen Unterlagen (Reto, 02.11.2026)
+
+**Entschieden:** Das Stadion heisst heute **«Berit Sitterstadion»** (früher kybunpark). In allen extern ausgerichteten Texten (Deliverables, Folienleitfaden, Präsentation) und in den Textbausteinen der Generatoren wird ausschliesslich «Berit Sitterstadion» verwendet, damit die frühere Bezeichnung nicht in Präsentation oder Bericht gelangt. Bestätigt durch Hinweis in `data_inventory.md` (Begrüssungstext «Berit Sitterstadion» bei 9 Spielen in `ErlaubteZutritteHerren` 25/26–26/27).
+
+**Unverändert:** Historische Laufartefakte (Run 1–3) bleiben unverändert (D-042); Quelltexte/Zitate aus FCSG-Dateien bleiben, wie sie geliefert wurden. Nur Bezeichnung, keine Rechen- oder Datenänderung. Datum der Umbenennung noch nicht belegt. Quelle: Reto, Chat.
+
 ## Bestätigte Arbeitsregeln zu den Quellen-Widersprüchen (11.10.2026)
 
 Details: `Quellen und interne Dokumentation/briefing/10_synthese_widersprueche.md`.

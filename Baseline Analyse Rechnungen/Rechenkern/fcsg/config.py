@@ -88,7 +88,7 @@ setze_datenpfade()
 # --------------------------------------------------------------------------------------------
 # Scope
 # --------------------------------------------------------------------------------------------
-# Kernstichprobe = Pflichtspiele der Herren im kybunpark (Super League, Schweizer Cup, UEFA).
+# Kernstichprobe = Pflichtspiele der Herren im Berit Sitterstadion (Super League, Schweizer Cup, UEFA).
 KERN_WETTBEWERBE = ("SL", "Cup", "UEFA")
 BASELINE_AB_SAISON = "2021/22"     # Spielebene: alle Kernquellen ab hier vorhanden
 MODELL_AB_SAISON = "2022/23"       # Kontextmodelle: Spielkontext-Tabelle ab hier (Auftrag Abschnitt D)

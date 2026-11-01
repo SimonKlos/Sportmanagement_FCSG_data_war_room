@@ -266,7 +266,7 @@ def chancenfelder(kz: dict) -> list[Chancenfeld]:
             "Klein gegenüber Herren-Pflichtspielen.",
             _lp(**{"Personensegmentierung": "nur Anlass-Ebene"}),
             "Verlässliche Zuschauerzahlen bei Events; Ziel des Clubs für Nicht-Pflichtspiel-Tage.",
-            ["Welche Catering-Formate passen zu Testspielen und Events im kybunpark?",
+            ["Welche Catering-Formate passen zu Testspielen und Events im Berit Sitterstadion?",
              "Lohnt sich an kleinen Anlässen ein reduziertes Standangebot?"],
             "Format-Varianten an Test-/Eventtagen vergleichen (KF, Bons je Anwesendem).",
             "abb_i17_randfelder.png", "Blatt F1_Randfelder_Kategorien"),

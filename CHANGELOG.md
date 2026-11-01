@@ -1,5 +1,10 @@
 # Changelog
 
+## Stadionname – 02.11.2026
+- D-044: «kybunpark» durch «Berit Sitterstadion» ersetzt in Deliverables (HTML-Bericht, Excel-Blatt 20_Chancenfelder, Folienleitfaden), in den Generatoren `delivery/build_report.py` und in den Textbausteinen des Rechenkerns (`config.py` Kommentar, `report/methodennotiz.py`, `ideen/chancen.py`, `ideen/bericht/html.py`), damit künftige Läufe die alte Bezeichnung nicht wieder erzeugen.
+- Excel per Text-Ersatz direkt in der Datei (Formate, Formeln und übrige Zellen unverändert); `data_inventory.md`: offene Frage zur Umbenennung als geklärt markiert.
+- Historische Run-Artefakte unverändert. Nur Bezeichnung; keine Rechen-, Daten- oder Modelländerung.
+
 ## Rechenkern und Notebooks einsortiert – 01.11.2026
 - Root `ralf/` nach `Baseline Analyse Rechnungen/Rechenkern/` verschoben: aktiver kanonischer Code, Tests, Referenzdaten und Korrekturen vollständig erhalten. Keine fachliche Logik geändert; Standardpfade trotz zusätzlicher Ordnerebene stabilisiert.
 - Root `notebooks/` nach `Baseline Analyse Rechnungen/Notebooks_Archiv/` verschoben; Repository-Erkennung für den tieferen Startordner angepasst. Keine Notebook-Ausgaben erzeugt oder archivierte Ergebnisse verändert.
