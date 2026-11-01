@@ -1,0 +1,1473 @@
+{
+  "report": "FCSG_Baseline_und_Chancenfelder.html",
+  "data_cutoff": "2026-09-12",
+  "report_date": "2026-11-01",
+  "policy": "Nur bestehende Aggregate; keine Modellierung; technische Quelldateinamen unverändert. Nicht öffentlich.",
+  "exhibits": [
+    {
+      "id": "G01",
+      "title": "Kundenfranken je Saison",
+      "source": "/data/cache/scratch/fcsg-review/Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_kern_phase1/Tabellen/saison_kpi.csv",
+      "selector": "wettbewerbe=SL; saison,spiele,kf_inkl",
+      "values": [
+        {
+          "saison": "2021/22",
+          "spiele": "18",
+          "kf_inkl": "13.68292726699488"
+        },
+        {
+          "saison": "2022/23",
+          "spiele": "18",
+          "kf_inkl": "13.315909892293883"
+        },
+        {
+          "saison": "2023/24",
+          "spiele": "19",
+          "kf_inkl": "14.806785679901058"
+        },
+        {
+          "saison": "2024/25",
+          "spiele": "18",
+          "kf_inkl": "14.476983582904538"
+        },
+        {
+          "saison": "2025/26",
+          "spiele": "19",
+          "kf_inkl": "15.27383038591347"
+        },
+        {
+          "saison": "2026/27",
+          "spiele": "4",
+          "kf_inkl": "16.73144841172125"
+        }
+      ],
+      "note": "Summe/Summe; inkl. MwSt.; letzte Saison nur vier Spiele",
+      "sha256": "1edf9f1297d75a8ce1837478bb5c4172acffc0ede029733e075b04d1474fdafa"
+    },
+    {
+      "id": "G02",
+      "title": "No-Show je Saison",
+      "source": "/data/cache/scratch/fcsg-review/Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_kern_phase1/Tabellen/saison_kpi.csv",
+      "selector": "wettbewerbe=SL; saison,spiele,noshow_quote",
+      "values": [
+        {
+          "saison": "2021/22",
+          "spiele": "18",
+          "noshow_quote": "0.22381891948993227"
+        },
+        {
+          "saison": "2022/23",
+          "spiele": "18",
+          "noshow_quote": "0.1716515571065509"
+        },
+        {
+          "saison": "2023/24",
+          "spiele": "19",
+          "noshow_quote": "0.16467832789801362"
+        },
+        {
+          "saison": "2024/25",
+          "spiele": "18",
+          "noshow_quote": "0.19049228689078734"
+        },
+        {
+          "saison": "2025/26",
+          "spiele": "19",
+          "noshow_quote": "0.18103340720188688"
+        },
+        {
+          "saison": "2026/27",
+          "spiele": "4",
+          "noshow_quote": "0.14903021860265753"
+        }
+      ],
+      "note": "1 − ΣIST/ΣSOLL; teils kapazitätsbasiertes SOLL; keine reine Abo-Quote",
+      "sha256": "1edf9f1297d75a8ce1837478bb5c4172acffc0ede029733e075b04d1474fdafa"
+    },
+    {
+      "id": "G03",
+      "title": "Vor-Anpfiff-Zeit nach physischem Eingang",
+      "source": "/data/cache/scratch/fcsg-review/Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_ideen_grundlage/Ideen_Grundlage_FCSG.xlsx",
+      "selector": "Z1_Verweilzeit_Eingang!A1:K6",
+      "values": [
+        {
+          "sektor": "A",
+          "spiele": 71,
+          "besucher_je_spiel": 1390.732394366197,
+          "verweil_mittel": 30.86669238683127,
+          "verweil_median": 29.375,
+          "anteil_letzte_15_min": 0.1834239130434783,
+          "anteil_nach_anpfiff": 0.03309993634627625,
+          "anteil_ab_60_min": 0.03041825095057034,
+          "besucher_minuten_je_spiel": 42666.37840375587,
+          "besucher_letzte_15_min_je_spiel": 255.0935777709737,
+          "lesart": "Verweilminuten = Minuten zwischen Drehkreuz und Anpfiff (Ankunft nach Anpfiff = 0); Median über die Spiele. Besucher-Minuten = Summe aller Minuten vor Anpfiff je Spiel und Eingang (Konsumfenster)."
+        },
+        {
+          "sektor": "B",
+          "spiele": 71,
+          "besucher_je_spiel": 2120.098591549296,
+          "verweil_mittel": 32.24665942422596,
+          "verweil_median": 31.25,
+          "anteil_letzte_15_min": 0.1764948453608247,
+          "anteil_nach_anpfiff": 0.02221018418201517,
+          "anteil_ab_60_min": 0.05075445816186557,
+          "besucher_minuten_je_spiel": 68830.7251173709,
+          "besucher_letzte_15_min_je_spiel": 374.1864730651953,
+          "lesart": "Verweilminuten = Minuten zwischen Drehkreuz und Anpfiff (Ankunft nach Anpfiff = 0); Median über die Spiele. Besucher-Minuten = Summe aller Minuten vor Anpfiff je Spiel und Eingang (Konsumfenster)."
+        },
+        {
+          "sektor": "C",
+          "spiele": 71,
+          "besucher_je_spiel": 4691.676056338029,
+          "verweil_mittel": 27.38374638141637,
+          "verweil_median": 25.33333333333333,
+          "anteil_letzte_15_min": 0.2310951069688625,
+          "anteil_nach_anpfiff": 0.0194044831047173,
+          "anteil_ab_60_min": 0.01738443303042276,
+          "besucher_minuten_je_spiel": 131086.2866197183,
+          "besucher_letzte_15_min_je_spiel": 1084.223380102688,
+          "lesart": "Verweilminuten = Minuten zwischen Drehkreuz und Anpfiff (Ankunft nach Anpfiff = 0); Median über die Spiele. Besucher-Minuten = Summe aller Minuten vor Anpfiff je Spiel und Eingang (Konsumfenster)."
+        },
+        {
+          "sektor": "D",
+          "spiele": 71,
+          "besucher_je_spiel": 4348.915492957746,
+          "verweil_mittel": 63.19436701509872,
+          "verweil_median": 70.2,
+          "anteil_letzte_15_min": 0.03778409090909091,
+          "anteil_nach_anpfiff": 0.01386263390044108,
+          "anteil_ab_60_min": 0.5972647960386701,
+          "besucher_minuten_je_spiel": 261199.7948356807,
+          "besucher_letzte_15_min_je_spiel": 164.3198183418694,
+          "lesart": "Verweilminuten = Minuten zwischen Drehkreuz und Anpfiff (Ankunft nach Anpfiff = 0); Median über die Spiele. Besucher-Minuten = Summe aller Minuten vor Anpfiff je Spiel und Eingang (Konsumfenster)."
+        },
+        {
+          "sektor": "B4 (Gäste)",
+          "spiele": 64,
+          "besucher_je_spiel": 639.546875,
+          "verweil_mittel": 35.19022431440311,
+          "verweil_median": 35.69583333333333,
+          "anteil_letzte_15_min": 0.04527156113537117,
+          "anteil_nach_anpfiff": 0.01000100010001,
+          "anteil_ab_60_min": 0.02498500593642517,
+          "besucher_minuten_je_spiel": 24455.546875,
+          "besucher_letzte_15_min_je_spiel": 28.95328545049809,
+          "lesart": "Verweilminuten = Minuten zwischen Drehkreuz und Anpfiff (Ankunft nach Anpfiff = 0); Median über die Spiele. Besucher-Minuten = Summe aller Minuten vor Anpfiff je Spiel und Eingang (Konsumfenster)."
+        }
+      ],
+      "note": "verweil_mittel = Median der spielweisen mittleren Verweilminuten; nach Anpfiff auf 0 gesetzt; B4 n=64, übrige n=71",
+      "sha256": "67f1c5e19462f4b42b73d727b83f88d65d84415ad37b3412451e23b65cd55bc4"
+    },
+    {
+      "id": "G04",
+      "title": "Historische Modellvalidierung",
+      "source": "/data/cache/scratch/fcsg-review/Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_kern_phase1/Tabellen/modellguete.csv",
+      "selector": "alle fünf Zielgrössen; spiele,verbesserung_loso_pct",
+      "values": [
+        {
+          "zielgroesse": "Anwesenheitsquote (IST/SOLL)",
+          "transformation": "logit",
+          "spiele": "76",
+          "saisons": "2022/23, 2023/24, 2024/25, 2025/26, 2026/27",
+          "r2_gesamt": "0.44826685692081447",
+          "r2_kontext_innerhalb_saison": "0.42383229990366555",
+          "rmse_modell_loso": "0.3105494782719365",
+          "rmse_saisonmittel_loso": "0.3694096172764261",
+          "verbesserung_loso_pct": "15.93356974256711",
+          "rmse_lomo_transformiert": "0.3284276073775746",
+          "smearing_faktor": "",
+          "hinweis": "R² innerhalb Saison = Anteil der saisonbereinigten Streuung, den der Kontext erklärt."
+        },
+        {
+          "zielgroesse": "Kundenfranken exkl. MwSt",
+          "transformation": "log",
+          "spiele": "76",
+          "saisons": "2022/23, 2023/24, 2024/25, 2025/26, 2026/27",
+          "r2_gesamt": "0.5024867224816416",
+          "r2_kontext_innerhalb_saison": "0.3330310389767399",
+          "rmse_modell_loso": "0.0842148004835572",
+          "rmse_saisonmittel_loso": "0.09074030026803595",
+          "verbesserung_loso_pct": "7.191402017850068",
+          "rmse_lomo_transformiert": "0.08648679532264335",
+          "smearing_faktor": "1.0027455329024746",
+          "hinweis": "R² innerhalb Saison = Anteil der saisonbereinigten Streuung, den der Kontext erklärt."
+        },
+        {
+          "zielgroesse": "Bons je Public-Anwesendem",
+          "transformation": "log",
+          "spiele": "60",
+          "saisons": "2023/24, 2024/25, 2025/26, 2026/27",
+          "r2_gesamt": "0.5482674643992027",
+          "r2_kontext_innerhalb_saison": "0.1868027312593622",
+          "rmse_modell_loso": "0.052871973401827733",
+          "rmse_saisonmittel_loso": "0.05385327428832655",
+          "verbesserung_loso_pct": "1.8221749735122916",
+          "rmse_lomo_transformiert": "0.058342336507272045",
+          "smearing_faktor": "1.0011759146188814",
+          "hinweis": "R² innerhalb Saison = Anteil der saisonbereinigten Streuung, den der Kontext erklärt."
+        },
+        {
+          "zielgroesse": "Ø Bon exkl. MwSt",
+          "transformation": "log",
+          "spiele": "60",
+          "saisons": "2023/24, 2024/25, 2025/26, 2026/27",
+          "r2_gesamt": "0.4859627955571302",
+          "r2_kontext_innerhalb_saison": "0.3454198277843411",
+          "rmse_modell_loso": "0.057691738156866",
+          "rmse_saisonmittel_loso": "0.060588985117757406",
+          "verbesserung_loso_pct": "4.781804737710127",
+          "rmse_lomo_transformiert": "0.05894367525119692",
+          "smearing_faktor": "1.0012043075914727",
+          "hinweis": "R² innerhalb Saison = Anteil der saisonbereinigten Streuung, den der Kontext erklärt."
+        },
+        {
+          "zielgroesse": "Anteil Ankunft ≥ 45 min vor Anpfiff (optional)",
+          "transformation": "logit",
+          "spiele": "66",
+          "saisons": "2022/23, 2023/24, 2024/25, 2025/26, 2026/27",
+          "r2_gesamt": "0.40340954011910635",
+          "r2_kontext_innerhalb_saison": "0.39222514498392247",
+          "rmse_modell_loso": "0.20659086208018967",
+          "rmse_saisonmittel_loso": "0.22381372572974706",
+          "verbesserung_loso_pct": "7.695177582787672",
+          "rmse_lomo_transformiert": "0.216088936160619",
+          "smearing_faktor": "",
+          "hinweis": "R² innerhalb Saison = Anteil der saisonbereinigten Streuung, den der Kontext erklärt."
+        }
+      ],
+      "note": "RMSE-Verbesserung relativ zum Saisonmittel auf transformierten saisonbereinigten Werten; keine operative Zukunftsprognose",
+      "sha256": "bf92775002ce4dfb0a96271f953b3470879d9be7da6337f7cacbdf72446b8c0a"
+    },
+    {
+      "id": "G05",
+      "title": "T-7 Prognosevergleich",
+      "source": "/data/cache/scratch/fcsg-review/Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_ideen_grundlage/Ideen_Grundlage_FCSG.xlsx",
+      "selector": "A6_Fruehindikator!A1:L2",
+      "values": {
+        "zielgroesse": "IST (Anwesende)",
+        "testspiele": "alle Testspiele",
+        "n": 54,
+        "mae_saison_bis_dato": 1849.937844644939,
+        "mae_kontext": 1338.076255201862,
+        "mae_kontext_plus_t7": 921.8087513558938,
+        "verbesserung_gegen_kontext_pct": 31.10940069578996,
+        "verbesserung_gegen_saisonmittel_pct": 50.17082579156503,
+        "abdeckung_pi80": 0.8636363636363636,
+        "spiele_mit_band": 44,
+        "erfolg_regel_10pct": true,
+        "lesart": "Rolling Origin: jedes Spiel wird nur mit früheren Spielen vorhergesagt (retrospektiv getestet). Erfolg = MAE mindestens 10 % tiefer als das reine Kontextmodell. Prädiktoren: nur bei T-7 bekannt (Gegner, Wochentag, Anstosszeit, Winter, Schulferien) plus verkaufte Einzeltickets bis T-7."
+      },
+      "note": "54 retrospektive Vorhersagen; Bandabdeckung nur 44 Spiele mit Band, nicht 54",
+      "sha256": "67f1c5e19462f4b42b73d727b83f88d65d84415ad37b3412451e23b65cd55bc4"
+    },
+    {
+      "id": "G06",
+      "title": "Treiberlogik",
+      "source": "/data/cache/scratch/fcsg-review/Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_kern_phase1/Methodennotiz_Phase1.md",
+      "selector": "§4 KPI-Definitionen, Zeilen 102–114",
+      "values": {},
+      "note": "Schematische Darstellung, keine Schätzung",
+      "sha256": "362938e533c4160524d29eb8aec9e866ea51c5064d246ff0b4978055271585f5"
+    },
+    {
+      "id": "G07",
+      "title": "Drei Themen",
+      "source": "/data/cache/scratch/fcsg-review/Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_ideen_grundlage/Ideen_Grundlage_FCSG.xlsx",
+      "selector": "02_Chancenfelder!A2:B10",
+      "values": [
+        [
+          1,
+          "Leere bezahlte Plätze aktivieren"
+        ],
+        [
+          2,
+          "Gruppen- und Gratistickets, die nicht genutzt werden"
+        ],
+        [
+          3,
+          "Das Zeitfenster vor dem Anpfiff"
+        ],
+        [
+          4,
+          "Mehr Kaufmomente: die Kauffrequenz"
+        ],
+        [
+          5,
+          "Warenkorb und Sortiment nach Spieltyp"
+        ],
+        [
+          6,
+          "Spieltage planbar machen (Frühindikator)"
+        ],
+        [
+          7,
+          "Wetter und Kiesplatz"
+        ],
+        [
+          8,
+          "Erfolgsmuster wiederholen"
+        ],
+        [
+          9,
+          "Das Stadion an weiteren Anlässen"
+        ]
+      ],
+      "note": "Gruppierung redaktionell; keine neue Modellierung",
+      "sha256": "67f1c5e19462f4b42b73d727b83f88d65d84415ad37b3412451e23b65cd55bc4"
+    },
+    {
+      "id": "T01",
+      "title": "Saison-Baseline",
+      "source": "/data/cache/scratch/fcsg-review/Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_kern_phase1/Tabellen/saison_kpi.csv",
+      "selector": "wettbewerbe=SL",
+      "values": [
+        {
+          "saison": "2021/22",
+          "wettbewerbe": "SL",
+          "spiele": "18",
+          "spiele_mit_soll_ist": "18",
+          "ist_summe": "216754.0",
+          "ist_mittel": "12041.888888888889",
+          "soll_mittel": "15514.277777777777",
+          "noshow_quote": "0.22381891948993227",
+          "noshow_quote_ungewichtet": "0.23378499583303614",
+          "spiele_ausverkauft": "3",
+          "spiele_mit_catering": "18",
+          "public_netto_summe": "206165.0",
+          "umsatz_inkl": "2820940.6999999997",
+          "umsatz_exkl": "2679912.09",
+          "kf_inkl": "13.68292726699488",
+          "kf_exkl": "12.998870273809812",
+          "kf_inkl_ungewichtet": "13.75940302062852",
+          "spiele_mit_bons": "0",
+          "bons_pro_anwesende": "",
+          "bon_inkl": "",
+          "bon_exkl": ""
+        },
+        {
+          "saison": "2022/23",
+          "wettbewerbe": "SL",
+          "spiele": "18",
+          "spiele_mit_soll_ist": "18",
+          "ist_summe": "262053.0",
+          "ist_mittel": "14558.5",
+          "soll_mittel": "17575.333333333332",
+          "noshow_quote": "0.1716515571065509",
+          "noshow_quote_ungewichtet": "0.1762298642056043",
+          "spiele_ausverkauft": "7",
+          "spiele_mit_catering": "18",
+          "public_netto_summe": "249568.0",
+          "umsatz_inkl": "3323224.9999999995",
+          "umsatz_exkl": "3149494.1751346337",
+          "kf_inkl": "13.315909892293883",
+          "kf_exkl": "12.619783686749237",
+          "kf_inkl_ungewichtet": "13.372633710142916",
+          "spiele_mit_bons": "0",
+          "bons_pro_anwesende": "",
+          "bon_inkl": "",
+          "bon_exkl": ""
+        },
+        {
+          "saison": "2023/24",
+          "wettbewerbe": "SL",
+          "spiele": "19",
+          "spiele_mit_soll_ist": "19",
+          "ist_summe": "281754.0",
+          "ist_mittel": "14829.157894736842",
+          "soll_mittel": "17752.63157894737",
+          "noshow_quote": "0.16467832789801362",
+          "noshow_quote_ungewichtet": "0.16954214928931366",
+          "spiele_ausverkauft": "8",
+          "spiele_mit_catering": "19",
+          "public_netto_summe": "270054.0",
+          "umsatz_inkl": "3998631.7",
+          "umsatz_exkl": "3762048.1",
+          "kf_inkl": "14.806785679901058",
+          "kf_exkl": "13.930725336414199",
+          "kf_inkl_ungewichtet": "14.775561186535807",
+          "spiele_mit_bons": "19",
+          "bons_pro_anwesende": "0.8379805520377406",
+          "bon_inkl": "17.669605391073798",
+          "bon_exkl": "16.62416305788776"
+        },
+        {
+          "saison": "2024/25",
+          "wettbewerbe": "SL",
+          "spiele": "18",
+          "spiele_mit_soll_ist": "18",
+          "ist_summe": "263430.0",
+          "ist_mittel": "14635.0",
+          "soll_mittel": "18078.88888888889",
+          "noshow_quote": "0.19049228689078734",
+          "noshow_quote_ungewichtet": "0.19318928178774641",
+          "spiele_ausverkauft": "9",
+          "spiele_mit_catering": "18",
+          "public_netto_summe": "250897.0",
+          "umsatz_inkl": "3632231.75",
+          "umsatz_exkl": "3448318.2308048108",
+          "kf_inkl": "14.476983582904538",
+          "kf_exkl": "13.74395959618812",
+          "kf_inkl_ungewichtet": "14.443713100032987",
+          "spiele_mit_bons": "18",
+          "bons_pro_anwesende": "0.8821548284754301",
+          "bon_inkl": "16.410932770071838",
+          "bon_exkl": "15.57998568113139"
+        },
+        {
+          "saison": "2025/26",
+          "wettbewerbe": "SL",
+          "spiele": "19",
+          "spiele_mit_soll_ist": "19",
+          "ist_summe": "275692.0",
+          "ist_mittel": "14510.105263157895",
+          "soll_mittel": "17717.57894736842",
+          "noshow_quote": "0.18103340720188688",
+          "noshow_quote_ungewichtet": "0.18698028758757407",
+          "spiele_ausverkauft": "9",
+          "spiele_mit_catering": "19",
+          "public_netto_summe": "261924.0",
+          "umsatz_inkl": "4000582.75",
+          "umsatz_exkl": "3799454.5036725258",
+          "kf_inkl": "15.27383038591347",
+          "kf_exkl": "14.505942577513041",
+          "kf_inkl_ungewichtet": "15.15656986406542",
+          "spiele_mit_bons": "19",
+          "bons_pro_anwesende": "0.9315259388219483",
+          "bon_inkl": "16.39657013226006",
+          "bon_exkl": "15.572236878189287"
+        },
+        {
+          "saison": "2026/27",
+          "wettbewerbe": "SL",
+          "spiele": "4",
+          "spiele_mit_soll_ist": "4",
+          "ist_summe": "63530.0",
+          "ist_mittel": "15882.5",
+          "soll_mittel": "18664.0",
+          "noshow_quote": "0.14903021860265753",
+          "noshow_quote_ungewichtet": "0.149665032858509",
+          "spiele_ausverkauft": "2",
+          "spiele_mit_catering": "4",
+          "public_netto_summe": "60915.0",
+          "umsatz_inkl": "1019196.1799999999",
+          "umsatz_exkl": "966140.0660222017",
+          "kf_inkl": "16.73144841172125",
+          "kf_exkl": "15.860462382372186",
+          "kf_inkl_ungewichtet": "16.751520765301933",
+          "spiele_mit_bons": "4",
+          "bons_pro_anwesende": "0.9765082491997045",
+          "bon_inkl": "17.133955013112768",
+          "bon_exkl": "16.242015769319508"
+        }
+      ],
+      "note": "Alle Tabellenwerte direkt gerundet; keine Mittelwerte über Saisons",
+      "sha256": "1edf9f1297d75a8ce1837478bb5c4172acffc0ede029733e075b04d1474fdafa"
+    },
+    {
+      "id": "T02",
+      "title": "Modulabdeckung",
+      "source": "/data/cache/scratch/fcsg-review/Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_kern_phase1/Tabellen/abdeckung.csv",
+      "selector": "Total/alle",
+      "values": {
+        "saison": "Total",
+        "wettbewerb": "alle",
+        "pflichtspiele": "108",
+        "Anwesenheit (Historie SOLL/IST)": "108",
+        "Catering-Umsatz + Public Netto": "108",
+        "Catering-Transaktionen (Bons)": "70",
+        "Zutritt vollständig (Ankunft)": "71",
+        "Einzeltickets vollständig (Vorlauf)": "96",
+        "Eintritt je Einzelticket (ZKS valide)": "35",
+        "Spielkontext-Tabelle (Gruppe)": "107",
+        "im Kontextmodell (Diagnosekarte)": "76"
+      },
+      "note": "108 gespielte Pflichtspiele; unterschiedliche Modulstichproben",
+      "sha256": "169efca86b056a5fe999df47d1ef3d62501ba51e5c28ef66c44b8a8c1b5eb1b0"
+    },
+    {
+      "id": "N01",
+      "title": "Definitionen, Ankunft und Grenzen",
+      "source": "/data/cache/scratch/fcsg-review/Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_kern_phase1/Methodennotiz_Phase1.md",
+      "selector": "§§1–4, 6–10, 13; insbesondere 146–174, 185–208, 254",
+      "values": {
+        "arrival_n": 71,
+        "median_minutes": 38,
+        "early_pct": 41,
+        "late_including_after_pct": 16,
+        "elasticity": 1.01,
+        "elasticity_ci": [
+          0.92,
+          1.1
+        ],
+        "elasticity_n": 96,
+        "did_minutes": 22.6,
+        "did_ci": [
+          19,
+          26
+        ],
+        "did_before": 12,
+        "did_after": 59,
+        "below_band": 6,
+        "above_band": 12
+      },
+      "note": "Werte aus historischer Methodennotiz; keine Rohdaten-Revalidierung",
+      "sha256": "362938e533c4160524d29eb8aec9e866ea51c5064d246ff0b4978055271585f5"
+    },
+    {
+      "id": "N02",
+      "title": "Chancenfelder und Belege",
+      "source": "/data/cache/scratch/fcsg-review/Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_ideen_grundlage/Ideen_Grundlage_FCSG.xlsx",
+      "selector": "02_Chancenfelder!A1:W10; K14_Kiesplatz_Wetter!A1:J10; K13_Zahlungswege_Ideen!A1:H19",
+      "values": {
+        "opportunities": [
+          {
+            "nr": 1,
+            "chancenfeld": "Leere bezahlte Plätze aktivieren",
+            "kernzahl": "60'942 leere, vergebene Plätze (verkauft oder ausgegeben) in der Saison 2025/26 – der Zweitmarkt besetzt nur 9 % davon neu.",
+            "evidenz": "stark"
+          },
+          {
+            "nr": 2,
+            "chancenfeld": "Gruppen- und Gratistickets, die nicht genutzt werden",
+            "kernzahl": "46 % aller No-Shows bei Einzeltickets stammen aus Inhouse-Bestellungen ab 10 Tickets.",
+            "evidenz": "mittel"
+          },
+          {
+            "nr": 3,
+            "chancenfeld": "Das Zeitfenster vor dem Anpfiff",
+            "kernzahl": "Tribüne C: im Schnitt 27 min vor Anpfiff im Stadion – 23 % kommen in den letzten 15 Minuten (≈ 1'084 Personen je Spiel).",
+            "evidenz": "mittel"
+          },
+          {
+            "nr": 4,
+            "chancenfeld": "Mehr Kaufmomente: die Kauffrequenz",
+            "kernzahl": "Der KF stieg 2023/24→2025/26 um +4.1 % – getragen von +11.2 % Kaufhäufigkeit, bei −6.3 % kleinerem Bon.",
+            "evidenz": "mittel"
+          },
+          {
+            "nr": 5,
+            "chancenfeld": "Warenkorb und Sortiment nach Spieltyp",
+            "kernzahl": "Abendspiele sind Getränkespiele: KF Alkohol +22 %, KF Food & alkoholfrei −12 % bei gleichem Kontext.",
+            "evidenz": "stark"
+          },
+          {
+            "nr": 6,
+            "chancenfeld": "Spieltage planbar machen (Frühindikator)",
+            "kernzahl": "Verkaufte Einzeltickets 7 Tage vor dem Spiel senken den Prognosefehler der Anwesenden um 31 %.",
+            "evidenz": "stark"
+          },
+          {
+            "nr": 7,
+            "chancenfeld": "Wetter und Kiesplatz",
+            "kernzahl": "+5 °C bringen dem Kiesplatz +10 % Umsatz je Anwesendem – deutlich mehr als im Stadion (+2.6 %).",
+            "evidenz": "stark"
+          },
+          {
+            "nr": 8,
+            "chancenfeld": "Erfolgsmuster wiederholen",
+            "kernzahl": "11 von 12 Spielen mit KF über der Erwartung waren Samstagsspiele (10 davon um 18:00).",
+            "evidenz": "schwach"
+          },
+          {
+            "nr": 9,
+            "chancenfeld": "Das Stadion an weiteren Anlässen",
+            "kernzahl": "Testspiele (5 Anlässe seit 2022/23): KF CHF 14.01 inkl. MwSt gegenüber CHF 14.61 in der Herren-Meisterschaft.",
+            "evidenz": "schwach"
+          }
+        ],
+        "weather": [
+          {
+            "zielgroesse": "Kiesplatz CHF je Anwesendem (brutto)",
+            "variable": "+5 °C",
+            "effekt": 9.504862464596698,
+            "ki95_unten": 5.765973801918789,
+            "ki95_oben": 13.37592301516437,
+            "einheit": "%",
+            "p_wert": 3.010763983966214e-07,
+            "spiele": 85,
+            "residuen_korrelation_kies_stadion": 0.4136550106697082,
+            "lesart": "Negative Residuen-Korrelation spräche für Verlagerung zwischen Kiesplatz und Stadion (Substitution), positive für gemeinsame Schwankung (Stimmung/Nachfrage). Kiesplatz ist im Catering-Total enthalten – nie addieren."
+          },
+          {
+            "zielgroesse": "Kiesplatz CHF je Anwesendem (brutto)",
+            "variable": "Regen bei Anreise",
+            "effekt": -9.71081734379572,
+            "ki95_unten": -26.82464863011794,
+            "ki95_oben": 11.4054986018246,
+            "einheit": "%",
+            "p_wert": 0.3407410138660566,
+            "spiele": 85,
+            "residuen_korrelation_kies_stadion": 0.4136550106697082,
+            "lesart": "Negative Residuen-Korrelation spräche für Verlagerung zwischen Kiesplatz und Stadion (Substitution), positive für gemeinsame Schwankung (Stimmung/Nachfrage). Kiesplatz ist im Catering-Total enthalten – nie addieren."
+          },
+          {
+            "zielgroesse": "Kiesplatz CHF je Anwesendem (brutto)",
+            "variable": "Abendspiel",
+            "effekt": 17.38421726622954,
+            "ki95_unten": 5.143550600389601,
+            "ki95_oben": 31.04992540697333,
+            "einheit": "%",
+            "p_wert": 0.004335309912913372,
+            "spiele": 85,
+            "residuen_korrelation_kies_stadion": 0.4136550106697082,
+            "lesart": "Negative Residuen-Korrelation spräche für Verlagerung zwischen Kiesplatz und Stadion (Substitution), positive für gemeinsame Schwankung (Stimmung/Nachfrage). Kiesplatz ist im Catering-Total enthalten – nie addieren."
+          },
+          {
+            "zielgroesse": "Stadion (ohne Kiesplatz) CHF je Anwesendem",
+            "variable": "+5 °C",
+            "effekt": 2.598247990213198,
+            "ki95_unten": 1.12296172219406,
+            "ki95_oben": 4.095057258899448,
+            "einheit": "%",
+            "p_wert": 0.000518176265297339,
+            "spiele": 85,
+            "residuen_korrelation_kies_stadion": 0.4136550106697082,
+            "lesart": "Negative Residuen-Korrelation spräche für Verlagerung zwischen Kiesplatz und Stadion (Substitution), positive für gemeinsame Schwankung (Stimmung/Nachfrage). Kiesplatz ist im Catering-Total enthalten – nie addieren."
+          },
+          {
+            "zielgroesse": "Stadion (ohne Kiesplatz) CHF je Anwesendem",
+            "variable": "Regen bei Anreise",
+            "effekt": 5.685252456978573,
+            "ki95_unten": -2.448871531523522,
+            "ki95_oben": 14.49762562720804,
+            "einheit": "%",
+            "p_wert": 0.1759818602226214,
+            "spiele": 85,
+            "residuen_korrelation_kies_stadion": 0.4136550106697082,
+            "lesart": "Negative Residuen-Korrelation spräche für Verlagerung zwischen Kiesplatz und Stadion (Substitution), positive für gemeinsame Schwankung (Stimmung/Nachfrage). Kiesplatz ist im Catering-Total enthalten – nie addieren."
+          },
+          {
+            "zielgroesse": "Stadion (ohne Kiesplatz) CHF je Anwesendem",
+            "variable": "Abendspiel",
+            "effekt": 6.653424187305812,
+            "ki95_unten": 3.372803800270185,
+            "ki95_oben": 10.03815774268142,
+            "einheit": "%",
+            "p_wert": 5.321914334041356e-05,
+            "spiele": 85,
+            "residuen_korrelation_kies_stadion": 0.4136550106697082,
+            "lesart": "Negative Residuen-Korrelation spräche für Verlagerung zwischen Kiesplatz und Stadion (Substitution), positive für gemeinsame Schwankung (Stimmung/Nachfrage). Kiesplatz ist im Catering-Total enthalten – nie addieren."
+          },
+          {
+            "zielgroesse": "Kiesplatz-Anteil am Catering",
+            "variable": "+5 °C",
+            "effekt": 0.5232852477647466,
+            "ki95_unten": 0.2792305273690118,
+            "ki95_oben": 0.7673399681604814,
+            "einheit": "Pp.",
+            "p_wert": 2.639874397327196e-05,
+            "spiele": 85,
+            "residuen_korrelation_kies_stadion": 0.4136550106697082,
+            "lesart": "Negative Residuen-Korrelation spräche für Verlagerung zwischen Kiesplatz und Stadion (Substitution), positive für gemeinsame Schwankung (Stimmung/Nachfrage). Kiesplatz ist im Catering-Total enthalten – nie addieren."
+          },
+          {
+            "zielgroesse": "Kiesplatz-Anteil am Catering",
+            "variable": "Regen bei Anreise",
+            "effekt": -1.071554426102344,
+            "ki95_unten": -2.312244500013935,
+            "ki95_oben": 0.1691356478092474,
+            "einheit": "Pp.",
+            "p_wert": 0.09049254237478771,
+            "spiele": 85,
+            "residuen_korrelation_kies_stadion": 0.4136550106697082,
+            "lesart": "Negative Residuen-Korrelation spräche für Verlagerung zwischen Kiesplatz und Stadion (Substitution), positive für gemeinsame Schwankung (Stimmung/Nachfrage). Kiesplatz ist im Catering-Total enthalten – nie addieren."
+          },
+          {
+            "zielgroesse": "Kiesplatz-Anteil am Catering",
+            "variable": "Abendspiel",
+            "effekt": 0.7261831847007425,
+            "ki95_unten": -0.1360406636773053,
+            "ki95_oben": 1.58840703307879,
+            "einheit": "Pp.",
+            "p_wert": 0.09878891705874532,
+            "spiele": 85,
+            "residuen_korrelation_kies_stadion": 0.4136550106697082,
+            "lesart": "Negative Residuen-Korrelation spräche für Verlagerung zwischen Kiesplatz und Stadion (Substitution), positive für gemeinsame Schwankung (Stimmung/Nachfrage). Kiesplatz ist im Catering-Total enthalten – nie addieren."
+          }
+        ],
+        "payment": [
+          {
+            "saison": "2022/23",
+            "kanal": "Payfix (Kasse/Stand)",
+            "umsatz_inkl": 396857,
+            "anteil": 0.1194192388417877,
+            "anteil_min_spiel": 0,
+            "anteil_max_spiel": 0.255893568981045,
+            "spiele_mit_umsatz": 10,
+            "lesart": "Meisterschaft; Anteile am Catering-Umsatz inkl. MwSt. Pick Up ersetzt ab 2026/27 Just Eat."
+          },
+          {
+            "saison": "2022/23",
+            "kanal": "Just Eat (App)",
+            "umsatz_inkl": 35049.5,
+            "anteil": 0.01054683327189703,
+            "anteil_min_spiel": 0,
+            "anteil_max_spiel": 0.0371179104433089,
+            "spiele_mit_umsatz": 12,
+            "lesart": "Meisterschaft; Anteile am Catering-Umsatz inkl. MwSt. Pick Up ersetzt ab 2026/27 Just Eat."
+          },
+          {
+            "saison": "2023/24",
+            "kanal": "Payfix (Kasse/Stand)",
+            "umsatz_inkl": 3880039,
+            "anteil": 0.9703416796300595,
+            "anteil_min_spiel": 0.9533674343813047,
+            "anteil_max_spiel": 0.9829430218690893,
+            "spiele_mit_umsatz": 19,
+            "lesart": "Meisterschaft; Anteile am Catering-Umsatz inkl. MwSt. Pick Up ersetzt ab 2026/27 Just Eat."
+          },
+          {
+            "saison": "2023/24",
+            "kanal": "Just Eat (App)",
+            "umsatz_inkl": 71359.5,
+            "anteil": 0.01784597966349339,
+            "anteil_min_spiel": 0.006847858287693605,
+            "anteil_max_spiel": 0.02823225705679092,
+            "spiele_mit_umsatz": 19,
+            "lesart": "Meisterschaft; Anteile am Catering-Umsatz inkl. MwSt. Pick Up ersetzt ab 2026/27 Just Eat."
+          },
+          {
+            "saison": "2023/24",
+            "kanal": "Gutscheine/nicht verbucht",
+            "umsatz_inkl": 30315.2,
+            "anteil": 0.007581393405149066,
+            "anteil_min_spiel": 0.003897719560287318,
+            "anteil_max_spiel": 0.01460033919576232,
+            "spiele_mit_umsatz": 19,
+            "lesart": "Meisterschaft; Anteile am Catering-Umsatz inkl. MwSt. Pick Up ersetzt ab 2026/27 Just Eat."
+          },
+          {
+            "saison": "2023/24",
+            "kanal": "Extern (Partner-Stände)",
+            "umsatz_inkl": 16918,
+            "anteil": 0.004230947301298091,
+            "anteil_min_spiel": 0,
+            "anteil_max_spiel": 0.01914309235633645,
+            "spiele_mit_umsatz": 6,
+            "lesart": "Meisterschaft; Anteile am Catering-Umsatz inkl. MwSt. Pick Up ersetzt ab 2026/27 Just Eat."
+          },
+          {
+            "saison": "2024/25",
+            "kanal": "Payfix (Kasse/Stand)",
+            "umsatz_inkl": 3473601.5,
+            "anteil": 0.956327057049705,
+            "anteil_min_spiel": 0.9448204078306983,
+            "anteil_max_spiel": 0.9670706148655993,
+            "spiele_mit_umsatz": 18,
+            "lesart": "Meisterschaft; Anteile am Catering-Umsatz inkl. MwSt. Pick Up ersetzt ab 2026/27 Just Eat."
+          },
+          {
+            "saison": "2024/25",
+            "kanal": "Just Eat (App)",
+            "umsatz_inkl": 45726.5,
+            "anteil": 0.01258909209193494,
+            "anteil_min_spiel": 0.004502416566819911,
+            "anteil_max_spiel": 0.02047171373577481,
+            "spiele_mit_umsatz": 18,
+            "lesart": "Meisterschaft; Anteile am Catering-Umsatz inkl. MwSt. Pick Up ersetzt ab 2026/27 Just Eat."
+          },
+          {
+            "saison": "2024/25",
+            "kanal": "Gutscheine/nicht verbucht",
+            "umsatz_inkl": 52634.8,
+            "anteil": 0.01449103571103358,
+            "anteil_min_spiel": 0.008058851712965874,
+            "anteil_max_spiel": 0.02481398786655165,
+            "spiele_mit_umsatz": 18,
+            "lesart": "Meisterschaft; Anteile am Catering-Umsatz inkl. MwSt. Pick Up ersetzt ab 2026/27 Just Eat."
+          },
+          {
+            "saison": "2024/25",
+            "kanal": "Extern (Partner-Stände)",
+            "umsatz_inkl": 60268.95,
+            "anteil": 0.01659281514732643,
+            "anteil_min_spiel": 0,
+            "anteil_max_spiel": 0.02408440581468198,
+            "spiele_mit_umsatz": 17,
+            "lesart": "Meisterschaft; Anteile am Catering-Umsatz inkl. MwSt. Pick Up ersetzt ab 2026/27 Just Eat."
+          },
+          {
+            "saison": "2025/26",
+            "kanal": "Payfix (Kasse/Stand)",
+            "umsatz_inkl": 3850516.5,
+            "anteil": 0.9624889023980319,
+            "anteil_min_spiel": 0.9540414254829487,
+            "anteil_max_spiel": 0.9847146505266979,
+            "spiele_mit_umsatz": 19,
+            "lesart": "Meisterschaft; Anteile am Catering-Umsatz inkl. MwSt. Pick Up ersetzt ab 2026/27 Just Eat."
+          },
+          {
+            "saison": "2025/26",
+            "kanal": "Just Eat (App)",
+            "umsatz_inkl": 46024,
+            "anteil": 0.01150432396380252,
+            "anteil_min_spiel": 0.003219491891418235,
+            "anteil_max_spiel": 0.01776033221048925,
+            "spiele_mit_umsatz": 19,
+            "lesart": "Meisterschaft; Anteile am Catering-Umsatz inkl. MwSt. Pick Up ersetzt ab 2026/27 Just Eat."
+          },
+          {
+            "saison": "2025/26",
+            "kanal": "Gutscheine/nicht verbucht",
+            "umsatz_inkl": 30029,
+            "anteil": 0.007506156446832652,
+            "anteil_min_spiel": 0.003880574398263203,
+            "anteil_max_spiel": 0.01280679600833074,
+            "spiele_mit_umsatz": 19,
+            "lesart": "Meisterschaft; Anteile am Catering-Umsatz inkl. MwSt. Pick Up ersetzt ab 2026/27 Just Eat."
+          },
+          {
+            "saison": "2025/26",
+            "kanal": "Extern (Partner-Stände)",
+            "umsatz_inkl": 74013.25,
+            "anteil": 0.01850061719133294,
+            "anteil_min_spiel": 0,
+            "anteil_max_spiel": 0.02913070146586899,
+            "spiele_mit_umsatz": 16,
+            "lesart": "Meisterschaft; Anteile am Catering-Umsatz inkl. MwSt. Pick Up ersetzt ab 2026/27 Just Eat."
+          },
+          {
+            "saison": "2026/27",
+            "kanal": "Payfix (Kasse/Stand)",
+            "umsatz_inkl": 977315.8,
+            "anteil": 0.9589084213404333,
+            "anteil_min_spiel": 0.9447135897717316,
+            "anteil_max_spiel": 0.9723777099120958,
+            "spiele_mit_umsatz": 4,
+            "lesart": "Meisterschaft; Anteile am Catering-Umsatz inkl. MwSt. Pick Up ersetzt ab 2026/27 Just Eat."
+          },
+          {
+            "saison": "2026/27",
+            "kanal": "Pick Up (App)",
+            "umsatz_inkl": 10946.4,
+            "anteil": 0.01074022863782712,
+            "anteil_min_spiel": 0,
+            "anteil_max_spiel": 0.02582890451780847,
+            "spiele_mit_umsatz": 2,
+            "lesart": "Meisterschaft; Anteile am Catering-Umsatz inkl. MwSt. Pick Up ersetzt ab 2026/27 Just Eat."
+          },
+          {
+            "saison": "2026/27",
+            "kanal": "Gutscheine/nicht verbucht",
+            "umsatz_inkl": 9551.48,
+            "anteil": 0.009371581435872337,
+            "anteil_min_spiel": 0.006416302605085213,
+            "anteil_max_spiel": 0.0139669290621877,
+            "spiele_mit_umsatz": 4,
+            "lesart": "Meisterschaft; Anteile am Catering-Umsatz inkl. MwSt. Pick Up ersetzt ab 2026/27 Just Eat."
+          },
+          {
+            "saison": "2026/27",
+            "kanal": "Extern (Partner-Stände)",
+            "umsatz_inkl": 21382.5,
+            "anteil": 0.02097976858586735,
+            "anteil_min_spiel": 0.01814024173487929,
+            "anteil_max_spiel": 0.02505351281392585,
+            "spiele_mit_umsatz": 4,
+            "lesart": "Meisterschaft; Anteile am Catering-Umsatz inkl. MwSt. Pick Up ersetzt ab 2026/27 Just Eat."
+          }
+        ]
+      },
+      "note": "Kausale Kurzformulierungen aus Quelle redaktionell als Assoziationen begrenzt; Bons-Trend vorläufig",
+      "sha256": "67f1c5e19462f4b42b73d727b83f88d65d84415ad37b3412451e23b65cd55bc4"
+    },
+    {
+      "id": "N03",
+      "title": "Leere Plätze und Zweitmarkt",
+      "source": "/data/cache/scratch/fcsg-review/Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_ideen_grundlage/Ideen_Grundlage_FCSG.xlsx",
+      "selector": "N1_Leere_Plaetze_Saison!A6:I6; N3_Zweitmarkt_Saison!A2:N2",
+      "values": {
+        "empty": {
+          "saison": "2025/26",
+          "spiele": 19,
+          "leere_plaetze": 60942,
+          "leere_plaetze_je_spiel": 3207.473684210526,
+          "soll": 336634,
+          "ist": 275692,
+          "spiele_ticketbasiert": 11,
+          "noshow_quote": 0.1810334072018869,
+          "leere_plaetze_ticketbasiert": 41442
+        },
+        "resale": {
+          "saison": "2025/26",
+          "spiele": 19,
+          "zweitmarkt": 5716,
+          "leere_bezahlte_plaetze": 60942,
+          "wiederbesetzung_untergrenze": 0.08575114764919439,
+          "zweitmarkt_je_spiel": 300.8421052631579,
+          "zweitmarkt_ausverkauft_je_spiel": 355.1111111111111,
+          "zweitmarkt_uebrige_je_spiel": 252,
+          "anteil_tribuene_A": 0.08275017494751574,
+          "anteil_tribuene_B": 0.2704688593421973,
+          "anteil_tribuene_C": 0.3812106368089573,
+          "anteil_tribuene_D": 0.2655703289013296,
+          "spiele_ohne_zweitmarkt_D": 7,
+          "csv_gleich_historie": true
+        }
+      },
+      "note": "60’942 = SOLL−IST, nicht vollständig nachgewiesen bezahlte Plätze; 41’442 in 11 Spielen mit ticketbasiertem SOLL. Historischer Wiederbesetzungsindikator 8,6 % nutzt 5’716/(60’942+5’716), nicht 5’716/60’942.",
+      "sha256": "67f1c5e19462f4b42b73d727b83f88d65d84415ad37b3412451e23b65cd55bc4"
+    },
+    {
+      "id": "N04",
+      "title": "Kundenfranken-Entwicklung",
+      "source": "/data/cache/scratch/fcsg-review/Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_ideen_grundlage/Ideen_Grundlage_FCSG.xlsx",
+      "selector": "K1_KF_Entwicklung!A1:I6",
+      "values": [
+        {
+          "saison": "2023/24",
+          "spiele": 19,
+          "kf_exkl": 13.9307253364142,
+          "bons_pro_anwesende": 0.8379805520377406,
+          "bon_exkl": 16.62416305788776,
+          "veraenderung_kf_pct": null,
+          "veraenderung_frequenz_pct": null,
+          "veraenderung_bon_pct": null,
+          "lesart": "(1 + Δ KF) = (1 + Δ Kauffrequenz) × (1 + Δ Ø Bon); Meisterschaft, exkl. MwSt. Steigen Frequenz und sinkt der Bon gleichzeitig, kaufen Fans öfter, aber kleinere Warenkörbe."
+        },
+        {
+          "saison": "2024/25",
+          "spiele": 18,
+          "kf_exkl": 13.74395959618812,
+          "bons_pro_anwesende": 0.8821548284754301,
+          "bon_exkl": 15.57998568113139,
+          "veraenderung_kf_pct": -1.340674916171691,
+          "veraenderung_frequenz_pct": 5.271515708839503,
+          "veraenderung_bon_pct": -6.281082380631087,
+          "lesart": "(1 + Δ KF) = (1 + Δ Kauffrequenz) × (1 + Δ Ø Bon); Meisterschaft, exkl. MwSt. Steigen Frequenz und sinkt der Bon gleichzeitig, kaufen Fans öfter, aber kleinere Warenkörbe."
+        },
+        {
+          "saison": "2025/26",
+          "spiele": 19,
+          "kf_exkl": 14.50594257751304,
+          "bons_pro_anwesende": 0.9315259388219483,
+          "bon_exkl": 15.57223687818929,
+          "veraenderung_kf_pct": 5.544129957543364,
+          "veraenderung_frequenz_pct": 5.596649108846696,
+          "veraenderung_bon_pct": -0.049735623001812,
+          "lesart": "(1 + Δ KF) = (1 + Δ Kauffrequenz) × (1 + Δ Ø Bon); Meisterschaft, exkl. MwSt. Steigen Frequenz und sinkt der Bon gleichzeitig, kaufen Fans öfter, aber kleinere Warenkörbe."
+        },
+        {
+          "saison": "2026/27",
+          "spiele": 4,
+          "kf_exkl": 15.86046238237219,
+          "bons_pro_anwesende": 0.9765082491997045,
+          "bon_exkl": 16.24201576931951,
+          "veraenderung_kf_pct": 9.337689003118665,
+          "veraenderung_frequenz_pct": 4.828884360927499,
+          "veraenderung_bon_pct": 4.301109059471875,
+          "lesart": "(1 + Δ KF) = (1 + Δ Kauffrequenz) × (1 + Δ Ø Bon); Meisterschaft, exkl. MwSt. Steigen Frequenz und sinkt der Bon gleichzeitig, kaufen Fans öfter, aber kleinere Warenkörbe."
+        },
+        {
+          "saison": "2023/24 → 2025/26",
+          "spiele": null,
+          "kf_exkl": 14.50594257751304,
+          "bons_pro_anwesende": null,
+          "bon_exkl": null,
+          "veraenderung_kf_pct": 4.129126281710938,
+          "veraenderung_frequenz_pct": 11.16319305462767,
+          "veraenderung_bon_pct": -6.327694068179623,
+          "lesart": "(1 + Δ KF) = (1 + Δ Kauffrequenz) × (1 + Δ Ø Bon); Meisterschaft, exkl. MwSt. Steigen Frequenz und sinkt der Bon gleichzeitig, kaufen Fans öfter, aber kleinere Warenkörbe."
+        }
+      ],
+      "note": "Bonsrate/Bon über 23/24 vorläufig, Sensitivität ohne Übergangssaison fehlt",
+      "sha256": "67f1c5e19462f4b42b73d727b83f88d65d84415ad37b3412451e23b65cd55bc4"
+    },
+    {
+      "id": "N05",
+      "title": "Aktuelle methodische Einschränkungen",
+      "source": "/data/cache/scratch/fcsg-review/Quellen und interne Dokumentation/team/2026-11-01_catering_klaerung_und_baseline_folgen.md",
+      "selector": "§§1–4, entsprechend D-038 bis D-041",
+      "values": {},
+      "note": "Dokumentationsstand 01.11.2026; keine Ergebnisänderung, keine Modellfreigabe",
+      "sha256": "b82e066f86bc82c0df0c07684f941d56b4177d1f153f7f9babbe1ff3959698e3"
+    },
+    {
+      "id": "N06",
+      "title": "Einzelticket-Vorlauf",
+      "source": "/data/cache/scratch/fcsg-review/Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_kern_phase1/FCSG_Phase1_Ergebnisse.xlsx",
+      "selector": "B8_Absatz_Ausverkauft!A1:F3",
+      "values": [
+        {
+          "ausverkauft": false,
+          "spiele": 53,
+          "t50_median": 4,
+          "t80_median": 1,
+          "anteil_spieltag_median": 0.1902764067127345,
+          "hinweis": "Ausverkauft gemäss Historie (Flag oder Bemerkung). Ohne Kapazitäts- und Bestandsdaten pro Tag kann der Zeitpunkt des Ausverkaufs nicht bestimmt werden – nur der Einzelticket-Vorlauf."
+        },
+        {
+          "ausverkauft": true,
+          "spiele": 34,
+          "t50_median": 11,
+          "t80_median": 4,
+          "anteil_spieltag_median": 0.03800714874345262,
+          "hinweis": "Ausverkauft gemäss Historie (Flag oder Bemerkung). Ohne Kapazitäts- und Bestandsdaten pro Tag kann der Zeitpunkt des Ausverkaufs nicht bestimmt werden – nur der Einzelticket-Vorlauf."
+        }
+      ],
+      "note": "Vorlauf: 34 ausverkaufte und 53 nicht ausverkaufte Meisterschaftsspiele; kein Ausverkaufszeitpunkt",
+      "sha256": "b4eadb584674d1128ce3fdbe11273f66b78e9a186c5a18c3416485d126852c0d"
+    },
+    {
+      "id": "T03",
+      "title": "Ausgewählte Kontexteffekte",
+      "source": "/data/cache/scratch/fcsg-review/Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_kern_phase1/Tabellen/kontext_effekt_matrix.csv",
+      "selector": "Ziel Anwesenheit/KF, Variablen Top-Gegner/Abend/Temperatur; Auswahl wie HTML",
+      "values": [
+        {
+          "zielgroesse": "Anwesenheitsquote (IST/SOLL)",
+          "variable": "Top-Gegner (FCB, YB, FCZ)",
+          "einordnung": "extern (Gegner)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "3.520373056893373",
+          "einheit_effekt": "Prozentpunkte",
+          "ki95_unten": "0.888008774995408",
+          "ki95_oben": "6.152737338791338",
+          "p_wert": "0.008762299634150103",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "belastbar",
+          "spiele": "76"
+        },
+        {
+          "zielgroesse": "Anwesenheitsquote (IST/SOLL)",
+          "variable": "Werktag (Mo–Fr) statt Wochenende",
+          "einordnung": "teilweise beeinflussbar (Spielplan/TV durch Liga)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "-2.925339498193403",
+          "einheit_effekt": "Prozentpunkte",
+          "ki95_unten": "-7.292274379588734",
+          "ki95_oben": "1.4415953832019288",
+          "p_wert": "0.1891922142721325",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "Hinweis (Richtung stabil, Grösse unsicher)",
+          "spiele": "76"
+        },
+        {
+          "zielgroesse": "Anwesenheitsquote (IST/SOLL)",
+          "variable": "Abendspiel (Anpfiff ab 20 Uhr)",
+          "einordnung": "teilweise beeinflussbar (Anstosszeit/TV durch Liga)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "-4.095549262644328",
+          "einheit_effekt": "Prozentpunkte",
+          "ki95_unten": "-7.087154501783595",
+          "ki95_oben": "-1.103944023505061",
+          "p_wert": "0.007290668958924218",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "belastbar",
+          "spiele": "76"
+        },
+        {
+          "zielgroesse": "Anwesenheitsquote (IST/SOLL)",
+          "variable": "Temperatur bei Anpfiff",
+          "einordnung": "extern (Wetter)",
+          "veraenderung": "+5 °C",
+          "effekt": "1.4151842272896997",
+          "einheit_effekt": "Prozentpunkte",
+          "ki95_unten": "0.6859937067688099",
+          "ki95_oben": "2.144374747810589",
+          "p_wert": "0.00014244101256733561",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "belastbar",
+          "spiele": "76"
+        },
+        {
+          "zielgroesse": "Anwesenheitsquote (IST/SOLL)",
+          "variable": "Regen bei Anreise (≥ 0.5 mm in 2 h vor Anpfiff)",
+          "einordnung": "extern (Wetter)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "0.41661871043754223",
+          "einheit_effekt": "Prozentpunkte",
+          "ki95_unten": "-3.0504704652218773",
+          "ki95_oben": "3.8837078860969627",
+          "p_wert": "0.8138043003788391",
+          "vorzeichen_stabil_loso": "0.6",
+          "vorzeichen_stabil_sensitivitaet": "0.8333333333333334",
+          "beurteilung": "nicht belastbar schätzbar",
+          "spiele": "76"
+        },
+        {
+          "zielgroesse": "Anwesenheitsquote (IST/SOLL)",
+          "variable": "Schulferien Stadt St.Gallen",
+          "einordnung": "extern (Kalender)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "-1.4744241843155592",
+          "einheit_effekt": "Prozentpunkte",
+          "ki95_unten": "-4.0173034153296",
+          "ki95_oben": "1.0684550466984817",
+          "p_wert": "0.2557655988908133",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "Hinweis (Richtung stabil, Grösse unsicher)",
+          "spiele": "76"
+        },
+        {
+          "zielgroesse": "Kundenfranken exkl. MwSt",
+          "variable": "Top-Gegner (FCB, YB, FCZ)",
+          "einordnung": "extern (Gegner)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "-0.8152051305572394",
+          "einheit_effekt": "%",
+          "ki95_unten": "-4.9701976244610595",
+          "ki95_oben": "3.5214562944906547",
+          "p_wert": "0.7077353969947321",
+          "vorzeichen_stabil_loso": "0.8",
+          "vorzeichen_stabil_sensitivitaet": "0.8333333333333334",
+          "beurteilung": "Hinweis (Richtung stabil, Grösse unsicher)",
+          "spiele": "76"
+        },
+        {
+          "zielgroesse": "Kundenfranken exkl. MwSt",
+          "variable": "Werktag (Mo–Fr) statt Wochenende",
+          "einordnung": "teilweise beeinflussbar (Spielplan/TV durch Liga)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "-4.023296954352884",
+          "einheit_effekt": "%",
+          "ki95_unten": "-7.943097967475021",
+          "ki95_oben": "0.06340995765607982",
+          "p_wert": "0.053581535945137156",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "Hinweis (Richtung stabil, Grösse unsicher)",
+          "spiele": "76"
+        },
+        {
+          "zielgroesse": "Kundenfranken exkl. MwSt",
+          "variable": "Abendspiel (Anpfiff ab 20 Uhr)",
+          "einordnung": "teilweise beeinflussbar (Anstosszeit/TV durch Liga)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "6.800092635297039",
+          "einheit_effekt": "%",
+          "ki95_unten": "3.0504792575840822",
+          "ki95_oben": "10.686140123589706",
+          "p_wert": "0.0003086881507479601",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "belastbar",
+          "spiele": "76"
+        },
+        {
+          "zielgroesse": "Kundenfranken exkl. MwSt",
+          "variable": "Temperatur bei Anpfiff",
+          "einordnung": "extern (Wetter)",
+          "veraenderung": "+5 °C",
+          "effekt": "3.556100783045957",
+          "einheit_effekt": "%",
+          "ki95_unten": "1.902409061409771",
+          "ki95_oben": "5.236628929212217",
+          "p_wert": "2.0949949378794545e-05",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "belastbar",
+          "spiele": "76"
+        },
+        {
+          "zielgroesse": "Kundenfranken exkl. MwSt",
+          "variable": "Regen bei Anreise (≥ 0.5 mm in 2 h vor Anpfiff)",
+          "einordnung": "extern (Wetter)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "4.748616120058191",
+          "einheit_effekt": "%",
+          "ki95_unten": "-3.781687969954284",
+          "ki95_oben": "14.035180492888388",
+          "p_wert": "0.2844027051500473",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "Hinweis (Richtung stabil, Grösse unsicher)",
+          "spiele": "76"
+        },
+        {
+          "zielgroesse": "Kundenfranken exkl. MwSt",
+          "variable": "Schulferien Stadt St.Gallen",
+          "einordnung": "extern (Kalender)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "-3.4249876291764125",
+          "einheit_effekt": "%",
+          "ki95_unten": "-7.785875613268645",
+          "ki95_oben": "1.1421306275153142",
+          "p_wert": "0.13933391741401555",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "Hinweis (Richtung stabil, Grösse unsicher)",
+          "spiele": "76"
+        },
+        {
+          "zielgroesse": "Bons je Public-Anwesendem",
+          "variable": "Top-Gegner (FCB, YB, FCZ)",
+          "einordnung": "extern (Gegner)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "-0.9023940416537979",
+          "einheit_effekt": "%",
+          "ki95_unten": "-4.324495519754079",
+          "ki95_oben": "2.6421084479701262",
+          "p_wert": "0.613159075161927",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "0.8333333333333334",
+          "beurteilung": "Hinweis (Richtung stabil, Grösse unsicher)",
+          "spiele": "60"
+        },
+        {
+          "zielgroesse": "Bons je Public-Anwesendem",
+          "variable": "Werktag (Mo–Fr) statt Wochenende",
+          "einordnung": "teilweise beeinflussbar (Spielplan/TV durch Liga)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "-1.6669047907208134",
+          "einheit_effekt": "%",
+          "ki95_unten": "-5.92326384046562",
+          "ki95_oben": "2.7820267599409254",
+          "p_wert": "0.4565373955624549",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "Hinweis (Richtung stabil, Grösse unsicher)",
+          "spiele": "60"
+        },
+        {
+          "zielgroesse": "Bons je Public-Anwesendem",
+          "variable": "Abendspiel (Anpfiff ab 20 Uhr)",
+          "einordnung": "teilweise beeinflussbar (Anstosszeit/TV durch Liga)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "4.629994929598125",
+          "einheit_effekt": "%",
+          "ki95_unten": "0.4710950759210908",
+          "ki95_oben": "8.961048256668146",
+          "p_wert": "0.0287342128339876",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "belastbar",
+          "spiele": "60"
+        },
+        {
+          "zielgroesse": "Bons je Public-Anwesendem",
+          "variable": "Temperatur bei Anpfiff",
+          "einordnung": "extern (Wetter)",
+          "veraenderung": "+5 °C",
+          "effekt": "0.7073419858340868",
+          "einheit_effekt": "%",
+          "ki95_unten": "-0.4337631376612583",
+          "ki95_oben": "1.8615250456249344",
+          "p_wert": "0.22538982451264988",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "0.8333333333333334",
+          "beurteilung": "Hinweis (Richtung stabil, Grösse unsicher)",
+          "spiele": "60"
+        },
+        {
+          "zielgroesse": "Bons je Public-Anwesendem",
+          "variable": "Regen bei Anreise (≥ 0.5 mm in 2 h vor Anpfiff)",
+          "einordnung": "extern (Wetter)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "-1.9699149678479855",
+          "einheit_effekt": "%",
+          "ki95_unten": "-7.32563268770825",
+          "ki95_oben": "3.69531349513037",
+          "p_wert": "0.48762591590563376",
+          "vorzeichen_stabil_loso": "0.75",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "nicht belastbar schätzbar",
+          "spiele": "60"
+        },
+        {
+          "zielgroesse": "Bons je Public-Anwesendem",
+          "variable": "Schulferien Stadt St.Gallen",
+          "einordnung": "extern (Kalender)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "-0.7597953601013008",
+          "einheit_effekt": "%",
+          "ki95_unten": "-3.9891482237090603",
+          "ki95_oben": "2.5781777242914083",
+          "p_wert": "0.6513606811891983",
+          "vorzeichen_stabil_loso": "0.75",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "nicht belastbar schätzbar",
+          "spiele": "60"
+        },
+        {
+          "zielgroesse": "Ø Bon exkl. MwSt",
+          "variable": "Top-Gegner (FCB, YB, FCZ)",
+          "einordnung": "extern (Gegner)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "0.5889240465663637",
+          "einheit_effekt": "%",
+          "ki95_unten": "-2.450060120004083",
+          "ki95_oben": "3.7225820261194587",
+          "p_wert": "0.707541281660087",
+          "vorzeichen_stabil_loso": "0.75",
+          "vorzeichen_stabil_sensitivitaet": "0.6666666666666666",
+          "beurteilung": "nicht belastbar schätzbar",
+          "spiele": "60"
+        },
+        {
+          "zielgroesse": "Ø Bon exkl. MwSt",
+          "variable": "Werktag (Mo–Fr) statt Wochenende",
+          "einordnung": "teilweise beeinflussbar (Spielplan/TV durch Liga)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "-3.975991640419474",
+          "einheit_effekt": "%",
+          "ki95_unten": "-7.367263096290289",
+          "ki95_oben": "-0.460566214021374",
+          "p_wert": "0.026991408839841337",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "belastbar",
+          "spiele": "60"
+        },
+        {
+          "zielgroesse": "Ø Bon exkl. MwSt",
+          "variable": "Abendspiel (Anpfiff ab 20 Uhr)",
+          "einordnung": "teilweise beeinflussbar (Anstosszeit/TV durch Liga)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "-0.13943213658056397",
+          "einheit_effekt": "%",
+          "ki95_unten": "-3.1814169512159207",
+          "ki95_oben": "2.9981301108272573",
+          "p_wert": "0.9295577435953516",
+          "vorzeichen_stabil_loso": "0.75",
+          "vorzeichen_stabil_sensitivitaet": "0.6666666666666666",
+          "beurteilung": "nicht belastbar schätzbar",
+          "spiele": "60"
+        },
+        {
+          "zielgroesse": "Ø Bon exkl. MwSt",
+          "variable": "Temperatur bei Anpfiff",
+          "einordnung": "extern (Wetter)",
+          "veraenderung": "+5 °C",
+          "effekt": "2.312510745444585",
+          "einheit_effekt": "%",
+          "ki95_unten": "0.9372988440303542",
+          "ki95_oben": "3.706459107963367",
+          "p_wert": "0.000928854224945989",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "belastbar",
+          "spiele": "60"
+        },
+        {
+          "zielgroesse": "Ø Bon exkl. MwSt",
+          "variable": "Regen bei Anreise (≥ 0.5 mm in 2 h vor Anpfiff)",
+          "einordnung": "extern (Wetter)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "2.87823243138694",
+          "einheit_effekt": "%",
+          "ki95_unten": "-3.513945436504118",
+          "ki95_oben": "9.69389054292158",
+          "p_wert": "0.38593528469706906",
+          "vorzeichen_stabil_loso": "0.75",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "nicht belastbar schätzbar",
+          "spiele": "60"
+        },
+        {
+          "zielgroesse": "Ø Bon exkl. MwSt",
+          "variable": "Schulferien Stadt St.Gallen",
+          "einordnung": "extern (Kalender)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "-2.6546227574516967",
+          "einheit_effekt": "%",
+          "ki95_unten": "-6.200408762483544",
+          "ki95_oben": "1.02520006189466",
+          "p_wert": "0.1552553423385518",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "Hinweis (Richtung stabil, Grösse unsicher)",
+          "spiele": "60"
+        },
+        {
+          "zielgroesse": "Anteil Ankunft ≥ 45 min vor Anpfiff (optional)",
+          "variable": "Top-Gegner (FCB, YB, FCZ)",
+          "einordnung": "extern (Gegner)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "3.2776147553134543",
+          "einheit_effekt": "Prozentpunkte",
+          "ki95_unten": "0.9705756231161874",
+          "ki95_oben": "5.584653887510721",
+          "p_wert": "0.00535978216790965",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "belastbar",
+          "spiele": "66"
+        },
+        {
+          "zielgroesse": "Anteil Ankunft ≥ 45 min vor Anpfiff (optional)",
+          "variable": "Werktag (Mo–Fr) statt Wochenende",
+          "einordnung": "teilweise beeinflussbar (Spielplan/TV durch Liga)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "-4.488237921695946",
+          "einheit_effekt": "Prozentpunkte",
+          "ki95_unten": "-10.618574225781826",
+          "ki95_oben": "1.6420983823899324",
+          "p_wert": "0.15129110777998483",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "Hinweis (Richtung stabil, Grösse unsicher)",
+          "spiele": "66"
+        },
+        {
+          "zielgroesse": "Anteil Ankunft ≥ 45 min vor Anpfiff (optional)",
+          "variable": "Abendspiel (Anpfiff ab 20 Uhr)",
+          "einordnung": "teilweise beeinflussbar (Anstosszeit/TV durch Liga)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "4.0807506646827525",
+          "einheit_effekt": "Prozentpunkte",
+          "ki95_unten": "0.8962153196992781",
+          "ki95_oben": "7.265286009666225",
+          "p_wert": "0.012018604947486718",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "belastbar",
+          "spiele": "66"
+        },
+        {
+          "zielgroesse": "Anteil Ankunft ≥ 45 min vor Anpfiff (optional)",
+          "variable": "Temperatur bei Anpfiff",
+          "einordnung": "extern (Wetter)",
+          "veraenderung": "+5 °C",
+          "effekt": "0.8599463252087802",
+          "einheit_effekt": "Prozentpunkte",
+          "ki95_unten": "-0.11405122575832906",
+          "ki95_oben": "1.8339438761758895",
+          "p_wert": "0.08354244095492287",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "Hinweis (Richtung stabil, Grösse unsicher)",
+          "spiele": "66"
+        },
+        {
+          "zielgroesse": "Anteil Ankunft ≥ 45 min vor Anpfiff (optional)",
+          "variable": "Regen bei Anreise (≥ 0.5 mm in 2 h vor Anpfiff)",
+          "einordnung": "extern (Wetter)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "-1.4892461793788625",
+          "einheit_effekt": "Prozentpunkte",
+          "ki95_unten": "-7.787595346641775",
+          "ki95_oben": "4.809102987884051",
+          "p_wert": "0.6430472407456599",
+          "vorzeichen_stabil_loso": "0.8",
+          "vorzeichen_stabil_sensitivitaet": "0.8333333333333334",
+          "beurteilung": "Hinweis (Richtung stabil, Grösse unsicher)",
+          "spiele": "66"
+        },
+        {
+          "zielgroesse": "Anteil Ankunft ≥ 45 min vor Anpfiff (optional)",
+          "variable": "Schulferien Stadt St.Gallen",
+          "einordnung": "extern (Kalender)",
+          "veraenderung": "ja vs. nein",
+          "effekt": "1.2862365318390645",
+          "einheit_effekt": "Prozentpunkte",
+          "ki95_unten": "-1.2143535419591993",
+          "ki95_oben": "3.786826605637328",
+          "p_wert": "0.3133721456322349",
+          "vorzeichen_stabil_loso": "1.0",
+          "vorzeichen_stabil_sensitivitaet": "1.0",
+          "beurteilung": "Hinweis (Richtung stabil, Grösse unsicher)",
+          "spiele": "66"
+        }
+      ],
+      "note": "Effekte gerundet; vollständige Tabelle ist kanonische Quelle",
+      "sha256": "b68f3d968cec535df2774ffae3052c834cd0d4d71756bc0def5ce550a317e71e"
+    }
+  ]
+}

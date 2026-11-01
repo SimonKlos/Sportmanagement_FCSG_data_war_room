@@ -47,7 +47,7 @@ def split_catering_events(catering: pd.DataFrame) -> tuple[pd.DataFrame, pd.Data
 def aggregate_access(scans: pd.DataFrame) -> pd.DataFrame:
     """Aggregiert Einzelscans auf ein Spiel pro Zeile.
 
-    Kennzahlen (technische Entwürfe, siehe docs/data_dictionary.md):
+    Kennzahlen (technische Entwürfe, siehe Quellen und interne Dokumentation/data_dictionary.md):
     ``scan_count``, ``arrival_median_min_before``, ``share_arrived_45min_before`` (Scan ≥ 45 Min. vor
     Anpfiff), ``share_last_15min`` (0 ≤ Minuten vor Anpfiff < 15). Scans sind **keine** eindeutigen
     Besucher (Mehrfach-/Wiedereintritt ungeprüft).

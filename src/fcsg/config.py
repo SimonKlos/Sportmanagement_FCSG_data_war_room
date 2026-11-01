@@ -1,7 +1,7 @@
 """Laden und Absichern der Laufkonfiguration.
 
 Die Konfiguration ist eine kleine YAML-Datei (Vorlage: ``config/project.example.yaml``).
-Wichtigste Schutzregel: Solange kein Datenmodus fachlich freigegeben ist (docs/decisions.md, D-001),
+Wichtigste Schutzregel: Solange kein Datenmodus fachlich freigegeben ist (Quellen und interne Dokumentation/decisions.md, D-001),
 akzeptiert die Pipeline ausschliesslich ``data_mode: synthetic_fixture``.
 """
 
@@ -59,7 +59,7 @@ def load_config(path: str | Path, allowed_modes: set[str] = ALLOWED_DATA_MODES) 
     if data_mode not in allowed_modes:
         raise ConfigError(
             f"Datenmodus '{data_mode}' ist für diesen Befehl nicht freigegeben. Erlaubt: {sorted(allowed_modes)}. "
-            "Siehe Entscheid D-001 (docs/decisions.md)."
+            "Siehe Entscheid D-001 (Quellen und interne Dokumentation/decisions.md)."
         )
 
     base = config_path.parent.parent if config_path.parent.name == "config" else config_path.parent

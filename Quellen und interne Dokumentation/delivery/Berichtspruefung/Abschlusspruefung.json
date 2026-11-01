@@ -1,0 +1,16 @@
+{
+  "sourceHashesMatch": true,
+  "sourceEntries": 16,
+  "validSvgFiles": 7,
+  "printedPages": 17,
+  "allSixMethodFoldoutsPrinted": true,
+  "foldoutChecks": {
+    "Keine gleichzeitige Vollabdeckung": true,
+    "Eintritt je Einzelticket ist nur": true,
+    "Erster Scan je Ticket": true,
+    "Unvollständige Bons": true,
+    "Je Zielgrösse": true,
+    "Join:": true
+  },
+  "reportSHA256": "298bc7659b2149f091932d05fe03614ac69e37cd8099dcd9dc11ee1532bbe1a7"
+}

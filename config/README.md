@@ -10,4 +10,4 @@ Felder: `data_mode` (nur `synthetic_fixture` freigegeben), `input_dir`, `output_
 `timezone` (Standard `Europe/Zurich`).
 
 Ein anderer Datenmodus wird von `fcsg.config.load_config` mit Fehler abgewiesen, bis Entscheid D-001
-(`docs/decisions.md`) gefallen ist. Echte Datenpfade gehören nie in versionierte Dateien.
+(`Quellen und interne Dokumentation/decisions.md`) gefallen ist. Echte Datenpfade gehören nie in versionierte Dateien.

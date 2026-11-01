@@ -62,6 +62,6 @@
     }
   ],
   "inputs": [
-    { "id": "runId", "type": "promptString", "description": "Lauf-ID (Ordnername unter outputs/)" }
+    { "id": "runId", "type": "promptString", "description": "Lauf-ID (Ordnername unter Baseline Analyse Rechnungen/)" }
   ]
 }

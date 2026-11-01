@@ -67,7 +67,7 @@ def cmd_run(args: argparse.Namespace) -> int:
     print(FIXTURE_BANNER)
     result = run_pipeline(cfg)
     print(f"Lauf-ID: {result.run_id}")
-    print(f"Laufordner: outputs/{result.run_dir.name}")
+    print(f"Laufordner: Baseline Analyse Rechnungen/{result.run_dir.name}")
     checks = pd.read_csv(result.run_dir / "quality_checks.csv")
     for _, c in checks.iterrows():
         print(f"  [{c['status']}] {c['check_id']}: {c['description']} – {c['detail']}")
@@ -77,14 +77,14 @@ def cmd_run(args: argparse.Namespace) -> int:
     if args.no_export:
         return 0
     xlsx = export_excel(result.run_dir)
-    print(f"Excel: outputs/{result.run_dir.name}/{xlsx.name}")
+    print(f"Excel: Baseline Analyse Rechnungen/{result.run_dir.name}/{xlsx.name}")
     return _print_readback(readback_excel(result.run_dir, xlsx))
 
 
 def cmd_export(args: argparse.Namespace) -> int:
     run_dir = _run_dir(args.config, args.run_id)
     xlsx = export_excel(run_dir)
-    print(f"Excel: outputs/{run_dir.name}/{xlsx.name}")
+    print(f"Excel: Baseline Analyse Rechnungen/{run_dir.name}/{xlsx.name}")
     return _print_readback(readback_excel(run_dir, xlsx))
 
 
@@ -129,7 +129,7 @@ def cmd_prepare_data(args: argparse.Namespace) -> int:
 
 
 def cmd_analyze(args: argparse.Namespace) -> int:
-    """Baseline + Hypothesen auf data/clean/LATEST → Laufordner, Bericht (docs/analysis), Excel + Readback."""
+    """Baseline + Hypothesen auf data/clean/LATEST → Laufordner, Bericht (Quellen und interne Dokumentation/analysis), Excel + Readback."""
     cfg = load_config(args.config, allowed_modes=PREPARE_MODES)
     result = run_analysis(cfg)
     print(f"Lauf-ID: {result.run_id}")
@@ -140,7 +140,7 @@ def cmd_analyze(args: argparse.Namespace) -> int:
     if result.n_fail:
         print(f"{result.n_fail} Prüfung(en) FAIL – Bericht und Export übersprungen.")
         return 1
-    report = write_report(result.run_dir, Path(args.report_dir) if args.report_dir else PROJECT_ROOT / "docs" / "analysis")
+    report = write_report(result.run_dir, Path(args.report_dir) if args.report_dir else PROJECT_ROOT / "Quellen und interne Dokumentation" / "analysis")
     print(f"Bericht: {report}")
     xlsx = export_excel(result.run_dir)
     print(f"Excel: {xlsx}")
@@ -186,7 +186,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     p = sub.add_parser("analyze", help="Baseline + Hypothesen auf bereinigten echten Daten (release_aggregates)")
     p.add_argument("--config", required=True)
-    p.add_argument("--report-dir", default=None, help="Zielordner Bericht (Standard: docs/analysis)")
+    p.add_argument("--report-dir", default=None, help="Zielordner Bericht (Standard: Quellen und interne Dokumentation/analysis)")
     p.set_defaults(func=cmd_analyze)
 
     p = sub.add_parser("make-fixture", help="künstliche Mini-Fixture neu schreiben")

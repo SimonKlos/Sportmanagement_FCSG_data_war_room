@@ -9,13 +9,13 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Quell-PDFs (vertraulich, nicht committen)
-docs/sources/*.pdf
+Quellen und interne Dokumentation/sources/*.pdf
 
 # Daten und Outputs
 data/
 raw/
-outputs/*
-!outputs/README.md
+Baseline Analyse Rechnungen/*
+!Baseline Analyse Rechnungen/README.md
 *.xlsx
 *.xls
 *.parquet
@@ -37,13 +37,17 @@ Thumbs.db
 .vscode/*.local.json
 
 # Ausnahme: geteilte Analyse-Läufe (aggregierte echte Ergebnisse, privates Repo, D-024)
-!outputs/run*_*/
-!outputs/run*_*/**
+!Baseline Analyse Rechnungen/run*_*/
+!Baseline Analyse Rechnungen/run*_*/**
 
 # Ralfs Rechenkern (ralf/): öffentliche Zusatzdaten und belegte Korrekturen versionieren (D-028, D-031)
 !ralf/external/*.csv
 !ralf/overrides/*.csv
-# Standard-Ausgabeordner von ralf/run_all.py (Läufe stattdessen mit --ausgabe nach outputs/runN_…)
+
+# Kuratierte externe Review-Excel und Diagrammdaten (private Projektablage, D-042)
+!Deliverables/**/*.xlsx
+!Deliverables/**/*.csv
+# Standard-Ausgabeordner von ralf/run_all.py (Läufe stattdessen mit --ausgabe nach Baseline Analyse Rechnungen/runN_…)
 Ergebnisse_Phase1/
 Ergebnisse_Ideen_Grundlage/
 # lokale Kopie des Übergabe-ZIPs

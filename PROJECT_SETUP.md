@@ -8,13 +8,13 @@ Noch nicht eingerichtet: die lokale Umgebung, echter Datenimport, Repository ode
 ## Verbindliche Quellen
 - **Modellierungsauftrag als PDF:** aus dem gemeinsamen SharePoint herunterladen.
 - **Datenquellen & Treiberbaum als PDF:** aus dem gemeinsamen SharePoint herunterladen.
-- Beide freigegebenen Dokumente lokal unter `docs/sources/` ablegen; sie sind diesem Paket nicht beigefügt. Die Originaldateinamen beibehalten und in `docs/sources/README.md` dokumentieren. Keine SharePoint-Adresse oder Dateinamen erraten.
-- Der Agent liest beide PDFs vor der fachlichen Umsetzung und erstellt daraus versionierte Arbeitsfassungen unter `docs/briefing/`, inklusive Quelldatei, Dokumentstand und Seitenverweisen. Die PDFs bleiben fachlich massgeblich; bei neuen Fassungen Arbeitsbriefing und Entscheidungen aktualisieren.
+- Beide freigegebenen Dokumente lokal unter `Quellen und interne Dokumentation/sources/` ablegen; sie sind diesem Paket nicht beigefügt. Die Originaldateinamen beibehalten und in `Quellen und interne Dokumentation/sources/README.md` dokumentieren. Keine SharePoint-Adresse oder Dateinamen erraten.
+- Der Agent liest beide PDFs vor der fachlichen Umsetzung und erstellt daraus versionierte Arbeitsfassungen unter `Quellen und interne Dokumentation/briefing/`, inklusive Quelldatei, Dokumentstand und Seitenverweisen. Die PDFs bleiben fachlich massgeblich; bei neuen Fassungen Arbeitsbriefing und Entscheidungen aktualisieren.
 - Retos Angaben zu Dateien und Vollständigkeit erst beim Import bestätigen. Keine KPI- oder Modellbefunde ohne echten Datenlauf.
 
 ## 1. Einmalige Einrichtung
 1. VS Code installieren/öffnen. Offizielle Erweiterung **Claude Code von Anthropic** installieren und anmelden; passende Claude-Code-Nutzungsberechtigung erforderlich. Kein pauschales Bypass-permissions aktivieren.
-2. Einen leeren lokalen Ordner `fcsg-analysis` öffnen. Dieses Startpaket entpacken bzw. die Markdown-Dateien dort ablegen. Die beiden freigegebenen Briefing-PDFs aus SharePoint herunterladen und unter `docs/sources/` ablegen. Noch keine Rohdaten hineinlegen.
+2. Einen leeren lokalen Ordner `fcsg-analysis` öffnen. Dieses Startpaket entpacken bzw. die Markdown-Dateien dort ablegen. Die beiden freigegebenen Briefing-PDFs aus SharePoint herunterladen und unter `Quellen und interne Dokumentation/sources/` ablegen. Noch keine Rohdaten hineinlegen.
 3. Claude Code mit Prompt 1 starten. Der Agent prüft OS, Python und Git, legt die Projektumgebung an und erklärt fehlende Installationen. Er darf projektspezifische Dateien bearbeiten und Tests ausführen; systemweite Änderungen und externe Aktionen brauchen Zustimmung.
 4. Datenzugriff und Weitergabe separat klären. Erst danach mit Prompt 2 ff. fortfahren.
 
@@ -56,7 +56,7 @@ fcsg-analysis/
     column_mapping.example.yaml
     metric_definitions.yaml
     model_specs.yaml
-  docs/
+  Quellen und interne Dokumentation/
     README.md
     sources/README.md
     briefing/README.md
@@ -99,7 +99,7 @@ fcsg-analysis/
     test_metrics.py
     test_models.py
     test_exports.py
-  outputs/README.md
+  Baseline Analyse Rechnungen/README.md
 ```
 Kein leeres Vollgerüst als Erfolgsnachweis: zuerst kleiner funktionsfähiger Vertikalschnitt. Weitere Module entstehen nach Bedarf. Rohdatenpfad wird lokal konfiguriert, nicht eingecheckt; Outputs standardmässig ausgeschlossen. `.venv`, Geheimnisse, lokale Config, Excel-Daten und Notebook-Ergebnisausgaben nicht committen.
 
@@ -147,6 +147,6 @@ Tabs: Start, Quellen, Definitionen, Abdeckung, Qualität, Spiel-Baseline, Ticket
 Prompt 1 Gerüst und Technik → Prompt 2 Zielbild und Datenverträge → Prompt 3 Inventar → Prompt 4 erster Baseline-Vertikalschnitt → Prompt 5 Analysen/Modelle → Prompt 6 Review und Export → Prompt 7 GitHub-Übergabe vorbereiten.
 
 ## Offizielle Referenzen
-- Claude-Code-Erweiterung: https://code.claude.com/docs/en/vs-code
-- Berechtigungen: https://code.claude.com/docs/en/permissions
+- Claude-Code-Erweiterung: https://code.claude.com/Quellen und interne Dokumentation/en/vs-code
+- Berechtigungen: https://code.claude.com/Quellen und interne Dokumentation/en/permissions
 - Codespaces/Jupyter: https://docs.github.com/codespaces/developing-in-a-codespace/getting-started-with-github-codespaces-for-machine-learning

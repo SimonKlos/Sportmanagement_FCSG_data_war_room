@@ -7,7 +7,7 @@ name = "fcsg-analysis"
 version = "0.4.0"
 description = "FCSG Phase 1 – Datenaufbereitung, Baseline und Hypothesen (Untapped Business)"
 requires-python = ">=3.12"
-# Keine Lizenzangabe: Lizenz-/Nutzungsrechte sind nicht entschieden (siehe docs/decisions.md).
+# Keine Lizenzangabe: Lizenz-/Nutzungsrechte sind nicht entschieden (siehe Quellen und interne Dokumentation/decisions.md).
 dependencies = [
     "pandas>=3.0",
     "openpyxl>=3.1",

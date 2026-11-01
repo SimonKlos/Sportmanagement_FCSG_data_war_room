@@ -1,0 +1,33 @@
+{
+  "browser": "Chrome 145 headless, local file, no public server",
+  "base": {
+    "title": "FCSG | Baseline & Chancenfelder",
+    "sections": 9,
+    "opportunities": 9,
+    "figures": 7,
+    "details": 6,
+    "duplicateIds": [],
+    "brokenAnchors": [],
+    "remoteResources": [],
+    "scripts": 0,
+    "bodyOverflow": false,
+    "personTokens": false
+  },
+  "foldout": true,
+  "svgOverflow": [],
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390,
+    "bodyOverflow": false,
+    "chartScroll": true
+  },
+  "print": {
+    "navHidden": true,
+    "detailsVisible": true
+  },
+  "networkRequests": [
+    "file:///data/cache/scratch/fcsg-review/Deliverables/01_Bericht/FCSG_Baseline_und_Chancenfelder.html"
+  ],
+  "missingFiles": [],
+  "pass": true
+}

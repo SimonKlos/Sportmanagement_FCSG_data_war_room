@@ -1,7 +1,7 @@
 """Baseline auf den bereinigten echten Daten (``data/clean/<run_id>/``): Spieltabelle, KPIs, Saisonwerte.
 
 **Status: vorläufig.** Definitionen von SOLL/IST/Public Netto und Umsatzbasis sind offen (D-004/D-005);
-die hier verwendeten Arbeitsdefinitionen stehen in ``docs/decisions.md`` (D-025). Deckungsbeitrag wird nicht
+die hier verwendeten Arbeitsdefinitionen stehen in ``Quellen und interne Dokumentation/decisions.md`` (D-025). Deckungsbeitrag wird nicht
 berechnet, solange keine Kostendaten vorliegen (D-003).
 
 Ablauf (Join-Regel AA S. 4–5): Die Zuschauer-Historie liefert den Spielkalender (Herren-Pflichtspiele ab 21/22).

@@ -1,0 +1,38 @@
+import {spawn} from 'node:child_process';
+import fs from 'node:fs';
+import path from 'node:path';
+const internal=path.dirname(decodeURIComponent(new URL(import.meta.url).pathname));
+const root=path.resolve(internal,'../../Deliverables/01_Bericht');
+const qa=path.join(internal,'Berichtspruefung');fs.mkdirSync(qa,{recursive:true});
+const proc=spawn('/data/tools/chromium-1208/chrome-linux64/chrome',['--headless','--no-sandbox','--disable-gpu','--disable-dev-shm-usage','--remote-debugging-port=0',`--user-data-dir=${root}/.qa/profile`,'about:blank'],{env:{...process.env,LD_LIBRARY_PATH:`${root}/.qa/libs/usr/lib/x86_64-linux-gnu`}});
+let err='';proc.stderr.on('data',d=>err+=d);
+const delay=ms=>new Promise(r=>setTimeout(r,ms));
+let ws;
+try{
+ for(let i=0;i<100&&!err.includes('DevTools listening on');i++)await delay(100);
+ const endpoint=err.match(/DevTools listening on (ws:\/\/\S+)/)?.[1];if(!endpoint)throw Error(err);
+ const port=new URL(endpoint).port;const tabs=await (await fetch(`http://127.0.0.1:${port}/json/list`)).json();
+ ws=new WebSocket(tabs.find(t=>t.type==='page').webSocketDebuggerUrl);await new Promise(r=>ws.addEventListener('open',r,{once:true}));
+ let count=0;const pending=new Map();
+ ws.addEventListener('message',ev=>{const m=JSON.parse(ev.data);if(m.id&&pending.has(m.id)){const {resolve,reject}=pending.get(m.id);pending.delete(m.id);m.error?reject(Error(JSON.stringify(m.error))):resolve(m.result)}});
+ const cdp=(method,params={})=>new Promise((resolve,reject)=>{const id=++count;pending.set(id,{resolve,reject});ws.send(JSON.stringify({id,method,params}))});
+ const evaluate=async expression=>(await cdp('Runtime.evaluate',{expression,returnByValue:true})).result.value;
+ await cdp('Page.enable');await cdp('Network.enable');let network=[];ws.addEventListener('message',ev=>{const m=JSON.parse(ev.data);if(m.method==='Network.requestWillBeSent')network.push(m.params.request.url)});
+ await cdp('Emulation.setDeviceMetricsOverride',{width:1440,height:1000,deviceScaleFactor:1,mobile:false});
+ await cdp('Page.navigate',{url:`file://${root}/FCSG_Baseline_und_Chancenfelder.html`});await delay(700);
+ const base=await evaluate(`(()=>{const ids=[...document.querySelectorAll('[id]')].map(e=>e.id);return {title:document.title,sections:document.querySelectorAll('main>section').length,opportunities:document.querySelectorAll('.opportunity').length,figures:document.querySelectorAll('figure').length,details:document.querySelectorAll('details').length,duplicateIds:ids.filter((id,i)=>ids.indexOf(id)!==i),brokenAnchors:[...document.querySelectorAll('a[href^="#"]')].map(e=>e.hash.slice(1)).filter(id=>!document.getElementById(id)),remoteResources:[...document.querySelectorAll('[src],[href]')].map(e=>e.getAttribute('src')||e.getAttribute('href')).filter(u=>/^https?:/.test(u)),scripts:document.scripts.length,bodyOverflow:document.documentElement.scrollWidth>innerWidth,personTokens:/Simon|Ralf|Reto/.test(document.body.innerText)}})()`);
+ const screenshot=async name=>{const r=await cdp('Page.captureScreenshot',{format:'png'});fs.writeFileSync(path.join(qa,name),Buffer.from(r.data,'base64'))};
+ await screenshot('Desktop.png');
+ await evaluate(`document.querySelector('summary').click()`);const foldout=await evaluate(`document.querySelector('details').open`);await evaluate(`document.querySelector('summary').click()`);
+ const svgOverflow=await evaluate(`(()=>{let a=[];document.querySelectorAll('svg').forEach(svg=>{const w=svg.viewBox.baseVal.width;svg.querySelectorAll('text').forEach(t=>{const b=t.getBBox();if(b.x<0||b.x+b.width>w)a.push(t.textContent)})});return a})()`);
+ await cdp('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});await delay(150);await screenshot('Mobil.png');
+ const mobile=await evaluate(`({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,bodyOverflow:document.documentElement.scrollWidth>innerWidth,chartScroll:[...document.querySelectorAll('figure')].every(f=>f.scrollWidth>f.clientWidth)})`);
+ await cdp('Emulation.setDeviceMetricsOverride',{width:1440,height:1000,deviceScaleFactor:1,mobile:false});await evaluate(`window.scrollTo({top:document.getElementById('fig-G03').getBoundingClientRect().top+scrollY-80,behavior:'instant'})`);await delay(200);await screenshot('Diagramm.png');
+ await cdp('Emulation.setEmulatedMedia',{media:'print'});
+ const print=await evaluate(`({navHidden:getComputedStyle(document.querySelector('nav')).display==='none',detailsVisible:[...document.querySelectorAll('.detailbody')].every(e=>getComputedStyle(e).display!=='none')})`);
+ const pdf=await cdp('Page.printToPDF',{printBackground:true,preferCSSPageSize:true});fs.writeFileSync(path.join(qa,'Pruefdruck.pdf'),Buffer.from(pdf.data,'base64'));
+ const links=await evaluate(`[...document.querySelectorAll('a[href]:not([href^="#"])')].map(e=>e.getAttribute('href'))`);
+ const missingFiles=links.filter(l=>!fs.existsSync(path.resolve(root,l)));
+ const result={browser:'Chrome 145 headless, local file, no public server',base,foldout,svgOverflow,mobile,print,networkRequests:network,missingFiles,pass:base.sections===9&&base.opportunities===9&&base.figures===7&&!base.duplicateIds.length&&!base.brokenAnchors.length&&!base.remoteResources.length&&!base.bodyOverflow&&!base.personTokens&&foldout&&!svgOverflow.length&&!mobile.bodyOverflow&&print.navHidden&&print.detailsVisible&&!missingFiles.length};
+ fs.writeFileSync(path.join(qa,'Browserpruefung.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));if(!result.pass)process.exitCode=1;
+}finally{if(ws)ws.close();proc.kill();}

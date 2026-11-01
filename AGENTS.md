@@ -6,9 +6,9 @@ diese Datei. Änderungen an Regeln immer in **beiden** Dateien nachführen. Stan
 
 ## Auftrag
 - Projekt: FC St.Gallen 1879, «Untapped Business», Phase 1 (HSG, Sportmanagement in der Praxis HS26).
-- Fachliche Quellen: PDFs in `docs/sources/` (nicht committen). Arbeitsfassungen mit Seitenverweisen in
-  `docs/briefing/`. Vor fachlichen Änderungen lesen: `docs/briefing/01_arbeitsauftrag_modellierung.md`
-  und `docs/briefing/10_synthese_widersprueche.md`. Bei Widerspruch gilt das PDF.
+- Fachliche Quellen: PDFs in `Quellen und interne Dokumentation/sources/` (nicht committen). Arbeitsfassungen mit Seitenverweisen in
+  `Quellen und interne Dokumentation/briefing/`. Vor fachlichen Änderungen lesen: `Quellen und interne Dokumentation/briefing/01_arbeitsauftrag_modellierung.md`
+  und `Quellen und interne Dokumentation/briefing/10_synthese_widersprueche.md`. Bei Widerspruch gilt das PDF.
 - Massgeblich ist der **Arbeitsauftrag vom 08.10.2026**. Fehlt eine Quelle: Blocker benennen, nichts vermuten.
 - Projektverantwortliche schreiben keinen Code. Erklärungen auf **Deutsch**, technische Namen **Englisch**.
 
@@ -16,13 +16,13 @@ diese Datei. Änderungen an Regeln immer in **beiden** Dateien nachführen. Stan
 - Datenupload, Git-Push, Remote-Repo, Codespaces/Actions, externe Freigaben, Systeminstallationen, Lizenzentscheid.
 - Berechtigungen umgehen.
 - **Echte Daten/Rohzeilen lesen oder in Toolausgaben zeigen**, solange kein Datenmodus freigegeben ist
-  (`docs/decisions.md`, D-001). Lokaler Agent ≠ offline: Gelesenes geht an ein externes Modell.
+  (`Quellen und interne Dokumentation/decisions.md`, D-001). Lokaler Agent ≠ offline: Gelesenes geht an ein externes Modell.
   Der Projektantrag verlangt Arbeit ausschliesslich im Datenraum (PA S. 2).
 - `.gitignore` ist keine Zugriffssperre. Keine Tokens/Geheimnisse in Dateien, Logs oder Notebooks.
 - Analyse-Läufe (`fcsg.cli run`) akzeptieren nur `data_mode: synthetic_fixture`; echte Daten nur über `prepare-data` (D-001 c).
 - Echte Rohdaten liegen unter `C:\FCSG_Daten\raw` (D-015). Freigegeben (D-001): Strukturinventar und
   **Datenmodus für nicht personenbezogene Daten** (`release_aggregates`). Analysen arbeiten mit `data/clean/<LATEST>/`
-  (bereinigt/aggregiert, `docs/data_dictionary_clean.md`). Personenbezogene Rohdateien (Einzeltickets, Ticket-CSVs,
+  (bereinigt/aggregiert, `Quellen und interne Dokumentation/data_dictionary_clean.md`). Personenbezogene Rohdateien (Einzeltickets, Ticket-CSVs,
   Abos, Zutritte) nie zeilenweise anzeigen; Personen-/ID-Spalten nie laden ausser intern zum Zählen in `fcsg.prepare`.
 
 ## Methodik (fachliche Leitplanken)
@@ -40,6 +40,9 @@ diese Datei. Änderungen an Regeln immer in **beiden** Dateien nachführen. Stan
 - Saisonquoten gewichtet (Σ/Σ), nicht als Mittel der Spielquoten.
 - Modellierung erst nach Baseline-Freigabe.
 
+## Ausgabe- und Strukturregel – 01.11.2026 (D-042)
+Quellen/Logs intern in `Quellen und interne Dokumentation`, Rechenstände in `Baseline Analyse Rechnungen`, externe Review-Unterlagen im separaten Root `Deliverables`. Historische Artefakte unverändert erhalten. Externe Fassungen ohne interne Personenvergleiche; Zahlen und Logik unverändert. Präsentation ausschliesslich als ausführlicher Folienleitfaden zur eigenen PPT-Erstellung durch Simon, **keine PPT/PPTX**.
+
 ## Aktueller Nachtrag – 01.11.2026
 Phase-2-Massnahmen primär auf inkrementellen Umsatz prüfen (Simon, D-039), nicht DB. Catering-Systemumsatz exkl. MwSt. und Cluberlös trennen. 20 % Cateringbeteiligung nur unbestätigte Szenarioannahme (D-040), kein Default/Margennachweis; Vertragsbasis offen. Phase-1-Entscheid D-003 bleibt historisch bestehen. Kundenfranken-Definition bestätigt, Nenner-Mapping offen (D-038). Bons 2023/24 wegen System-/Gutscheinwechsel eingeschränkt vergleichbar: D-041 und Teamnotiz vor Verwendung lesen; kein bereits erfolgter Sensitivitätslauf.
 
@@ -49,9 +52,9 @@ Phase-2-Massnahmen primär auf inkrementellen Umsatz prüfen (Simon, D-039), nic
   Spielkontext-Tabelle nur **Version 5** (D-034).
 - Python-Paket `src/fcsg/` (modular, Docstrings für zentrale Funktionen), CLI `python -m fcsg.cli`,
   Tests `tests/` (pytest), VS-Code-Tasks `.vscode/tasks.json`. Kurze erklärende Notebooks folgen bei Bedarf.
-- README pro Hauptordner; `docs/data_dictionary.md` und `docs/decisions.md` nachführen.
+- README pro Hauptordner; `Quellen und interne Dokumentation/data_dictionary.md` und `Quellen und interne Dokumentation/decisions.md` nachführen.
 - **Jede fachliche oder methodische Festlegung** (Definition, Hypothese, Abgrenzung, Annahme) als D-Eintrag in
-  `docs/decisions.md`: Datum, wer entschieden hat (Team oder Agent-Annahme), Quelle. Agent-Annahmen bleiben
+  `Quellen und interne Dokumentation/decisions.md`: Datum, wer entschieden hat (Team oder Agent-Annahme), Quelle. Agent-Annahmen bleiben
   «offen» bzw. «Arbeitsannahme», bis das Team sie bestätigt (D-027).
 - **Jede grössere Änderung** (neue Analyse, neuer Lauf, geänderte Definition, neue Abhängigkeit, geänderte Regel)
   erhält einen Eintrag in `CHANGELOG.md`.

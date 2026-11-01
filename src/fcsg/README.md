@@ -7,7 +7,7 @@ config.load_config ─▶ io.load_all_sources ─▶ joins.build_mart_match ─�
    (Datenmodus-        (Schema, Fixture-        (dim_match, Aggregation      (Spiel-KPIs, Saison
     Sperre)             Marker, Missing=NaN)     vor Join, Unmatched,         gewichtet, KPI-Checks)
                                                  Summenerhalt)
-        ─▶ pipeline.run_pipeline (CSV-Artefakte + manifest.json in outputs/<run_id>/)
+        ─▶ pipeline.run_pipeline (CSV-Artefakte + manifest.json in Baseline Analyse Rechnungen/<run_id>/)
         ─▶ export.export_excel ─▶ export.readback_excel (Vergleich Excel ↔ Datenkern)
 ```
 
@@ -27,7 +27,7 @@ config.load_config ─▶ io.load_all_sources ─▶ joins.build_mart_match ─�
 | `baseline.py` | Echte Daten: Spieltabelle aus `data/clean` (1:1-Join, Summenerhalt, Unmatched), KPIs, Saisonwerte, Abdeckung, Reto-/Quellabgleich |
 | `hypotheses.py` | H1–H3, K1: einheitliches Ergebnisformat, saison-zentriert, Bootstrap-KI; Liste weiterer Hypothesen |
 | `analysis.py` | Analyse-Lauf (`analyze`): Artefakte + Manifest in `<output_dir>/<run_id>/` |
-| `report.py` | Bericht `docs/analysis/01_baseline_erste_erkenntnisse.md` + PNG-Grafiken aus den Laufartefakten |
+| `report.py` | Bericht `Quellen und interne Dokumentation/analysis/01_baseline_erste_erkenntnisse.md` + PNG-Grafiken aus den Laufartefakten |
 
 Echtdaten-Fluss: `prepare.run_prepare` → `data/clean/LATEST` → `analysis.run_analysis` (baseline + hypotheses) →
 `report.write_report` + `export.export_excel` → `export.readback_excel`.

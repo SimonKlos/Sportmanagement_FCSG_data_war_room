@@ -1,4 +1,12 @@
-# FCSG «Untapped Business» – Datenanalyse Phase 1 (interner Arbeitsstand)
+# FCSG «Untapped Business» – Baseline und Chancenfelder
+
+## Einstieg nach Verwendungszweck
+
+- **[Deliverables](Deliverables/README.md):** extern ausgerichteter Bericht, Excel, neutrale Diagramme und ausführlicher Folienleitfaden (**keine fertige PPT**); Review-Fassung, nicht automatisch freigegeben.
+- **[Baseline Analyse Rechnungen](Baseline%20Analyse%20Rechnungen/README.md):** alle eingefrorenen Rechenstände, Gegenrechnungen und Prüfausgaben; bisher `outputs`.
+- **[Quellen und interne Dokumentation](Quellen%20und%20interne%20Dokumentation/README.md):** Quellen, Begriffe, Decision Logs, interne Abstimmungen und Delivery-Prüfungen; bisher `docs`.
+
+Code (`ralf/`, `src/`), Tests und Konfiguration bleiben technisch am bisherigen Ort und sind aus dem Rechenbereich verlinkt. Keine doppelte Rechenlogik, keine neue Modellschätzung durch die Aufbereitung. Die folgenden Abschnitte dokumentieren weiterhin die interne analytische Herkunft.
 
 > **Intern – nur für die Abstimmung im Projektteam.** Das Repo enthält aggregierte, **vertrauliche** FCSG-Ergebnisse
 > (keine Personendaten) und ist deshalb privat (D-024). Vor einer Übergabe an den FC St.Gallen wird es aufgeräumt
@@ -8,33 +16,33 @@
 Modellierungsauftrag «Datenverknüpfung & Kontextbereinigung» des FC St.Gallen 1879 (HSG, Sportmanagement in der
 Praxis HS26). Phase 1: Ticketing-, Zutritts- und Catering-Daten je Heimspiel verknüpfen, eine saubere Baseline bauen
 und den Spielkontext einbeziehen. Steuerungsgrösse ist der **Deckungsbeitrag** (D-003); dafür fehlen noch Kostendaten,
-deshalb arbeitet die Baseline vorerst auf Umsatzebene. Fachliche Grundlage: `docs/briefing/` (Arbeitsfassungen der 3 PDFs).
+deshalb arbeitet die Baseline vorerst auf Umsatzebene. Fachliche Grundlage: `Quellen und interne Dokumentation/briefing/` (Arbeitsfassungen der 3 PDFs).
 
 ## Aktueller Nachtrag (01.11.2026)
 
-Partnerantworten und neue Projektfestlegung: [Catering-Klärung und Baseline-Folgen](docs/team/2026-11-01_catering_klaerung_und_baseline_folgen.md). Phase-2-Massnahmen werden auf Umsatz bewertet (D-039); Catering-Systemumsatz und Cluberlös bleiben getrennt. 20 % Clubbeteiligung ist nur eine unbestätigte Szenarioannahme (D-040). KF exkl. MwSt. ist fachlich bestätigt, konkretes Nenner-Mapping bleibt offen. Bons-/Bon-Auswertungen sind wegen Erfassungsänderungen 2023/24 erneut auf Vergleichbarkeit zu prüfen (D-041). **Keine Neuberechnung erfolgt**; der folgende technische Stand und historische Outputs bleiben unverändert.
+Partnerantworten und neue Projektfestlegung: [Catering-Klärung und Baseline-Folgen](Quellen%20und%20interne%20Dokumentation/team/2026-11-01_catering_klaerung_und_baseline_folgen.md). Phase-2-Massnahmen werden auf Umsatz bewertet (D-039); Catering-Systemumsatz und Cluberlös bleiben getrennt. 20 % Clubbeteiligung ist nur eine unbestätigte Szenarioannahme (D-040). KF exkl. MwSt. ist fachlich bestätigt, konkretes Nenner-Mapping bleibt offen. Bons-/Bon-Auswertungen sind wegen Erfassungsänderungen 2023/24 erneut auf Vergleichbarkeit zu prüfen (D-041). **Keine Neuberechnung erfolgt**; der folgende technische Stand und historische Outputs bleiben unverändert.
 
 ## 1 Stand (14.10.2026)
 
 | Schritt | Stand | Wo |
 |---|---|---|
-| Datenlieferung inventarisiert (50 Dateien, «20261003_Input Sandro») | ✅ | [docs/data_inventory.md](docs/data_inventory.md) |
+| Datenlieferung inventarisiert (50 Dateien, «20261003_Input Sandro») | ✅ | [Quellen und interne Dokumentation/data_inventory.md](Quellen%20und%20interne%20Dokumentation/data_inventory.md) |
 | Daten bereinigt und aggregiert (nur Herren, ohne Personendaten) | ✅ 38/38 Prüfungen OK | [§4](#4-wie-die-daten-zustande-kommen-bereinigung) |
-| Baseline je Spiel und Saison + Abgleich mit Retos Sichtung | ✅ vorläufig | [Bericht](docs/analysis/01_baseline_erste_erkenntnisse.md) |
+| Baseline je Spiel und Saison + Abgleich mit Retos Sichtung | ✅ vorläufig | [Bericht](Quellen%20und%20interne%20Dokumentation/analysis/01_baseline_erste_erkenntnisse.md) |
 | Hypothesen H1–H3 (Verknüpfung der 3 Datenbasen) + K1 (Spielkontext) | ✅ explorativ | Bericht §5–§6 |
-| Ergebnisse Run 1 zum Nachprüfen | ✅ | [outputs/run1_simon_2026-10-11/](outputs/run1_simon_2026-10-11/) |
+| Ergebnisse Run 1 zum Nachprüfen | ✅ | [Baseline Analyse Rechnungen/run1_simon_2026-10-11/](Baseline%20Analyse%20Rechnungen/run1_simon_2026-10-11/) |
 | **Ralfs Rechenkern übernommen = Zahlenbasis** (D-028) | ✅ | [ralf/README_REPO.md](ralf/README_REPO.md) |
-| Spielkontext-Tabelle **Version 5** (D-034), Neuberechnung beider Pipelines + Abgleich | ✅ Kernzahlen identisch | [outputs/run3_kontext-v5_2026-10-14/](outputs/run3_kontext-v5_2026-10-14/README.md) |
-| Kontextmodelle und Diagnosekarte (Ralf) | ✅ gerechnet, Freigabe offen | `outputs/run3_…/ralf_kern_phase1/` |
-| Vorschlag nächste Schritte Phase 1 → Phase 2 | 💬 zur Diskussion | [docs/team/2026-10-14_vorschlag_naechste_schritte.md](docs/team/2026-10-14_vorschlag_naechste_schritte.md) |
-| Deckungsbeitrag | ⏳ Kostendaten fehlen (D-003/D-029) | [docs/decisions.md](docs/decisions.md) |
+| Spielkontext-Tabelle **Version 5** (D-034), Neuberechnung beider Pipelines + Abgleich | ✅ Kernzahlen identisch | [Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/](Baseline%20Analyse%20Rechnungen/run3_kontext-v5_2026-10-14/README.md) |
+| Kontextmodelle und Diagnosekarte (Ralf) | ✅ gerechnet, Freigabe offen | `Baseline Analyse Rechnungen/run3_…/ralf_kern_phase1/` |
+| Vorschlag nächste Schritte Phase 1 → Phase 2 | 💬 zur Diskussion | [Quellen und interne Dokumentation/team/2026-10-14_vorschlag_naechste_schritte.md](Quellen%20und%20interne%20Dokumentation/team/2026-10-14_vorschlag_naechste_schritte.md) |
+| Deckungsbeitrag | ⏳ Kostendaten fehlen (D-003/D-029) | [Quellen und interne Dokumentation/decisions.md](Quellen%20und%20interne%20Dokumentation/decisions.md) |
 
 ## 2 Einstieg – drei Wege
 
 | Ich will … | Dann … | Rohdaten nötig? |
 |---|---|---|
-| **verstehen, was rauskam** | [Run-3-README](outputs/run3_kontext-v5_2026-10-14/README.md), dann Ralfs `Methodennotiz_Phase1.md` (Run 3) und die [Vorschläge](docs/team/2026-10-14_vorschlag_naechste_schritte.md); Simons erster Bericht: [Run 1](docs/analysis/01_baseline_erste_erkenntnisse.md) | nein |
-| **mit den Ergebnissen weiterrechnen** (neue Hypothesen auf Spielebene) | [Notebook](notebooks/01_baseline_hypothesen.ipynb) öffnen, Kernel `.venv`. Ohne lokale Config läuft es automatisch im **Repo-Modus** auf `outputs/run1_…/mart_match.csv` | nein |
+| **verstehen, was rauskam** | [Run-3-README](Baseline%20Analyse%20Rechnungen/run3_kontext-v5_2026-10-14/README.md), dann Ralfs `Methodennotiz_Phase1.md` (Run 3) und die [Vorschläge](Quellen%20und%20interne%20Dokumentation/team/2026-10-14_vorschlag_naechste_schritte.md); Simons erster Bericht: [Run 1](Quellen%20und%20interne%20Dokumentation/analysis/01_baseline_erste_erkenntnisse.md) | nein |
+| **mit den Ergebnissen weiterrechnen** (neue Hypothesen auf Spielebene) | [Notebook](notebooks/01_baseline_hypothesen.ipynb) öffnen, Kernel `.venv`. Ohne lokale Config läuft es automatisch im **Repo-Modus** auf `Baseline Analyse Rechnungen/run1_…/mart_match.csv` | nein |
 | **alles neu rechnen** (andere Definitionen, neue Aggregationen, neue Lieferung, H3 neu) | Rohdaten lokal ablegen, `config/project.local.example.yaml` → `config/project.local.yaml` kopieren, dann [§5](#5-befehle-und-wichtigste-funktionen) | **ja** |
 
 ### Kann ich mit den Daten im Repo weiterrechnen?
@@ -43,13 +51,13 @@ Partnerantworten und neue Projektfestlegung: [Catering-Klärung und Baseline-Fol
 
 | Im Repo | Damit möglich | Nicht im Repo (lokal) |
 |---|---|---|
-| `outputs/run1_…/mart_match.csv`: 108 Herren-Pflichtspiele × ~65 Spalten (Ticketing, Zutritt, Catering, Kontext, KPIs) | Baseline-Auswertungen, Grafiken, H1/H2/K1 neu testen, **eigene Hypothesen auf Spielebene** | **Rohdaten** (Personendaten; SharePoint bzw. bei Simon), Ablage `C:\FCSG_Daten\raw\` (D-015) |
+| `Baseline Analyse Rechnungen/run1_…/mart_match.csv`: 108 Herren-Pflichtspiele × ~65 Spalten (Ticketing, Zutritt, Catering, Kontext, KPIs) | Baseline-Auswertungen, Grafiken, H1/H2/K1 neu testen, **eigene Hypothesen auf Spielebene** | **Rohdaten** (Personendaten; SharePoint bzw. bei Simon), Ablage `C:\FCSG_Daten\raw\` (D-015) |
 | `season_summary.csv`, Hypothesen- und Prüftabellen, Excel | nachvollziehen und gegenprüfen | **`data/clean/`**: 18 bereinigte Tabellen (z. B. Ankunft je Minute und Sektor, Tickets nach Vorlauf, Kanal und Block) |
 | Code, Tests, künstliche Testdaten | Code ändern und testen (`pytest`) ohne echte Daten | `Spielkontext_Tabelle_FCSG_3.xlsx` (Team, SharePoint) |
 
 Für alles **unterhalb der Spielebene** braucht ihr die Rohdaten und einen eigenen `prepare-data`-Lauf. Dazu gehören Ankunftskurven je Sektor,
 Ticketvorlauf nach Kanal, H3 neu, Kiesplatz-Stände und Artikel. Der Lauf dauert einige Minuten; danach stimmen die Prüfsummen mit
-`outputs/run1_…/bereinigung/manifest.json` überein, wenn ihr dieselbe Lieferung nutzt.
+`Baseline Analyse Rechnungen/run1_…/bereinigung/manifest.json` überein, wenn ihr dieselbe Lieferung nutzt.
 
 ## 3 Wie das Projekt funktioniert
 
@@ -58,10 +66,10 @@ Rohdaten (lokal)  ──prepare-data──▶  data/clean/<run>/  ──analyze�
 50 Dateien + Kontext   bereinigen,      18 Tabellen,          1:1 über Spieldatum,    (1 Zeile = 1 Spiel)     Hypothesen H1–H3, K1
                        aggregieren      nur Aggregate         Summen geprüft                                   │
                                                                                                                ▼
-                                     Bericht docs/analysis/ (+ Grafiken) · Excel + Readback · Laufordner mit manifest.json
+                                     Bericht Quellen und interne Dokumentation/analysis/ (+ Grafiken) · Excel + Readback · Laufordner mit manifest.json
 ```
 
-**Die drei Datenbasen** (Treiberbaum, `docs/briefing/02_datenquellen_treiberbaum.md`) und was daraus je Spiel wird:
+**Die drei Datenbasen** (Treiberbaum, `Quellen und interne Dokumentation/briefing/02_datenquellen_treiberbaum.md`) und was daraus je Spiel wird:
 
 | Datenbasis | Quelle | In der Spieltabelle |
 |---|---|---|
@@ -72,7 +80,7 @@ Rohdaten (lokal)  ──prepare-data──▶  data/clean/<run>/  ──analyze�
 
 ## 4 Wie die Daten zustande kommen (Bereinigung)
 
-Code: [src/fcsg/prepare.py](src/fcsg/prepare.py) · Details: [docs/data_inventory.md](docs/data_inventory.md), [docs/data_dictionary_clean.md](docs/data_dictionary_clean.md)
+Code: [src/fcsg/prepare.py](src/fcsg/prepare.py) · Details: [Quellen und interne Dokumentation/data_inventory.md](Quellen%20und%20interne%20Dokumentation/data_inventory.md), [Quellen und interne Dokumentation/data_dictionary_clean.md](Quellen%20und%20interne%20Dokumentation/data_dictionary_clean.md)
 
 - **Datenschutz:** Personenbezogene Spalten (Name, Geburtstag, PLZ, Kunden-Nr., Sitzplatz, Barcode …) werden **nie gelesen**,
   dafür sorgt eine Positivliste der Spalten. Ticket- und Rechnungsschlüssel werden nur intern gehasht, um zu zählen. Jede Ausgabetabelle durchläuft eine
@@ -102,7 +110,7 @@ und `.\.venv\Scripts\python.exe -m pip install -e . --no-deps`. In VS Code gibt 
 |---|---|---|
 | `pytest -q` | FCSG: Tests ausführen | 83 Tests, nur künstliche Daten |
 | `fcsg.cli prepare-data --config config/project.local.yaml` | FCSG: Echte Daten bereinigen/aggregieren | Rohdaten → `data/clean/<run>/` |
-| `fcsg.cli analyze --config config/project.local.yaml` | FCSG: Baseline-Analyse (echte Daten) | Spieltabelle, KPIs, Hypothesen → Bericht `docs/analysis/`, Excel + Readback |
+| `fcsg.cli analyze --config config/project.local.yaml` | FCSG: Baseline-Analyse (echte Daten) | Spieltabelle, KPIs, Hypothesen → Bericht `Quellen und interne Dokumentation/analysis/`, Excel + Readback |
 | `fcsg.cli run --config config/project.example.yaml` | FCSG: Lauf + Excel-Export + Readback (Fixture) | technischer Test mit künstlichen Daten |
 
 | Modul | Wichtigste Funktionen |
@@ -112,16 +120,16 @@ und `.\.venv\Scripts\python.exe -m pip install -e . --no-deps`. In VS Code gibt 
 | `hypotheses.py` | `test_h1`, `test_h2`, `test_h3`, `context_associations`; Helfer `demean`, `spearman`, `bootstrap`, `status_from_ci`; Liste `FURTHER_HYPOTHESES` |
 | `analysis.py` / `report.py` / `export.py` | Analyse-Lauf mit Manifest · Bericht + Grafiken · Excel ohne Formeln + Readback |
 
-Mehr dazu: [src/fcsg/README.md](src/fcsg/README.md), [docs/analysis/README.md](docs/analysis/README.md) (mögliche Baseline-Outputs, Regeln für neue Tests).
+Mehr dazu: [src/fcsg/README.md](src/fcsg/README.md), [Quellen und interne Dokumentation/analysis/README.md](Quellen%20und%20interne%20Dokumentation/analysis/README.md) (mögliche Baseline-Outputs, Regeln für neue Tests).
 
 ## 6 Projektstruktur
 
 | Ordner/Datei | Inhalt |
 |---|---|
-| `docs/analysis/` | Bericht, Grafiken, Übergabe-Doku zur Analyse |
-| `docs/briefing/` | Arbeitsfassungen der PDFs (Auftrag, Datenquellen/Treiberbaum, Projektantrag) + Widerspruchsliste |
-| `docs/decisions.md` | alle Entscheide und offenen Punkte (D-001 …) |
-| `outputs/run1_simon_2026-10-11/` | Ergebnisse Run 1 (eingefroren) inkl. Prüfprotokolle der Bereinigung |
+| `Quellen und interne Dokumentation/analysis/` | Bericht, Grafiken, Übergabe-Doku zur Analyse |
+| `Quellen und interne Dokumentation/briefing/` | Arbeitsfassungen der PDFs (Auftrag, Datenquellen/Treiberbaum, Projektantrag) + Widerspruchsliste |
+| `Quellen und interne Dokumentation/decisions.md` | alle Entscheide und offenen Punkte (D-001 …) |
+| `Baseline Analyse Rechnungen/run1_simon_2026-10-11/` | Ergebnisse Run 1 (eingefroren) inkl. Prüfprotokolle der Bereinigung |
 | `notebooks/` | Notebook Baseline + Hypothesen (Repo- und Voll-Modus) |
 | `src/fcsg/` | Python-Paket (gesamte Logik) |
 | `tests/` | pytest mit künstlichen Daten (Jahr 2099) |
@@ -132,7 +140,7 @@ Mehr dazu: [src/fcsg/README.md](src/fcsg/README.md), [docs/analysis/README.md](d
 
 - **Nie ins Repo:** Rohdaten, `data/`, `config/project.local.yaml`, Quell-PDFs, Notebook-Ausgaben (vor dem Commit «Clear All Outputs»).
   `.gitignore` ist eingerichtet, ersetzt aber nicht den Blick vor dem Commit.
-- **Neue Ergebnisse teilen:** als neuer Ordner `outputs/runN_<name>_<datum>/` mit kurzem README (Lauf-IDs, Befehle, Prüfstatus).
+- **Neue Ergebnisse teilen:** als neuer Ordner `Baseline Analyse Rechnungen/runN_<name>_<datum>/` mit kurzem README (Lauf-IDs, Befehle, Prüfstatus).
   Run 1 nicht überschreiben.
 - **Methodik:**
   - Fehlende Werte nie als 0.
@@ -141,7 +149,7 @@ Mehr dazu: [src/fcsg/README.md](src/fcsg/README.md), [docs/analysis/README.md](d
   - Keine Kausalsprache, keine «Potenziale».
   - Lücken von KF, Bonsrate und Ø Bon nie addieren.
   - Modellierung erst nach Baseline-Freigabe.
-- **Entscheide** in `docs/decisions.md` nachführen (auch Hypothesen und Agent-Annahmen, D-027); grössere Änderungen
+- **Entscheide** in `Quellen und interne Dokumentation/decisions.md` nachführen (auch Hypothesen und Agent-Annahmen, D-027); grössere Änderungen
   im `CHANGELOG.md` festhalten. Neue Logik immer mit Test auf künstlichen Daten.
 
 ## 8 Vor der Übergabe an den FCSG
