@@ -24,7 +24,7 @@ Die frühere Phase-1-Festlegung D-003 wird nicht rückwirkend als nie beschlosse
 
 ### Voraussichtlich keine numerische Änderung allein durch die Klarstellung
 
-- `ralf/fcsg/sources/catering.py` berechnet `kf_exkl = umsatz_exkl / public_netto`; die bestätigte KF-Formel passt zur vorhandenen Implementierung. Der fachliche Nennerabgleich bleibt offen.
+- `Baseline Analyse Rechnungen/Rechenkern/fcsg/sources/catering.py` berechnet `kf_exkl = umsatz_exkl / public_netto`; die bestätigte KF-Formel passt zur vorhandenen Implementierung. Der fachliche Nennerabgleich bleibt offen.
 - Die bestehenden Umsatz-/KF-Werte und Ticketing-/Zutrittsaggregate werden durch die neue Information allein nicht rechnerisch geändert. Das ist ein Codebefund, kein erneuter Nachweis historischer Datenrichtigkeit.
 - Steuerliche 80/20-Aufteilung nicht als Beteiligung behandeln. Bestehende Quell-Netto-/Bruttowerte nicht ohne belegten Fehler ersetzen.
 - Die 20-%-Annahme betrifft nur eine optionale Cluberlös-Szenariospalte, nicht Umsatz-Baseline, Kundenfranken oder historische Bons.

@@ -18,8 +18,8 @@ from pathlib import Path
 # Pfade
 # --------------------------------------------------------------------------------------------
 CODE_DIR = Path(__file__).resolve().parents[1]      # .../2. Modellierung/Python_Auswertung
-MODEL_DIR = CODE_DIR.parent                          # .../2. Modellierung
-PROJECT_ROOT = MODEL_DIR.parent                      # .../Sportmanagement
+MODEL_DIR = CODE_DIR.parents[1]                     # Repository-Root; alte Standardpfade beibehalten
+PROJECT_ROOT = MODEL_DIR.parent                      # bisheriger Standard-Elternordner für Rohdaten
 
 OUTPUT_DIR = Path(os.environ.get("FCSG_OUTPUT_DIR", MODEL_DIR / "Ergebnisse_Phase1"))
 IDEEN_DIR = Path(os.environ.get("FCSG_IDEEN_DIR", MODEL_DIR / "Ergebnisse_Ideen_Grundlage"))

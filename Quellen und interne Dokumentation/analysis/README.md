@@ -1,11 +1,11 @@
 # Quellen und interne Dokumentation/analysis/ – Analyse und Übergabe (Phase 1)
 
-> **Seit 14.10.2026 ist Ralfs Rechenkern die Zahlenbasis (D-028)** – siehe `ralf/README_REPO.md` und
+> **Seit 14.10.2026 ist Ralfs Rechenkern die Zahlenbasis (D-028)** – siehe `Baseline Analyse Rechnungen/Rechenkern/README_REPO.md` und
 > `Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/`. Dieser Ordner beschreibt Simons Pipeline (Bereinigung, Gegenrechnung, Run 1).
 
 Dieser Ordner ist der Einstieg für alle, die die Analyse weiterführen. Ergebnisse:
 **[01_baseline_erste_erkenntnisse.md](01_baseline_erste_erkenntnisse.md)** (Bericht mit Zahlen, Grafiken in `figures/`).
-Interaktiv weiterarbeiten: **[notebooks/01_baseline_hypothesen.ipynb](../../notebooks/01_baseline_hypothesen.ipynb)**.
+Interaktiv weiterarbeiten: **[Baseline Analyse Rechnungen/Notebooks_Archiv/01_baseline_hypothesen.ipynb](../../Baseline%20Analyse%20Rechnungen/Notebooks_Archiv/01_baseline_hypothesen.ipynb)**.
 
 > Alle Zahlen sind **vorläufig** (Definitionen D-004/D-005 offen), aggregiert, nur Herren-Pflichtspiele und **vertraulich**
 > (nur privates Projekt-Repo, D-024). Assoziationen sind keine Ursachen, und Residuen sind keine Potenziale.

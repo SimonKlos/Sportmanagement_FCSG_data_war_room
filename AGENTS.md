@@ -40,6 +40,9 @@ diese Datei. Änderungen an Regeln immer in **beiden** Dateien nachführen. Stan
 - Saisonquoten gewichtet (Σ/Σ), nicht als Mittel der Spielquoten.
 - Modellierung erst nach Baseline-Freigabe.
 
+## Rechenkern-Migration – 01.11.2026 (D-043)
+Der kanonische Code liegt jetzt in `Baseline Analyse Rechnungen/Rechenkern` (bisher Root `ralf`), historische Notebooks in `Baseline Analyse Rechnungen/Notebooks_Archiv` (bisher Root `notebooks`). Den kanonischen Kern aus seinem eigenen Ordner starten, um die beiden Pakete namens `fcsg` nicht zu verwechseln. Frühere Angaben zur Beibehaltung dieser Root-Ordner sind überholt. Keine Dateien/Archivresultate löschen; keine fachliche Rechenlogik ändern.
+
 ## Ausgabe- und Strukturregel – 01.11.2026 (D-042)
 Quellen/Logs intern in `Quellen und interne Dokumentation`, Rechenstände in `Baseline Analyse Rechnungen`, externe Review-Unterlagen im separaten Root `Deliverables`. Historische Artefakte unverändert erhalten. Externe Fassungen ohne interne Personenvergleiche; Zahlen und Logik unverändert. Präsentation ausschliesslich als ausführlicher Folienleitfaden zur eigenen PPT-Erstellung durch Simon, **keine PPT/PPTX**.
 
@@ -47,7 +50,7 @@ Quellen/Logs intern in `Quellen und interne Dokumentation`, Rechenstände in `Ba
 Phase-2-Massnahmen primär auf inkrementellen Umsatz prüfen (Simon, D-039), nicht DB. Catering-Systemumsatz exkl. MwSt. und Cluberlös trennen. 20 % Cateringbeteiligung nur unbestätigte Szenarioannahme (D-040), kein Default/Margennachweis; Vertragsbasis offen. Phase-1-Entscheid D-003 bleibt historisch bestehen. Kundenfranken-Definition bestätigt, Nenner-Mapping offen (D-038). Bons 2023/24 wegen System-/Gutscheinwechsel eingeschränkt vergleichbar: D-041 und Teamnotiz vor Verwendung lesen; kein bereits erfolgter Sensitivitätslauf.
 
 ## Code und Dokumentation
-- **Zahlenbasis = Ralfs Rechenkern unter `ralf/`** (D-028; immer aus `ralf/` starten, siehe `ralf/README_REPO.md`).
+- **Zahlenbasis = Ralfs Rechenkern unter `Baseline Analyse Rechnungen/Rechenkern/`** (D-028; immer aus `Baseline Analyse Rechnungen/Rechenkern/` starten, siehe `Baseline Analyse Rechnungen/Rechenkern/README_REPO.md`).
   `src/fcsg/` bleibt für Bereinigung, Datenschutzprüfung, Tests und Gegenrechnung (`fcsg.abgleich`).
   Spielkontext-Tabelle nur **Version 5** (D-034).
 - Python-Paket `src/fcsg/` (modular, Docstrings für zentrale Funktionen), CLI `python -m fcsg.cli`,

@@ -14,9 +14,10 @@ Run 1 und Run 2 bleiben als historische Archive erhalten. Doppelte Diagramme und
 
 ## Wo liegt die Rechenlogik?
 
-Dieser Ordner ist der fachliche Einstieg zu den Rechnungen. Der ausführbare Code bleibt aus Gründen der Paket-/Importstruktur ohne Duplizierung an seinen bestehenden Stellen:
+Dieser Ordner ist der fachliche Einstieg zu den Rechnungen und enthält jetzt auch den massgeblichen Rechenkern sowie das Notebook-Archiv. Die Bereinigungs-/Gegenrechnungspipeline bleibt technisch unter `src/`:
 
-- [Rechenkern](../ralf/README_REPO.md) – kanonische Analyse.
+- [Rechenkern](Rechenkern/README_REPO.md) – kanonische Analyse.
+- [Notebooks_Archiv](Notebooks_Archiv/README.md) – vorhandene historische Notebooks, nicht Teil der externen Deliverables.
 - [Bereinigung und Gegenrechnung](../src/fcsg/README.md).
 - [Tests](../tests/) – künstliche Fixtures; reale Daten werden dadurch nicht neu verprobt.
 - [Konfiguration](../config/README.md) – keine lokalen Datenpfade oder Geheimnisse versionieren.

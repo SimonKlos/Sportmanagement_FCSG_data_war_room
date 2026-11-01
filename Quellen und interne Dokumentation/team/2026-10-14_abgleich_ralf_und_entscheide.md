@@ -78,7 +78,7 @@ Dazu bestehende offene Punkte: D-004/D-005 (Definitionen, Sandro), D-023 (Datenr
 ### 5.1 Technisch: Ralfs Rechenkern in dieses Repo
 
 1. **Ralfs Einverständnis** einholen; Paket ohne Ergebnisse mit Rohdatenbezug übernehmen (enthält keine Rohdaten).
-2. Branch `feature/ralf-pipeline`: Ralfs `Python_Auswertung/` als eigenen Ordner (z. B. `ralf/`) ablegen, **Simons
+2. Branch `feature/ralf-pipeline`: Ralfs `Python_Auswertung/` als eigenen Ordner (z. B. `Baseline Analyse Rechnungen/Rechenkern/`) ablegen, **Simons
    Code bleibt zunächst unverändert**. Ergebnisse von Ralfs Lauf als `Baseline Analyse Rechnungen/run2_ralf_2026-10-13/` mit README.
 3. **Abgleichstest** schreiben: Kennzahlen beider Pipelines je Spiel vergleichen (gleich / Abweichung mit Grund).
 4. Nach E-1: Simons Code für die Analyse ersetzen oder stilllegen; Simons Tests auf künstlichen Daten auf Ralfs Kern

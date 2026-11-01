@@ -16,6 +16,8 @@ data/
 raw/
 Baseline Analyse Rechnungen/*
 !Baseline Analyse Rechnungen/README.md
+!Baseline Analyse Rechnungen/Rechenkern/
+!Baseline Analyse Rechnungen/Notebooks_Archiv/
 *.xlsx
 *.xls
 *.parquet
@@ -40,14 +42,14 @@ Thumbs.db
 !Baseline Analyse Rechnungen/run*_*/
 !Baseline Analyse Rechnungen/run*_*/**
 
-# Ralfs Rechenkern (ralf/): öffentliche Zusatzdaten und belegte Korrekturen versionieren (D-028, D-031)
-!ralf/external/*.csv
-!ralf/overrides/*.csv
+# Ralfs Rechenkern (Baseline Analyse Rechnungen/Rechenkern/): öffentliche Zusatzdaten und belegte Korrekturen versionieren (D-028, D-031)
+!Baseline Analyse Rechnungen/Rechenkern/external/*.csv
+!Baseline Analyse Rechnungen/Rechenkern/overrides/*.csv
 
 # Kuratierte externe Review-Excel und Diagrammdaten (private Projektablage, D-042)
 !Deliverables/**/*.xlsx
 !Deliverables/**/*.csv
-# Standard-Ausgabeordner von ralf/run_all.py (Läufe stattdessen mit --ausgabe nach Baseline Analyse Rechnungen/runN_…)
+# Standard-Ausgabeordner von Baseline Analyse Rechnungen/Rechenkern/run_all.py (Läufe stattdessen mit --ausgabe nach Baseline Analyse Rechnungen/runN_…)
 Ergebnisse_Phase1/
 Ergebnisse_Ideen_Grundlage/
 # lokale Kopie des Übergabe-ZIPs

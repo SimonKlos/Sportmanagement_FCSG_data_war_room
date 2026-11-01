@@ -1,5 +1,11 @@
 # Changelog
 
+## Rechenkern und Notebooks einsortiert – 01.11.2026
+- Root `ralf/` nach `Baseline Analyse Rechnungen/Rechenkern/` verschoben: aktiver kanonischer Code, Tests, Referenzdaten und Korrekturen vollständig erhalten. Keine fachliche Logik geändert; Standardpfade trotz zusätzlicher Ordnerebene stabilisiert.
+- Root `notebooks/` nach `Baseline Analyse Rechnungen/Notebooks_Archiv/` verschoben; Repository-Erkennung für den tieferen Startordner angepasst. Keine Notebook-Ausgaben erzeugt oder archivierte Ergebnisse verändert.
+- Navigation, aktive Pfadverweise, Ignore-Ausnahmen und Startanleitung angepasst. Keine Dateien gelöscht, keine neuen externen Dokumente erzeugt; bestehende Deliverables unverändert. D-043.
+
+
 ## Struktur und externe Aufbereitung – 01.11.2026
 - Simon bestätigt drei Hauptbereiche: `Baseline Analyse Rechnungen` (bisher outputs), `Quellen und interne Dokumentation` (bisher docs), separater Root `Deliverables`. Quellen-/Entscheidungsdokumente bleiben intern; Code/Paketstruktur bleibt unverändert.
 - Historische Laufartefakte nur verschoben; Inhalt und Rechenlogik bleiben identisch. Aktive Pfade, Markdown-Links, Fixture-Konfiguration, CLI-Berichtsziel und Archiv-Notebook auf die neuen Ordnernamen angepasst.
@@ -15,23 +21,23 @@
 
 
 ## 0.5.2 – 14.10.2026
-- D-037: `notebooks/01_baseline_hypothesen.ipynb` als **Auslaufmodell** gekennzeichnet (Hinweis im Notebook und in
-  `notebooks/README.md`); Idee einer Phase-2-Analyse-Werkbank auf Ralfs Rechenkern festgehalten (Bau nach dem
+- D-037: `Baseline Analyse Rechnungen/Notebooks_Archiv/01_baseline_hypothesen.ipynb` als **Auslaufmodell** gekennzeichnet (Hinweis im Notebook und in
+  `Baseline Analyse Rechnungen/Notebooks_Archiv/README.md`); Idee einer Phase-2-Analyse-Werkbank auf Ralfs Rechenkern festgehalten (Bau nach dem
   Chancenfeld-Workshop).
 
 ## 0.5.1 – 14.10.2026
 - **D-036 entschieden, D-016 ergänzt (Simon):** Frauen-Spiele **und Länderspiele** (Nationalteams, WEURO 2025,
   Nati-Trainings, Public Viewings) werden überall ignoriert.
-  - Ralfs Ideen-Grundlage angepasst (`ralf/fcsg/ideen/`: Randfelder ohne Frauen/Länderspiele, Blatt F2 entfällt,
+  - Ralfs Ideen-Grundlage angepasst (`Baseline Analyse Rechnungen/Rechenkern/fcsg/ideen/`: Randfelder ohne Frauen/Länderspiele, Blatt F2 entfällt,
     Chancenfeld 9 neu «Das Stadion an weiteren Anlässen») und in Run 3 neu gerechnet (`ralf_ideen_grundlage/`, QA 18/18).
   - Simons Bereinigung: neuer Filter `drop_national_team` (Prüfungen `D016N-*`, Herren-Pflichtspiele geschützt) + Test;
     entfernt 22 Historie-, 16 Catering-, 9 Saisonsummen- und 189 Kiesplatz-Zeilen. Analyse-Ergebnisse unverändert.
   - Run 3 aktualisiert (Gegenrechnung mit bereinigtem Lauf `20261014T215420_clean_0cf1`); Phase 1 von Ralf identisch.
 
 ## 0.5.0 – 14.10.2026
-- **Ralfs Rechenkern übernommen (D-028 entschieden, Simon):** Code v1.1.0 unter `ralf/` (inkl. Tests, Korrekturen,
-  öffentliche Zusatzdaten), Einbindung beschrieben in `ralf/README_REPO.md`. Einzige Codeänderung am Kern: Einlesen der
-  Spielkontext-Tabelle Version 5 (`ralf/fcsg/sources/kontext.py`, Standarddatei in `config.py`) + 2 Tests.
+- **Ralfs Rechenkern übernommen (D-028 entschieden, Simon):** Code v1.1.0 unter `Baseline Analyse Rechnungen/Rechenkern/` (inkl. Tests, Korrekturen,
+  öffentliche Zusatzdaten), Einbindung beschrieben in `Baseline Analyse Rechnungen/Rechenkern/README_REPO.md`. Einzige Codeänderung am Kern: Einlesen der
+  Spielkontext-Tabelle Version 5 (`Baseline Analyse Rechnungen/Rechenkern/fcsg/sources/kontext.py`, Standarddatei in `config.py`) + 2 Tests.
 - **Spielkontext-Tabelle Version 5 (D-034 entschieden):** einzige gültige Version, kein Rückfall auf ältere Versionen.
   Simons `prepare_context` auf v5 umgestellt (neue Spalten: Gegner-Kategorie, Punkteschnitt, Wetter zur Anstossstunde
   `temp_c`/`precip_mm`/`wind_kmh`, Covid, Saison 21/22); Schulferien-Recherche nur noch Gegenprobe (96 Spiele, 0 Abweichungen);
@@ -77,7 +83,7 @@
   Retos Sichtung und Quell-Tab «Entwicklung», Excel mit 16 Blättern + Readback (ausserhalb des Repos).
 - **Hypothesen** H1 (Ticketing × Catering), H2 (Zutritt × Catering), H3 (Ticketing × Zutritt), K1 (Spielkontext)
   mit Bootstrap-KI; Bericht `Quellen und interne Dokumentation/analysis/01_baseline_erste_erkenntnisse.md` mit 5 Grafiken; Übergabe-Doku
-  `Quellen und interne Dokumentation/analysis/README.md`; Notebook `notebooks/01_baseline_hypothesen.ipynb`.
+  `Quellen und interne Dokumentation/analysis/README.md`; Notebook `Baseline Analyse Rechnungen/Notebooks_Archiv/01_baseline_hypothesen.ipynb`.
 - Neue Module `baseline.py`, `hypotheses.py`, `analysis.py`, `report.py`; Export für Datenmodus `release_aggregates`.
 - Entscheide D-024 (echte aggregierte Zahlen ins private Repo), D-025 (Arbeitsdefinitionen).
 - Abhängigkeiten: matplotlib, ipykernel, nbconvert (nur `.venv`); `requirements.lock.txt` nach Test neu fixiert.

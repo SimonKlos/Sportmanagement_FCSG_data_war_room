@@ -69,7 +69,7 @@ fcsg-analysis/
     troubleshooting.md
     fcsg_handover.md
   prompts/README.md
-  notebooks/
+  Baseline Analyse Rechnungen/Notebooks_Archiv/
     README.md
     00_quality_and_inventory.ipynb
     01_baseline.ipynb

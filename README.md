@@ -6,7 +6,7 @@
 - **[Baseline Analyse Rechnungen](Baseline%20Analyse%20Rechnungen/README.md):** alle eingefrorenen Rechenstände, Gegenrechnungen und Prüfausgaben; bisher `outputs`.
 - **[Quellen und interne Dokumentation](Quellen%20und%20interne%20Dokumentation/README.md):** Quellen, Begriffe, Decision Logs, interne Abstimmungen und Delivery-Prüfungen; bisher `docs`.
 
-Code (`ralf/`, `src/`), Tests und Konfiguration bleiben technisch am bisherigen Ort und sind aus dem Rechenbereich verlinkt. Keine doppelte Rechenlogik, keine neue Modellschätzung durch die Aufbereitung. Die folgenden Abschnitte dokumentieren weiterhin die interne analytische Herkunft.
+Der massgebliche Rechenkern und das Notebook-Archiv liegen im Rechnungsbereich. Die Bereinigungs-/Gegenrechnungspipeline (`src/`), ihre Tests und Konfiguration bleiben technisch am bisherigen Ort und sind aus dem Rechenbereich verlinkt. Keine doppelte Rechenlogik, keine neue Modellschätzung durch die Aufbereitung. Die folgenden Abschnitte dokumentieren weiterhin die interne analytische Herkunft.
 
 > **Intern – nur für die Abstimmung im Projektteam.** Das Repo enthält aggregierte, **vertrauliche** FCSG-Ergebnisse
 > (keine Personendaten) und ist deshalb privat (D-024). Vor einer Übergabe an den FC St.Gallen wird es aufgeräumt
@@ -31,7 +31,7 @@ Partnerantworten und neue Projektfestlegung: [Catering-Klärung und Baseline-Fol
 | Baseline je Spiel und Saison + Abgleich mit Retos Sichtung | ✅ vorläufig | [Bericht](Quellen%20und%20interne%20Dokumentation/analysis/01_baseline_erste_erkenntnisse.md) |
 | Hypothesen H1–H3 (Verknüpfung der 3 Datenbasen) + K1 (Spielkontext) | ✅ explorativ | Bericht §5–§6 |
 | Ergebnisse Run 1 zum Nachprüfen | ✅ | [Baseline Analyse Rechnungen/run1_simon_2026-10-11/](Baseline%20Analyse%20Rechnungen/run1_simon_2026-10-11/) |
-| **Ralfs Rechenkern übernommen = Zahlenbasis** (D-028) | ✅ | [ralf/README_REPO.md](ralf/README_REPO.md) |
+| **Ralfs Rechenkern übernommen = Zahlenbasis** (D-028) | ✅ | [Baseline Analyse Rechnungen/Rechenkern/README_REPO.md](Baseline%20Analyse%20Rechnungen/Rechenkern/README_REPO.md) |
 | Spielkontext-Tabelle **Version 5** (D-034), Neuberechnung beider Pipelines + Abgleich | ✅ Kernzahlen identisch | [Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/](Baseline%20Analyse%20Rechnungen/run3_kontext-v5_2026-10-14/README.md) |
 | Kontextmodelle und Diagnosekarte (Ralf) | ✅ gerechnet, Freigabe offen | `Baseline Analyse Rechnungen/run3_…/ralf_kern_phase1/` |
 | Vorschlag nächste Schritte Phase 1 → Phase 2 | 💬 zur Diskussion | [Quellen und interne Dokumentation/team/2026-10-14_vorschlag_naechste_schritte.md](Quellen%20und%20interne%20Dokumentation/team/2026-10-14_vorschlag_naechste_schritte.md) |
@@ -42,7 +42,7 @@ Partnerantworten und neue Projektfestlegung: [Catering-Klärung und Baseline-Fol
 | Ich will … | Dann … | Rohdaten nötig? |
 |---|---|---|
 | **verstehen, was rauskam** | [Run-3-README](Baseline%20Analyse%20Rechnungen/run3_kontext-v5_2026-10-14/README.md), dann Ralfs `Methodennotiz_Phase1.md` (Run 3) und die [Vorschläge](Quellen%20und%20interne%20Dokumentation/team/2026-10-14_vorschlag_naechste_schritte.md); Simons erster Bericht: [Run 1](Quellen%20und%20interne%20Dokumentation/analysis/01_baseline_erste_erkenntnisse.md) | nein |
-| **mit den Ergebnissen weiterrechnen** (neue Hypothesen auf Spielebene) | [Notebook](notebooks/01_baseline_hypothesen.ipynb) öffnen, Kernel `.venv`. Ohne lokale Config läuft es automatisch im **Repo-Modus** auf `Baseline Analyse Rechnungen/run1_…/mart_match.csv` | nein |
+| **mit den Ergebnissen weiterrechnen** (neue Hypothesen auf Spielebene) | [Notebook](Baseline%20Analyse%20Rechnungen/Notebooks_Archiv/01_baseline_hypothesen.ipynb) öffnen, Kernel `.venv`. Ohne lokale Config läuft es automatisch im **Repo-Modus** auf `Baseline Analyse Rechnungen/run1_…/mart_match.csv` | nein |
 | **alles neu rechnen** (andere Definitionen, neue Aggregationen, neue Lieferung, H3 neu) | Rohdaten lokal ablegen, `config/project.local.example.yaml` → `config/project.local.yaml` kopieren, dann [§5](#5-befehle-und-wichtigste-funktionen) | **ja** |
 
 ### Kann ich mit den Daten im Repo weiterrechnen?
@@ -130,7 +130,7 @@ Mehr dazu: [src/fcsg/README.md](src/fcsg/README.md), [Quellen und interne Dokume
 | `Quellen und interne Dokumentation/briefing/` | Arbeitsfassungen der PDFs (Auftrag, Datenquellen/Treiberbaum, Projektantrag) + Widerspruchsliste |
 | `Quellen und interne Dokumentation/decisions.md` | alle Entscheide und offenen Punkte (D-001 …) |
 | `Baseline Analyse Rechnungen/run1_simon_2026-10-11/` | Ergebnisse Run 1 (eingefroren) inkl. Prüfprotokolle der Bereinigung |
-| `notebooks/` | Notebook Baseline + Hypothesen (Repo- und Voll-Modus) |
+| `Baseline Analyse Rechnungen/Notebooks_Archiv/` | Notebook Baseline + Hypothesen (Repo- und Voll-Modus) |
 | `src/fcsg/` | Python-Paket (gesamte Logik) |
 | `tests/` | pytest mit künstlichen Daten (Jahr 2099) |
 | `config/` | Fixture-Config, Vorlage für die lokale Config, `reference/` (Schulferien) |

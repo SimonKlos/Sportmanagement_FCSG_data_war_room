@@ -1,4 +1,4 @@
-"""Abgleich der Spieltabellen beider Pipelines (Simon `src/fcsg` vs. Ralfs Rechenkern `ralf/`), D-028.
+"""Abgleich der Spieltabellen beider Pipelines (Simon `src/fcsg` vs. Ralfs Rechenkern `Baseline Analyse Rechnungen/Rechenkern/`), D-028.
 
 Vergleicht je Spieldatum die Kernzahlen, die beide Pipelines aus denselben Rohdaten bilden. Ziel ist keine
 neue Kennzahl, sondern der Nachweis, wo die Zahlenbasis übereinstimmt und wo und warum sie abweicht
@@ -6,7 +6,7 @@ neue Kennzahl, sondern der Nachweis, wo die Zahlenbasis übereinstimmt und wo un
 
 Aufruf (Projektroot)::
 
-    python -m fcsg.abgleich <simon/mart_match.csv> <ralf/Tabellen/mart_match.csv> <ausgabeordner>
+    python -m fcsg.abgleich <simon/mart_match.csv> <Baseline Analyse Rechnungen/Rechenkern/Tabellen/mart_match.csv> <ausgabeordner>
 """
 
 from __future__ import annotations
@@ -41,7 +41,7 @@ def compare_marts(simon: pd.DataFrame, ralf: pd.DataFrame) -> tuple[pd.DataFrame
 
     Args:
         simon: ``mart_match.csv`` aus ``fcsg.cli analyze`` (Spalte ``match_date``).
-        ralf: ``Tabellen/mart_match.csv`` aus ``ralf/run_all.py`` (Spalte ``datum``; nur gespielte Kernspiele).
+        ralf: ``Tabellen/mart_match.csv`` aus ``Baseline Analyse Rechnungen/Rechenkern/run_all.py`` (Spalte ``datum``; nur gespielte Kernspiele).
 
     Returns:
         (je Spiel und Kennzahl: Werte, Status, Grund; Zusammenfassung je Kennzahl)
