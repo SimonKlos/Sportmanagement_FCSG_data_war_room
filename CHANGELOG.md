@@ -1,5 +1,12 @@
 # Changelog
 
+## Dokumentationsnachtrag – 01.11.2026
+- Partnerantworten zum Catering quellengetrennt dokumentiert: Kundenfranken exkl. MwSt., Umsatzbeteiligung/Warenkosten, steuerliche 80/20-Aufteilung und Bons-Erfassungsbruch.
+- D-038 bis D-041 und Nachträge D-003/D-004/D-005/D-019/D-029: Phase-2-Massnahmen auf Umsatz (Simon); 20 % Cateringbeteiligung ausschliesslich unbestätigte Szenarioannahme.
+- Teamnotiz `docs/team/2026-11-01_catering_klaerung_und_baseline_folgen.md`: verbleibende Rückfragen, Codeprüfung und begrenzte Bons-Sensitivität statt pauschalem Neuimport.
+- README und beide Agentenregeln synchronisiert. Nur Dokumentation; keine Code-/Datenänderung, keine Neuberechnung, keine Freigabe historischer Modelle.
+
+
 ## 0.5.2 – 14.10.2026
 - D-037: `notebooks/01_baseline_hypothesen.ipynb` als **Auslaufmodell** gekennzeichnet (Hinweis im Notebook und in
   `notebooks/README.md`); Idee einer Phase-2-Analyse-Werkbank auf Ralfs Rechenkern festgehalten (Bau nach dem

@@ -10,6 +10,10 @@ Praxis HS26). Phase 1: Ticketing-, Zutritts- und Catering-Daten je Heimspiel ver
 und den Spielkontext einbeziehen. Steuerungsgrösse ist der **Deckungsbeitrag** (D-003); dafür fehlen noch Kostendaten,
 deshalb arbeitet die Baseline vorerst auf Umsatzebene. Fachliche Grundlage: `docs/briefing/` (Arbeitsfassungen der 3 PDFs).
 
+## Aktueller Nachtrag (01.11.2026)
+
+Partnerantworten und neue Projektfestlegung: [Catering-Klärung und Baseline-Folgen](docs/team/2026-11-01_catering_klaerung_und_baseline_folgen.md). Phase-2-Massnahmen werden auf Umsatz bewertet (D-039); Catering-Systemumsatz und Cluberlös bleiben getrennt. 20 % Clubbeteiligung ist nur eine unbestätigte Szenarioannahme (D-040). KF exkl. MwSt. ist fachlich bestätigt, konkretes Nenner-Mapping bleibt offen. Bons-/Bon-Auswertungen sind wegen Erfassungsänderungen 2023/24 erneut auf Vergleichbarkeit zu prüfen (D-041). **Keine Neuberechnung erfolgt**; der folgende technische Stand und historische Outputs bleiben unverändert.
+
 ## 1 Stand (14.10.2026)
 
 | Schritt | Stand | Wo |

@@ -40,6 +40,9 @@ diese Datei. Änderungen an Regeln immer in **beiden** Dateien nachführen. Stan
 - Saisonquoten gewichtet (Σ/Σ), nicht als Mittel der Spielquoten.
 - Modellierung erst nach Baseline-Freigabe.
 
+## Aktueller Nachtrag – 01.11.2026
+Phase-2-Massnahmen primär auf inkrementellen Umsatz prüfen (Simon, D-039), nicht DB. Catering-Systemumsatz exkl. MwSt. und Cluberlös trennen. 20 % Cateringbeteiligung nur unbestätigte Szenarioannahme (D-040), kein Default/Margennachweis; Vertragsbasis offen. Phase-1-Entscheid D-003 bleibt historisch bestehen. Kundenfranken-Definition bestätigt, Nenner-Mapping offen (D-038). Bons 2023/24 wegen System-/Gutscheinwechsel eingeschränkt vergleichbar: D-041 und Teamnotiz vor Verwendung lesen; kein bereits erfolgter Sensitivitätslauf.
+
 ## Code und Dokumentation
 - **Zahlenbasis = Ralfs Rechenkern unter `ralf/`** (D-028; immer aus `ralf/` starten, siehe `ralf/README_REPO.md`).
   `src/fcsg/` bleibt für Bereinigung, Datenschutzprüfung, Tests und Gegenrechnung (`fcsg.abgleich`).
