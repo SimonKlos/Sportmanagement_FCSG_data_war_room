@@ -27,6 +27,10 @@ def test_spielrechner_testdaten(tmp_path):
     assert d["meta"]["basis_saison"] == "T3/T4"
     assert len(d["spiele"]) == 4 * 3 * 12                       # 4 Kennzahlen × 3 Saisons × 12 Spiele
     assert {s["code"] for s in d["slots"]} == {"referenz", "slot_sa_abend", "slot_nachmittag", "slot_werktag_abend"}
+    # Vergleichsspiele je Tagesgruppe und Slot (TESTDATEN: 3 Saisons × 3 Spiele je Kombination)
+    assert d["ansetzungen"]["Samstag"] == {"referenz": 9, "slot_sa_abend": 9}
+    assert d["ansetzungen"]["Werktag"] == {"slot_werktag_abend": 9}
+    assert "Samstag" in d["ansetzungen"] and "slot_nachmittag" not in d["ansetzungen"]["Samstag"]   # → Warnhinweis
     # Vorhersage wie im Browser: Referenz-Slot, Basis T3/T4, 12 °C
     k = d["modelle"]["kf_exkl"]["terme"]
     kf = math.exp(k["Intercept"] + k["C(saison)[T.T3/T4]"] + k["temp_anpfiff_c"] * 12)

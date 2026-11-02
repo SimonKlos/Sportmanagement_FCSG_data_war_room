@@ -44,6 +44,7 @@ def erzeuge(ordner: Path) -> tuple[Path, Path]:
     ids = sorted({e["match_id"] for e in erw})
     mart = pd.DataFrame({"match_id": ids, "saison": [i.split("_")[1] for i in ids], "wettbewerb": "SL",
                          "spielstatus": "gespielt", "gegner_anzeige": [f"Testgegner {chr(65 + n % 10)}" for n in range(len(ids))],
-                         "soll": rng.integers(14000, 18000, len(ids)), "ist_vip": rng.integers(500, 900, len(ids))})
+                         "soll": rng.integers(14000, 18000, len(ids)), "ist_vip": rng.integers(500, 900, len(ids)),
+                         "wochentag": [("Samstag", "Samstag", "Sonntag", "Mittwoch")[int(i[-2:]) % 4] for i in ids]})
     mart.to_csv(ordner / "mart_match.csv", index=False)
     return tab, ordner / "mart_match.csv"

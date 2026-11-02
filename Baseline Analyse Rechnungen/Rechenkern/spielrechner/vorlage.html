@@ -60,7 +60,11 @@
     <div class="raster">
       <div class="karte">
         <label for="e_saison">Saisonniveau (Preise, Sortiment)</label><select id="e_saison"></select>
-        <label for="e_slot">Anstoss</label><select id="e_slot"></select>
+        <label for="e_tag">Wochentag der Ansetzung</label>
+        <select id="e_tag"><option>Montag</option><option>Dienstag</option><option>Mittwoch</option><option>Donnerstag</option>
+          <option>Freitag</option><option selected>Samstag</option><option>Sonntag</option></select>
+        <label for="e_zeit">Anstosszeit</label><input id="e_zeit" type="time" value="18:00">
+        <p class="hinweis" id="slot_info"></p>
         <label for="e_top">Gegner</label>
         <select id="e_top"><option value="0">übriger Gegner</option><option value="1">Top-Gegner (FCB, YB, FCZ)</option></select>
         <label for="e_temp">Temperatur bei Anpfiff (°C, Prognose)</label><input id="e_temp" type="number" step="1" value="12">
@@ -119,7 +123,16 @@ $("testbanner").hidden = !D.meta.testdaten;
 // ---------- Spiel vorab ----------
 function option(sel, wert, text, aktiv) { const o = document.createElement("option"); o.value = wert; o.textContent = text; if (aktiv) o.selected = true; sel.appendChild(o); }
 D.saisons.forEach(s => option($("e_saison"), s, s, s === D.meta.basis_saison));
-D.slots.forEach((s, i) => option($("e_slot"), s.code, s.label, i === 0));
+// Gleiche Regel wie fcsg/analysis/anstoss_slot.py: Zeitfenster statt fixer Zeiten
+const WERKTAGE = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"];
+function slotCode(tag, zeit) {
+  const [h, m] = (zeit || "").split(":").map(Number); if (isNaN(h)) return null;
+  const min = h * 60 + (m || 0);
+  if (min < 17 * 60) return "slot_nachmittag";
+  if (tag === "Samstag") return min < 20 * 60 ? "referenz" : "slot_sa_abend";
+  return "slot_werktag_abend";
+}
+const tagesgruppe = t => WERKTAGE.includes(t) ? "Werktag" : t;
 function setzeVorgaben() {
   const v = D.saison_mittel[$("e_saison").value] || {};
   $("e_soll").value = Math.round((v.soll || 0) / 100) * 100;
@@ -140,7 +153,13 @@ function vorhersage(ziel, x) {
 function rechne() {
   const x = {saison: $("e_saison").value, top_gegner: +$("e_top").value, temp_anpfiff_c: +$("e_temp").value,
              regen_anreise: +$("e_regen").value, schulferien: +$("e_ferien").value};
-  for (const s of D.slots) if (s.code !== "referenz") x[s.code] = ($("e_slot").value === s.code) ? 1 : 0;
+  const tag = $("e_tag").value, code = slotCode(tag, $("e_zeit").value);
+  const slot = D.slots.find(s => s.code === code);
+  for (const s of D.slots) if (s.code !== "referenz") x[s.code] = (code === s.code) ? 1 : 0;
+  const n = code ? ((D.ansetzungen[tagesgruppe(tag)] || {})[code] || 0) : 0;
+  $("slot_info").innerHTML = !slot ? "Bitte Anstosszeit eingeben." :
+    `→ gerechnet als: <b>${slot.label}</b> (${n} Vergleichsspiele ${tagesgruppe(tag) === "Werktag" ? "an Werktagen" : "am " + tag})` +
+    (n < 3 ? `<br><span class="unter">Für diese Ansetzung gibt es kaum Vergleichsspiele – Erwartung nur grob.</span>` : "");
   const soll = +$("e_soll").value, vip = +$("e_vip").value;
   const q = vorhersage("anwesenheitsquote", x), kf = vorhersage("kf_exkl", x);
   const bons = vorhersage("bons_pro_anwesende", x), bon = vorhersage("bon_exkl", x);

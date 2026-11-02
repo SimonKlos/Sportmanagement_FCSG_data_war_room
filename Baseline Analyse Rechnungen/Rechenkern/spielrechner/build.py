@@ -20,6 +20,7 @@ sys.path.insert(0, str(HIER.parent))
 
 from fcsg.analysis.anstoss_slot import REFERENZ_SLOT, SLOTS  # noqa: E402
 
+WERKTAGE = ("Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag")
 ZIELE = [
     {"code": "anwesenheitsquote", "label": "Anwesenheitsquote (IST/SOLL)", "prozent": True},
     {"code": "kf_exkl", "label": "Kundenfranken exkl. MwSt", "prozent": False},
@@ -64,10 +65,17 @@ def daten(run4: Path, mart: Path, testdaten: bool, basis_saison: str | None = No
                "band80_unten": float(r.band80_unten), "band80_oben": float(r.band80_oben)}
               for r in e.sort_values("datum").itertuples()]
     slots = [{"code": "referenz", "label": REFERENZ_SLOT}] + [{"code": c, "label": l} for c, l in SLOTS.items()]
+    # Vergleichsspiele je Tagesgruppe und Slot (Modellstichprobe KF) – für den Hinweis bei seltenen Ansetzungen
+    code_von = {s["label"]: s["code"] for s in slots}
+    kf = e[e["ziel_code"] == "kf_exkl"].merge(m[["match_id", "wochentag"]], on="match_id", how="left")
+    kf["gruppe"] = kf["wochentag"].map(lambda t: "Werktag" if t in WERKTAGE else t)
+    ansetzungen = {}
+    for (g, sl), n in kf.groupby(["gruppe", "anstoss_slot"]).size().items():
+        ansetzungen.setdefault(g, {})[code_von[sl]] = int(n)
     return {"meta": {"testdaten": testdaten, "basis_saison": basis,
                      "untertitel": ("TESTDATEN · " if testdaten else "") + f"Kontextmodell Run 4 · Meisterschaft · Basis {basis}",
                      "lesehilfe": LESEHILFE},
-            "saisons": saisons, "slots": slots, "ziele": ZIELE, "modelle": modelle, "saison_mittel": mittel,
+            "saisons": saisons, "slots": slots, "ansetzungen": ansetzungen, "ziele": ZIELE, "modelle": modelle, "saison_mittel": mittel,
             "spiele": spiele}
 
 

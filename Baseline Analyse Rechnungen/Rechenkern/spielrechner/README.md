@@ -4,7 +4,7 @@ Erzeugt eine **einzelne HTML-Datei**, die beim FCSG ohne Python, Server oder Int
 
 | Bereich | Inhalt |
 |---|---|
-| Spiel vorab | Saisonniveau, Anstoss-Slot, Gegner, Temperatur-/Regenprognose, Ferien, erwartete Tickets und VIP eingeben → erwartete Anwesenheitsquote, Anwesende, Kundenfranken, Bons, Ø Bon, Catering-Umsatz mit 80 %-Band |
+| Spiel vorab | Saisonniveau, Wochentag + Anstosszeit (automatisch dem Anstoss-Slot zugeordnet, Hinweis bei Ansetzungen mit weniger als 3 Vergleichsspielen), Gegner, Temperatur-/Regenprognose, Ferien, erwartete Tickets und VIP eingeben → erwartete Anwesenheitsquote, Anwesende, Kundenfranken, Bons, Ø Bon, Catering-Umsatz mit 80 %-Band |
 | Spiele im Rückblick | Je Spiel beobachtet vs. erwartet, Abweichung, Status über/im/unter Band |
 | Saisonübersicht | Anzahl Spiele über/unter dem Erwartungsband je Saison und Kennzahl |
 | Lesehilfe | Kontext vs. Clubhebel, Grenzen, Pflege |

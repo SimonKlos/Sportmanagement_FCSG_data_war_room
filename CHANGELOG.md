@@ -2,6 +2,7 @@
 
 ## Spielrechner-Entwurf – 02.11.2026
 - D-047: `Rechenkern/spielrechner/` (Generator `build.py`, Vorlage `vorlage.html`, künstliche `testdaten.py`, README). Erzeugt eine einzelne, offline nutzbare HTML-Datei: Erwartung für ein angesetztes Spiel, Beobachtung vs. Erwartung im Rückblick, Saisonübersicht, Lesehilfe. Grundlage Run 4 (D-046).
+- Eingabe Wochentag + Anstosszeit statt Slot-Auswahl; Zuordnung über Zeitfenster wie im Rechenkern (robust gegen verschobene Anstosszeiten), Warnung bei seltenen Ansetzungen.
 - Test `tests/test_spielrechner.py` (Testdaten); fehlende VIP-Werte werden nicht als 0 gemittelt. `.gitignore`: erzeugte `*Spielrechner*.html` mit echten Werten werden nie versioniert.
 
 ## Run 4: Anstoss-Slot und Sensitivitäten – 02.11.2026
