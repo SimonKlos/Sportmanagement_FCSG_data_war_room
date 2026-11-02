@@ -1,0 +1,39 @@
+{
+  "zeitpunkt": "2026-11-02 21:01:03",
+  "version_auswertung": "1.1.0",
+  "datenstand_letztes_spiel_mit_ist": "12.09.2026",
+  "laufzeit_sekunden": 53.9,
+  "python": "3.13.5",
+  "pakete": {
+    "pandas": "3.0.6",
+    "numpy": "2.5.3",
+    "openpyxl": "3.1.5",
+    "python-calamine": "0.8.3",
+    "statsmodels": "0.15.0",
+    "matplotlib": "3.11.2",
+    "xlsxwriter": "3.2.9"
+  },
+  "eingabedateien": [
+    {
+      "datei": "fcstgallen1879_data_2026-10-01_1149/Spielkontext_Tabelle_FCSG_5.xlsx",
+      "bytes": 363582,
+      "md5": "0821419565c7d77f33ceb7b7257e2e21"
+    },
+    {
+      "datei": "Simon_Repo/Baseline Analyse Rechnungen/Rechenkern/external/meteoschweiz_stg_stuendlich.csv",
+      "bytes": 2913224,
+      "md5": "42616b31e75e6f97c700183e07f5dbee"
+    },
+    {
+      "datei": "Simon_Repo/Baseline Analyse Rechnungen/Rechenkern/external/football_data_super_league.csv",
+      "bytes": 83550,
+      "md5": "c54fa586b60a03d619185251208f5e79"
+    },
+    {
+      "datei": "Simon_Repo/Baseline Analyse Rechnungen/Rechenkern/overrides/korrekturen.csv",
+      "bytes": 1780,
+      "md5": "179c9d8d46deabd1ef05cba4101511ec"
+    }
+  ],
+  "lauf": "Run 4 – Anstoss-Slot und Sensitivitäten (run4.py)"
+}
