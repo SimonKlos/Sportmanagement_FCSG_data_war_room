@@ -228,7 +228,7 @@ def seite(e: dict, kz: dict, felder: list, ordner: Path) -> str:
   <h1>Ideen-Grundlage «Untapped Business»</h1>
   <p class="unter">Vertiefte Datenanalyse für die Ideenfindung – FC St.Gallen 1879 · für Simon und Reto</p>
   <div class="meta">Datenauswertung Ralf Stoffel · Version {esc(__version__)} · Daten bis {esc(kz.get('datenstand', '12.09.2026'))} ·
-  Meisterschaft der Herren im kybunpark, Basis 2025/26 · alle CHF-Werte Catering-Umsatz exkl. MwSt, sofern nicht anders angegeben</div>
+  Meisterschaft der Herren im Berit Sitterstadion, Basis 2025/26 · alle CHF-Werte Catering-Umsatz exkl. MwSt, sofern nicht anders angegeben</div>
   <div class="vertraulich">Vertraulich – nur Projektgruppe und Datenraum (NDA). Nur Aggregate, keine Personendaten.</div>
 </header>
 <nav class="toc"><b>Inhalt</b><ol>{toc}</ol></nav>

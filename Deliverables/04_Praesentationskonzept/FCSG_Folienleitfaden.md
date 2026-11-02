@@ -74,7 +74,7 @@ Alle Pfade beziehen sich auf den Hauptordner des privaten Projekt-Repositories.
 | Valider Eintritt je Einzelticket | 35 |
 | Spiele in der Kontext-Diagnosekarte | 76 |
 
-Zusatz unter der Tabelle: «Kernscope: Herren-Heimpflichtspiele im kybunpark. Kontextmodelle: Meisterschaft ab 2022/23. Kein Merchandise; keine Hospitality-Massnahmen.» Die unterschiedlichen Modulzahlen nicht als Qualitätsrangfolge darstellen.
+Zusatz unter der Tabelle: «Kernscope: Herren-Heimpflichtspiele im Berit Sitterstadion. Kontextmodelle: Meisterschaft ab 2022/23. Kein Merchandise; keine Hospitality-Massnahmen.» Die unterschiedlichen Modulzahlen nicht als Qualitätsrangfolge darstellen.
 
 **Visual:** Eine kompakte Coverage-Tabelle oder horizontale Balken. Je Balken den Modulnamen ausschreiben. Die Kontextstichprobe farblich absetzen, weil sie eine Auswahl und nicht bloss ein weiterer Datenlieferungsstand ist.
 

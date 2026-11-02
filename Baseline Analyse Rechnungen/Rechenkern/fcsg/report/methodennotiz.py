@@ -157,7 +157,7 @@ def text(res: dict[str, pd.DataFrame], info: dict) -> str:
       "Abweichungen mit Unsicherheit zeigen.")
     a("- **Leitplanken:** Kapazität fix, kein Dynamic Pricing, kein Stadionausbau, keine Hospitality; keine Personensegmentierung; "
       "Umsatz (nicht DB) als Fokus; Massnahmenquantifizierung erst Phase 2.")
-    a(f"- **Kernstichprobe:** Pflichtspiele der Herren im kybunpark (Super League inkl. Meisterschafts-/Abstiegsrunde, Schweizer Cup, UEFA). "
+    a(f"- **Kernstichprobe:** Pflichtspiele der Herren im Berit Sitterstadion (Super League inkl. Meisterschafts-/Abstiegsrunde, Schweizer Cup, UEFA). "
       f"Baseline ab {config.BASELINE_AB_SAISON}, Kontextmodelle Meisterschaft ab {config.MODELL_AB_SAISON} (Kontexttabelle; 21/22 COVID-geprägt). "
       "Frauen, Länderspiele, Testspiele und Events sind dokumentiert ausgeschlossen (Unmatched-Report).\n")
 
