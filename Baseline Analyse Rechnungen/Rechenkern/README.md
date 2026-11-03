@@ -62,6 +62,8 @@ Weitere Optionen:
 - `python run_all.py --ausgabe <Ordner>` – anderer Zielordner für Phase 1 (Standard: `Ergebnisse_Phase1` neben dem Codeordner)
 - `python run_all.py --ohne-ideen` – nur Phase 1
 - `python run_all.py --ideen-ausgabe <Ordner>` – anderer Zielordner für die Ideen-Grundlage
+- `python run4.py --daten <Ordner> --kontext <Datei> --ausgabe <Ordner>` – Run 4: Kontextmodelle mit Anstoss-Slot und
+  Sensitivitäten 2021/22 / ohne 2023/24 (D-046); Phase-1-Ergebnisse bleiben unverändert
 - `python -m pytest` – 48 Tests in rund 1.5 Minuten: Einheitentests (Parser, MwSt-Formeln, Bemerkungs-Codierung,
   Hebel-Formeln) und Integrationstests auf den echten Daten (Retos Kernzahlen, Validierungen, Datenschutz, Ideen-Stufe)
 

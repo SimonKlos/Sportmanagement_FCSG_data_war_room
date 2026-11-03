@@ -1,5 +1,11 @@
 # Changelog
 
+## Run 4: Anstoss-Slot und Sensitivitäten – 02.11.2026
+- D-046: neues Modul `Rechenkern/fcsg/analysis/anstoss_slot.py` und Skript `Rechenkern/run4.py`; Kontextmodelle mit Anstoss-Slot (Referenz Samstag 17–19.59 Uhr) statt Werktag + Abendspiel, plus Sensitivitäten inkl. 2021/22 (Covid) und ohne 2023/24 (D-041). `models.py`/`run_all.py` unverändert; Run 3 bleibt Zahlenbasis.
+- Ergebnisse `Baseline Analyse Rechnungen/run4_anstoss-slot_2026-11-02/`: KF-Modell erklärt 82 % statt 33 % der saisonbereinigten Streuung; Sonntagnachmittag −15.7 % KF gegenüber Samstag 18 Uhr; Slot-Aussagen stabil in beiden Sensitivitäten.
+- Test `tests/test_anstoss_slot.py` (künstliche Werte); gesamte Testsuite 52/52 bestanden. Lokale Datenlieferung nicht bytegleich mit Run 3, Kernresultate von Run 3 auf ihr reproduziert (Details im Run-README).
+- D-045 (Spielplan/Anstoss = extern) und D-047 (Spielrechner für den FCSG) festgehalten.
+
 ## Stadionname – 02.11.2026
 - D-044: «kybunpark» durch «Berit Sitterstadion» ersetzt in Deliverables (HTML-Bericht, Excel-Blatt 20_Chancenfelder, Folienleitfaden), in den Generatoren `delivery/build_report.py` und in den Textbausteinen des Rechenkerns (`config.py` Kommentar, `report/methodennotiz.py`, `ideen/chancen.py`, `ideen/bericht/html.py`), damit künftige Läufe die alte Bezeichnung nicht wieder erzeugen.
 - Excel per Text-Ersatz direkt in der Datei (Formate, Formeln und übrige Zellen unverändert); `data_inventory.md`: offene Frage zur Umbenennung als geklärt markiert.

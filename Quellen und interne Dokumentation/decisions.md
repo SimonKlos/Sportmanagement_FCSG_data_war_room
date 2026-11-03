@@ -83,6 +83,20 @@ Frühere Hinweise, die technischen Rechenkern-/Notebook-Roots unverändert zu la
 
 **Unverändert:** Historische Laufartefakte (Run 1–3) bleiben unverändert (D-042); Quelltexte/Zitate aus FCSG-Dateien bleiben, wie sie geliefert wurden. Nur Bezeichnung, keine Rechen- oder Datenänderung. Datum der Umbenennung noch nicht belegt. Quelle: Reto, Chat.
 
+## D-045 – Spielplan und Anstosszeit sind extern (Reto, 02.11.2026)
+
+**Entschieden:** Wochentag, Werktag/Wochenende, Anstosszeit und Abendspiel werden als **extern (Spielplan der Liga/TV)** eingeordnet, nicht als «teilweise beeinflussbar». Begründung: Der Club erhält den Spielplan zu Saisonbeginn und bestimmt ihn nicht. Gilt für Folien, Bericht und neue Auswertungen (Run 4). Ältere Laufartefakte (Run 1–3) behalten ihre Beschriftung (D-042). Keine Rechenänderung: Die Variablen werden ohnehin herausgerechnet. Quelle: Reto, Chat.
+
+## D-046 – Anstoss-Slot im Kontextmodell, Run 4 (Reto, 02.11.2026)
+
+**Entschieden:** Die Anstosszeit wird als **Anstoss-Slot** modelliert (Samstag 17–19.59 Uhr als Referenz, Samstag ab 20 Uhr, Nachmittag vor 17 Uhr, Werktagabend) statt nur «Abendspiel ab 20 Uhr» + «Werktag». Anlass: Hinweis des Caterers, Samstag 18 Uhr sei der umsatzstärkste Termin; die Daten bestätigen das. Dazu als Sensitivitäten: inkl. 2021/22 mit Covid-Variable und ohne 2023/24 (Bons-Erfassungsbruch, erfüllt die offene Sensitivitätsprüfung aus D-041).
+
+**Umsetzung:** `Rechenkern/fcsg/analysis/anstoss_slot.py` + `run4.py`, Ergebnisse in `Baseline Analyse Rechnungen/run4_anstoss-slot_2026-11-02/`. Run 3 bleibt unverändert und Zahlenbasis für Bericht/Excel/Deliverables (D-028), bis das Team die Übernahme des Slot-Modells entscheidet (**offen**). Quelle: Reto, Chat; Umsetzung Agent.
+
+## D-047 – Spielrechner für den FCSG (Reto, 02.11.2026)
+
+**Entschieden:** Das Team baut ein Werkzeug für den FCSG: erwartete Anwesende, Kundenfranken und Umsatz für ein angesetztes Spiel (aus Kontext und Anstoss-Slot) sowie Beobachtung vs. Erwartung für vergangene Spiele; Grundlage Run 4 (`erwartung_je_spiel`, `koeffizienten`). **Arbeitsannahme (Agent, offen):** als einzelne, offline nutzbare HTML-Datei ohne Python/Server beim FCSG, erzeugt aus dem Rechenkern; enthält Clubzahlen je Spiel und bleibt daher intern/beim FCSG (keine öffentliche Publikation). Start mit künstlichen, markierten Testdaten. Quelle: Reto, Chat.
+
 ## Bestätigte Arbeitsregeln zu den Quellen-Widersprüchen (11.10.2026)
 
 Details: `Quellen und interne Dokumentation/briefing/10_synthese_widersprueche.md`.

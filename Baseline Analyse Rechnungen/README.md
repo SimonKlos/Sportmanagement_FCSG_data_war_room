@@ -10,6 +10,8 @@ Interner Sammelpunkt für alle Rechenstände, Gegenrechnungen und analytischen P
 - [Gegenrechnung](run3_kontext-v5_2026-10-14/abgleich_simon_ralf/): interner Abgleich der Kernzahlen.
 - [Frühere Baseline](run3_kontext-v5_2026-10-14/simon_baseline/): Gegenrechnung/Erklärmaterial, keine konkurrierende freigegebene Zahlenbasis.
 
+- [Run 4 – Anstoss-Slot](run4_anstoss-slot_2026-11-02/README.md): ergänzende Kontextmodelle mit Anstoss-Slot und Sensitivitäten (D-046); Übernahme als Zahlenbasis offen.
+
 Run 1 und Run 2 bleiben als historische Archive erhalten. Doppelte Diagramme und interne Abstimmungen werden dort zur Nachvollziehbarkeit **nicht gelöscht oder nachträglich umgeschrieben**.
 
 ## Wo liegt die Rechenlogik?
