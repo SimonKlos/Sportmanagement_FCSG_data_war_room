@@ -1,5 +1,10 @@
 # Changelog
 
+## Spielrechner-Entwurf – 02.11.2026
+- D-047: `Rechenkern/spielrechner/` (Generator `build.py`, Vorlage `vorlage.html`, künstliche `testdaten.py`, README). Erzeugt eine einzelne, offline nutzbare HTML-Datei: Erwartung für ein angesetztes Spiel, Beobachtung vs. Erwartung im Rückblick, Saisonübersicht, Lesehilfe. Grundlage Run 4 (D-046).
+- Eingabe Wochentag + Anstosszeit statt Slot-Auswahl; Zuordnung über Zeitfenster wie im Rechenkern (robust gegen verschobene Anstosszeiten), Warnung bei seltenen Ansetzungen.
+- Test `tests/test_spielrechner.py` (Testdaten); fehlende VIP-Werte werden nicht als 0 gemittelt. `.gitignore`: erzeugte `*Spielrechner*.html` mit echten Werten werden nie versioniert.
+
 ## Run 4: Anstoss-Slot und Sensitivitäten – 02.11.2026
 - D-046: neues Modul `Rechenkern/fcsg/analysis/anstoss_slot.py` und Skript `Rechenkern/run4.py`; Kontextmodelle mit Anstoss-Slot (Referenz Samstag 17–19.59 Uhr) statt Werktag + Abendspiel, plus Sensitivitäten inkl. 2021/22 (Covid) und ohne 2023/24 (D-041). `models.py`/`run_all.py` unverändert; Run 3 bleibt Zahlenbasis.
 - Ergebnisse `Baseline Analyse Rechnungen/run4_anstoss-slot_2026-11-02/`: KF-Modell erklärt 82 % statt 33 % der saisonbereinigten Streuung; Sonntagnachmittag −15.7 % KF gegenüber Samstag 18 Uhr; Slot-Aussagen stabil in beiden Sensitivitäten.

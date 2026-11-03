@@ -54,3 +54,6 @@ Ergebnisse_Phase1/
 Ergebnisse_Ideen_Grundlage/
 # lokale Kopie des Übergabe-ZIPs
 FCSG_Uebergabe_*/
+
+# Spielrechner mit echten Werten (D-047) nie versionieren
+*Spielrechner*.html
