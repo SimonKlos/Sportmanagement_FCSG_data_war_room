@@ -1,12 +1,12 @@
-# FCSG «Untapped Business» – Folienleitfaden für einen ersten Team-Entwurf
+# FCSG «Untapped Business» – Folienleitfaden zur Abschlusspräsentation (Storyline v3)
 
-**Arbeitsstatus:** Präsentationskonzept / Inspiration für Simon zum eigenen Zusammenstellen. Kein fertiges Deck, keine Teamentscheidung und keine formelle Baseline-Freigabe. Ausschliesslich Markdown; keine PPT/PPTX-Produktion.
+**Arbeitsstatus:** Folienkonzept für die vom Team erstellte Präsentation (PowerPoint oder Folienwerkzeug). Stand **05.11.2026**, Zahlenbasis **Run 4** (D-048). Kein fertiges Deck und keine formelle Baseline-Freigabe. Ausschliesslich Markdown; keine PPT/PPTX-Produktion durch den Agenten (D-042).
 
-**Erzählkern:** Die historische Baseline zeigt Anwesenheits- und Konsummuster. Kontextmodelle helfen, vergleichbare Spiele und prüfenswerte Abweichungen zu erkennen. Daraus entstehen Chancenfelder – noch keine bewiesenen Umsatzwirkungen. Phase 2 soll ausgewählte Massnahmen auf **inkrementellen Umsatz** testen.
+**Aufbau:** Der Leitfaden folgt Folie für Folie der Team-Vorlage «Abschlusspräsentation v2 (Storyline mit Stickern)», 47 Folien. Je Folie stehen Aussage, Inhalt mit Run-4-Zahlen, Visual, Quellen und unter **Sticker-Update** die Änderung gegenüber dem grünen Sticker der Vorlage. Neu sind die Entscheide aus dem Team-Call vom 03.11.2026 (D-049): Massnahmen auf einer Matrix Wirkung × Aufwand, rund 6 Massnahmen inkl. Abo-Obergrenze, KF-Initiativen als separater Research-Teil, Hauptteil top-line und Details im Anhang.
+
+**Roter Faden:** Die Baseline zeigt Muster → der Spielkontext macht Spiele vergleichbar und erklärt den grössten Teil der Spiel-zu-Spiel-Schwankung → die Chancenfelder zielen auf das Niveau, das der Club beeinflussen kann → Massnahmen werden nach Wirkung und Aufwand eingeordnet und als Pilot auf **inkrementellen Umsatz** getestet.
 
 ## Verwendung und Quellenkonvention
-
-Die folgenden **14 Kernfolien** sind ein Vorschlag, keine vorgeschriebene Abfolge. Dazu kommen **6 Backup-Folien**. Pro Folie stehen eine mögliche Aussageüberschrift, konkret übernehmbare Inhalte, Visualisierung, Fundstellen und Sprechabsicht. Nicht alle Erläuterungen gehören auf die sichtbare Folie: Kernaussage und Evidenz nach vorne, Einschränkungen kurz sichtbar und ausführlicher in die Notizen.
 
 ### Verbindliche Quellenbasis
 
@@ -14,87 +14,115 @@ Alle Pfade beziehen sich auf den Hauptordner des privaten Projekt-Repositories.
 
 | Kürzel | Exakte Quelle |
 |---|---|
-| M | `Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_kern_phase1/Methodennotiz_Phase1.md` |
-| P | `Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_kern_phase1/FCSG_Phase1_Ergebnisse.xlsx` |
-| T | `Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_kern_phase1/Tabellen/` |
-| I | `Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_ideen_grundlage/Ideen_Grundlage_FCSG.md` |
-| W | `Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/ralf_ideen_grundlage/Ideen_Grundlage_FCSG.xlsx` |
+| M | `Baseline Analyse Rechnungen/run4_komplett_2026-11-05/kern_phase1/Methodennotiz_Phase1.md` |
+| P | `Baseline Analyse Rechnungen/run4_komplett_2026-11-05/kern_phase1/FCSG_Phase1_Ergebnisse.xlsx` |
+| T | `Baseline Analyse Rechnungen/run4_komplett_2026-11-05/kern_phase1/Tabellen/` |
+| I | `Baseline Analyse Rechnungen/run4_komplett_2026-11-05/ideen_grundlage/Ideen_Grundlage_FCSG.md` |
+| W | `Baseline Analyse Rechnungen/run4_komplett_2026-11-05/ideen_grundlage/Ideen_Grundlage_FCSG.xlsx` |
+| R | `Baseline Analyse Rechnungen/run4_komplett_2026-11-05/README.md` (Lauf, Prüfungen, Gegenproben zur Modellgüte) |
+| V | `Baseline Analyse Rechnungen/run4_anstoss-slot_2026-11-02/Tabellen/` (Sensitivitäten inkl. ohne 2023/24, CHF-Baustein je Slot) |
 | K | `Quellen und interne Dokumentation/team/2026-11-01_catering_klaerung_und_baseline_folgen.md` |
+| E | `Quellen und interne Dokumentation/decisions.md` (D-045 bis D-049) |
 
-**Quellenhierarchie:** M/P/T liefern die kanonischen Baseline- und Modellzahlen; I/W die bestehende Chancenanalyse und Rechenbausteine. K ergänzt fachliche Einschränkungen und den Umsatzfokus, ohne historische Resultate neu zu rechnen. Ältere Baseline-Erklärungen unter `Quellen und interne Dokumentation/analysis/` sind bei Bedarf methodischer Hintergrund, **keine zweite Zahlenbasis**. Interne Personenvergleiche, Abstimmungsprotokolle und überholte Anfragen gehören nicht in die Publikumsstory. Historische Personenbezüge in Blattnamen werden nur in Quellenangaben beibehalten, nicht als Folieninhalt.
+**Quellenhierarchie:** M/P/T liefern Baseline- und Modellzahlen, I/W Chancenanalyse und Rechenbausteine, V die Sensitivitäten. K und E ergänzen fachliche Einschränkungen und Entscheide. Run 3 (14.10.2026) ist Archiv und keine zweite Zahlenbasis. Nur Zahlen aus Run 4 verwenden.
 
 ### Durchgehende Darstellungsregeln
 
-- Jede Evidenz erhält ein Label: **Deskriptiv**, **Modell / Zusammenhang**, **Hypothese / Testvorschlag** oder **Szenario / Rechenwert**. Ein Label ersetzt keine Quellenangabe.
-- Zahlenfuss immer mit Wettbewerb, Zeitraum, MwSt.-Basis und Nenner. Public-Anwesende sind nicht Gesamt-IST; Meisterschaft ist nicht die Summe aller Pflichtspiele.
-- Saisonquotienten als **Summe/Summe**; keine ungekennzeichneten Mittelwerte von Spielquotienten.
-- Catering-CHF sind grundsätzlich Umsatz des Cateringsystems, nicht automatisch Cluberlös. Für Massnahmenszenarien primär Public-Catering-Umsatz **exkl. MwSt.**; historische Bruttovergleiche ausdrücklich kennzeichnen.
-- Datenstand des bestehenden Laufs: **12.09.2026**. Die Saison **2026/27 ist unvollständig**; keine gleichwertige Vollsaison und keine Hochrechnung ohne eigene Annahmen.
-- `Public Netto` ist das verwendete technische Nennerfeld. Der Partner bestätigt fachlich Public-Anwesende ohne VIP und exkl.-MwSt.-Umsatz; der historische Feldabgleich ist nicht abgeschlossen (K §1).
-- Bonsrate und Durchschnittsbon sind besonders vorsichtig zu behandeln: Systemwechsel **2023/24**, Gutscheine erst ab **Januar 2024** technisch als Transaktionen erfassbar; stabil vollständige Zählung nicht bestätigt. Historische Zerlegungen bleiben **vorläufige Rechenbefunde**. Eine Sensitivitätsprüfung ist noch nicht erfolgt (K §§1–3).
-- Keine Summe aus Diagnose-Residualen, keine Summe überlappender Hebel, keine kausale Umsatzbehauptung aus einer Assoziation. Kleine Gutschein-Umsatzanteile begrenzen nicht automatisch den Fehler der Transaktionszählung.
+- Jede Evidenz erhält ein Label: **Deskriptiv**, **Modell / Zusammenhang**, **Hypothese / Testvorschlag**, **Szenario / Rechenwert** oder **Research / Benchmark**.
+- Zahlenfuss immer mit Wettbewerb, Zeitraum, MwSt.-Basis und Nenner. Saisonquoten als Summe/Summe.
+- Catering-CHF = Umsatz des Cateringsystems, nicht Cluberlös. Massnahmen primär auf Public-Catering-Umsatz **exkl. MwSt.**
+- Datenstand 12.09.2026. 2026/27 ist unvollständig.
+- **Anstosszeit und Spielplan sind extern** (Liga/TV, D-045). Slot-Effekte sind Kontext, kein Hebel. Effekte des Slots immer «gegenüber Samstag 17–19.59 Uhr» beschriften.
+- Bonsrate und Ø Bon: Systemwechsel 2023/24. Für die Kontextmodelle ist die Gegenrechnung ohne 2023/24 gemacht (stabil), für Trends über 2023/24 nicht möglich.
+- Keine Summe aus Diagnose-Residuen oder überlappenden Hebeln, keine kausale Umsatzbehauptung aus Zusammenhängen.
+- Personennamen nur auf der Titelfolie (Autorenschaft). Keine Namen in Aufgaben, Fragen oder Quellenhinweisen; «12 Ausgangsideen» statt Personenbezug.
+
+### Was sich gegenüber der Vorlage v2 inhaltlich ändert (Kurzliste)
+
+1. **Kontext-Folie:** «Abendspiele und Wetter» wird zu **«Die Anstosszeit prägt Anwesenheit und Konsum am stärksten»**. Der alte Befund «Abendspiel +6.8 % KF» entfällt: Run 3 hatte Samstag 18 Uhr und Sonntagnachmittag in derselben Gruppe.
+2. **Erklärungsquote KF:** 82 % statt 33 % der Spiel-zu-Spiel-Schwankung innerhalb der Saison. Das ist die Begründung, warum KF-Initiativen nur über Piloten bzw. als Research-Teil bewertbar sind.
+3. **Diagnose:** 6 über / 8 unter Erwartung statt 12 / 6. Das liegt etwa im Rahmen des Zufalls (≈ 7.6 je Seite). Neue Fallkarten.
+4. **Feld 4 (mobiler Verkauf):** Der frühere Unterschied −7.2 % schrumpft auf −0.8 % (KI90 −4.1 bis +2.6 %). Kein eigener Befund mehr, nur noch Pilotfrage.
+5. **Feld 8 (Erfolgsmuster):** Die Häufung an Samstag 18 Uhr war die Anstosszeit selbst. Jetzt sind es noch 2 von 6 Spitzenspielen an Samstagen.
+6. **Massnahmenteil:** «Shortlist drei Massnahmen» wird zu **Matrix Wirkung × Aufwand mit rund 6 Massnahmen**. Die Abo-Obergrenze ist neu dabei, Steckbriefe kommen in den Anhang, KF-Initiativen in einen eigenen Research-Teil.
+7. **Übergabe:** Der Spielrechner (Entwurf, D-047) kommt als Werkzeug für den FCSG dazu.
 
 ---
 
-## Kernfolie 01 – Einstieg: Vom beobachteten Muster zum prüfbaren Umsatzhebel
+# Hauptteil
 
-**Claim / mögliche Überschrift:** «Wir sehen konkrete Ansatzpunkte – die Umsatzwirkung müssen wir gezielt testen.»
+## Folie 1 – Titel
 
-**Inhalt auf der Folie:**
-- Ausgangspunkt: Anwesenheit und Public-Catering gemeinsam betrachten, statt Umsatzschwankungen pauschal als operatives Problem zu lesen.
-- Arbeitspfad: **Baseline → Kontextdiagnostik → Chancenfelder → Umsatztests**.
-- Leitfrage: «Welche beeinflussbaren Veränderungen bringen zusätzliche Anwesenheit oder zusätzliche Käufe – ohne bloss Umsatz zu verlagern?»
-- Kleine Statuszeile: «Erster Team-Entwurf auf bestehender Analyse; Baseline noch nicht formell freigegeben.»
+Unverändert. Untertitel bleibt. Statuszeile «Entwurf v2 – Storyline mit Stickern» vor dem Upload entfernen.
 
-**Visual:** Ein horizontaler Pfad mit klar getrennten Feldern. Unter Baseline «Was beobachten wir?», unter Kontext «Was ist erwartbar?», unter Chancen «Was könnte beeinflussbar sein?», unter Tests «Was wirkt tatsächlich?». Keine Umsatzpotenzial-Zahl auf der Titelfolie.
+## Folien 2–3 – intern (Storyline, Folienverteilung)
 
-**Quelle / Fundstelle:** M §§1, 10, 15; I «Leitplanken» und «Neun Chancenfelder»; K §2 für den aktuellen Top-line-Fokus.
+Vor dem Upload löschen. **Sticker-Update Folie 2:** Roter Faden ergänzen: «… Kontext erklärt den grössten Teil der Spiel-zu-Spiel-Schwankung → Massnahmen zielen auf das Niveau → Matrix Wirkung × Aufwand → Piloten». **Folie 3:** Owner offen lassen (Teamentscheid). Canvas 25.11.2026, Praxistag 04.12.2026.
 
-**Sprechabsicht:** «Heute geht es um eine belastbare Diskussionsgrundlage für Ideen, nicht um die Freigabe eines fertigen Business Case.» Den Unterschied zwischen analytischem Hinweis und Massnahmenwirkung gleich am Anfang setzen.
+## Folie 4 (S. 2) – Agenda
 
-**Grenzen:** Der Pfad ist eine vorgeschlagene Präsentationslogik, kein bereits beschlossener Umsetzungsplan. Keine ROI-/DB-Versprechen.
+**Sticker-Update:** Kapitel 5 umbenennen in «Massnahmen: Wirkung × Aufwand und Pilotdesign» (8 min). Neues Unterkapitel «Research: Ideen für den Kundenfranken» (2 min, aus Kapitel 4 oder 6 nehmen). Zeitbudget sonst unverändert.
 
-**Übergang:** «Damit wir dieselben Zahlen meinen, grenzen wir zuerst Datenbasis und Kennzahlen ab.»
+## Folie 5 (S. 3) – Ausgangslage: Matchday-Ertrag als eine Rechnung
 
-## Kernfolie 02 – Datenbasis: Breite Historie, unterschiedliche Modultiefe
+**Claim:** «Matchday-Ertrag ist eine Multiplikation – jede Stufe ist ein eigener Hebel.»
 
-**Claim / mögliche Überschrift:** «Die Spiele sind verknüpft – die Detailanalysen beruhen aber nicht auf derselben Stichprobe.»
+**Inhalt:** Formelzeile wie Vorlage. Referenzwerte laut Antrag: No-Show ~17 %, KF CHF 14.50. Fehlend bisher: systematische Sicht auf den Spielkontext; drei Datentöpfe kaum verknüpft. Beispiel-Callout: «−1 Pp. No-Show ≈ CHF 29k–49k Catering-Umsatz je Saison (Meisterschaft 2025/26, exkl. MwSt., je nach Konsum der zusätzlichen Besucher)».
 
-**Label:** Deskriptiv / Datenabdeckung.
+**Quelle:** Projektantrag 25.09.2026, S. 1; W `R1_Faustwerte`, Basis 2025/26.
 
-**Exakter Inhalt:**
+**Sticker-Update:** Beispielzahl aus R1 (29'299–48'832) ergänzen, mit «φ 0.6–1.0» in der Notiz.
 
-| Modul | Spiele mit vorhandener Abdeckung |
+## Folie 6 (S. 4) – Auftrag, Ziele und Leitplanken
+
+Inhalt wie Vorlage. **Sticker-Update:** Leitplanke ergänzen: «Anstosszeit/Spielplan = extern (Liga/TV)». Phasenwechsel festhalten: Massnahmenquantifizierung ab 03.11.2026 (D-049). Quellen: zusätzlich D-045, D-049.
+
+## Folie 7 (S. 5) – Executive Summary
+
+**Fünf Kernbotschaften (Vorschlag):**
+1. **Zahlenbasis:** 108 Herren-Pflichtspiele 2021/22–2026/27 sind auf Spielebene verknüpft (Ticketing, Zutritt, Catering, Spielkontext); nur Aggregate.
+2. **Baseline:** Rund jeder sechste vergebene Platz bleibt leer: No-Show 18.1 % in der Meisterschaft 2025/26, 60'942 Plätze. KF CHF 14.51 exkl. MwSt.
+3. **Kontext:** Die Anstosszeit prägt den Konsum am stärksten. Bei gleichem Kontext liegt der KF am Sonntagnachmittag **−15.7 %**, am Werktagabend **−9.4 %** unter Samstag 17–19.59 Uhr. Der Kontext erklärt **82 %** der Spiel-zu-Spiel-Schwankung des KF.
+4. **Chancen:** Der Club beeinflusst vor allem das Niveau über alle Spiele, also Platznutzung, Zeitfenster, Angebot und Planung. Das ist nur mit Piloten messbar.
+5. **Empfehlung:** Rund 6 Massnahmen auf der Matrix Wirkung × Aufwand; zuerst die Quick Wins pilotieren, Leuchttürme vorbereiten. KF-Ideen wie Fast Lane und Loyalty als Research-Teil.
+
+**Quelle:** T `saison_kpi.csv`, `kontext_effekt_matrix.csv`, `modellguete.csv`; R; W `R1_Faustwerte`.
+
+**Sticker-Update:** Quelle «Methodennotiz Phase 1 (Run 3)» → «Run 4 (05.11.2026)». Botschaft 3 und 5 neu wie oben. Erst finalisieren, wenn die Matrix (Folie 24) steht.
+
+## Folie 8 (S. 6) – Datenlandschaft
+
+Inhalt wie Vorlage. **Sticker-Update:** In der Box «nicht geliefert» ergänzen: «Abo-Besuche je Spiel und Sektor (nur Näherung 2026/27)». Quelle bleibt; D-034.
+
+## Folie 9 (S. 7) – Datenbasis: Abdeckung je Modul
+
+| Modul | Spiele |
 |---|---:|
-| Herren-Pflichtspiele im Kernbestand, 2021/22–2026/27 | 108 |
-| Anwesenheit sowie Catering-Umsatz / Public-Nenner | jeweils 108 |
-| Catering-Transaktionen / Bons | 70 |
-| Vollständige Ankunftsdaten | 71 |
-| Vollständige Einzelticket-Vorlaufdaten | 96 |
-| Valider Eintritt je Einzelticket | 35 |
-| Spiele in der Kontext-Diagnosekarte | 76 |
+| Kernbestand Herren-Pflichtspiele 2021/22–2026/27 | 108 |
+| Anwesenheit und Catering-Umsatz | je 108 |
+| Bons | 70 |
+| Ankunft vollständig | 71 |
+| Einzelticket-Vorlauf vollständig | 96 |
+| Eintritt je Einzelticket valide | 35 |
+| Kontextmodell / Diagnose | 76 |
 
-Zusatz unter der Tabelle: «Kernscope: Herren-Heimpflichtspiele im Berit Sitterstadion. Kontextmodelle: Meisterschaft ab 2022/23. Kein Merchandise; keine Hospitality-Massnahmen.» Die unterschiedlichen Modulzahlen nicht als Qualitätsrangfolge darstellen.
+**Sticker-Update:** Quellenpfade auf Run 4 (P `05_Abdeckung`, T `abdeckung.csv`). Werte unverändert (identisch mit Run 3).
 
-**Visual:** Eine kompakte Coverage-Tabelle oder horizontale Balken. Je Balken den Modulnamen ausschreiben. Die Kontextstichprobe farblich absetzen, weil sie eine Auswahl und nicht bloss ein weiterer Datenlieferungsstand ist.
+## Folie 10 (S. 8) – Projektaufbau
 
-**Quelle / Fundstelle:** M §2, Abdeckungstabelle, Totalzeile; P `05_Abdeckung` und `06_Gemeinsame_Stichproben`; T `abdeckung.csv`, Zeile `Total,alle`. Scope: M §1 und §13.
+**Sticker-Update:** Meilenstein ergänzen: «05.11.2026 Run 4 – Anstoss-Slot im Kontextmodell, Zahlenbasis». Qualitätssicherung ergänzen: Permutationstest und Prüfung an ausgelassenen Saisons (R). Quellen: Run-4-README statt Run-3-README.
 
-**Sprechabsicht:** Erklären, warum spätere Folien unterschiedliche n ausweisen. «Ein Wert mit weniger Spielen ist nicht automatisch widersprüchlich; er kann eine andere Datenkombination benötigen.»
+## Folie 11 (S. 9) – Kennzahlen und Treiberbaum
 
-**Grenzen:** Abdeckung bedeutet nicht vollständige historische Vergleichbarkeit der Bons. Keine Person↔Bon-Verknüpfung, keine Kassen-Zeitstempel und kein belastbares Stand→Sektor-Mapping. Teilstand 2026/27 sichtbar kennzeichnen.
+`Public-Catering-Umsatz = Public-Anwesende × KF` · `KF = Bons je Public-Anwesendem × Ø Bon`
 
-**Übergang:** «Auf der gemeinsamen Baseline sehen wir zuerst die Entwicklung von Anwesenheit und Konsum.»
+Referenz Meisterschaft 2025/26, 19 Spiele: Public-Anwesende 261'924 (Ø 13'785 je Spiel); KF CHF 14.51 exkl. MwSt.; Bons je Anwesendem 0.932; Ø Bon CHF 15.57 exkl. MwSt. Den Antragswert 14.50 hier auflösen: 14.51 gerundet sowohl Meisterschaft als auch alle Pflichtspiele (Anhang 1).
 
-## Kernfolie 03 – Baseline: Anwesenheit schwankt, Kundenfranken steigt nicht geradlinig
+**Sticker-Update:** Pfade auf Run 4 (W `R3_Basis_Saison`, unverändert).
 
-**Claim / mögliche Überschrift:** «Bei ähnlicher Anwesenheit unterscheiden sich No-Show und Konsum zwischen den Saisons.»
+## Folie 12 (S. 10) – Baseline je Saison
 
-**Label:** Deskriptiv.
-
-**Exakt übernehmbare Tabelle – ausschliesslich Meisterschaft:**
-
-| Saison | Spiele | Ø Gesamt-IST | No-Show, gewichtet | KF inkl. MwSt. | Catering-Umsatz inkl. MwSt., CHF |
+| Saison | Spiele | Ø IST | No-Show | KF inkl. MwSt. | Catering-Umsatz inkl. MwSt., CHF |
 |---|---:|---:|---:|---:|---:|
 | 2021/22 | 18 | 12'042 | 22.4 % | 13.68 | 2'820'941 |
 | 2022/23 | 18 | 14'558 | 17.2 % | 13.32 | 3'323'225 |
@@ -102,520 +130,337 @@ Zusatz unter der Tabelle: «Kernscope: Herren-Heimpflichtspiele im Berit Sitters
 | 2024/25 | 18 | 14'635 | 19.0 % | 14.48 | 3'632'232 |
 | 2025/26 | 19 | 14'510 | 18.1 % | 15.27 | 4'000'583 |
 
-Ø IST hier gemäss gerundeter Darstellung in M §5, nicht aus den sichtbaren Ganzzahlen weiterrechnen. Definitionen: No-Show = `1 − ΣIST/ΣSOLL`; KF = `ΣCatering-Umsatz / ΣPublic Netto`.
+**Sticker-Update:** Nur die Pfade auf Run 4 (T `saison_kpi.csv`, SL). Werte identisch mit Run 3.
 
-**Visual:** Drei übereinanderliegende kleine Diagramme für Ø IST, No-Show und KF; dieselbe Saisonachse, keine Doppelachse. Alternativ die Tabelle und nur KF als hervorgehobene Sparkline. **2026/27 nicht in diese Vollsaisonlinie aufnehmen**; Teilstand nur im Backup.
+## Folie 13 (S. 11) – Spielkontext: Die Anstosszeit prägt Anwesenheit und Konsum am stärksten
 
-**Quelle / Fundstelle:** M §5, Baseline-Tabelle; P `A5_Saison_KPI`; T `saison_kpi.csv`, Filter `wettbewerbe = SL`. Bruttobasis des langfristigen Vergleichs: M §4.
-
-**Sprechabsicht:** «Ein voller wirkender Spieltag und ein konsumstarker Spieltag sind nicht dasselbe. Wir müssen Anwesenheit und Konsum separat verstehen.»
-
-**Grenzen:** 2021/22 ist COVID-geprägt. SOLL ist teilweise Kapazitäts- und nicht Ticketgrösse. Nominale Umsatz-/KF-Zahlen sind kein Nachweis realen Mehrkonsums oder einer Massnahmenwirkung. Catering-Umsatz ist nicht Cluberlös.
-
-**Übergang:** «Für die Chancenfindung zerlegen wir den Umsatz deshalb in wenige klar definierte Grössen.»
-
-## Kernfolie 04 – Treiberbaum: Anwesenheit, Bonsrate und Warenkorb auseinanderhalten
-
-**Claim / mögliche Überschrift:** «Mehr Umsatz kann aus mehr Public-Anwesenden oder höherem Konsum je Public-Anwesendem entstehen.»
-
-**Label:** KPI-Identität / Deskriptiv; Bonskennzahlen vorläufig.
-
-**Inhalt:**
-
-`Public-Catering-Umsatz = Public-Anwesende × KF`
-
-`KF = Bons je Public-Anwesendem × Ø Bon`
-
-Referenz **2025/26, Meisterschaft, 19 Spiele**:
-- Public-Anwesende gesamt: **261'924**, im Mittel **13'785 je Spiel**.
-- KF: **CHF 14.51 exkl. MwSt.**
-- Bons je Public-Anwesendem: **0.932**.
-- Durchschnittsbon: **CHF 15.57 exkl. MwSt.**
-
-Unter der Formel: «Bonsrate ist keine Käuferquote. Eine Person kann mehrfach kaufen, eine Gruppe gemeinsam auf einem Bon.» Für die Formel nur ungerundete Quellwerte verwenden; die sichtbaren Werte sind gerundet.
-
-**Visual:** Einfacher multiplikativer Baum. Links Public-Anwesende, rechts KF, darunter Bonsrate und Bon. Nur die genannten Referenzwerte als kleine Zahlenkarten. Gesamt-IST nicht als Nenner in diesen Baum setzen.
-
-**Quelle / Fundstelle:** M §4; I «Rechengrundlage»; W `R3_Basis_Saison`, Zeile `2025/26`; P `A5_Saison_KPI`, Zeile `2025/26`, Wettbewerb `SL`; K §3 für Zählvorbehalt.
-
-**Sprechabsicht:** Eine gemeinsame Sprache schaffen, damit «mehr Besucher», «mehr Käufe» und «grösserer Warenkorb» nicht als drei addierbare Business Cases missverstanden werden.
-
-**Grenzen:** Exakte algebraische Identität belegt keine vollständige Bonzählung. Mapping des Public-Nenners offen. Die Quellen weisen CHF 14.51 gerundet sowohl für die Meisterschaft als auch für alle Pflichtspiele dieser Saison aus; trotzdem sind die Grundgesamtheiten nicht austauschbar (Backup B1).
-
-**Übergang:** «Bevor wir Abweichungen einem Clubhebel zuschreiben, müssen wir den Spielkontext berücksichtigen.»
-
-## Kernfolie 05 – Kontext: Abendspiele verändern Anwesenheit und Konsum unterschiedlich
-
-**Claim / mögliche Überschrift:** «Weniger Anwesenheit und höherer Kundenfranken können beim selben Spieltyp zusammen auftreten.»
+**Claim:** «Ob ein Spiel konsumstark ist, entscheidet zuerst der Spielplan: Samstag 18 Uhr ist der stärkste Termin.»
 
 **Label:** Modell / Zusammenhang, nicht kausal.
 
-**Exakte Zahlen aus der Kontextmatrix:**
-
-| Kontextmerkmal | Zielgrösse | Modellierter Zusammenhang | 95-%-KI |
-|---|---|---:|---:|
-| Abendspiel, Anpfiff ab 20 Uhr | Anwesenheitsquote IST/SOLL | −4.1 Pp. | −7.1 bis −1.1 Pp. |
-| Abendspiel, Anpfiff ab 20 Uhr | KF exkl. MwSt. | +6.8 % | +3.1 bis +10.7 % |
-| Temperatur, je +5 °C | Anwesenheitsquote IST/SOLL | +1.4 Pp. | +0.7 bis +2.1 Pp. |
-| Temperatur, je +5 °C | KF exkl. MwSt. | +3.6 % | +1.9 bis +5.2 % |
-
-Basis: Meisterschaft ab 2022/23, **76 Modellspiele**, Saison- und Kontextkontrollen. Unter der Tabelle: «Spielplan und Wetter sind Kontext; Angebote und Abläufe sind mögliche Reaktionen darauf.»
-
-**Visual:** Zwei kleine Forest-Plots, getrennt nach Prozentpunkten und Prozent. Die Einheit nicht in einer gemeinsamen Skala vermischen. Abendspiel in beiden Panels identisch einfärben.
-
-**Quelle / Fundstelle:** M §9, Kontext-Effekt-Matrix; P `K1_Kontext_Effekt_Matrix`, Zielgrössen `Anwesenheitsquote (IST/SOLL)` und `Kundenfranken exkl. MwSt`; T `kontext_effekt_matrix.csv`. Stichprobe: P `K2_Modellguete`.
-
-**Sprechabsicht:** «Das Modell hilft uns fairer zu vergleichen. Es sagt nicht, dass wir durch einen späteren Anpfiff den Umsatz um diesen Wert erhöhen könnten.»
-
-**Grenzen:** Aggregierte Spiele, keine individuellen Wirkungen. Keine kontrollierte Intervention. Prozent- und Prozentpunktwerte nicht addieren oder direkt zu einem Gesamtumsatzeffekt verrechnen. Bonsbezogene Modellteile hier bewusst nicht als Hauptevidenz zeigen.
-
-**Übergang:** «Mit diesem Erwartungsrahmen können wir auffällige Spiele gezielter untersuchen.»
-
-## Kernfolie 06 – Diagnose: Auffällige Spiele sind Lernfälle, kein entgangener Umsatz
-
-**Claim / mögliche Überschrift:** «Die Diagnosekarte priorisiert Nachfragen – sie beziffert kein realisierbares Potenzial.»
-
-**Label:** Modell / Diagnose.
-
-**Inhalt:**
-- Im bestehenden Modell liegen **6 Spiele unter** und **12 über** dem **80-%-Erwartungsband** des KF; Basis **76 Spiele**.
-- Als konkrete Fallkarten, KF jeweils **exkl. MwSt.**:
-
-| Spiel | Beobachteter KF | Erwarteter KF | Dokumentierter Hinweis / Lesart |
-|---|---:|---:|---|
-| 19.02.2023, FC Luzern | 10.69 | 12.35 | Runner/Bauchläden ganz oder teilweise nicht im Einsatz; operativer Prüfkandidat |
-| 06.08.2023, FC Luzern | 11.24 | 14.65 | Ungeklärte Abweichung; kein dokumentierter Mechanismus |
-| 09.08.2025, FC Winterthur | 17.70 | 15.38 | Positiver Lernfall; Frequenzdiagnose nur vorläufig |
-
-**Visual:** Drei Fallkarten mit zwei Punkten für beobachtet/erwartet; darüber die Band-Zählung. Alternativ die bestehende Diagnosegrafik als Hintergrund verwenden, aber **CHF-Residualsummen weglassen**. Nicht die gesamte Diagnosekarte als unlesbare Tabelle abbilden.
-
-**Quelle / Fundstelle:** M §10; P `K6_Diagnosekarte`; T `diagnosekarte.csv`; W `D1_Ausreisser_Zaehlung` für die Band-Zählung. Grafikinspiration: `ralf_kern_phase1/Abbildungen/abb04_diagnosekarte_kf.png` im kanonischen Laufordner.
-
-**Sprechabsicht:** «Wir wollen sowohl schlechte als auch gute Spiele verstehen. Ein Freitext-Hinweis macht eine Ursache plausibel, beweist sie aber nicht.»
-
-**Grenzen:** Erwartungswerte sind Leave-one-match-out-Schätzungen. Ausreisser sind auch zufällig zu erwarten. Keine Addition von KF-, Bon- und Frequenzlücken; keine Addition von CHF-Referenzlücken; kein «liegen gelassener Umsatz» als Folientitel.
-
-**Übergang:** «Diese Befunde bündeln wir in ein übersichtliches Chancenportfolio.»
-
-## Kernfolie 07 – Portfolio: Neun Chancenfelder, drei Arbeitsrichtungen
-
-**Claim / mögliche Überschrift:** «Die Chancen lassen sich entlang von Anwesenheit, Kaufanlässen und Angebotsplanung strukturieren.»
-
-**Label:** Strukturierung bestehender Befunde / Hypothesen.
-
-**Inhalt – die Nummern entsprechen I, nicht einer Prioritätsrangfolge:**
-
-| Arbeitsrichtung | Chancenfelder | Rolle im weiteren Denken |
-|---|---|---|
-| Anwesenheit / Ticketnutzung | **1** Leere vergebene Plätze aktivieren; **2** Gruppen- und Gratistickets besser nutzen | Nutzung bereits ausgegebener Plätze erhöhen |
-| Kaufanlässe / Erlebnis | **3** Zeitfenster vor Anpfiff; **4** Mehr Kaufmomente; **8** Erfolgsmuster wiederholen; **9** Weitere Anlässe | Zusätzliche Kaufgelegenheiten testen; gute Abläufe verstehen |
-| Sortiment / Planung | **5** Warenkorb nach Spieltyp; **6** Spieltage planbar machen; **7** Wetter und Kiesplatz | Angebot an Nachfrage anpassen; Planung als Enabler |
-
-Evidenzlabels aus I: Feld 1 stark; 2–4 mittel; 5–7 stark; 8–9 schwach. **Diese Labels sind historische Analyse-Einordnungen, keine Freigabe und keine Umsetzungspriorität.** Der Bonzählvorbehalt schränkt vor allem frequenz-/bonbasierte Begründungen ein.
-
-**Visual:** Drei Spalten mit neun nummerierten Karten. Feld 6 als Werkzeugkarte, Feld 8 als Lernkarte und Feld 9 als gestrichelte Randfeldkarte zeichnen. Keine neun gleich grossen CHF-Blasen.
-
-**Quelle / Fundstelle:** I «Neun Chancenfelder», Tabelle sowie Einzelabschnitte 1–9; W `02_Chancenfelder`. Die Dreiergruppierung ist eine redaktionelle Empfehlung dieses Leitfadens.
-
-**Sprechabsicht:** Orientierung geben, ohne jedes Feld als gleich reif oder wirtschaftlich gleich relevant zu verkaufen. «Prognose ist ein Hilfsmittel, nicht selbst zusätzlicher Umsatz.»
-
-**Grenzen:** Chancenfelder überlappen. Feld 9 liegt ausserhalb des Herren-Pflichtspiel-Kernscopes. Keine Neupriorisierung als angeblich beschlossener Teamstand.
-
-**Übergang:** «Zuerst zur Ticketnutzung: Wo zeigt die bestehende Historie eine grosse Anwesenheitslücke?»
-
-## Kernfolie 08 – Feld 1: Vergebene Plätze besser nutzen
-
-**Claim / mögliche Überschrift:** «Die SOLL–IST-Lücke ist gross; Aktivierung und Wiederverkauf brauchen unterschiedliche Mechanismen.»
-
-**Label:** Deskriptiv + Hypothese / Testvorschlag.
-
-**Exakter Inhalt:**
-- **2025/26, Meisterschaft:** `ΣSOLL − ΣIST = 60'942`; im Mittel **3'207 je Spiel**, gewichtete Quote **18.1 %**.
-- Bei den **11 Spielen mit ticketbasiertem SOLL** beträgt die entsprechende Lücke **41'442**. Das ist die methodisch sauberer abgegrenzte Teilmenge, nicht eine zweite Zahl für dieselbe Grundgesamtheit.
-- Zweitmarkt: **5'716 Weiterverkäufe** in **19 Spielen** dieser Saison.
-- Vorlauftiming aus der verfügbaren gepoolten Zweitmarktstichprobe **2025/26 und Teilstand 2026/27, 7'607 Tickets**: **70 %** in den letzten **2 Tagen**, **36 %** am Spieltag.
-
-**Konkrete Ideenimpulse:**
-- Unbenutzte Plätze einfacher und früher freigeben lassen; generische Sektor-Kommunikation, keine Personenprofile.
-- Aktivierung («Inhaber kommt doch») von Wiederverkauf («anderer Besucher nutzt den Platz») trennen.
-- Erfolgskriterium: zusätzliche tatsächlich gescannte Public-Anwesende; Wiederverkauf allein beweist keine zusätzliche Gesamtnachfrage.
-
-**Visual:** Zwei nebeneinanderliegende Kästen «Aktivieren» und «Weitergeben». Darüber die SOLL–IST-Lücke mit Definitionsstern. Darunter ein kleiner Timingbalken der Zweitmarkttickets mit ausdrücklich gepooltem Zeitraum. **Kein Wasserfall**, der Weiterverkäufe rechnerisch von der Lücke abzieht.
-
-**Quelle / Fundstelle:** W `N1_Leere_Plaetze_Saison`, Zeile `2025/26`; `N3_Zweitmarkt_Saison`; `N5_Zweitmarkt_Vorlauf`; M §4 für SOLL-Definition. I Feld 1 als Ideenreferenz.
-
-**Sprechabsicht:** «Nicht jeder leere Platz ist ein bezahlt ungenutzter Abo-Sitz. Aber das Ausmass und das späte Weitergeben begründen eine saubere Prozessprüfung.»
-
-**Grenzen:** Gesamtlücke nicht als «60'942 leere bezahlte Plätze» ausgeben: SOLL enthält unterschiedliche Definitionen, ausgegebene Tickets und teilweise Kapazitätswerte. Die Quellen-Kurzform «9 % Wiederbesetzung» hier bewusst nicht als einfache Quote `5'716 / 60'942` nachbauen; W verwendet eine eigene Untergrenzen-Definition. Weiterverkauf kann sonstige Ticketkäufe verdrängen. Cateringwirkung und Zweitmarkterlös getrennt bewerten.
-
-**Übergang:** «Daneben gibt es ein klar abgegrenztes historisches Muster bei grossen Einzelticket-Bestellungen.»
-
-## Kernfolie 09 – Feld 2: Gruppenkontingente auf tatsächliche Nutzung ausrichten
-
-**Claim / mögliche Überschrift:** «Historisch werden grosse Inhouse-Bestellungen deutlich seltener genutzt als kleine bezahlte Online-Bestellungen.»
-
-**Label:** Deskriptiv; historische Segmente, keine aktuelle Wirkungsbehauptung.
-
-**Exakte Vergleichswerte:** Basis **35 Spiele 2021/22–2022/23 mit validem ZKS-Eintritt**.
-
-| Segment | Tickets | No-Show-Quote, gerundet |
+| Merkmal (gegenüber Samstag 17–19.59 Uhr) | Anwesenheitsquote | KF exkl. MwSt. |
 |---|---:|---:|
-| Inhouse, bezahlt, Bestellung ab 10 Tickets | 24'673 | 28.6 % |
-| Inhouse, gratis, Bestellung ab 10 Tickets | 9'061 | 24.3 % |
+| Sonntagnachmittag (vor 17 Uhr) | **+3.7 Pp.** (+1.2 bis +6.3) | **−15.7 %** (−17.9 bis −13.3) |
+| Werktagabend | **−7.4 Pp.** (−10.4 bis −4.4) | **−9.4 %** (−13.1 bis −5.6) |
+| Samstag ab 20 Uhr | −0.4 Pp. (n.s.) | −3.6 % (−6.0 bis −1.1) |
+| je +5 °C | +1.3 Pp. (+0.6 bis +2.1) | +2.8 % (+2.0 bis +3.6) |
+| Top-Gegner (FCB/YB/FCZ) | +3.4 Pp. (+1.1 bis +5.6) | n.s. |
+
+Basis: Meisterschaft ab 2022/23, 76 Modellspiele, Saisoneffekte und Kontextkontrollen, 95 %-KI. Infozeile: «Der Kontext erklärt 82 % der KF-Schwankung zwischen Spielen derselben Saison (Run 3 ohne Anstoss-Slot: 33 %).»
+
+**Grössenordnung (Notiz, nicht auf die Folie als Potenzial):** Ein Sonntagnachmittag entspricht bei gleicher Besucherzahl rund **CHF −31'000 Catering-Umsatz je Spiel** gegenüber Samstag 18 Uhr (KI −36'000 bis −27'000), ein Werktagabend rund −19'000. Das ist Kontext, den der Club nicht wählt.
+
+**Visual:** Zwei Panels (Prozentpunkte | Prozent). Slots in einer Farbe, Wetter/Gegner grau. Fussnote «Spielplan = Liga/TV».
+
+**Quelle:** T `kontext_effekt_matrix.csv`; P `K1_Kontext_Effekt_Matrix`, `K2_Modellguete`; V `chf_baustein.csv`; R (Gegenproben).
+
+**Sprechabsicht:** «Ein Teil der vermeintlich schwachen Spiele sind einfach Sonntagnachmittage. Erst wenn das herausgerechnet ist, sehen wir, was der Club beeinflussen kann.»
+
+**Grenzen:** Assoziationen. Freitags- und Sonntagabendspiele kamen nicht vor. Kein Hebel: Die Anstosszeit setzt die Liga fest.
+
+**Sticker-Update:** Titel und Inhalt ersetzen («Abendspiel und Temperatur» → «Anstoss-Slot, Temperatur, Top-Gegner»). Abendspiel-Färbung → Slot-Färbung. Info: 76 Modellspiele, 82 % erklärte Streuung. Quellen auf Run 4, plus V.
+
+## Folie 14 (S. 12) – Diagnose: Auffällige Spiele als Lernfälle
+
+**Claim:** «Nach Herausrechnen des Kontexts bleiben wenige Ausreisser – etwa so viele, wie der Zufall erwarten lässt.»
+
+**Inhalt:** KF-Diagnose, 76 Spiele, 80 %-Erwartungsband: **8 unter, 6 über** der Erwartung, zufällig erwartet wären ≈ 7.6 je Seite. Fallkarten (KF exkl. MwSt.):
+
+| Spiel | Beobachtet | Erwartet | Lesart |
+|---|---:|---:|---|
+| 24.11.2024, Yverdon Sport (So 16.30) | 11.88 | 12.70 | Runner ganz/teilweise nicht im Einsatz, technische Probleme, kalt; operativer Prüfkandidat |
+| 06.08.2023, FC Luzern (So 16.30) | 11.24 | 12.65 | ungeklärt; Abweichung v.a. über Bons je Anwesendem |
+| 25.10.2025, Grasshopper Club Zürich (Sa 18.00) | 15.97 | 15.02 | positiver Lernfall |
+
+**Quelle:** T `diagnosekarte.csv`; P `K6_Diagnosekarte`; W `D1_Ausreisser_Zaehlung`.
+
+**Grenzen:** Leave-one-match-out-Erwartungen; Freitext-Hinweise unvollständig; keine CHF-Summen.
+
+**Sticker-Update:** Zählung 12/6 → **6 über / 8 unter**, Zufallserwartung ergänzen. Fallkarten ersetzen: Das frühere positive Beispiel Winterthur 09.08.2025 liegt jetzt im Band. Quellen auf Run 4.
+
+## Folie 15 (S. 13) – Zwischenfazit Phase 1
+
+**Belastbar:** verknüpfte Spieltabelle; Kontextzusammenhänge mit Anstoss-Slot (82 % der KF-Schwankung); Erwartung je Spiel (auch als Spielrechner); Ankunftseffekt der Toröffnung in D (+22.6 min).
+**Nicht messbar:** Konsum je Ticket/Person, Konsum-Timing, Sektor-KF, Abo-Besuche je Spiel; Bons über 2023/24 nur eingeschränkt.
+**Überleitung:** «Das Niveau, das der Club beeinflusst, zeigt kein historisches Modell – deshalb Piloten.»
+
+**Sticker-Update:** Punkt «Kontextzusammenhänge» mit Anstoss-Slot und 82 % präzisieren; D-041-Satz ergänzen: «Gegenrechnung ohne 2023/24 für Kontextmodelle gemacht, stabil.»
+
+## Folie 16 (S. 14) – Chancenportfolio: neun Felder in drei Arbeitsrichtungen
+
+**Claim:** «Die Felder kommen aus Daten und Ideen – geprüft, gebündelt und ohne Rangfolge.»
+
+**Herkunft (neu, laut Call zu begründen):** 12 Ausgangsideen aus der Projektvorbereitung, im Daten-Check geprüft (Anhang 12): umgesetzt, umformuliert oder zurückgestellt. Dazu kommen Befunde aus der Baseline. Zusammen ergibt das 9 Felder, redaktionell in 3 Arbeitsrichtungen geclustert.
+
+| Arbeitsrichtung | Felder | Evidenz laut I (Run 4) |
+|---|---|---|
+| Anwesenheit / Ticketnutzung | 1 Leere vergebene Plätze aktivieren; 2 Gruppen- und Gratistickets | stark; mittel |
+| Kaufanlässe / Erlebnis | 3 Zeitfenster vor Anpfiff; 4 Kaufmomente; 8 Erfolgsmuster; 9 weitere Anlässe | mittel; mittel; schwach; schwach |
+| Sortiment / Planung | 5 Warenkorb nach Spieltyp; 6 Spieltage planbar machen; 7 Wetter und Kiesplatz | stark |
+
+**Offen (D-049a):** Die Call-Zusammenfassung spricht von 8 Feldern. Bis zum Teamentscheid bleiben es 9. Mögliche Bündelung: Feld 8 in Feld 4 integrieren, weil das Erfolgsmuster nach Run 4 kein eigenständiger Befund mehr ist.
+
+**Sticker-Update:** Herkunftszeile ausformulieren (ohne Personenbezug). Feld 8 als «nach Run 4 schwach – Bündelung prüfen» markieren.
+
+## Folie 17 (S. 15) – Bewertungslogik und Grössenordnungen
+
+**Bewertungskriterien für die Matrix:**
+- **Wirkung:** adressierbare Basis × plausibler Hebel, über isolierte Rechenbausteine.
+- **Umsetzungsaufwand/Komplexität:** Prozessänderung, Partner (Caterer, Ticketing), IT, Fanakzeptanz.
+- **Evidenz** und **Datenreife** als Ampel.
+- Leitplanken als Ausschluss.
+
+**Rechenbausteine** (Meisterschaft 2025/26, Catering exkl. MwSt., isoliert, **nicht addieren**):
+
+| Isolierte Änderung | CHF je Saison |
+|---|---:|
+| +CHF 1 KF | 261'924 |
+| +CHF 1 Ø Bon | 243'989 |
+| +1 % Bonsrate | 37'995 |
+| −1 Pp. No-Show, φ 0.6 / 0.8 / 1.0 | 29'299 / 39'066 / 48'832 |
+
+φ = angenommener Konsum zusätzlicher Besucher relativ zum Durchschnitt; die gemessene Elastizität 1.01 spricht für φ nahe 1, beweist es aber nicht.
+
+**Sticker-Update:** Kriterien auf die Matrix-Achsen umstellen («Wirkung» und «Aufwand» statt Rangliste). Quelle W `R1_Faustwerte` (Run 4, Werte identisch).
+
+## Folie 18 (S. 16) – Feld 1: Vergebene Plätze besser nutzen
+
+- 2025/26 Meisterschaft: ΣSOLL − ΣIST = **60'942** (Ø 3'207 je Spiel, No-Show 18.1 %); in den **11** Spielen mit ticketbasiertem SOLL **41'442**.
+- Zweitmarkt **5'716** Weiterverkäufe; Wiederbesetzung rund 9 % (Definition W); 70 % in den letzten 2 Tagen, 36 % am Spieltag (gepoolt 2025/26 + Teilstand, 7'607 Tickets); Gebühr für Käufer 10.8 %.
+- Leere Plätze sind vor allem Abo-Plätze. Einzeltickets werden zu 91–97 % genutzt. Abo-Anwesenheit 2026/27 (Näherung, 4 Spiele): **D 71–74 %**, B 82–85 %, C 86–89 %. In D bleiben je Spiel rund 1'100 vergebene Plätze leer.
+
+**Mechanismen:** Aktivieren (Inhaber kommt) | Weitergeben (Zweitmarkt früher und sichtbarer). Erfolgskriterium: zusätzliche Scans.
+
+**Sticker-Update:** Abo-Anwesenheit je Tribüne als Überleitung zur Abo-Obergrenze ergänzen (Folie 24/Anhang 15b). Quellen W `N1`, `N3`, `N5`, `N7_Tribuene_2627` (Run 4, identisch).
+
+## Folie 19 (S. 17) – Feld 2: Gruppen- und Gratistickets
+
+| Segment (35 Spiele 2021/22–2022/23, valider Eintritt) | Tickets | No-Show |
+|---|---:|---:|
+| Inhouse, bezahlt, ab 10 Tickets | 24'673 | 28.6 % |
+| Inhouse, gratis, ab 10 Tickets | 9'061 | 24.3 % |
 | Online-Shop, bezahlt, 2–4 Tickets | 82'669 | 3.7 % |
 
-**Konkrete Ideenimpulse:** Bestätigung benötigter Kontingente, einfache Rückgabe ungenutzter Tickets, klare Verteilungsverantwortung bei Gruppen. Als Pilotidee eine Prozessänderung gegen vergleichbare unveränderte Kontingente testen. Erst aktuellen Stand prüfen, dann einen Wirkungskorridor formulieren.
+46 % aller No-Shows bei Einzeltickets stammen aus Inhouse-Bestellungen ab 10 Tickets.
 
-**Visual:** Drei Balken mit Quote und Ticketzahl. Direkt unter der Überschrift das historische Zeitfenster statt in einer kaum lesbaren Fussnote. Keine Personenbilder oder demografischen Segmente.
+**Neu aus dem Call (Hypothese):** Ein grosser Teil dürften vom Club ausgegebene **Sponsorentickets** sein (Grössenordnung rund 20 je Sponsor, über das Sponsoringbudget bezahlt). Fanclub-Gruppenkontingente sind in der Schweiz weniger verbreitet als in Deutschland. **Prüfung:** Auswertung nach Tarif und Kanal, nie nach Käufer; braucht eigene Freigabe (D-049d).
 
-**Quelle / Fundstelle:** W `N9_Einzel_NoShow_Segmente`, die exakt bezeichneten Segmentzeilen; I Feld 2; M §6 für ZKS-Grenzen.
+**Sticker-Update:** Hypothese Sponsorentickets als «zu prüfen» ergänzen; Pilotidee «Sponsoren bestätigen Kontingent bis T−3, Rückgabe in den Verkauf».
 
-**Sprechabsicht:** «Das ist ein guter Prozesshinweis, aber kein Beleg, dass heute dieselbe Lücke besteht oder der Kanal selbst die Ursache ist.»
+## Folie 20 (S. 18) – Feld 3: Zeitfenster vor dem Anpfiff
 
-**Grenzen:** 2021/22 COVID-geprägt; Kanal, Tarif und Bestellgrösse sind nicht randomisiert. Keine aktuelle No-Show-Prognose. Kein Konsum je Segment messbar; nicht unterstellen, dass zusätzlich aktivierte Gruppentickets durchschnittlichen KF erzielen.
+Eingang C: mittlere Verweilzeit 27.4 min, 23.1 % kommen in den letzten 15 min (71 Spiele). Sektor D öffnet seit 02.04.2023 früher (90 statt 60 min). Das verschiebt die mediane Ankunft um **+22.6 min** (KI 19.0–26.1; 12 vs. 59 Spiele). Frühere Ankunft und KF hängen nach Kontextkontrolle **nicht** belastbar zusammen (P `D6_Ankunft_Konsum`, Run 4).
 
-**Übergang:** «Wenn Menschen kommen, ist die nächste Frage: Wie viel nutzbares Zeitfenster entsteht vor dem Spiel?»
+**Sticker-Update:** Satz zu D6 ergänzen (Run 4: +0.5 % je +10 Pp. Frühankommende, KI −2.8 bis +3.9 %). Sonst unverändert.
 
-## Kernfolie 10 – Feld 3: Früheres Kommen ist beeinflussbar, Mehrkonsum noch offen
+## Folie 21 (S. 19) – Feld 4: Mobiler Verkauf und Kaufmomente
 
-**Claim / mögliche Überschrift:** «Die Toröffnung verschiebt die Ankunft – ob daraus zusätzlicher Umsatz entsteht, ist eine eigene Testfrage.»
+**Claim (neu):** «Runner sind ein Pilotkandidat – die Historie zeigt nach Herausrechnen der Anstosszeit keinen messbaren Unterschied.»
 
-**Label:** Deskriptiv + natürliches Experiment / Hypothese für Konsum.
-
-**Exakter Inhalt:**
-- Eingang C: mittlere Verweilzeit vor Anpfiff **27.4 Minuten**, Anteil Ankunft in den letzten **15 Minuten: 23.1 %**; Basis **71 Spiele**. Quelle definiert Verweilzeit nach dem Drehkreuz bis zum Anpfiff, spätere Ankunft als null.
-- Sektor D öffnet seit **02.04.2023** früher: **90 statt 60 Minuten** vor Anpfiff.
-- Differenz-in-Differenzen gegenüber A/B/C: Median der Ankunft **22.6 Minuten früher**, **95-%-KI 19.0 bis 26.1 Minuten**; **12 Spiele vorher, 59 nachher**.
-- Prüffrage: «Können frühere Öffnung und passendes Vorprogramm zusätzliche Kaufmomente schaffen?»
-
-**Visual:** Links die Verweilzeitkarte für C, rechts ein Vorher/Nachher-Schema D versus A/B/C. Ein deutlicher Trennstrich zwischen «Ankunftsverschiebung beobachtet» und «Umsatzwirkung offen». Kein CHF-Pfeil direkt an die Minuten schreiben.
-
-**Quelle / Fundstelle:** W `Z1_Verweilzeit_Eingang`, Zeile `C`; P `D9_Toroeffnung_DiD`, Zeile `Median Ankunft, min vor Anpfiff`; M §8; I Feld 3. Bestehende Grafik: `ralf_kern_phase1/Abbildungen/abb13_toroeffnung_experiment.png`.
-
-**Sprechabsicht:** «Der starke Befund betrifft Ankunft. Wir übertragen ihn nicht ungeprüft auf Umsatz. Die Hypothese ist testbar, sobald Zeit- und Standortdaten des Caterings vorliegen.»
-
-**Grenzen:** Physischer Eingang ist nicht sicher der Sitzsektor. Verweil-Mittel und Median nicht vermischen: Die Baseline weist für C einen Median von **25.3 Minuten** aus, nicht einen konkurrierenden Wert für dieselbe Statistik. Kein belastbarer aggregierter Ankunft→Konsum-Nachweis. Natürliches Experiment ist kein randomisierter Umsatzpilot.
-
-**Übergang:** «Das relevante Ziel ist nicht zusätzliche Zeit allein, sondern zusätzliche Käufe ohne Verlagerung.»
-
-## Kernfolie 11 – Feld 4: Kaufgelegenheiten testen statt Frequenzwachstum versprechen
-
-**Claim / mögliche Überschrift:** «Mobiler Verkauf ist ein plausibler Testkandidat – die historische Wirkung ist nicht kausal belegt.»
-
-**Label:** Modell / Zusammenhang + Hypothese.
-
-**Exakter Inhalt für die Hauptgrafik:** KF-Abweichung von der Kontexterwartung, **exkl. MwSt.**
-
-| Dokumentierter mobiler Verkauf | Spiele | Mittlere KF-Abweichung |
+| Dokumentierter mobiler Verkauf | Spiele | KF-Abweichung von der Erwartung |
 |---|---:|---:|
-| Ganz oder teilweise nicht im Einsatz | 15 | −3.4 % |
-| Ausdrücklich im Einsatz | 16 | +3.8 % |
+| ganz/teilweise nicht im Einsatz | 15 | −1.1 % |
+| ausdrücklich im Einsatz | 16 | −0.2 % |
+| Differenz | 31 | −0.8 % (KI90 −4.1 bis +2.6 %) |
 
-Die in W ausgewiesene Differenz «nicht im Einsatz − im Einsatz» ist **−7.2 %**, **90-%-KI −12.6 bis −1.5 %**. Als unterstützende Notiz, nicht als garantierter Pilot-Uplift verwenden.
+Run 3 zeigte −7.2 %. Der Unterschied kam vor allem daher, dass Runner-Ausfälle häufiger an Sonntagnachmittagen vorkamen. Nachweisgrenze (MDE) jetzt 4.6 %.
 
-**Konkrete Ideenimpulse:** Runner-Einsatz nach festem Plan zwischen vergleichbaren Sektoren/Spielen variieren; Standöffnungen und technische Störungen strukturiert protokollieren; Zusatzumsatz über alle betroffenen Verkaufsstellen messen, nicht nur Umsatz des neuen Kanals. Bonsrate nur als ergänzenden KPI verwenden, nachdem ihre Zählung verprobt ist.
+**Pilotidee:** Einsatzplan nach festem Wechsel → Protokoll → Gesamtumsatz aller betroffenen Kanäle vergleichen.
 
-**Visual:** Zwei Punkte um eine Null-Linie; darunter ein Pilotablauf «Einsatzplan → Durchführung protokollieren → Gesamtumsatz vergleichen». Die historische Frequenz-Wachstumsgrafik nicht als Hauptbeweis verwenden.
+**Sticker-Update:** Hauptgrafik und Aussage ersetzen; nicht mehr als Befund, nur als Testfrage. Quelle W `K11_Mobiler_Verkauf_Effekt` (Run 4).
 
-**Quelle / Fundstelle:** W `K11_Mobiler_Verkauf_Effekt`, Zielgrösse `Kundenfranken exkl. MwSt`, Gruppen `ganz/teilweise nicht im Einsatz`, `im Einsatz` und Differenzzeile; I Feld 4. K §3 zum Bonsvorbehalt.
+## Folie 22 (S. 20) – Felder 5 und 7: Sortiment, Wetter und Kiesplatz
 
-**Sprechabsicht:** «Wir haben eine beobachtete Assoziation und einen konkreten operativen Ansatzpunkt. Jetzt brauchen wir einen Test, der Nachfrageschwäche und Einsatzentscheidung auseinanderhält.»
+**Feld 5 – Warenkorb nach Anstoss:** Alkoholanteil am Artikelumsatz 53.5 % (2023/24) → 49.9 % (2025/26), einheitlich brutto. Gegenüber Samstag 17–19.59 Uhr bei gleichem Kontext (58 Spiele, MwSt.-Proxy):
 
-**Grenzen:** Freitext-Codierung; fehlende Angabe bedeutet nicht «kein Einsatz». Umgekehrte Kausalität möglich. Das Intervall ist ausdrücklich 90 %, nicht 95 %. Der Quelle zufolge liegt der Vergleich an der Nachweisgrenze. Historische Bons-/Bon-Trends sind wegen Erfassungswechsel nicht als verifiziertes Fanverhalten auszugeben.
+| Slot | KF Alkohol | KF Food & alkoholfrei |
+|---|---:|---:|
+| Samstag ab 20 Uhr | +6.4 % (+1.1 bis +12.0) | **−14.9 %** (−18.6 bis −10.9) |
+| Sonntagnachmittag | **−26.4 %** (−30.1 bis −22.6) | −5.2 % (−9.3 bis −0.9) |
+| Werktagabend | −12.0 % (−19.7 bis −3.7) | −9.8 % (−16.8 bis −2.2) |
 
-**Übergang:** «Neben der Zahl der Kaufgelegenheiten ist entscheidend, ob das Angebot zum Spieltyp passt.»
+Lesart: Bei späten Samstagsspielen haben Fans offenbar schon gegessen. Am Sonntagnachmittag fehlt vor allem der Getränkeumsatz.
 
-## Kernfolie 12 – Felder 5 und 7: Sortiment und Wetter gemeinsam denken
+**Feld 7 – Wetter und Kiesplatz** (85 Spiele): je +5 °C Kiesplatz **+8.1 %** (+5.1 bis +11.3), Stadion +2.3 % (+1.5 bis +3.0). Regen bei Anreise: Kiesplatz −16.8 %. Kiesplatz am Sonntagnachmittag −20 %, am Werktagabend −29 % gegenüber Samstag 17–19.59 Uhr.
 
-**Claim / mögliche Überschrift:** «Spieltyp und Wetter sprechen für passende Angebote – nicht für pauschale Umsatzversprechen.»
+**Sticker-Update:** «Abendspiel-Callout» ersetzen durch die Slot-Tabelle oben. Kiesplatz-Werte von +9.5 / +2.6 % auf **+8.1 / +2.3 %** ändern. Jugendschutz-Hinweis bei Alkoholideen behalten. Quellen W `K2`, `K8`, `K14` (Run 4).
 
-**Label:** Deskriptiv / Modell / Hypothese sauber getrennt.
+## Folie 23 (S. 21) – Felder 6, 8 und 9: Planung und Lernfelder
 
-**Inhalt, zweigeteilt:**
+**Feld 6:** Rolling-Origin-Test über 54 Spiele: MAE der IST-Prognose **1'120** nur mit Kontext, **849** mit Verkaufsstand T−7, also **−24.2 %**. Das 80 %-Band deckt 84.1 % der 44 Spiele mit Band ab. Nutzenpfad: Prognose → Personal/Ware → Zusatzumsatz messen. Das Werkzeug dazu ist der **Spielrechner** (Folie 30).
+**Feld 8:** Nach Run 4 noch 2 von 6 KF-Spitzenspielen an Samstagen (1 um 18 Uhr). Als Lernkarte behalten, kein eigener Befund.
+**Feld 9:** Testspiele: KF CHF 14.01 inkl. MwSt. gegenüber CHF 14.61 in der Herren-Meisterschaft; separat, ausserhalb des Kernscopes.
 
-**Angebot nach Spieltyp, Feld 5:**
-- Artikelmix der Meisterschaft, **einheitlich brutto**: Alkoholanteil **53.5 % in 2023/24 → 49.9 % in 2025/26**.
-- Abendspiele: Alkoholanteil gemäss MwSt.-Proxy **+8.2 Prozentpunkte**, **95-%-KI +6.1 bis +10.4 Pp.**, **58 Modellspiele**.
-- Ideenfrage: «Welches schnelle Food-/alkoholfreie Angebot passt zu Fans, die später von der Arbeit kommen?»
+**Sticker-Update:** T−7-Werte ändern (1'338/922/31.1 % → **1'120/849/24.2 %**, Band 86.4 % → **84.1 %**). Feld 8 abschwächen. Quellen W `A6_Fruehindikator`, `D1_Ausreisser_Zaehlung` (Run 4).
 
-**Wetter / Kiesplatz, Feld 7:**
-- Zusammenhang je **+5 °C**: Kiesplatz-Umsatz je Anwesendem **+9.5 %**, Stadion ohne Kiesplatz **+2.6 %**; **85 Spiele**.
-- KI des Temperatureffekts: Kiesplatz **+5.8 bis +13.4 %**, Stadion **+1.1 bis +4.1 %**.
-- Ideenfrage: «Welche Angebots- und Öffnungsreaktion passt bei Kälte, statt auf automatische Verlagerung nach drinnen zu setzen?»
+## Folie 24 (S. 22) – Massnahmen auf der Matrix Wirkung × Aufwand (ersetzt «Priorisierungsergebnis»)
 
-**Visual:** Zwei klar getrennte Panels: links ein Artikelanteilsvergleich plus Abendspiel-Callout; rechts zwei Temperatur-Effektpunkte mit Intervallen. Bruttobasis und jeweilige Stichprobe direkt in die Panels schreiben. Kiesplatz als **Teil des Totals** markieren.
+**Claim:** «Quick Wins zuerst pilotieren, Leuchttürme vorbereiten.»
 
-**Quelle / Fundstelle:** W `K2_Warenkorb_Gruppen`, Gruppe `Alkoholische Getränke`; `K8_Alkohol_Effekt_Matrix`, Ziel `Alkoholanteil am Umsatz (Normalsatz-Proxy)`, Variable Abendspiel; `K14_Kiesplatz_Wetter`, Variable `+5 °C`; I Felder 5 und 7; M §7 zur Artikelharmonisierung und Kiesplatz-Abgrenzung.
+**Label:** Vorschlag für den Teamentscheid; Einordnung qualitativ, Wirkung über Rechenbausteine (Anhang 15).
 
-**Sprechabsicht:** «Die Chance liegt in einer besseren Reaktion auf Nachfragebedingungen. Wir können Wetter nicht ändern und Alkoholanteile nicht als Verkaufsauftrag interpretieren.»
+| Nr. | Massnahme (Felder) | Mechanismus in einem Satz | Wirkung (Vorschlag) | Aufwand (Vorschlag) | Quadrant |
+|---|---|---|---|---|---|
+| M1 | Zweitmarkt früher und sichtbarer (1) | Abo-Inhaber geben ungenutzte Plätze früher frei, Erinnerung T−3 | mittel | tief | Quick Win |
+| M2 | Gruppen-/Sponsorenkontingente bestätigen (2) | Kontingent bis T−3 bestätigen, Rest zurück in den Verkauf | mittel | tief | Quick Win |
+| M3 | Abo-Obergrenze je Sektor (1) | Abo-Bestand v.a. in D begrenzen, Plätze als Einzeltickets verkaufen | mittel bis hoch (Anwesenheit), Catering klein | hoch (Fanakzeptanz, Ticketerlös) | Leuchtturm |
+| M4 | Frühere Toröffnung + Vorprogramm (3, 4) | Tore wie in D früher öffnen, Zeitfenster mit Angebot füllen | offen (Ankunft belegt, Konsum offen) | mittel | Pilot |
+| M5 | Angebot nach Anstoss-Slot (5, 4) | Food-Angebot vor Samstag-20-Uhr-Spielen, Getränke-/Familienangebot am Sonntagnachmittag; Runner-Einsatz im Test | mittel | mittel | Pilot |
+| M6 | Wetter-/Kiesplatz-Playbook mit T−7 (6, 7) | Ware, Personal und Kiesplatz-Öffnung nach Prognose und Wetter planen | tief bis mittel | tief | Quick Win |
 
-**Grenzen:** Alkoholindikator ist ein Proxy, keine Artikelzählung je Spiel. Keine nachgewiesene Massnahmenwirkung. Positive gemeinsame Residuen sind **kein Beweis, dass Verlagerung ausgeschlossen ist**. Kiesplatz nie zusätzlich zum Catering-Total addieren. Jugendschutz, Sicherheit und Bewilligungen für alkoholbezogene Ideen prüfen; hier bewusst Food-/alkoholfreie Ideen betonen. Artikelbasis bleibt fachlich abzusichern.
+Querschnitt: **Spielrechner** als Planungswerkzeug (Feld 6) für M5/M6.
 
-**Übergang:** «Damit solche Reaktionen rechtzeitig geplant werden können, braucht es ein Frühbild der Nachfrage.»
+**Visual:** 2×2-Matrix (x = Aufwand, y = Wirkung), sechs nummerierte Punkte; KF-Research-Ideen als graue gestrichelte Wolke ausserhalb der Matrix (Folie 24b).
 
-## Kernfolie 13 – Felder 6, 8 und 9: Planung und Lernen unterstützen die Massnahmen
+**Sticker-Update:** Folie ersetzt die Tabelle «neun Felder × Kriterien». Workshop-Ergebnis = Teamentscheid über Auswahl und Platzierung (offen, D-049b). Startvorschlag vom 14.10. ist in M1, M2, M4 und M5/M6 enthalten.
 
-**Claim / mögliche Überschrift:** «Bessere Prognosen und gute Spieltagsprotokolle sind Enabler – kein eigener Umsatz-Business-Case.»
+## Folie 24b (neu) – Research: Ideen für den Kundenfranken («Moonshots»)
 
-**Label:** Prognosevalidierung + explorative Lernfelder.
+**Claim:** «Ideen für mehr Umsatz je Fan – mit den vorhandenen Daten nicht bewertbar, deshalb als Research.»
 
-**Hauptinhalt, Feld 6:**
-- Retrospektiver Rolling-Origin-Test über **54 vorhergesagte Spiele**: mittlerer absoluter Fehler der IST-Prognose **1'338 Anwesende** nur mit Kontext, **922** mit Einzelticket-Verkaufsstand **T−7**.
-- Verbesserung des MAE: **31.1 %**.
-- Das nominale **80-%-Prognoseband** deckt **86.4 %** der **44 Spiele mit verfügbarem Band** ab. Nicht fälschlich auf alle 54 Spiele beziehen.
-- Konkreter Nutzenpfad: «T−7-Prognose → Personal/Waren/Angebot rechtzeitig festlegen → tatsächlichen Zusatzumsatz der Reaktion messen».
+**Label:** Research / Benchmark – keine Quantifizierung.
 
-**Zwei kleinere Lernkarten:**
-- **Feld 8, Erfolgsmuster:** Gute und schwache Spiele anhand derselben operativen Checkliste vergleichen. Kleine Fallzahlen; Hypothesenquelle, kein eigener addierbarer Hebel.
-- **Feld 9, weitere Anlässe:** Testspiele und Events separat explorieren; ausserhalb des Kernscopes und nicht in die Meisterschafts-Baseline mischen. Verlässliche Besuchszahlen und Ziele zuerst klären.
+- **Begründung:** Der Kontext erklärt 82 % der Spiel-zu-Spiel-Schwankung des KF. Solche Initiativen verschieben das Niveau aller Spiele und lassen sich nur mit Pilot und Vergleich bewerten.
+- **Fast Lane / Mobile Order:** Beispiel eines Bundesligisten. Dort umstritten, unter anderem wegen der Rolle eines Kreditkarten-Sponsors. Angaben zur eigenen App («Umsatz verdoppelt») sind nicht belegt.
+- **Loyalty:** Punkte und Gutscheine; Beispiel eines Bundesligisten mit Telekom-Partner, Punkte sammeln mit dem Handy in der Tasche.
+- **Risiken:** Akzeptanz in der Fankurve (Sichtweise der aktiven Fanszene), Sponsorenbezug, Datenschutz.
 
-**Visual:** Zwei Fehlerbalken «nur Kontext» / «Kontext + T−7»; darunter der Nutzenpfad. Rechts die zwei kleinen Lernkarten. Feld 6 nicht als Euro-/CHF-Potenzialkachel darstellen.
+**Offen:** öffentliches Benchmarking anderer Clubs (Team-Aufgabe); mögliche vertrauliche Inputs aus der Praxis.
 
-**Quelle / Fundstelle:** W `A6_Fruehindikator`, Zeile Ziel `IST (Anwesende)`, `alle Testspiele`; I Felder 6, 8 und 9; W `D1_Ausreisser_Zaehlung` und `F1_Randfelder_Kategorien` für Backup-Vertiefung. Achtung: «Testspiele» im Prognoseblatt meint **Validierungsfälle**, nicht Freundschaftsspiele.
+**Sticker-Update:** Folie neu einfügen, nach Folie 24 oder vor dem Fazit.
 
-**Sprechabsicht:** «Der Prognosefehler sinkt im bestehenden Test. Mehr Umsatz entsteht aber erst, wenn eine daraus abgeleitete Entscheidung nachweislich wirkt.»
+## Folie 25 (S. 23) – Massnahmen auf einen Blick (ersetzt «Shortlist: drei Massnahmen»)
 
-**Grenzen:** Retrospektive Prognosegüte ist keine Garantie künftiger Treffer. T−7 verbessert die Anwesenheitsprognose, nicht nachgewiesen die No-Show-Quote im selben Umfang. Bandabdeckung auf kleinerer Teilstichprobe. Weitere Anlässe nicht als bereits erschlossenes Wachstum darstellen.
+Hauptteil top-line: **eine** Folie mit sechs Mini-Karten (Mechanismus, Felder, Ziel-KPI, Rechenbaustein). Die ausführlichen Steckbriefe M1–M6 kommen in den Anhang (Folien 26–28 werden zu Anhang 15a–f).
 
-**Übergang:** «Zum Schluss übersetzen wir diese Arbeitsrichtungen in prüfbare Umsatztests.»
+**Sticker-Update:** Folien 26–28 («Massnahme 1–3») in den Anhang verschieben und auf M1–M6 erweitern (siehe Anhang 15). Korridore nur mit offengelegter Annahme.
 
-## Kernfolie 14 – Phase 2: Wenige Massnahmen sauber auf inkrementellen Umsatz testen
+## Folie 29 (S. 27) – Pilot- und Messdesign
 
-**Claim / mögliche Überschrift:** «Ein guter Pilot trennt zusätzliche Nutzung, zusätzlichen Umsatz und blosse Verlagerung.»
-
-**Label:** Vorschlag für Phase 2 – keine beschlossene Priorisierung.
-
-**Konkrete Vorlage auf der Folie:**
-
-| Testkandidat | Verhaltens-/Prozesssignal | Primäre wirtschaftliche Zielgrösse | Mindestvoraussetzung |
+| Massnahme | Verhaltenssignal | Wirtschaftliche Zielgrösse | Mindestvoraussetzung |
 |---|---|---|---|
-| Platzaktivierung / Rückgabe | Zusätzliche Scans bei vergebenen Plätzen; angebotene und verkaufte Zweitmarktplätze | Zusätzlicher Public-Catering-Umsatz exkl. MwSt.; allfälligen Ticket-/Zweitmarkterlös getrennt ausweisen | SOLL-Definition, aktuelle aggregierte Abo-Nutzung und Zweitmarktdaten |
-| Frühere Öffnung / Vorprogramm | Früheres Ankommen in behandelten Eingängen | Zusätzlicher Public-Catering-Umsatz exkl. MwSt. über betroffene Bereiche | Öffnungslog, Kassen-Zeitdaten, Zuordnung Kasse→Stand→Sektor |
-| Mobiler Verkauf / passendes Angebot | Dokumentierter Einsatz und Angebotsverfügbarkeit | Netto-Zusatzumsatz über alle betroffenen Kanäle, nicht nur Umsatz des Pilotstands | Strukturierte Einsatzpläne und vergleichbare Kontrollspiele/-bereiche |
+| M1/M2 | zusätzliche Scans je vergebenem Platz; Rückgaben | zusätzlicher Catering-Umsatz exkl. MwSt.; Ticket-/Zweitmarkterlös separat | SOLL-Definition, aktuelle Eintrittsdaten nach Tarif/Kanal |
+| M3 | Abo-Anwesenheit je Sektor | Anwesende und Catering-Umsatz; Ticketerlös (Abo vs. Einzel) separat | Abo-Besuche je Spiel und Sektor («Coding» klären), Nachfrage nach Einzeltickets in D |
+| M4 | frühere Ankunft im Pilotsektor | Umsatz je Kasse und Viertelstunde | Öffnungslog, Kasse→Stand→Sektor |
+| M5/M6 | Angebotsverfügbarkeit, Einsatzplan | Netto-Zusatzumsatz nach Verlagerung | Spieltagsprotokoll, Artikel je Spiel |
 
-**Messprinzipien als kurze Fusszeile:** Vorab Hypothese und Vergleich festlegen; Kontext berücksichtigen; Verlagerung prüfen; Unsicherheitsintervall berichten; überlappende Wirkungen nicht addieren. «Netto-Zusatzumsatz» meint hier **nach Verlagerung**, nicht Deckungsbeitrag; MwSt.-Basis bleibt exkl.
+Messprinzipien: Hypothese vorab; Kontext über den Spielrechner herausrechnen (Erwartung je Spiel als Vergleich); Verlagerung prüfen; Unsicherheit berichten; nicht addieren.
 
-**Abschlussfrage an das Publikum:** «Welche wenigen Testkandidaten sollten wir anhand von Datenreife, Steuerbarkeit und plausibler zusätzlicher Nachfrage als Erstes konkretisieren?» Keine fertige Rangfolge vortäuschen.
+**Sticker-Update:** M1–M3 → M1–M6; Messprinzip «Erwartung je Spiel aus dem Spielrechner als Vergleichsbasis» ergänzen.
 
-**Visual:** Die Tabelle als drei Pilotkarten mit identischer Struktur. Daneben ein kleines Gate «Definitionen & Messbarkeit vor Wirkungszahl». Keine erfundenen Fristen, Verantwortlichen, Pilotgrössen oder Ziel-Uplifts.
+## Folie 30 (S. 28) – Übergabe und nächste Schritte
 
-**Quelle / Fundstelle:** M §15; I Pilotabschnitte der Felder 1, 3–5 sowie «Datenanfragen»; K §§1–3 für Top-line, Erlösempfänger, historische Bons und offene Definitionen.
+**Was der FCSG erhält:** Spielkontext-Tabelle v5; Excel mit Hebel-Rechner; Bericht und Lesehilfe; **Spielrechner (Entwurf)**. Er liefert erwartete Anwesende, KF und Umsatz für ein angesetztes Spiel und den Rückblick «Beobachtung vs. Erwartung». Er ist offline nutzbar und enthält Clubzahlen, bleibt also beim FCSG (D-047).
+**Datenagenda:** Kassen-Zeitdaten je Stand; Abo-Besuche je Spiel/Sektor; Zweitmarkt-Angebot und -Verkauf; Eintritt je Ticket nach Tarif/Kanal; Spieltagsprotokolle.
 
-**Sprechabsicht:** «Der nächste Erkenntnisschritt ist ein messbarer Test, nicht eine Summe historischer Lücken. Das Ziel ist inkrementeller Umsatz, nicht ein aus fehlenden Kostendaten geschätzter DB.»
+**Sticker-Update:** Spielrechner als viertes Item ergänzen. Datenagenda um «Abo-Besuche je Sektor» (für M3) schärfen.
 
-**Grenzen:** Baseline und Bonsvergleich noch nicht freigegeben; gewünschte Sensitivitätsprüfung nicht durchgeführt. Clubbeteiligung ist nicht der Caterer-Umsatz. Ein Beteiligungssatz darf weder stiller Default noch gemessene Marge werden.
+## Folie 31 (S. 29) – Fazit und Diskussionsfragen
 
-**Übergang / Abschluss:** «Für die Vertiefung liegen Definitionen, Rechenwerte, Modellprüfung und Messlücken im Backup.»
+**Kernaussagen:** (1) Faire Vergleichsbasis: Der Spielkontext, vor allem die Anstosszeit, ist herausgerechnet. (2) Die grössten beeinflussbaren Hebel liegen bei Platznutzung und Angebot. (3) Sechs Massnahmen sind auf Wirkung × Aufwand eingeordnet; Quick Wins sind pilotreif.
+**Fragen an den FCSG:** Reihenfolge der Piloten (Quick Wins zuerst?); welche Messdaten lieferbar sind (Kassenzeit, Abo-Besuche); Haltung zur Abo-Obergrenze und Verantwortung/Erlösteilung mit dem Caterer.
+
+**Sticker-Update:** Kernaussage 3 auf Matrix/sechs Massnahmen anpassen; Frage zur Abo-Obergrenze aufnehmen.
 
 ---
 
-# Backup-Folien
+# Anhang
 
-## Backup B1 – KPI-Definitionen und Scope-Wechsel offenlegen
+## Anhang 1 (S. 31) – KPI-Definitionen und Grundgesamtheiten
 
-**Claim:** «Gleiche gerundete KF-Werte bedeuten nicht dieselbe Grundgesamtheit.»
-
-**Label:** Definitionen / Deskriptiv.
-
-**Exakter Inhalt:**
-
-| Referenz 2025/26 | Spiele | Public-Anwesende | Catering-Umsatz exkl. MwSt., CHF | KF exkl. MwSt., ungerundet als Quellenwert |
+| Referenz 2025/26 | Spiele | Public-Anwesende | Catering-Umsatz exkl. MwSt., CHF | KF exkl. MwSt. |
 |---|---:|---:|---:|---:|
-| Meisterschaft (SL) | 19 | 261'924 | 3'799'454.5036725258 | 14.505942577513041 |
-| Alle Herren-Pflichtspiele (SL + Cup + UEFA) | 20 | 277'145 | 4'022'508.0354209067 | 14.514092029157686 |
+| Meisterschaft | 19 | 261'924 | 3'799'455 | 14.51 |
+| Alle Herren-Pflichtspiele | 20 | 277'145 | 4'022'508 | 14.51 |
 
-**Produktionshinweis:** Auf der tatsächlichen Backup-Folie Umsatz auf Rappen und KF auf zusätzliche Dezimalstellen runden; die langen Werte oben dienen dem präzisen Nachschlagen und sind keine sinnvolle sichtbare Datengenauigkeit. Beide KF ergeben auf zwei Dezimalstellen **14.51**. Der Antragsreferenzwert **CHF 14.50** bezieht sich laut M auf alle Pflichtspiele und exkl. MwSt.; K bestätigt fachlich exkl. MwSt. und Public ohne VIP, nicht den vollständigen historischen Feldabgleich.
+**Sticker-Update:** Pfade auf Run 4 (Werte identisch).
 
-Weitere Definitionszeilen: `Anwesenheit = IST/SOLL`; `No-Show = 1 − IST/SOLL`; `KF = Umsatz/Public Netto`; `Bonsrate = Bons/Public Netto`; `Ø Bon = Umsatz/Bons`. Public-Netto-Feld und Gesamt-IST nicht tauschen. SOLL ist teilweise Ticketbestand, teilweise Kapazitätswert.
+## Anhang 2 (S. 32) – Hebel-Arithmetik
 
-**Visual:** Zwei Scope-Karten, darunter das Nennerdiagramm «Gesamt-IST → VIP-Abzug → technisches Public-Feld». Offenen historischen Feldabgleich markieren; keinen festen VIP-Abzug erfinden.
+Rechenbausteine wie Folie 17; Formeln `ΔU_KF = ΣPublic × ΔKF`, `ΔU_NoShow = Spiele × ØSOLL × ΔQuote × KF × φ`. 20 % Clubbeteiligung nur als unbestätigte Annahme, separat. **Sticker-Update:** keine Wertänderung.
 
-**Quelle / Worksheet:** T `saison_kpi.csv`, Zeilen `2025/26,SL` und `2025/26,SL+Cup+UEFA`; P `A5_Saison_KPI`; M §4; K §1.
+## Anhang 3 (S. 33) – Vorbehalt Bonszählung
 
-**Sprechabsicht:** Rückfragen zu vermeintlichen Zahlenwidersprüchen schnell und ohne Diskussion über unterschiedliche Rechenstände beantworten.
+Inhalt wie Vorlage. **Sticker-Update:** «Sensitivitätsprüfung noch offen» ersetzen durch: «Gegenrechnung ohne 2023/24 für die Kontextmodelle gemacht – Anstoss-Effekte stabil (z.B. Ø Bon Sonntagnachmittag −8.3 % mit, −8.5 % ohne 2023/24). Trends über 2023/24 bleiben vorläufig.» Quelle V `effekte.csv`.
 
-**Grenzen:** Die Nachkommastellen sind gespeicherte Rechenwerte, keine Aussage über perfekte Quellmessung. Keine rückwirkende Nennerfreigabe durch Partnerantwort.
+## Anhang 4 (S. 34) – Modellgüte
 
-**Übergang:** «Auf dieser definierten Basis lassen sich isolierte Szenariowerte lesen.»
-
-## Backup B2 – Hebel-Arithmetik: Grössenordnung, nicht Potenzialzusage
-
-**Claim:** «Ein Rechenbaustein zeigt die Sensitivität des Umsatzes, nicht den erreichbaren Massnahmeneffekt.»
-
-**Label:** Szenario / isolierter Rechenwert.
-
-**Exakte Übernahme aus W – Basis Meisterschaft 2025/26, 19 Spiele, Caterer-Umsatz exkl. MwSt.:**
-
-| Isolierte Änderung | Zusätzlicher Umsatz je Saison, CHF | Bedingung |
-|---|---:|---|
-| +CHF 1 KF | 261'924 | Public-Anwesende unverändert |
-| +CHF 1 Ø Bon | 243'989 | Bonszahl unverändert; Bonzählung vorläufig |
-| +1 % Bonsrate | 37'995 | Ø Bon und Anwesenheit unverändert |
-| −1 Pp. No-Show, φ = 0.6 | 29'299 | Zusätzlich Anwesende konsumieren 60 % des Referenz-KF |
-| −1 Pp. No-Show, φ = 0.8 | 39'066 | Zusätzlich Anwesende konsumieren 80 % des Referenz-KF |
-| −1 Pp. No-Show, φ = 1.0 | 48'832 | Zusätzlich Anwesende konsumieren wie der Referenzdurchschnitt |
-
-`ΔU_KF = ΣPublic × ΔKF`
-
-`ΔU_NoShow = Spiele × ØSOLL × ΔQuote × KF × φ`
-
-φ ist eine **gesetzte Konsumannahme**, kein gemessener Aktivierungserfolg, keine Clubbeteiligung und keine Wahrscheinlichkeit. Bei No-Show-Rechnungen muss die Behandlung von Public versus Gesamtanwesenheit zusätzlich fachlich abgesichert werden; die Tabelle übernimmt nur die bestehende Quellenarithmetik.
-
-**Optional, nicht als Standardfolie:** Eine Clubbeteiligung von **20 %** ist **unbestätigte Szenarioannahme**. Nur getrennt mit Formel zeigen: `zusätzlicher Cluberlös = zusätzlich beteiligungsfähiger Catering-Umsatz × 0.20`. Satz, MwSt.-Basis und Geltungsbereich offen. Keine zusätzlichen Club-CHF-Werte erfinden und keinen DB daraus ableiten.
-
-**Visual:** Drei getrennte Rechenkarten «KF», «Bon/Frequenz», «Anwesenheit mit φ». Gross «Nicht addieren». Keinen Gesamtpotenzialbalken bilden.
-
-**Quelle / Worksheet:** W `R1_Faustwerte`, Filter `basis = 2025/26`, Zeilen `kf_chf`, `bon_chf`, `frequenz_pct`, `noshow_pp`; I «Rechengrundlage»; K §2 für die optionale Beteiligungsannahme.
-
-**Sprechabsicht:** «Die Hebel helfen, Ideen auf eine sinnvolle Grössenordnung zu prüfen. Die erreichbare Veränderung ist noch nicht nachgewiesen.»
-
-**Grenzen:** Keine Hochrechnung aus Diagnose-Residualen. Abhängige Hebel überlappen. Historische Bonzahlen nicht als stabil vollständig bestätigen. Keine Beteiligung auf falsche Umsatzbasis anwenden.
-
-**Übergang:** «Die Sicherheit der Interpretation hängt auch von Erfassungsregeln und Modellgrenzen ab.»
-
-## Backup B3 – Bonszählung: Was bestätigt ist und was nicht
-
-**Claim:** «Die Umsatzidentität kann stimmen, obwohl die historische Transaktionszählung nicht vergleichbar ist.»
-
-**Label:** Fachlicher Qualitätsvorbehalt, keine neue Berechnung.
-
-**Inhalt:**
-- Partnerantwort: Transaktionen sollen die im Umsatz enthaltenen Zahlungswege umfassen.
-- Historische Einschränkung: Kassensystemwechsel zur Saison **2023/24**; Gutscheine bis Ende **2023** nicht als Transaktionen gebucht, erst ab **Januar 2024** systemseitig möglich und zunächst nicht reibungslos.
-- Der Beginn stabil vollständiger Bonzählung sowie historische Just-Eat-Bonabdeckung sind nicht bestätigt.
-- Mechanik: Bei enthaltenem Umsatz, aber fehlenden Bons, fällt die ausgewiesene Bonsrate zu tief und der Durchschnittsbon zu hoch aus. Das Produkt kann trotzdem denselben KF ergeben.
-- Konsequenz: Zerlegung, Frequenz-/Bon-Trends und darauf gestützte Diagnosen nur vorläufig. Die in K empfohlene Sensitivitätsprüfung mit Ausschluss der Übergangssaison ist **nicht durchgeführt**. Keine bereinigten Ersatzwerte vorhanden.
-
-**Visual:** Waage oder Gegenpfeile «Bonsrate ↓ / Ø Bon ↑», darunter «Produkt kann gleich bleiben». Kein Prozentwert zum geschätzten Fehler, da unbekannt.
-
-**Quelle / Worksheet:** K §§1 und 3. Betroffene historische Ausgaben: P `C1_KF_Zerlegung`, `C2_KF_Korrelationen`, `A5_Saison_KPI`; W `K1_KF_Entwicklung`.
-
-**Sprechabsicht:** «Wir verwerfen nicht alle Umsatzinformationen. Wir trennen aber Umsatzkennzahlen von einer möglicherweise instabilen Transaktionszählung.»
-
-**Grenzen:** Ab 2024/25 ist eine mögliche Prüfstichprobe, keine bestätigte fehlerfreie Periode. Ein kleiner Gutschein-/Unverbucht-Umsatzanteil beweist keine kleine Transaktionsverzerrung. Keine Umrechnung Umsatzanteil→Bonfehler ohne Daten.
-
-**Übergang:** «Unabhängig davon müssen auch die Kontextmodelle als Modelle und nicht als Wirkungsbeweis gelesen werden.»
-
-## Backup B4 – Modellgüte und Unsicherheit richtig erklären
-
-**Claim:** «Kontext verbessert den Vergleich – er erklärt nicht alle Unterschiede und identifiziert keine Interventionseffekte.»
-
-**Label:** Modell / Validierung.
-
-**Exakte Werte:**
-
-| Zielgrösse | Spiele | Erklärte saisonbereinigte Streuung | Verbesserung im LOSO-Test gegen Saisonmittel |
+| Zielgrösse | Spiele | Erklärte Streuung innerhalb Saison | Fehlerreduktion ausgelassene Saison |
 |---|---:|---:|---:|
-| Anwesenheitsquote | 76 | 42.4 % | 15.9 % geringerer RMSE |
-| KF exkl. MwSt. | 76 | 33.3 % | 7.2 % geringerer RMSE |
+| Anwesenheitsquote | 76 | 62 % (Run 3: 42 %) | 29 % |
+| KF exkl. MwSt. | 76 | **82 %** (Run 3: 33 %) | 53 % |
+| Bons je Anwesendem | 60 | 50 % | 18 % |
+| Ø Bon | 60 | 71 % | 39 % |
 
-LOSO = jeweils eine Saison aus dem Training lassen. Modelle mit Saison-Effekten und vorab festgelegten Kontextvariablen: Top-Gegner, Werktag, Abendspiel, Anpfifftemperatur, Regen bei Anreise, Schulferien. Robuste Standardfehler; «belastbar» beruht in M zusätzlich auf Vorzeichenstabilität, nicht nur auf einem p-Wert.
+**Gegenproben (R):** Slot allein 64 %. Mit zufällig vertauschten Anstosszeiten (1000 Läufe) im Median 27 %, maximal 41 %. In jeder Saison hat der Sonntagnachmittag den tiefsten Ø KF.
+**Lesart (Sprechnotiz):** Die 82 % beziehen sich auf Unterschiede zwischen Spielen derselben Saison. Das heisst **nicht**, dass der Club nur 18 % beeinflusst: Clubmassnahmen verschieben das Niveau aller Spiele und erscheinen in dieser Kennzahl nicht.
 
-Erwartungsband in der Diagnose ist ein **80-%-Prognose-/Erwartungsband**, nicht das **95-%-Konfidenzintervall** eines einzelnen Kontexteffekts. «Nicht belastbar» ist kein Beweis für Wirkung null.
+**Sticker-Update:** Werte ersetzen; Modellaufbau «Saison + Anstoss-Slot, Top-Gegner, Temperatur, Regen, Ferien» statt «sechs Kontextvariablen». Diagramm G04 (Run 4).
 
-**Visual:** Zwei Güte-Karten mit getrennten Spalten «innerhalb Stichprobe» und «ausgelassene Saison». Kein Kreisdiagramm «erklärt / ungenutztes Potenzial»: der unerklärte Rest ist kein adressierbarer Umsatz.
+## Anhang 5 (S. 35) – Messbarkeit und Datenbedarf
 
-**Quelle / Worksheet:** M §§9–10; P `K2_Modellguete`, `K3_Sensitivitaet`, `K4_LOSO_Folds`; T `modellguete.csv`.
+Matrix wie Vorlage, Bezug auf **M1–M6**; Zeile ergänzen: «Bringt eine Abo-Obergrenze zusätzliche Anwesende? → Abo-Besuche je Spiel/Sektor und Nachfrage nach Einzeltickets in D → nicht behaupten: aktuelle Abo-No-Show-Quote je Sektor über alle Saisons.»
 
-**Sprechabsicht:** Das methodische Sicherheitsniveau erklären, ohne die Hauptstory mit Regressionsdetails zu überfrachten.
+## Anhang 6 (S. 36) – Teilstand 2026/27 und Randfelder
 
-**Grenzen:** Kleine saisonale Stichproben und mögliche unbeobachtete Faktoren. Modellgüte ist keine Kausalität. Bonsmodelle hier wegen zusätzlichem Zählvorbehalt nicht als Hauptnachweis aufnehmen.
+Meisterschaft 4 Spiele: KF 15.86 exkl. MwSt., No-Show 14.9 %; alle Pflichtspiele 7 Spiele: KF 16.90, No-Show 11.2 %. Keine Hochrechnung. **Sticker-Update:** Pfade auf Run 4.
 
-**Übergang:** «Für die nächste Stufe fehlen vor allem Messdaten, die eine Massnahme mit tatsächlichem Zusatzumsatz verbinden.»
+## Anhang 7 (S. 37) – Kontext-Effekt-Matrix
 
-## Backup B5 – Messbarkeit: Welche Information beantwortet welche Wirkungsfrage?
+Alle belastbaren Effekte aus T `kontext_effekt_matrix.csv` (Run 4: 35 Effekte, 5 Zielgrössen × 7 Merkmale). Slot-Effekte immer «gegenüber Samstag 17–19.59 Uhr». **Sticker-Update:** Tabelle neu aus Run 4; Hinweis «Werktag/Abendspiel ab 20 Uhr ersetzt durch Anstoss-Slot (D-048)».
 
-**Claim:** «Die entscheidenden Datenlücken betreffen Messbarkeit und Abgrenzung, nicht eine pauschale Forderung nach mehr Daten.»
+## Anhang 8 (S. 38) – Spielkontext-Tabelle v5
 
-**Label:** Datenbedarf / Testdesign, kein erneuter Versand alter Anfragen.
+Wie Vorlage. Ergänzen: Der Spielrechner leitet den Slot aus Wochentag und Anstosszeit ab; die Pflege der Tabelle hält ihn aktuell.
 
-**Konkreter Inhalt:**
+## Anhang 9–11 (S. 39–41)
 
-| Wirkungsfrage | Benötigte Information | Was aktuell nicht behauptet werden darf |
-|---|---|---|
-| Kommen Abo-Inhaber häufiger oder wird nur anders verkauft? | Aggregierte Besuche je Spiel/Sektor; angebotene und verkaufte Zweitmarktplätze; verfügbare Sektorkapazität | Exakte aktuelle Abo-No-Show-Quote über alle Saisons |
-| Erzeugt frühere Öffnung Mehrkonsum? | Tatsächliche Öffnungslogs; Umsatz je Kasse und Viertelstunde; Kasse→Stand→Sektor | Mehrumsatz aus zusätzlichen Verweilminuten |
-| Erzeugt mobiler Verkauf Zusatzumsatz? | Strukturierter Einsatzplan, Gesamtumsatz betroffener Kanäle, Vergleichsbereiche | Runner-Umsatz gleich inkrementeller Umsatz |
-| Passen Sortiment und Angebot? | Artikel je Spiel und dokumentierte Verfügbarkeit / Ausverkauft-Meldungen | Individuelle Präferenzen oder Artikelwirkung aus Saisonsummen |
-| Sind KPIs historisch vergleichbar? | Mapping Public-Feld, SOLL-Definition, konsistente Bons-/Zahlungswegzählung | Baseline sei bereits fachlich freigegeben |
+Wie Vorlage; Pfade auf Run 4. Anhang 9: Qualitätssicherung um Permutationstest und Prüfung an ausgelassenen Saisons ergänzen.
 
-**Visual:** Eine Frage→Messgrösse→vermeidbarer Fehlschluss-Matrix. Keine alten personenbezogenen Zuständigkeiten oder pauschalen Startblocker-Listen übernehmen.
+## Anhang 12 (S. 42) – Ausgangsideen im Daten-Check
 
-**Quelle / Worksheet:** M §§2, 13, 15; I «Datenanfragen» / W `04_Datenanfragen`; K §§1–3. Die bereits beantwortete exkl.-MwSt.-Grunddefinition nicht erneut als völlig offen präsentieren; offen ist ihre historische Feldumsetzung.
+Wie Vorlage. **Sticker-Update:** Quelle neutral «Ideen-Grundlage, 12 Ausgangsideen im Daten-Check» (ohne Personenbezug). Ergänzen, dass die Ideen Herkunft der Felder sind (Folie 16).
 
-**Sprechabsicht:** «Wir können Ideen jetzt konkretisieren. Für einen belastbaren Wirkungstest muss aber klar sein, welcher Messschritt die jeweilige Unsicherheit beseitigt.»
+## Anhang 13–14 (S. 43–44)
 
-**Grenzen:** Keine implizite Forderung nach Kosten-/Margendaten als Voraussetzung für jede Massnahme: Phase 2 bewertet primär Top-line. Cluberlös separat abgrenzen. Datenbedarf ist keine Zusage verfügbarer Lieferungen.
+Offene Klärungspunkte: um «Bedeutung des Zutrittsfelds ‹Coding› (Abo/Einzel?)» und «Sponsorentickets im Inhouse-Kanal» ergänzen. Glossar: «Anstoss-Slot» und «Spielrechner» ergänzen.
 
-**Übergang:** «Ein abschliessender Teilstand- und Scope-Check schützt vor missverständlichen Vergleichsfolien.»
+## Anhang 15a–f (ersetzt Folien 26–28 und Anhang 15) – Steckbriefe und Rechenwege M1–M6
 
-## Backup B6 – Teilstand und Randfelder nicht mit Vollsaisons vermischen
+Gleiche Struktur je Massnahme: Mechanismus · Befund · Pilot und KPI · Voraussetzung · Rechenweg. **Rechenwege nur mit offengelegter Annahme; die Annahmen (tief/hoch) legt das Team fest.** Keine Gesamtsumme, Cluberlös nur separat.
 
-**Claim:** «Aktuelle Teilwerte und zusätzliche Anlässe gehören in getrennte Analysefenster.»
+| | Basis (Run 4, 2025/26 Meisterschaft) | Rechenweg | Beispiel mit offengelegter Annahme |
+|---|---|---|---|
+| **M1** Zweitmarkt | 60'942 SOLL−IST; 5'716 Weiterverkäufe | −1 Pp. No-Show ≈ CHF 29k–49k je Saison (φ 0.6–1.0) | Annahme Team: x Pp. weniger No-Show → x × 29k–49k |
+| **M2** Kontingente | Inhouse ≥10 Tickets: No-Show 24–29 % (2021/22–22/23) | wie M1, nur Anteil der Kontingente | erst aktuelle Quote nach Tarif/Kanal prüfen |
+| **M3** Abo-Obergrenze | D: Ø 3'614 Abos je Spiel, Abo-Anwesenheit 71–74 % (Näherung 2026/27, 4 Spiele); Einzeltickets 91–97 % genutzt; Ø Abo-Preis D CHF 304 | je 100 Abos, die als Einzeltickets verkauft werden: zusätzliche Anwesende je Spiel ≈ 100 × (Einzel- minus Abo-Nutzung) = **17–26**; × 19 Spiele × KF 14.51 × φ | **≈ CHF 2'800–7'100 Catering-Umsatz je Saison je 100 Abos** (φ 0.6–1.0). Nur bei genügend Nachfrage nach Einzeltickets in D. Ticketerlös (Abo vs. Einzel) und Fanakzeptanz separat bewerten |
+| **M4** Toröffnung | Ankunft +22.6 min (D); Konsumwirkung offen | +CHF 1 KF ≈ CHF 262k je Saison, nur wenn der Pilot einen KF-Effekt zeigt | kein Beispiel ohne Pilotdaten |
+| **M5** Angebot nach Slot | Samstag ab 20 Uhr Food −14.9 %; Sonntagnachmittag Alkohol −26.4 % | +CHF 1 Ø Bon ≈ CHF 244k je Saison; ein Slot betrifft nur einen Teil der Spiele (Anteil × Baustein) | Annahme Team: Spielanteil und KF-Hebel je Slot |
+| **M6** Wetter-Playbook | Kiesplatz +8.1 % je +5 °C; Regen −16.8 % | eher Kosten/Verfügbarkeit als Umsatz; Wirkung über T−7-Planung | keine CHF-Hebelzahl (Wetter extern) |
 
-**Label:** Deskriptiv / Scope-Hinweis.
-
-**Exakter Teilstand 2026/27 bis 12.09.2026:**
-
-| Grundgesamtheit | Spiele | KF exkl. MwSt. | Gewichtete No-Show-Quote |
-|---|---:|---:|---:|
-| Meisterschaft | 4 | 15.86 | 14.9 % |
-| Alle Herren-Pflichtspiele | 7 | 16.90 | 11.2 % |
-
-Darunter: «Sommer-/Frühherbstteilstand; anderer Wettbewerbsmix. Nicht gegen Vollsaisons als bereinigte Verbesserung interpretieren.» Keine volle Saison extrapolieren.
-
-**Randfelder ohne zusätzliche Potenzialzahl:** Erfolgsmuster sind eine Quelle für operative Checklisten. Testspiele und Events bleiben explorativ; Event-Zuschauerzahlen sind teilweise geschätzt oder fehlen. Frauen- und Länderspiele nicht in den Kernscope aufnehmen. Merchandise wurde nicht geliefert.
-
-**Visual:** Abgetrennter Teilstand-Kasten, keine fortlaufende Trendlinie mit den Vollsaisons. Randfelder als gestrichelter Rahmen ausserhalb des Haupttreiberbaums.
-
-**Quelle / Worksheet:** T `saison_kpi.csv`, Zeilen `2026/27,SL` und `2026/27,SL+Cup+UEFA`; P `A5_Saison_KPI`; M §§1–2 und 13; I Felder 8–9; W `F1_Randfelder_Kategorien`.
-
-**Sprechabsicht:** Den naheliegenden, aber unzulässigen Eindruck einer schon belegten aktuellen Trendwende verhindern.
-
-**Grenzen:** Keine Aussage zu Saisonende, Wirkung einer neuen Massnahme oder zusätzlichem Cluberlös. Randfelder nicht zur Baseline addieren.
-
-**Übergang:** Zurück zur Schlussfrage der Kernfolie 14: Welche Testkandidaten sind fachlich und messtechnisch bereit für die Konkretisierung?
+**Lesart M3:** Für den Catering-Umsatz ist die Abo-Obergrenze eher klein. Ihr Wert liegt bei Anwesenheit und Stimmung (volle Kurve) und beim Ticketing. Abgeleitet aus W `N7_Tribuene_2627` und P `B10_Abo_Snapshot`; Näherung aus 4 Sommerspielen, deshalb Bandbreite.
 
 ---
 
-# Produktions- und Prüfnotizen für die Zusammenstellung
+# Produktions- und Prüfnotizen
 
-## Was in den ersten Entwurf gehört – und was nicht
+**Für Folienwerkzeuge / Claude Design:** Nur den Ordner `Deliverables/` verwenden, nicht das ganze Repository. Die Spielrechner-Datei mit echten Werten gehört nicht dazu. Zahlen aus diesem Leitfaden oder dem Bericht übernehmen und nicht neu rechnen lassen.
 
-**Übernehmen:** Aussageüberschriften, eindeutig beschriftete Zahlenkarten, klar getrennte Evidenzarten, Quellenfuss mit Worksheet und Filter, je Folie ein Erkenntnisschritt. Bei Platzmangel Einschränkungen nicht löschen, sondern Detailtabellen ins Backup verschieben.
+**Nicht übernehmen:** interne Personenvergleiche, Rechenstand-Debatten als Story, kausale Umsatzversprechen, Gesamtpotenzial aus Residuen oder überlappenden Hebeln, DB als Hauptzielgrösse, unbestätigte Clubbeteiligung als Fakt, Run-3-Werte zu Abendspiel, Diagnosezählung, mobilem Verkauf oder T−7.
 
-**Nicht übernehmen:** interne Personenvergleiche, alte Abstimmungsaufträge, Rechenstand-Debatten als Story, historische Anfragen im Wortlaut, fertige Teampriorisierung, kausale Umsatzversprechen, Gesamtpotenzial aus Residualen oder überlappenden Hebeln, DB als Hauptzielgrösse, unbestätigte Clubbeteiligung als Fakt.
-
-**Grafiknutzung:** Bestehende Diagramme sind Inspiration, kein automatischer Freigabestempel. Vor dem Einbau Labels, Brutto-/Nettobasis, Stichprobe und Bonsvorbehalt prüfen. Dieser Leitfaden enthält keine freigegebenen fertigen Grafiken und setzt keine neue Analyse voraus.
-
-## Zahlen- und Quellencheck dieses Leitfadens
-
-Die Zahlen wurden gegen die **bestehenden** kanonischen Markdown-Berichte, CSV-Exports und gespeicherten Workbookwerte gelesen; es wurde **keine Analyse neu gerechnet**, kein Modell verändert und keine Baseline freigegeben. Gestaltungsnummern, Folienanzahl und Testvorschläge sind redaktionelle Vorgaben, keine empirischen Kennzahlen.
+## Zahlen- und Quellencheck (05.11.2026)
 
 | Prüfbereich | Referenz / Check |
 |---|---|
-| Vollsaison-Baseline | M §5 mit P `A5_Saison_KPI` und T `saison_kpi.csv`, Wettbewerb `SL`, abgeglichen |
-| Coverage | M §2 mit P `05_Abdeckung` und T `abdeckung.csv`, Totalzeile, abgeglichen |
-| Public-Basis und Referenz-KPIs | W `R3_Basis_Saison` mit P/T Saison-KPI, 2025/26 SL, abgeglichen |
-| Kontexteffekte | M §9 mit P `K1_Kontext_Effekt_Matrix`; Einheiten und Konfidenzniveau beibehalten |
-| Diagnose | M §10 / P `K6_Diagnosekarte`; Zählung mit W `D1_Ausreisser_Zaehlung` abgeglichen; keine CHF-Summe gebildet |
-| SOLL–IST und Zweitmarkt | W `N1`, `N3`, `N5`; gepooltes Vorlauftiming ausdrücklich nicht nur 2025/26 zugeschrieben |
-| Gruppensegmente | W `N9_Einzel_NoShow_Segmente`; Kanal, bezahlt/gratis und Bestellgrösse explizit erhalten |
-| Ankunft | W `Z1_Verweilzeit_Eingang` und P `D9_Toroeffnung_DiD`; Mittel-/Medianunterschied kenntlich |
-| Mobiler Verkauf | W `K11_Mobiler_Verkauf_Effekt`; Differenz-KI aus derselben Workbookzeile, nicht mit anderer Bootstrap-Ausgabe vermischt |
-| Artikel-/Wetterzahlen | W `K2`, `K8`, `K14`; einheitliche Artikel-Bruttobasis und Proxy kenntlich |
-| T−7-Prognose | W `A6_Fruehindikator`; 54 Prognosefälle von 44 Bandfällen unterschieden |
-| Szenarien | W `R1_Faustwerte`, nur Basis 2025/26; keine Neuszenarien oder Hebelsumme |
-| Partnerergänzung | K; exkl. MwSt./Public ohne VIP bestätigt, Feldmapping und stabile historische Bons weiter offen |
-| Teilstand | T Saison-KPI, 2026/27 SL versus alle Pflichtspiele; keine Vollsaisonvergleichbarkeit behauptet |
+| Baseline, Abdeckung, Treiberbaum | T `saison_kpi.csv`, `abdeckung.csv`; W `R3_Basis_Saison`; identisch mit Run 3 |
+| Kontexteffekte, Modellgüte | T `kontext_effekt_matrix.csv`, `modellguete.csv` (Run 4); Gegenproben R |
+| CHF-Baustein Slot | V `chf_baustein.csv` (Kontext, kein Potenzial) |
+| Diagnose | T `diagnosekarte.csv`; W `D1_Ausreisser_Zaehlung` (6 über / 8 unter, Zufall 7.6) |
+| Plätze, Zweitmarkt, Segmente, Tribünen | W `N1`, `N3`, `N5`, `N7`, `N9`; identisch mit Run 3 |
+| Mobiler Verkauf | W `K11_Mobiler_Verkauf_Effekt` (Run 4, Differenz −0.8 %) |
+| Sortiment/Wetter | W `K2`, `K8`, `K14` (Run 4, Slot-Effekte) |
+| T−7 | W `A6_Fruehindikator` (Run 4: 1'120 → 849, −24.2 %, Band 84.1 % von 44) |
+| Rechenbausteine | W `R1_Faustwerte`; identisch mit Run 3 |
+| Abo-Obergrenze M3 | W `N7_Tribuene_2627`, P `B10_Abo_Snapshot`; Rechenweg offengelegt, Szenario |
 
-### Bewusst entschärfte Quellen-Kurzformulierungen
-
-- «Leere bezahlte Plätze» wurde zu **SOLL–IST-Lücke** präzisiert, weil nicht jede SOLL-Position ein bezahltes Ticket ist.
-- Die Kurzform «70 % der Weiterverkäufe» hat hier den **gepoolten Zeitraum** des zugrunde liegenden Worksheets erhalten.
-- «KF-Wachstum kommt aus Kaufhäufigkeit» wurde nicht als freigegebener Verhaltensbefund auf die Hauptfolien übernommen: Historische Bonzählung ist offen.
-- «Kein Switching» wurde nicht als bewiesener Ausschluss jeder Verlagerung wiedergegeben; positive Residuenkorrelation allein reicht dafür nicht.
-- Die stärkeren Sortimentsformulierungen wurden auf **Proxy / Zusammenhang** begrenzt, statt einen kausalen Absatzauftrag daraus abzuleiten.
-- Prognose-Bandabdeckung wurde auf die tatsächlich **44 Bandfälle** und nicht auf sämtliche Validierungsfälle bezogen.
-
-**Verbleibend offen:** historischer Public-Nennerabgleich, stabile Transaktionszählung und noch nicht durchgeführte Bons-Sensitivität; formelle Baseline-Freigabe; messbares Pilotdesign; Beteiligungssatz und Vertrags-Umsatzbasis für allfällige separate Cluberlös-Szenarien. Diese Punkte werden nicht durch die Erstellung des Präsentationskonzepts erledigt.
+**Verbleibend offen:** 8 vs. 9 Felder (D-049a); Auswahl und Platzierung der Massnahmen (D-049b); Abo-Besuche je Sektor (D-049c); Sponsorentickets nach Tarif/Kanal (D-049d); historischer Public-Nennerabgleich; Beteiligungssatz Catering; formelle Baseline-Freigabe; öffentliches Benchmarking für den Research-Teil.

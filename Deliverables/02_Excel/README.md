@@ -4,9 +4,9 @@
 
 Die Arbeitsmappe verbindet Saison- und Spielbaseline, thematische Vertiefungen, bestehende Chancenfelder und einen separat gekennzeichneten Szenariorechner. Analytische Tabellen sind statische Ergebnisse des dokumentierten Datenstands; eine neue Datenlieferung aktualisiert diese Datei nicht automatisch. Die Referenzdefinitionen und Grenzen stehen in der Arbeitsmappe sowie in der Methodik-Lesehilfe.
 
-**Status:** vertraulicher Reviewentwurf. Keine formale Baseline-, Massnahmen- oder Veröffentlichungsfreigabe. Datenstichtag 12.09.2026; analytischer Ergebnisstand 14.10.2026.
+**Status:** vertraulicher Reviewentwurf. Keine formale Baseline-, Massnahmen- oder Veröffentlichungsfreigabe. Datenstichtag 12.09.2026; analytischer Ergebnisstand Run 4 vom 05.11.2026 (Kontextmodelle mit Anstoss-Slot).
 
-**Rechner:** Die bestehenden isolierten Hebel- und Szenarioformeln wurden beibehalten. Nur die vorgesehenen Eingaben ändern; beim Öffnen in Microsoft Excel automatische Neuberechnung zulassen. Vorbelegte Ergebnisse und Formeln wurden gegen die Ausgangsdatei geprüft. Es erfolgte kein Rechenlauf und kein visueller Test in Microsoft Excel oder LibreOffice in der Produktionsumgebung.
+**Rechner:** Die bestehenden isolierten Hebel- und Szenarioformeln wurden beibehalten. Nur die vorgesehenen Eingaben ändern; beim Öffnen in Microsoft Excel automatische Neuberechnung zulassen. Vorbelegte Ergebnisse und Formeln wurden gegen die Ausgangsdatei geprüft (05.11.2026: 10'992 Zahlenzellen exakt, 39 Formeln und Caches gleich, 9 definierte Namen). Es erfolgte kein Rechenlauf und kein visueller Test in Microsoft Excel oder LibreOffice in der Produktionsumgebung.
 
 **Interpretation:** Catering-Systemumsatz exkl. MwSt. ist nicht Cluberlös oder Deckungsbeitrag. Rechenbausteine sind keine nachgewiesenen Potenziale und dürfen nicht einfach addiert werden. Die 20-%-Beteiligungsannahme ist unbestätigt und wurde nicht auf die Baseline oder den bestehenden Rechner angewendet. Bons-Erfassungsänderungen 2023/24 und offene Nennerdefinitionen bleiben bei der Interpretation zu beachten.
 
