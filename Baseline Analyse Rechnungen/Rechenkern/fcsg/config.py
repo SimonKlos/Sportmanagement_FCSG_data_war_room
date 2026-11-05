@@ -92,7 +92,15 @@ setze_datenpfade()
 KERN_WETTBEWERBE = ("SL", "Cup", "UEFA")
 BASELINE_AB_SAISON = "2021/22"     # Spielebene: alle Kernquellen ab hier vorhanden
 MODELL_AB_SAISON = "2022/23"       # Kontextmodelle: Spielkontext-Tabelle ab hier (Auftrag Abschnitt D)
-TREND_AB_SAISON = "2018/19"        # Langfristiger Catering-Trend (Saisonebene)
+TREND_AB_SAISON = "2018/19"
+# Anstoss-Slot (D-046/D-048): ersetzt ab Run 4 «Werktag + Abendspiel ab 20 Uhr» in allen Kontextmodellen.
+# Referenz = Samstag 17–19.59 Uhr. Anstoss und Spielplan sind für den Club extern (Liga/TV, D-045).
+REFERENZ_SLOT = "Samstag 17–19.59 Uhr"
+SLOTS = {
+    "slot_sa_abend": "Samstag ab 20 Uhr",
+    "slot_nachmittag": "Nachmittag vor 17 Uhr (Sonntag/Feiertag)",
+    "slot_werktag_abend": "Werktagabend ab 17 Uhr",
+}        # Langfristiger Catering-Trend (Saisonebene)
 
 # Datenschutz: Segmentzellen mit weniger Tickets/Scans werden unterdrückt (Auftrag Abschnitt 8)
 MIN_ZELLE = 10

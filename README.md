@@ -33,7 +33,8 @@ Partnerantworten und neue Projektfestlegung: [Catering-Klärung und Baseline-Fol
 | Ergebnisse Run 1 zum Nachprüfen | ✅ | [Baseline Analyse Rechnungen/run1_simon_2026-10-11/](Baseline%20Analyse%20Rechnungen/run1_simon_2026-10-11/) |
 | **Ralfs Rechenkern übernommen = Zahlenbasis** (D-028) | ✅ | [Baseline Analyse Rechnungen/Rechenkern/README_REPO.md](Baseline%20Analyse%20Rechnungen/Rechenkern/README_REPO.md) |
 | Spielkontext-Tabelle **Version 5** (D-034), Neuberechnung beider Pipelines + Abgleich | ✅ Kernzahlen identisch | [Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14/](Baseline%20Analyse%20Rechnungen/run3_kontext-v5_2026-10-14/README.md) |
-| Kontextmodelle und Diagnosekarte (Ralf) | ✅ gerechnet, Freigabe offen | `Baseline Analyse Rechnungen/run3_…/ralf_kern_phase1/` |
+| Kontextmodelle und Diagnosekarte | ✅ gerechnet, Freigabe offen | `Baseline Analyse Rechnungen/run4_komplett_2026-11-05/kern_phase1/` |
+| **Run 4 komplett: Anstoss-Slot in allen Modellen = Zahlenbasis** (D-048) | ✅ 05.11.2026 | [Baseline Analyse Rechnungen/run4_komplett_2026-11-05/](Baseline%20Analyse%20Rechnungen/run4_komplett_2026-11-05/README.md) |
 | Vorschlag nächste Schritte Phase 1 → Phase 2 | 💬 zur Diskussion | [Quellen und interne Dokumentation/team/2026-10-14_vorschlag_naechste_schritte.md](Quellen%20und%20interne%20Dokumentation/team/2026-10-14_vorschlag_naechste_schritte.md) |
 | Deckungsbeitrag | ⏳ Kostendaten fehlen (D-003/D-029) | [Quellen und interne Dokumentation/decisions.md](Quellen%20und%20interne%20Dokumentation/decisions.md) |
 
@@ -41,7 +42,7 @@ Partnerantworten und neue Projektfestlegung: [Catering-Klärung und Baseline-Fol
 
 | Ich will … | Dann … | Rohdaten nötig? |
 |---|---|---|
-| **verstehen, was rauskam** | [Run-3-README](Baseline%20Analyse%20Rechnungen/run3_kontext-v5_2026-10-14/README.md), dann Ralfs `Methodennotiz_Phase1.md` (Run 3) und die [Vorschläge](Quellen%20und%20interne%20Dokumentation/team/2026-10-14_vorschlag_naechste_schritte.md); Simons erster Bericht: [Run 1](Quellen%20und%20interne%20Dokumentation/analysis/01_baseline_erste_erkenntnisse.md) | nein |
+| **verstehen, was rauskam** | [Run-4-README](Baseline%20Analyse%20Rechnungen/run4_komplett_2026-11-05/README.md), dann `Methodennotiz_Phase1.md` (Run 4) und die [Vorschläge](Quellen%20und%20interne%20Dokumentation/team/2026-10-14_vorschlag_naechste_schritte.md); Simons erster Bericht: [Run 1](Quellen%20und%20interne%20Dokumentation/analysis/01_baseline_erste_erkenntnisse.md) | nein |
 | **mit den Ergebnissen weiterrechnen** (neue Hypothesen auf Spielebene) | [Notebook](Baseline%20Analyse%20Rechnungen/Notebooks_Archiv/01_baseline_hypothesen.ipynb) öffnen, Kernel `.venv`. Ohne lokale Config läuft es automatisch im **Repo-Modus** auf `Baseline Analyse Rechnungen/run1_…/mart_match.csv` | nein |
 | **alles neu rechnen** (andere Definitionen, neue Aggregationen, neue Lieferung, H3 neu) | Rohdaten lokal ablegen, `config/project.local.example.yaml` → `config/project.local.yaml` kopieren, dann [§5](#5-befehle-und-wichtigste-funktionen) | **ja** |
 

@@ -62,8 +62,9 @@ Weitere Optionen:
 - `python run_all.py --ausgabe <Ordner>` – anderer Zielordner für Phase 1 (Standard: `Ergebnisse_Phase1` neben dem Codeordner)
 - `python run_all.py --ohne-ideen` – nur Phase 1
 - `python run_all.py --ideen-ausgabe <Ordner>` – anderer Zielordner für die Ideen-Grundlage
-- `python run4.py --daten <Ordner> --kontext <Datei> --ausgabe <Ordner>` – Run 4: Kontextmodelle mit Anstoss-Slot und
-  Sensitivitäten 2021/22 / ohne 2023/24 (D-046); Phase-1-Ergebnisse bleiben unverändert
+- `python run4.py --daten <Ordner> --kontext <Datei> --ausgabe <Ordner>` – Vergleich Slot-Modell vs. Run-3-Spezifikation und
+  Sensitivitäten 2021/22 / ohne 2023/24 (D-046). Seit D-048 nutzt auch `run_all.py` den Anstoss-Slot in allen Kontextmodellen
+  (`config.SLOTS`, `models.VARIABLEN`); die Run-3-Spezifikation bleibt als `models.VARIABLEN_RUN3` für Vergleiche.
 - `python -m pytest` – 48 Tests in rund 1.5 Minuten: Einheitentests (Parser, MwSt-Formeln, Bemerkungs-Codierung,
   Hebel-Formeln) und Integrationstests auf den echten Daten (Retos Kernzahlen, Validierungen, Datenschutz, Ideen-Stufe)
 

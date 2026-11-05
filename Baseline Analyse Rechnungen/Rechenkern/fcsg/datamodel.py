@@ -17,7 +17,7 @@ import pandas as pd
 
 from . import config
 from .log import befund, logger
-from .utils import (anpfiff_slot, anzeige_gegner, gegner_kanonisch, ist_leer, minuten, saison_index, saison_von,
+from .utils import (anpfiff_slot, anstoss_slot, anzeige_gegner, gegner_kanonisch, ist_leer, minuten, saison_index, saison_von,
                     wochentag)
 
 ANPFIFF_PRIORITAET = ["resultate", "kontext", "catering", "historie", "ticket_export"]
@@ -138,14 +138,17 @@ def baue_dim_match(r: Rohdaten) -> tuple[pd.DataFrame, pd.Timestamp]:
     dim["wochentag_typ"] = np.where(dim["wochenende"], "Wochenende (Sa/So)", "Wochentag (Mo–Fr)")
     dim["anpfiff_slot"] = dim["anpfiff"].map(anpfiff_slot)
     dim["abendspiel"] = dim["anpfiff"].map(minuten) >= 20 * 60
+    dim["anstoss_slot"] = [anstoss_slot(w, a) for w, a in zip(dim["wochentag"], dim["anpfiff"])]
+    for col, label in config.SLOTS.items():
+        dim[col] = np.where(dim["anstoss_slot"].isna(), np.nan, (dim["anstoss_slot"] == label).astype(float))
     dim["monat"] = dim["datum"].dt.month
     dim["winter"] = dim["monat"].isin([11, 12, 1, 2])
     dim["saison_idx"] = dim["saison"].map(saison_index)
     dim.loc[(dim["datum"] > datenstand) & (dim["spielstatus"] == "gespielt"), "spielstatus"] = "geplant"
     cols = ["match_id", "datum", "saison", "saison_idx", "wettbewerb", "wettbewerb_text", "spielstatus", "gegner",
             "gegner_anzeige", "top_gegner", "anpfiff", "anpfiff_ts", "anpfiff_quellen", "anpfiff_abweichungen",
-            "wochentag", "wochenende", "wochentag_typ", "anpfiff_slot", "abendspiel", "monat", "winter",
-            "spiel_text", "historie_zeile"]
+            "wochentag", "wochenende", "wochentag_typ", "anpfiff_slot", "abendspiel", "anstoss_slot", *config.SLOTS,
+            "monat", "winter", "spiel_text", "historie_zeile"]
     return dim[cols], datenstand
 
 

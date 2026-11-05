@@ -14,6 +14,7 @@ import matplotlib.ticker as mtick  # noqa: E402
 import numpy as np  # noqa: E402
 import pandas as pd  # noqa: E402
 
+from ... import config  # noqa: E402
 from ..fmt import chf_k, p, pct, z  # noqa: E402
 
 BLAU, ORANGE, AQUA = "#2a78d6", "#eb6834", "#1baf7a"
@@ -336,9 +337,11 @@ def alkohol_validierung(e, kz, ordner, liste):
 
 def alkohol_kontext(e, kz, ordner, liste):
     m = e["alkohol_effekt_matrix"]
-    vars_ = ["Abendspiel (Anpfiff ab 20 Uhr)", "Werktag (Mo–Fr) statt Wochenende", "Temperatur bei Anpfiff", "Top-Gegner (FCB, YB, FCZ)"]
-    namen = {"Abendspiel (Anpfiff ab 20 Uhr)": "Abendspiel (ab 20 Uhr)", "Werktag (Mo–Fr) statt Wochenende": "Werktag statt Wochenende",
+    ref = f" (vs. {config.REFERENZ_SLOT})"
+    namen = {config.SLOTS["slot_sa_abend"] + ref: "Samstag ab 20 Uhr*", config.SLOTS["slot_nachmittag"] + ref: "Sonntagnachmittag*",
+             config.SLOTS["slot_werktag_abend"] + ref: "Werktagabend*",
              "Temperatur bei Anpfiff": "+5 °C bei Anpfiff", "Top-Gegner (FCB, YB, FCZ)": "Top-Gegner (FCB/YB/FCZ)"}
+    vars_ = list(namen)
     reihen = [("KF Alkohol (exkl. MwSt)", "KF Alkohol", BLAU), ("KF Food & alkoholfrei (exkl. MwSt)", "KF Food & alkoholfrei", ORANGE)]
     fig, ax = plt.subplots(figsize=(8.0, 3.9))
     y = np.arange(len(vars_))[::-1]
@@ -355,8 +358,9 @@ def alkohol_kontext(e, kz, ordner, liste):
     _hbar_raster(ax)
     ax.legend(loc="lower right")
     ax.set_title("Was Alkohol- und Food-Umsatz je Anwesendem bewegt (Effekt mit 95 %-Intervall, 2023/24–2026/27)")
+    fig.text(0.01, 0.01, "* gegenüber Samstag 17–19.59 Uhr bei gleichem Kontext", fontsize=7, color=INK2)
     _speichern(fig, ordner, "abb_i13_alkohol_kontext.png", "Alkohol vs. Food nach Kontext",
-               f"Abends steigt der Alkohol-KF um {pct(kz['alk_abend_kf'], 0)}, Food & alkoholfrei sinkt um {pct(kz['food_abend_kf'], 0)}.",
+               f"Samstag ab 20 Uhr (vs. 17–19.59 Uhr): Alkohol-KF {pct(kz['alk_sa20_kf'], 0)}, Food & alkoholfrei {pct(kz['food_sa20_kf'], 0)}.",
                "Alkohol_Effekt_Matrix", liste)
 
 

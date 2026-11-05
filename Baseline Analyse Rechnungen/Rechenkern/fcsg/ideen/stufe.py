@@ -11,6 +11,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from .. import config
 from ..log import logger
 from . import absatz, ausreisser, basis, chancen, konsum, noshow, randfelder, reto_check, zeitfenster
 
@@ -162,12 +163,14 @@ def kennzahlen(e: dict[str, pd.DataFrame], res: dict) -> dict:
     kz["alk_val_maxdiff"] = av["differenz_pp"].abs().max()
     kz["alk_val_r"] = av["r_innerhalb_saison_mit_kiesplatz"].iloc[0]
     am = e["alkohol_effekt_matrix"].set_index(["zielgroesse", "variable"])
-    abend, werktag, temp, top = ("Abendspiel (Anpfiff ab 20 Uhr)", "Werktag (Mo–Fr) statt Wochenende", "Temperatur bei Anpfiff",
-                                 "Top-Gegner (FCB, YB, FCZ)")
-    for key, (ziel, var) in {"alk_abend_pp": ("Alkoholanteil am Umsatz (Normalsatz-Proxy)", abend),
-                             "alk_abend_kf": ("KF Alkohol (exkl. MwSt)", abend), "food_abend_kf": ("KF Food & alkoholfrei (exkl. MwSt)", abend),
-                             "alk_werktag_kf": ("KF Alkohol (exkl. MwSt)", werktag), "food_temp_kf": ("KF Food & alkoholfrei (exkl. MwSt)", temp),
-                             "food_top_kf": ("KF Food & alkoholfrei (exkl. MwSt)", top)}.items():
+    # Anstoss-Slot (D-048): Effekte jeweils gegenüber Samstag 17–19.59 Uhr
+    sa20, nachm, wt = (f"{config.SLOTS[c]} (vs. {config.REFERENZ_SLOT})" for c in ("slot_sa_abend", "slot_nachmittag", "slot_werktag_abend"))
+    temp, top = "Temperatur bei Anpfiff", "Top-Gegner (FCB, YB, FCZ)"
+    alk, food, anteil = "KF Alkohol (exkl. MwSt)", "KF Food & alkoholfrei (exkl. MwSt)", "Alkoholanteil am Umsatz (Normalsatz-Proxy)"
+    for key, (ziel, var) in {"alk_sa20_pp": (anteil, sa20), "alk_sa20_kf": (alk, sa20), "food_sa20_kf": (food, sa20),
+                             "alk_nachm_kf": (alk, nachm), "food_nachm_kf": (food, nachm),
+                             "alk_wt_kf": (alk, wt), "food_wt_kf": (food, wt),
+                             "food_temp_kf": (food, temp), "food_top_kf": (food, top)}.items():
         kz[key] = am.loc[(ziel, var), "effekt"] if (ziel, var) in am.index else np.nan
         kz[key + "_urteil"] = am.loc[(ziel, var), "beurteilung"] if (ziel, var) in am.index else ""
     dk = e["durchsatz_knick"]
@@ -190,7 +193,8 @@ def kennzahlen(e: dict[str, pd.DataFrame], res: dict) -> dict:
     kz["zw_pickup"] = zw27.get("Pick Up (App)", np.nan)
     kw = e["kiesplatz_wetter"].set_index(["zielgroesse", "variable"])["effekt"]
     kz["kies_temp"] = kw.get(("Kiesplatz CHF je Anwesendem (brutto)", "+5 °C"))
-    kz["kies_abend"] = kw.get(("Kiesplatz CHF je Anwesendem (brutto)", "Abendspiel"))
+    kz["kies_nachm"] = kw.get(("Kiesplatz CHF je Anwesendem (brutto)", nachm))
+    kz["kies_wt"] = kw.get(("Kiesplatz CHF je Anwesendem (brutto)", wt))
     kz["stadion_temp"] = kw.get(("Stadion (ohne Kiesplatz) CHF je Anwesendem", "+5 °C"))
     kz["kies_r_resid"] = e["kiesplatz_wetter"]["residuen_korrelation_kies_stadion"].iloc[0]
     kj = e["kiesplatz_je_spiel_ideen"]
@@ -227,13 +231,18 @@ def kennzahlen(e: dict[str, pd.DataFrame], res: dict) -> dict:
     kz["rf_event_anteil_min"], kz["rf_event_anteil_max"] = ev.min(), ev.max()
     kz["rf_test_anlaesse"] = int(rk.loc[rk["kategorie"] == "Testspiele", "anlaesse"].sum())
 
-    mx = res["kontext_effekt_matrix"].set_index(["zielgroesse", "variable"])["effekt"]
-    kz["ktx_abend_anw"] = mx.get(("Anwesenheitsquote (IST/SOLL)", abend))
-    kz["ktx_abend_kf"] = mx.get(("Kundenfranken exkl. MwSt", abend))
+    mx_alle = res["kontext_effekt_matrix"].set_index(["zielgroesse", "variable"])
+    mx = mx_alle["effekt"]
+    kz["ktx_nachm_kf"] = mx.get(("Kundenfranken exkl. MwSt", nachm))
+    kz["ktx_nachm_anw"] = mx.get(("Anwesenheitsquote (IST/SOLL)", nachm))
+    kz["ktx_wt_kf"] = mx.get(("Kundenfranken exkl. MwSt", wt))
+    kz["ktx_wt_anw"] = mx.get(("Anwesenheitsquote (IST/SOLL)", wt))
+    kz["ktx_sa20_kf"] = mx.get(("Kundenfranken exkl. MwSt", sa20))
     kz["ktx_temp_kf"] = mx.get(("Kundenfranken exkl. MwSt", temp))
     kz["ktx_temp_anw"] = mx.get(("Anwesenheitsquote (IST/SOLL)", temp))
     kz["ktx_top_anw"] = mx.get(("Anwesenheitsquote (IST/SOLL)", top))
-    kz["ktx_werktag_bon"] = mx.get(("Ø Bon exkl. MwSt", werktag))
+    kz["ktx_wt_bon"] = mx.get(("Ø Bon exkl. MwSt", wt))
+    kz["ktx_wt_bon_urteil"] = mx_alle["beurteilung"].get(("Ø Bon exkl. MwSt", wt), "")
     seg_t = res["eintritt_segmente"].set_index(["merkmal", "auspraegung"])["eintrittsquote"]
     kz["tarif_voll"] = seg_t.get(("Tarifgruppe", "Vollpreis"))
     kz["tarif_erm"] = seg_t.get(("Tarifgruppe", "Ermässigt"))

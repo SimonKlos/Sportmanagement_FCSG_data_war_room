@@ -27,7 +27,9 @@ ZIELE = {
     "bon_exkl": {"label": "Ø Bon exkl. MwSt", "transform": "log", "daten": "catering"},
     "anteil_ab_45_min": {"label": "Anteil Ankunft ≥ 45 min vor Anpfiff (optional)", "transform": "logit", "daten": "zutritt"},
 }
-VARIABLEN = {
+_ANSTOSS = "extern (Spielplan/Anstosszeit durch Liga/TV, D-045)"
+# Run-3-Spezifikation (Werktag + Abendspiel ab 20 Uhr) – nur noch für Vergleiche (run4.py, Sensitivität)
+VARIABLEN_RUN3 = {
     "top_gegner": {"label": "Top-Gegner (FCB, YB, FCZ)", "schritt": 1, "einheit": "ja vs. nein",
                    "einordnung": "extern (Gegner)"},
     "werktag": {"label": "Werktag (Mo–Fr) statt Wochenende", "schritt": 1, "einheit": "ja vs. nein",
@@ -42,6 +44,8 @@ VARIABLEN = {
                     "einordnung": "extern (Kalender)"},
 }
 NICHT_IM_MODELL = [
+    ("Werktag und Abendspiel ab 20 Uhr (Run 3)", "extern (Spielplan/Anstosszeit durch Liga/TV, D-045)", "nein (ersetzt)",
+     "Ab Run 4 durch den Anstoss-Slot ersetzt (D-048): Run 3 legte Samstag 18 Uhr und Sonntag 16.30 Uhr in dieselbe Kategorie."),
     ("Gegnerstärke (Punkte/Spiel vor dem Spiel)", "extern (sportlich)", "nur Sensitivität",
      "Alternative zu Top-Gegner; beide zusammen wären kollinear."),
     ("Form/Tabellenplatz FCSG", "extern (sportlich)", "nein", "Zu wenige Spiele für zusätzliche Variablen; Resultat erst nach dem Spiel bekannt."),
@@ -53,7 +57,25 @@ NICHT_IM_MODELL = [
      "Clubhebel; keine Messgrösse je Spiel bzw. Phase 2."),
     ("Ankunftszeit", "Vermittler einer Clubmassnahme", "nein", "Nicht pauschal externer Kontext (Auftrag 6.2); eigene Zielgrösse."),
 ]
+HAUPT_RUN3 = list(VARIABLEN_RUN3)
+# Ab Run 4 (D-048): Anstoss-Slot statt Werktag + Abendspiel; übrige Variablen unverändert
+VARIABLEN = {"top_gegner": VARIABLEN_RUN3["top_gegner"],
+             **{c: {"label": f"{lab} (vs. {config.REFERENZ_SLOT})", "schritt": 1, "einheit": f"vs. {config.REFERENZ_SLOT}",
+                    "einordnung": _ANSTOSS} for c, lab in config.SLOTS.items()},
+             **{c: VARIABLEN_RUN3[c] for c in ("temp_anpfiff_c", "regen_anreise", "schulferien")}}
 HAUPT = list(VARIABLEN)
+ZEIT_TERME = list(config.SLOTS)          # Anstoss-Kontrolle in Nebenmodellen (Ideen-Grundlage, Elastizität, Ankunft)
+ALLE_VARIABLEN = {**VARIABLEN_RUN3, **VARIABLEN}
+
+
+def zeit_formel() -> str:
+    """Formelteil der Anstoss-Kontrolle, z.B. für «y ~ x + C(saison) + top_gegner + <zeit_formel()>»."""
+    return " + ".join(ZEIT_TERME)
+
+
+def label(var: str) -> str:
+    """Anzeigename einer Kontextvariable (Run-4- oder Run-3-Spezifikation)."""
+    return ALLE_VARIABLEN[var]["label"]
 BAND_Z = 1.2816     # 80 %-Band
 
 
@@ -66,7 +88,7 @@ def modell_daten(k: pd.DataFrame, ctx: pd.DataFrame, ankunft: pd.DataFrame) -> p
     d = d.merge(ankunft[["match_id", "anteil_ab_45_min", "median_min_vor_anpfiff"]], on="match_id", how="left")
     d = d[d["spielstatus"] == "gespielt"].copy()
     d["werktag"] = ~d["wochenende"].astype(bool)
-    for c in ["top_gegner", "werktag", "abendspiel", "regen_anreise", "schulferien"]:
+    for c in ["top_gegner", "werktag", "abendspiel", "regen_anreise", "schulferien", *config.SLOTS]:
         d[c] = d[c].astype("Float64").astype(float)
     d["qualitaet_ok"] = d["ist_qualitaet"] != "IST geschätzt/Scanprobleme"
     d["hauptstichprobe"] = (d["wettbewerb"] == "SL") & (d["saison"] >= config.MODELL_AB_SAISON)
@@ -147,7 +169,7 @@ def lomo(x: pd.DataFrame, preds: list[str]) -> pd.Series:
 
 
 def _effekt(beta: float, se: float, ziel: str, var: str, pbar: float) -> tuple[float, float, float]:
-    s = VARIABLEN[var]["schritt"]
+    s = ALLE_VARIABLEN[var]["schritt"]
     if ZIELE[ziel]["transform"] == "log":
         f = lambda b: (np.exp(b * s) - 1) * 100
     else:

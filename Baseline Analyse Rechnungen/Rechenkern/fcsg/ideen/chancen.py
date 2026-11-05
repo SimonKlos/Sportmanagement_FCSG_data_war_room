@@ -163,30 +163,33 @@ def chancenfelder(kz: dict) -> list[Chancenfeld]:
             "abb_i09_kf_entwicklung.png", "Blätter KF_Entwicklung, Preis_Menge, Mobiler_Verkauf*, Durchsatz_Knick"),
         Chancenfeld(
             5, "Warenkorb und Sortiment nach Spieltyp", "Ø Bon und Sortimentsmix",
-            f"Abendspiele sind Getränkespiele: KF Alkohol {pct(kz['alk_abend_kf'], 0)}, KF Food & alkoholfrei {pct(kz['food_abend_kf'], 0)} "
-            "bei gleichem Kontext.",
+            f"Die Anstosszeit verschiebt den Warenkorb: Samstag ab 20 Uhr KF Alkohol {pct(kz['alk_sa20_kf'], 0)}, KF Food & alkoholfrei "
+            f"{pct(kz['food_sa20_kf'], 0)} gegenüber Samstag 17–19.59 Uhr bei gleichem Kontext.",
             [f"Neuer Spiel-Indikator: Alkoholanteil je Spiel aus dem MwSt-Mix der Kassen (validiert: ≤ {dez(kz['alk_val_maxdiff'], 1)} Pp. "
              f"Abweichung zur Artikelauswertung, r = {dez(kz['alk_val_r'])} mit dem Kiesplatz).",
-             f"Abendspiel: Alkoholanteil {pp(kz['alk_abend_pp'])}; Werktag: KF Alkohol {pct(kz['alk_werktag_kf'], 0)}; +5 °C: KF Food & "
-             f"alkoholfrei {pct(kz['food_temp_kf'])}; Top-Gegner: Food & alkoholfrei {pct(kz['food_top_kf'])}.",
+             f"Je gegenüber Samstag 17–19.59 Uhr: Sonntagnachmittag KF Alkohol {pct(kz['alk_nachm_kf'], 0)}, Food & alkoholfrei "
+             f"{pct(kz['food_nachm_kf'], 0)}; Werktagabend Alkohol {pct(kz['alk_wt_kf'], 0)}, Food & alkoholfrei {pct(kz['food_wt_kf'], 0)}; "
+             f"Alkoholanteil am Umsatz Samstag ab 20 Uhr {pp(kz['alk_sa20_pp'])}.",
+             f"+5 °C: KF Food & alkoholfrei {pct(kz['food_temp_kf'])}; Top-Gegner: Food & alkoholfrei {pct(kz['food_top_kf'])}.",
              f"Alkoholanteil am Umsatz sinkt ({p(kz['alk_2324'], 1)} → {p(kz['alk_2526'], 1)}, 23/24→25/26, einheitlich brutto); Food "
              f"{p(kz['food_2526'])}, alkoholfrei {p(kz['afrei_2526'])}.",
              f"Warenkorb je 100 Anwesende (25/26): {z(kz['wk_bier_total'])} Bier, {z(kz['wk_soft'])} Süssgetränke, {z(kz['wk_bratwurst'])} "
              f"Bratwürste, {z(kz['wk_nuggets'])} Nugget-Boxen, {z(kz['wk_mineral'])} Mineral, {z(kz['wk_punsch'])} Punsch.",
-             f"Werktags ist der Ø Bon {pct(kz['ktx_werktag_bon'])} tiefer (Phase 1, belastbar)."],
+             f"An Werktagabenden liegt der Ø Bon bei {pct(kz['ktx_wt_bon'])} gegenüber Samstag 17–19.59 Uhr (Phase 1, {kz['ktx_wt_bon_urteil']})."],
             "stark", "Proxy doppelt validiert; Effekte nach Phase-1-Regel belastbar (Intervall ohne 0, stabil über Saisons und Varianten).",
             "hoch", "Sortiment und Angebot je Spieltyp (ohne Preisänderung), Platzierung, Bundles aus bestehenden Preisen",
-            "Abendspiele (~30 %), Werktage, Kälte", "heute nutzbar; Artikel je Spiel würden die Proxy-Ebene ergänzen",
+            "Samstagsspiele ab 20 Uhr, Sonntagnachmittage, Werktagabende, Kälte", "heute nutzbar; Artikel je Spiel würden die Proxy-Ebene ergänzen",
             f"+CHF 1 Ø Bon ≈ {chf_k(kz['fw_bon_chf_10'])} je Saison; +CHF 1 KF ≈ {chf_k(kz['fw_kf_chf_10'])} je Saison (isoliert).",
             _lp(**{"Dynamic Pricing": "Preise fix vor Saison – Sortiment/Angebot statt Preis",
                    "Umsatz ≠ DB": "Margen je Kategorie unbekannt (Food vs. Getränke!)",
                    "Personensegmentierung": "Spieltyp-Ebene, keine Personen"}),
             "Artikel je Spiel (statt Saison), Einstandspreise/Marge je Kategorie, Beteiligungsmodell des Clubs.",
-            ["Wie könnten wir bei Abendspielen den Food-Umsatz zurückholen, wenn Fans offenbar vorher essen?",
+            ["Wie könnten wir bei Samstagsspielen ab 20 Uhr den Food-Umsatz zurückholen, wenn Fans offenbar vorher essen?",
+             "Was fehlt am Sonntagnachmittag, damit Fans ähnlich konsumieren wie an einem Samstag um 18 Uhr?",
              "Wie könnten wir den Trend zu Food und alkoholfreien Getränken in grössere Warenkörbe übersetzen?",
              "Was bräuchte ein Werktags-Fan, der spät und hungrig direkt von der Arbeit kommt?",
              "Welche Angebote passen zu kalten Spielen, an denen Food & alkoholfrei weniger läuft?"],
-            "Angebotstest an Abendspielen (z.B. 3 Spiele mit, 3 ohne); Messgrössen = KF Food & alkoholfrei (Proxy) und Ø Bon gegenüber "
+            "Angebotstest an Samstagsspielen ab 20 Uhr bzw. Sonntagnachmittagen (z.B. 3 Spiele mit, 3 ohne); Messgrössen = KF Food & alkoholfrei (Proxy) und Ø Bon gegenüber "
             "Kontexterwartung.",
             "abb_i13_alkohol_kontext.png", "Blätter Alkohol_*, Warenkorb_*, Preis_Menge",
             warnhinweis="Weiche Leitplanke: Ideen, die Alkoholkonsum steigern, brauchen Jugendschutz-, Sicherheits- und Bewilligungs-Check."),
@@ -215,7 +218,8 @@ def chancenfelder(kz: dict) -> list[Chancenfeld]:
             7, "Wetter und Kiesplatz", "Kontext × Ort (Kiesplatz)",
             f"+5 °C bringen dem Kiesplatz {pct(kz['kies_temp'], 0)} Umsatz je Anwesendem – deutlich mehr als im Stadion ({pct(kz['stadion_temp'])}).",
             [f"Kiesplatz = im Median {p(kz['kies_anteil_median'])} des Catering-Umsatzes je Spiel (im Total enthalten, nie addieren).",
-             f"Abendspiele: Kiesplatz {pct(kz['kies_abend'], 0)} je Anwesendem.",
+             f"Anstoss: Kiesplatz je Anwesendem am Sonntagnachmittag {pct(kz['kies_nachm'], 0)}, am Werktagabend {pct(kz['kies_wt'], 0)} "
+             "gegenüber Samstag 17–19.59 Uhr.",
              f"Kein «Switching»: Kiesplatz und Stadion schwanken gemeinsam (Residuen r = {dez(kz['kies_r_resid'])}). Schlechtes Wetter kostet "
              "draussen Umsatz, ohne dass er drinnen zurückkommt.",
              f"Im ganzen Stadion: +5 °C → KF {pct(kz['ktx_temp_kf'])}, Anwesenheit {pp(kz['ktx_temp_anw'])} (Phase 1)."],
@@ -318,9 +322,11 @@ def kernbefunde(kz: dict) -> pd.DataFrame:
         ("Kundenfranken", f"KF-Wachstum kommt aus der Kaufhäufigkeit ({pct(kz['kf_entw_freq'], 0)}), nicht aus Preisen",
          f"23/24→25/26: KF {pct(kz['kf_entw_kf'])}, Ø Bon {pct(kz['kf_entw_bon'])}, Preis je Einheit {pct(kz['pm_preis'], 1)}.",
          "Blätter KF_Entwicklung, Preis_Menge"),
-        ("Abendspiele", f"Abendspiele sind Getränkespiele: Alkohol-KF {pct(kz['alk_abend_kf'], 0)}, Food {pct(kz['food_abend_kf'], 0)}",
-         f"Neuer, validierter Spiel-Indikator (MwSt-Mix der Kassen): Alkoholanteil am Umsatz abends {pp(kz['alk_abend_pp'])} bei gleichem Kontext",
-         "Blatt Alkohol_Effekt_Matrix"),
+        ("Anstosszeit", f"Samstag 17–19.59 Uhr ist der stärkste Konsumtermin: KF Sonntagnachmittag {pct(kz['ktx_nachm_kf'], 0)}, "
+         f"Werktagabend {pct(kz['ktx_wt_kf'], 0)}, Samstag ab 20 Uhr {pct(kz['ktx_sa20_kf'], 0)}",
+         f"Bei gleichem Kontext; Samstag ab 20 Uhr kippt der Warenkorb zum Getränk (Alkohol-KF {pct(kz['alk_sa20_kf'], 0)}, Food "
+         f"{pct(kz['food_sa20_kf'], 0)}; validierter Spiel-Indikator aus dem MwSt-Mix der Kassen). Anstosszeit = Liga/TV (extern).",
+         "Blätter K1 (Phase 1), Alkohol_Effekt_Matrix"),
         ("Sortiment", f"Alkoholanteil sinkt: {p(kz['alk_2324'], 1)} → {p(kz['alk_2526'], 1)}",
          f"Einheitlich brutto gerechnet (Phase-1-Korrektur); Food {p(kz['food_2526'])}, alkoholfrei {p(kz['afrei_2526'])} am Umsatz 25/26.",
          "Blätter Warenkorb_Gruppen, C5"),

@@ -49,7 +49,8 @@ def ankunft_je_spiel(a: pd.DataFrame, k: pd.DataFrame) -> pd.DataFrame:
                   "anteil_chipkarte": float((g["kartentyp"] == "Chipkarte").mean()), "leser_aktiv": g["leser"].nunique()})
         rows.append(d)
     out = pd.DataFrame(rows).merge(k[["match_id", "datum", "saison", "wettbewerb", "gegner_anzeige", "anpfiff",
-                                      "wochentag", "anpfiff_slot", "abendspiel", "wochenende"]], on="match_id")
+                                      "wochentag", "anpfiff_slot", "abendspiel", "wochenende", "anstoss_slot",
+                                      *config.SLOTS]], on="match_id")
     out["anpfiff_plausibel"] = out["median_min_vor_anpfiff"].between(0, 120)
     for _, row in out[~out["anpfiff_plausibel"]].iterrows():
         befund("Zutritt", "hoch", f"{row['datum']:%d.%m.%Y}", f"Median der Ankunft {row['median_min_vor_anpfiff']:.0f} min vor "
@@ -110,9 +111,9 @@ def ankunft_konsum(je_spiel: pd.DataFrame, k: pd.DataFrame, ctx: pd.DataFrame) -
                         ("bon_exkl", "Ø Bon exkl. MwSt")]:
         d[f"ln_{ziel}"] = np.log(d[ziel])
         for spez, formel in [("nur Saisoneffekte", f"ln_{ziel} ~ frueh_10pp + C(saison)"),
-                             ("plus Kontext (Abend, Wochentag, Temperatur, Top-Gegner)",
-                              f"ln_{ziel} ~ frueh_10pp + C(saison) + abendspiel + wochenende + temp_anpfiff_c + top_gegner")]:
-            x = d.dropna(subset=["temp_anpfiff_c"]).astype({"abendspiel": float, "wochenende": float, "top_gegner": float})
+                             ("plus Kontext (Anstoss-Slot, Temperatur, Top-Gegner)",
+                              f"ln_{ziel} ~ frueh_10pp + C(saison) + " + " + ".join(config.SLOTS) + " + temp_anpfiff_c + top_gegner")]:
+            x = d.dropna(subset=["temp_anpfiff_c", *config.SLOTS]).astype({"top_gegner": float})
             fit = smf.ols(formel, data=x).fit(cov_type="HC3")
             b, se = fit.params["frueh_10pp"], fit.bse["frueh_10pp"]
             dm = x.assign(a=x["anteil_ab_45_min"] - x.groupby("saison")["anteil_ab_45_min"].transform("mean"),

@@ -1,5 +1,12 @@
 # Changelog
 
+## Run 4 komplett: Anstoss-Slot im ganzen Rechenkern – 05.11.2026
+- D-048 (Team, 03.11.): Der Anstoss-Slot (Referenz Samstag 17–19.59 Uhr) ersetzt «Werktag + Abendspiel ab 20 Uhr» in **allen** Kontextmodellen: Phase-1-Modelle und Diagnosekarte, Elastizität, Ankunft–Konsum, Durchsatz-Knick, Kiesplatz–Wetter, Promo, Gästeanteil, Frühindikator T-7. Zentrale Definition in `config.SLOTS`/`utils.anstoss_slot`; Dummies im Spielkalender (`dim_match`). Run-3-Spezifikation bleibt als `models.VARIABLEN_RUN3` (Vergleich in `run4.py`).
+- Textbausteine der Chancenfelder, Kernbefunde, Phase-2-Kandidaten, Methodennotiz, Datenwörterbuch und Grafik i13 auf die Slot-Effekte umgeschrieben (u.a. «Samstag ab 20 Uhr: Alkohol +6 %, Food −15 % gegenüber Samstag 17–19.59 Uhr» statt «Abendspiele sind Getränkespiele»).
+- Neuer Lauf `Baseline Analyse Rechnungen/run4_komplett_2026-11-05/` (`kern_phase1/`, `ideen_grundlage/`) = Zahlenbasis; Run 3 bleibt Archiv. Importtests 19/19, Ideen-QA 18/18, Testsuite 53/53 inkl. Integrationstests auf echten Daten; Excel zurückgelesen. Phase 1 reproduziert die Run-4-Voranalyse exakt; gegen den Run-3-Code auf derselben Lieferung ändern sich nur modellabhängige Werte.
+- Laufprotokoll: Eingabedateien werden jetzt auch über Ordner-Verknüpfungen erfasst (`run_all._laufinfo`, Test `tests/test_laufinfo.py`).
+- D-049: Storyline und Massnahmen-Darstellung aus dem Team-Call vom 03.11. (Wirkung × Aufwand-Matrix, rund 6 Massnahmen inkl. Abo-Obergrenze, KF-Initiativen als Research-Teil); offene Punkte dort.
+
 ## Run 4: Anstoss-Slot und Sensitivitäten – 02.11.2026
 - D-046: neues Modul `Rechenkern/fcsg/analysis/anstoss_slot.py` und Skript `Rechenkern/run4.py`; Kontextmodelle mit Anstoss-Slot (Referenz Samstag 17–19.59 Uhr) statt Werktag + Abendspiel, plus Sensitivitäten inkl. 2021/22 (Covid) und ohne 2023/24 (D-041). `models.py`/`run_all.py` unverändert; Run 3 bleibt Zahlenbasis.
 - Ergebnisse `Baseline Analyse Rechnungen/run4_anstoss-slot_2026-11-02/`: KF-Modell erklärt 82 % statt 33 % der saisonbereinigten Streuung; Sonntagnachmittag −15.7 % KF gegenüber Samstag 18 Uhr; Slot-Aussagen stabil in beiden Sensitivitäten.

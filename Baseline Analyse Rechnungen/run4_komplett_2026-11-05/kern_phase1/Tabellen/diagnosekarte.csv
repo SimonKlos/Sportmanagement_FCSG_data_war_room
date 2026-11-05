@@ -1,0 +1,502 @@
+﻿match_id,datum,saison,wettbewerb,gegner_anzeige,anpfiff,wochentag,public_netto,soll,ist,soll_ticketbasiert,ist_qualitaet,kf_exkl,band80_oben_anteil_ab_45_min,band80_oben_anwesenheitsquote,band80_oben_bon_exkl,band80_oben_bons_pro_anwesende,band80_oben_kf_exkl,band80_unten_anteil_ab_45_min,band80_unten_anwesenheitsquote,band80_unten_bon_exkl,band80_unten_bons_pro_anwesende,band80_unten_kf_exkl,beobachtet_anteil_ab_45_min,beobachtet_anwesenheitsquote,beobachtet_bon_exkl,beobachtet_bons_pro_anwesende,beobachtet_kf_exkl,erwartet_anteil_ab_45_min,erwartet_anwesenheitsquote,erwartet_bon_exkl,erwartet_bons_pro_anwesende,erwartet_kf_exkl,status_anteil_ab_45_min,status_anwesenheitsquote,status_bon_exkl,status_bons_pro_anwesende,status_kf_exkl,z_wert_anteil_ab_45_min,z_wert_anwesenheitsquote,z_wert_bon_exkl,z_wert_bons_pro_anwesende,z_wert_kf_exkl,stand_geschlossen,mobiler_verkauf_reduziert,personalmangel,technische_probleme,operativer_hinweis,aktion_gratis_gutschein,event_plattform,bemerkung_catering,bemerkung_historie,referenzluecke_konsum_chf,fehlende_anwesende_ref,chf_szenario_phi_0_6,mechanismen,einordnung_konsum,einordnung_anwesenheit
+20220723_SL,2022-07-23,2022/23,SL,FC Winterthur,20:30,Samstag,11727.0,15673.0,12247.0,True,IST aus Zählung,13.999982945339813,,0.8503606555536984,,,15.15454052142047,,0.7416153432278761,,,13.486549661268324,,0.7814075161105086,,,13.999982945339816,,0.8015335753456947,,,14.296239482319828,,im Erwartungsband,,,im Erwartungsband,,-0.4578864535723314,,,-0.46030109895335847,True,False,True,False,True,False,False,"zu wenig Personal, lange Wartezeiten, Probleme mit dem Bier
+
+Aussenstand Sektor C geschlossen 
+Bier 2 geschlossen
+Aquarium B Bar geschlossen",,3474.2004091646018,315.4357263930712,2649.656873912323,Stände geschlossen (Catering-Bemerkung); Personalmangel,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20220730_SL,2022-07-30,2022/23,SL,FC Zürich,18:00,Samstag,14197.0,17838.0,14717.0,True,IST aus Zählung,14.113597943227443,0.5216737417500744,0.8791701866656861,,,15.842088536539837,0.3931245748176304,0.7860947577300171,,,14.098422415662112,0.4549580525374777,0.8250364390626752,,,14.113597943227445,0.4566779419314536,0.8379522167886734,,,14.94484714322823,im Erwartungsband,im Erwartungsband,,,im Erwartungsband,-0.034115743336037216,-0.34606235390829665,,,-1.2579518967859535,True,False,False,False,True,False,False,"Aussenstand Sektor C geschlossen 
+Bier 2 geschlossen
+Bierrucksäcke im Einsatz",,11801.24489241115,230.3916430763553,1950.9930119155438,Stände geschlossen (Catering-Bemerkung),im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20220813_SL,2022-08-13,2022/23,SL,FC Luzern,20:30,Samstag,12683.0,16609.0,13205.0,True,IST aus Zählung,13.368397066939998,0.5281542579398917,0.8433396998254546,,,15.101386519018924,0.39934139744727876,0.7311055375294317,,,13.439246076440373,0.3932815356489945,0.7950508760310675,,,13.368397066939995,0.46313281162764913,0.7927799571439379,,,14.246095939749058,unter Erwartung,im Erwartungsband,,,unter Erwartung,-1.406226163692653,0.05208523824362888,,,-1.397788413461255,True,False,False,False,True,False,False,"Bier 2 geschlossen
+Bierrucksäcke im Einsatz
+Erstes Spiel neuer Gastronom Piazza d'Arena",,11131.854803837345,-37.71769179633557,-302.53504822912754,Stände geschlossen (Catering-Bemerkung),unter Erwartung – möglicher Clubhebel (operativer Hinweis dokumentiert) → Prüfkandidat Phase 2,im Erwartungsband
+20220904_SL,2022-09-04,2022/23,SL,BSC Young Boys,16:30,Sonntag,16575.0,19200.0,17251.0,False,IST aus Zählung,12.927849170437407,0.49274268698581714,0.9146003219585207,,,13.188927593872378,0.36586960295838816,0.843973286753975,,,11.73728274520853,0.39264740427531125,0.8984895833333333,,,12.927849170437407,0.4281251897625665,0.8838719997413994,,,12.441952108707175,im Erwartungsband,im Erwartungsband,,,im Erwartungsband,-0.7217703031166457,0.5663927126762915,,,0.8421064226477382,False,False,False,False,False,False,False,"Zusätzliche Stände:
+Sektor A: Buffet im Foyer
+Sektor B: 1x Schügazelt, BBQ S2
+Sektor C: 1x Schügazelt
+Sektor D: Bierwagen S2, BBW S1 in der Pause
+Kiesplatz: Bierwagen S1, BBQ S1, Getränke, Pommes, Fanshop Bar",ausverkauft,-8053.7437981785815,,,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20220910_SL,2022-09-10,2022/23,SL,FC Sion,18:00,Samstag,15152.0,18579.0,15755.0,False,IST aus Zählung,14.061877639915522,0.4164767973211263,0.8689036509233655,,,14.781525385312404,0.2977155990425937,0.7699888916060124,,,13.15459059260402,0.4496839117533222,0.848000430593681,,,14.06187763991552,0.3548639781336846,0.8248811015063311,,,13.944350640240229,über Erwartung,im Erwartungsband,,,im Erwartungsband,1.947340795016481,0.6350456425380552,,,0.18448974695968767,False,False,False,False,False,False,False,"Zusätzliche Stände:
+Sektor A: Buffet im Foyer
+Sektor B: 1x Schügazelt, BBQ S2
+Sektor C: 1x Schügazelt
+Sektor D: Bierwagen S2, BBW S1 in der Pause
+Kiesplatz: Bierwagen S1, BBQ S1, Getränke, Pommes, Fanshop Bar",ausverkauft (exkl. Gästesektor & Hospitality),-1780.7690990800195,,,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20221016_SL,2022-10-16,2022/23,SL,FC Lugano,14:15,Sonntag,13660.0,17059.0,14187.0,True,IST aus Zählung,11.876581259150806,0.46712150585497425,0.8778247843462373,,,13.171935508160544,0.3423925365423455,0.7839676484688649,,,11.722160900539123,0.38144624848008013,0.8316431209332317,,,11.876581259150804,0.4031932976424973,0.836233355582032,,,12.425922396272336,im Erwartungsband,im Erwartungsband,,,im Erwartungsband,-0.4489110948877552,-0.12438952954490104,,,-0.9939207344929735,False,False,False,False,False,False,False,"Stände Plattform / Kiesplatz:
+Sektor B: 1x Bierwagen (Kassen Z97+Z105), BBQ S2
+Sektor C: 1x Pommes Contrailer
+Sektor D: Bierwagen S1, BBQ S1 in der Pause
+Kiesplatz: Bierwagen (Kassen: Z103 + Z104), Getränke, Fanshop Bar (Z102 + Z101)",,7503.9999330801265,78.30481287388557,557.99608384758,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20221023_SL,2022-10-23,2022/23,SL,Servette FC,16:30,Sonntag,13625.0,16679.0,14252.0,True,IST aus Zählung,11.171313761467891,0.4634914987121315,0.8636640890969233,,,12.844522595499953,0.3391149723084736,0.7618793829392192,,,11.430784827467415,0.36419400855920114,0.854487679117453,,,11.17131376146789,0.3996874605751514,0.8182501080660912,,,12.117053024589074,im Erwartungsband,im Erwartungsband,,,unter Erwartung,-0.7402026244970151,0.9970768168053984,,,-1.7863146509167989,False,False,False,False,False,False,False,"Stände Plattform / Kiesplatz:
+Sektor B: BBQ S2
+Sektor C: 1x Pommes Contrailer
+Sektor D: Bierwagen S1, BBQ S1 in der Pause
+Kiesplatz: Bierwagen Bierhof S1, Getränke, Fanshop Bar
+
+Just Eat Test beim Stand C1",,12885.697460026146,-604.4064475656639,-4051.2084391261333,,unter Erwartung – ungeklärte Abweichung (kein dokumentierter Mechanismus),im Erwartungsband
+20221105_SL,2022-11-05,2022/23,SL,Grasshopper Club Zürich,18:00,Samstag,15098.0,18517.0,15710.0,True,IST aus Zählung,13.799758246125315,0.4309707678573673,0.8437210197521017,,,13.943318158133103,0.3102741655327619,0.7316731221743145,,,12.408640995530519,0.35143023934617634,0.8484095695847059,,,13.799758246125311,0.36856807557146176,0.7932541727061656,,,13.153616586731404,im Erwartungsband,über Erwartung,,,im Erwartungsband,-0.36603728470828173,1.4167001756620219,,,1.0541064421085546,False,False,False,False,False,False,False,"Stände Plattform / Kiesplatz:
+Sektor B: BBQ S2
+Sektor C: 1x BBQ Stand FH (Plattform-C Flex)
+Sektor D: Bierwagen S1, BBQ S1 in der Pause
+Kiesplatz: Bierwagen Bierhof S1, Getränke, Pommes, Fanshop Bar
+
+Just Eat Test beim Stand C1 / C3",,-9755.446773529204,-1021.3124839999311,-8456.319223769266,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),über Erwartung – ungeklärt (keine Bemerkung)
+20230122_SL,2023-01-22,2022/23,SL,FC Basel,16:30,Sonntag,15548.0,19200.0,16246.0,False,IST aus Zählung,10.53721057370723,0.47696083584727017,0.8709184716712877,,,11.641421078616245,0.3513368085572613,0.7731270001901078,,,10.360103183766975,0.3474523092369478,0.8461458333333334,,,10.537210573707227,0.41272901356009617,0.8274381376484113,,,10.982091038602082,unter Erwartung,im Erwartungsband,,,im Erwartungsband,-1.3656802705953321,0.5145078232823761,,,-0.9089996324842309,False,False,False,False,False,False,False,"Stände Plattform / Kiesplatz:
+Sektor A: Foyer Bierstand (Aussen Flex 1.1)
+Sektor B: BBQ S2 und Bier S3
+Sektor C: 1x BBQ/Getränke (Aussen Flex 1.2)
+Sektor D: Bierwagen S1, BBQ S1 in der Pause
+Kiesplatz: Bierwagen Bierhof S1, Getränke, Pommes, Fanshop Bar BBQ S1
+
+Just Eat Test beim Stand A2, A5, B1, C1, C3, C5",ausverkauft,6917.001468185199,,,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20230204_SL,2023-02-04,2022/23,SL,Servette FC,20:30,Samstag,9915.0,14806.0,10477.0,True,IST aus Zählung,13.449188098840143,0.4905038060847831,0.8008161037423533,,,13.3286979473369,0.36379376182993656,0.6700368251874165,,,11.861669216082253,0.4475787041494175,0.7076185330271512,,,13.44918809884014,0.4259333795983116,0.7407513227616863,,,12.573806350202187,im Erwartungsband,im Erwartungsband,,,über Erwartung,0.43300367788085836,-0.6230451192441644,,,1.4794175657760105,True,False,False,False,True,False,False,"Stände Plattform / Kiesplatz:
+Sektor A: Foyer Bierstand (Aussen Flex 1.1+ 1.2)
+Sektor B: BBQ S2 offe, Bier S3 geschlossen
+Sektor C: 1x BBQ/Getränke (Getränke A Flex S1) offen, Aquarium C geschlossen
+Sektor D: Bierwagen S1, BBQ S1 in der Pause
+Kiesplatz: Bierwagen Bierhof S1, Getränke, Pommes, Fanshop Bar BBQ S1
+
+Just Eat beim Stand A2, A5, B1, C1, C3, C5",,-8679.410037745316,490.56408480952746,3958.6131906832215,Stände geschlossen (Catering-Bemerkung),über Erwartung – positiver Ausreisser (was lief gut? Muster prüfen),im Erwartungsband
+20230219_SL,2023-02-19,2022/23,SL,FC Luzern,14:15,Sonntag,13629.0,17126.0,14129.0,True,IST aus Zählung,10.692864480152615,0.44278712566918693,0.8706136447075297,,,12.349345895330647,0.3206460200857388,0.7726515223401289,,,10.990109958539724,0.3413648718137075,0.8250029195375452,,,10.692864480152615,0.3798155055134971,0.8270510218157973,,,11.649921429165307,im Erwartungsband,im Erwartungsband,,,unter Erwartung,-0.8211273137846746,-0.05348215421055013,,,-1.8843125959886111,False,True,False,False,True,False,False,"Stände Plattform / Kiesplatz:
+Sektor A: Foyer Bierstand (Aussen Flex 1.1+ 1.2)
+Sektor B: BBQ S2 offe, Bier S3
+Sektor C: 1x BBQ/Getränke (Getränke A Flex S1) offen, Aquarium C 
+Sektor D: Bierwagen S1, BBQ S1 in der Pause
+Kiesplatz: Bierwagen Bierhof S1, Getränke, Pommes, Fanshop Bar BBQ S1
+
+Bierrucksäcke nur einer sehr kurz im Einsatz
+
+Just Eat beim Stand A2, A5, B1, C1, C3, C5",,13043.72915809398,35.075799617344245,225.03646310475057,Runner/Bauchläden ganz oder teilweise nicht im Einsatz,unter Erwartung – möglicher Clubhebel (operativer Hinweis dokumentiert) → Prüfkandidat Phase 2,im Erwartungsband
+20230305_SL,2023-03-05,2022/23,SL,Grasshopper Club Zürich,14:15,Sonntag,14284.0,18484.0,14930.0,True,IST aus Zählung,11.136230747689723,0.4335529948450155,0.8609961623287387,,,11.933306910580733,0.3125304114045308,0.7577782714849063,,,10.619862479183785,0.3709819313798471,0.8077256005193681,,,11.136230747689723,0.3710201956491932,0.8148839666384659,,,11.257445461216363,im Erwartungsband,im Erwartungsband,,,im Erwartungsband,-0.0008067851162393509,-0.17548540305250857,,,-0.2379692531409219,False,True,False,False,True,False,False,"Stände Plattform / Kiesplatz:
+Sektor A: Foyer Bierstand A3
+Sektor B: BBQ S2 offen, Bier S3 offen, Aquarium offen 
+Sektor C: 1x BBQ/Getränke offen, Aquarium C offen 
+Sektor D: Bierwagen S1, BBQ S1 in der Pause, Aquarium D1 + D4
+Kiesplatz: Bierwagen Bierhof S1, Getränke, Pommes, Fanshop Bar BBQ S1
+
+Bierrucksäcke nur einer im Einsatz mit Glühwein
+
+Just Eat beim Stand A2, A5, B1, C1, C3, C5 
+> Rabattaktion via Flyer: CHF 5.00 (ersten 500, Mindesteinkauf CHF 12.00)",,1731.4309680145343,132.31523934540195,884.0958220717141,Runner/Bauchläden ganz oder teilweise nicht im Einsatz,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20230426_SL,2023-04-26,2022/23,SL,FC Lugano,20:30,Mittwoch,8192.0,12622.0,8803.0,True,IST aus Zählung,13.695918060557755,0.3708964703667547,0.7636291266661808,,,12.948092961596009,0.2593558562155554,0.6200190175681468,,,11.522955677769069,0.4038708173020869,0.6974330533988276,,,13.695918060557759,0.3124165028055837,0.6965989992752781,,,12.21475752146167,über Erwartung,im Erwartungsband,,,über Erwartung,1.9655703258042543,0.014820444948128494,,,2.515844424923561,True,True,False,False,True,False,False,"Sektor D: Türöffnung 1.5h vor Spielbeginn
+Stände Plattform / Kiesplatz:
+Sektor A: Foyer Bierstand A3
+Sektor B: BBQ S2 offen, Bier S3 geschlossen, Aquarium offen 
+Sektor C: 1x BBQ/Getränke offen, Aquarium C geschlossen 
+Sektor D: Bierwagen S1, BBQ S1 in der Pause, Aquarium D1 + D4
+Kiesplatz: Bierwagen Bierhof S1, Getränke, Pommes, Fanshop Bar BBQ S1
+
+Bierrucksäcke nicht im Einsatz
+
+Just Eat beim Stand A2, A5, B1, C1, C3, C5 ",effektiv verkauft: 13'374,-12133.667136275151,-10.527431147440797,-86.5097006301076,Stände geschlossen (Catering-Bemerkung); Runner/Bauchläden ganz oder teilweise nicht im Einsatz,über Erwartung – positiver Ausreisser (was lief gut? Muster prüfen),im Erwartungsband
+20230506_SL,2023-05-06,2022/23,SL,BSC Young Boys,20:30,Samstag,14595.0,18779.0,15292.0,False,IST aus Zählung,14.105193559438165,0.5294072006333128,0.8843494603544231,,,14.579425129875297,0.4005481654095511,0.7943303229576538,,,12.974734586567086,0.47182678937959344,0.8143138612279675,,,14.105193559438163,0.46438331478569905,0.8445859467158147,,,13.753696647987345,im Erwartungsband,im Erwartungsband,,,im Erwartungsband,0.14709713708003197,-0.8047979123017002,,,0.5547118060935754,False,True,False,False,True,False,False,"Sektor D: Türöffnung 1.5h vor Spielbeginn
+Stände Plattform / Kiesplatz:
+Sektor A: Foyer Bierstand A3
+Sektor B: BBQ S2 offen, Bier S3 offen, Aquarium offen 
+Sektor C: 1x BBQ/Getränke offen, Aquarium C offen 
+Sektor D: Bierwagen S1, BBQ S1 in der Pause, Aquarium D1 + D4
+Kiesplatz: Bierwagen Bierhof S1, Getränke, Pommes, Fanshop Bar BBQ S1
+
+Bierrucksäcke nicht im Einsatz
+
+Just Eat beim Stand A2, A5, B1, C1, C3, C5 
+> Rabattaktion via Newsletter: CHF 5.00 (ersten 300, Mindesteinkauf CHF 12.00)",ausverkauft (exkl. Gästesektor),-5130.097422624688,,,Runner/Bauchläden ganz oder teilweise nicht im Einsatz,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20230514_SL,2023-05-14,2022/23,SL,FC Basel,16:30,Sonntag,14640.0,18846.0,15289.0,False,IST aus Zählung,11.608534836065575,0.4752562104086291,0.9059021856193342,,,12.573460327154706,0.349780906308382,0.829423258405906,,,11.189557141404151,0.42115795090715047,0.8112596837525204,,,11.608534836065575,0.41107352946497705,0.872480488556483,,,11.861342790589761,im Erwartungsband,unter Erwartung,,,im Erwartungsband,0.20422857058947194,-1.7444018082954529,,,-0.4735691118093193,False,True,False,False,True,False,False,"Sektor D: Türöffnung 1.5h vor Spielbeginn
+Stände Plattform / Kiesplatz:
+Sektor A: Foyer Bierstand A3
+Sektor B: BBQ S2 offen, Bier S3 offen, Aquarium offen 
+Sektor C: 1x BBQ/Getränke offen, Aquarium C offen 
+Sektor D: Bierwagen S1, BBQ S1 in der Pause, Aquarium D1 + D4
+Kiesplatz: Bierwagen Bierhof S1, Getränke, Pommes, Fanshop Bar, BBQ S1 (Grillzelt, da Wagen beim aufgetischt im Einsatz war)
+
+Bierrucksäcke nicht im Einsatz
+
+Just Eat beim Stand A2, A5, B1, C1, C3, C5 ",ausverkauft (exkl. Gästesektor),3701.1084542340914,,,Runner/Bauchläden ganz oder teilweise nicht im Einsatz,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),unter Erwartung – SOLL ist Kapazitätswert (nur bedingt interpretierbar)
+20230529_SL,2023-05-29,2022/23,SL,FC Sion,16:30,Montag,15311.0,18423.0,15955.0,False,IST aus Zählung,14.116599177062243,0.44138900071992004,0.8963672767725933,,,12.97513207585022,0.31941248544744666,0.8137321967134497,,,11.547018720569389,0.4471347345556762,0.8660370189437117,,,14.116599177062245,0.37848115936488197,0.860082034637069,,,12.24026523330695,über Erwartung,im Erwartungsband,,,über Erwartung,1.396106692366237,0.18910220117321333,,,3.135005677996426,False,False,False,False,False,False,False,"Sektor D: Türöffnung 1.5h vor Spielbeginn
+Stände Plattform / Kiesplatz:
+Sektor A: Foyer Bierstand A3
+Sektor B: BBQ S2 offen, Bier S3 offen, Aquarium offen 
+Sektor C: 1x BBQ/Getränke offen, Aquarium C offen 
+Sektor D: Bierwagen S1, BBQ S1 in der Pause, Aquarium D1 + D4
+Kiesplatz: Bierwagen Bierhof S1, Getränke, Pommes, Fanshop Bar, BBQ S1 (BBQ konnt in der Pause nicht hochtransportiert werden)
+
+Bierrucksäcke: Bier-Runner 1 im Einsatz
+EFT Gerät Bier-Runner 2 als Ersatzgerät im BBQ auf dem Kiesplatz im Einsatz
+
+Just Eat beim Stand A2, A5, B1, C1, C3, C5 ",ausverkauft (exkl. Gästesektor),-28728.549012837324,,,,über Erwartung – positiver Ausreisser (was lief gut? Muster prüfen),im Erwartungsband
+20230722_SL,2023-07-22,2023/24,SL,FC Basel,18:00,Samstag,15475.0,19200.0,16074.0,False,IST aus Zählung,15.928261712439419,0.5505994699925624,0.9056896160910004,19.033389130045176,0.9325177349680654,16.607750836415928,0.4211990207837064,0.8290705194939689,17.17538302390969,0.8265005965168734,14.77981177329022,0.46115627822944893,0.8371875000000001,17.376795911173776,0.9166397415185783,15.92826171243942,0.48565891706865416,0.8722030694713815,18.080535073709658,0.8779102825537868,15.667144964540626,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,-0.483705179023165,-1.0624696361942134,-0.9906728353122314,0.9168607660520798,0.3633350767989483,True,False,False,True,True,False,False,"Sektor D: Türöffnung 1.5h vor Spielbeginn
+Stände Plattform / Kiesplatz:
+Sektor A: Foyer Bierstand A3
+Sektor B: BBQ S2 offen, Bier S3 offen, Aquarium offen 
+Sektor C: 1x BBQ/Getränke offen, Aquarium C offen 
+Sektor D: Bierwagen S1, BBQ S1 in der Pause, Aquarium D1 + D4
+Kiesplatz: Bierwagen Bierhof S1, Getränke, Pommes, Fanshop Bar, BBQ S1 
+Bierrucksäcke: 2x Bier-Runner im Einsatz (Terminals Side-Event 1 und 2)
+
+Just Eat beim Stand A2, B1, C1, C3, C5 
+--> A5 war geschlossen, Technische Probleme beim Login",ausverkauft,-4040.7816737338494,,,Stände geschlossen (Catering-Bemerkung); technische Probleme (Kasse/App/Internet),im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20230806_SL,2023-08-06,2023/24,SL,FC Luzern,16:30,Sonntag,15006.0,17734.0,15503.0,True,IST aus Zählung,11.23765493802479,0.4403165296677451,0.8990504533073201,16.990351252452967,0.8356963743461999,13.40759443138049,0.3184674238871142,0.8181207713042337,15.331782925143758,0.7406867730271918,11.93188192551078,0.4163143989431969,0.8741964587797452,15.4128735947354,0.7291083566573371,11.23765493802479,0.3774582566425244,0.8635616810625539,16.13977624456279,0.7867586991861043,12.648234408816428,im Erwartungsband,im Erwartungsband,im Erwartungsband,unter Erwartung,unter Erwartung,0.7991953994077543,0.35045640987136917,-1.1499654817367309,-1.6162196418753476,-2.599252279888577,False,False,False,False,False,False,False,"Gästesektor geschlossen, Luzern Fans im B3
+
+Sektor D/Sektor B: Türöffnung 1.5h vor Spielbeginn
+Stände Plattform / Kiesplatz:
+Sektor A: Foyer Bierstand A3
+Sektor B: BBQ S2 offen, Bier S3 offen (ab 14.30), Aquarium offen 
+Sektor C: 1x BBQ/Getränke offen, Aquarium C offen 
+Sektor D: Bierwagen S1, BBQ S1 in der Pause, Aquarium D1 + D4
+Kiesplatz: Bierwagen Bierhof S1, Getränke, Pommes, Fanshop Bar, BBQ S1 
+Bierrucksäcke: 2x Bier-Runner im Einsatz (Terminals Side-Event 1 und 2)
+
+Just Eat beim Stand A2, B1, C1, C3, C5 ",Gästesektor gesperrt / B3 teilweise gesperrt,21167.15553869933,-188.59714803666935,-1271.6338031590017,Abweichung v.a. über Bons je Anwesendem (Frequenz),unter Erwartung – ungeklärte Abweichung (kein dokumentierter Mechanismus),im Erwartungsband
+20230902_SL,2023-09-02,2023/24,SL,FC Lausanne-Sport,18:00,Samstag,14223.0,17557.0,14493.0,True,IST aus Zählung,14.793053504886451,0.5052855580893011,0.9031865771596445,19.152137468639545,0.9288563112316883,16.99756091217934,0.37758689463136624,0.8249270595991186,17.28253935770164,0.8232554368928364,15.126717239530855,0.4074830890642616,0.8254827134476277,16.72508744038156,0.8844828798425086,14.79305350488645,0.4404514335227496,0.868939891388535,18.193338604716704,0.8744632687047021,16.034877538672973,im Erwartungsband,im Erwartungsband,unter Erwartung,im Erwartungsband,unter Erwartung,-0.6644825707233859,-1.2671441785450182,-2.0997586570968907,0.24196531077959108,-1.7718926816191989,False,False,False,False,False,False,True,"Espen-Kids-Day ab 15.00 Uhr 
+> Zusätzlicher Stand auf der Plattform bis Spielbeginn (Aussen Flex C)
+
+Stände Plattform / Kiesplatz:
+Sektor A: Foyer Bierstand A3
+Sektor B: BBQ S2 offen, Bier S3 offen, Aquarium offen 
+Sektor C: 1x BBQ/Getränke offen, Aquarium C offen 
+Sektor D: Bierwagen S1, BBQ S1 in der Pause, Aquarium D1 + D4
+Kiesplatz: Bierwagen Bierhof S1, Getränke, Pommes, Fanshop Bar, BBQ S1 
+Bierrunner: 2x Bier-Runner im Einsatz
+Just Eat beim Stand A2,A5, B1, C1, C3, C5 ",,17662.46323254572,762.9776731085096,6772.061724796768,"Plattform-Event/Zusatzprogramm (z.B. Winterzauber, Kids Day); Abweichung v.a. über Ø Bon (Warenkorb)",unter Erwartung – ungeklärte Abweichung (kein dokumentierter Mechanismus),im Erwartungsband
+20230927_SL,2023-09-27,2023/24,SL,BSC Young Boys,20:30,Mittwoch,14303.0,17746.0,14993.0,True,IST aus Zählung,13.719023980983012,0.45177384985885216,0.8486196344268528,16.695824932815224,0.9115175214628622,14.68051620266346,0.32861575144156274,0.7389974325821599,15.066007748908044,0.8078878792052538,13.0646990280189,0.4060400407193756,0.8448664487771892,16.25306054833099,0.8440886527301965,13.71902398098301,0.3884150639258896,0.7993585024665057,15.85999457163231,0.858139823847525,13.849062270195517,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,0.3622267873748377,1.173063473106475,0.6109041268310799,-0.3506344815585716,-0.20737409820731795,False,False,False,False,False,False,False,"Stände Plattform / Kiesplatz:
+Sektor A: Foyer Bierstand A3
+Sektor B: BBQ S2 offen, Bier S3 offen (ab 14.30), Aquarium offen 
+Sektor C: 1x BBQ/Getränke offen, Aquarium C offen 
+Sektor D: Bierwagen S1, BBQ S1 in der Pause, Aquarium D1 + D4
+Kiesplatz: Bierwagen Bierhof S1, Getränke, Pommes, Fanshop Bar, BBQ S1 
+Bierrucksäcke: 2x Bier-Runner im Einsatz (Terminals Side-Event 1 und 2)
+
+Just Eat beim Stand A2, B1, C1, C3, C5 ",,1859.9376506064898,-807.5840152293885,-6647.558682954318,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20231007_SL,2023-10-07,2023/24,SL,Stade Lausanne-Ouchy,20:30,Samstag,12232.0,16591.0,12783.0,True,IST aus Zählung,15.353482668410726,0.5325852260997069,0.8732864012959421,18.183752610794908,0.905682957737766,15.525836495735328,0.403616097577378,0.776829169984834,16.408686533362495,0.8027166420068826,13.816978788403416,0.49071281155739,0.7704779699837261,16.380619276057566,0.9372956180510137,15.353482668410727,0.4675588236922326,0.8304484077879154,17.2734332600889,0.8526469272554267,14.646506530015772,im Erwartungsband,unter Erwartung,unter Erwartung,über Erwartung,im Erwartungsband,0.45657328221470134,-1.4177091832804392,-1.3243204088234484,2.010274286285999,1.036217048137566,False,False,False,False,False,False,False,"Stände Plattform / Kiesplatz:
+Sektor A: Foyer Bierstand A3
+Sektor B: BBQ S2 offen, Bier S3 offen (ab 14.30), Aquarium offen 
+Sektor C: 1x BBQ/Getränke offen, Aquarium C offen 
+Sektor D: Bierwagen S1, BBQ S1 in der Pause, Aquarium D1 + D4
+Kiesplatz: Bierwagen Bierhof S1, Getränke, Pommes, Fanshop Bar, BBQ S1 
+Bierrucksäcke: 2x Bier-Runner im Einsatz (Terminals Side-Event 1 und 2)
+Gästesektor geschlossen
+Just Eat beim Stand A2, A5, B1, C1, C3, C5 ",geschlossener Gästesektor,-8647.73212484709,994.9695336093049,9165.748493920299,Abweichung v.a. über Bons je Anwesendem (Frequenz),im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),unter Erwartung – Bemerkung: geschlossener Gästesektor
+20231028_SL,2023-10-28,2023/24,SL,Grasshopper Club Zürich,18:00,Samstag,15587.0,19200.0,16221.0,False,IST mit Ergänzung (Formel),14.848530826971194,0.4985953821574898,0.8784595726384428,18.04867081311527,0.922776250846626,15.819179895353518,0.37131844771073,0.7849706375821857,16.286791184149898,0.8178666133384138,14.078035223678642,0.35518846865233744,0.84484375,17.616383772263656,0.8428818887534484,14.848530826971194,0.4338668403919918,0.8370441258563928,17.145113959512468,0.8687392515300829,14.923235968666308,unter Erwartung,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,-1.6247633147465688,0.2188564382145555,0.6766518781901917,-0.6417408945925354,-0.11031471767562347,False,False,False,False,False,False,False,"Stände Plattform / Kiesplatz:
+Sektor A: Foyer Bierstand A3
+Sektor B: BBQ S2 offen, Bier S3 offen (ab 14.30), Aquarium offen 
+Sektor C: 1x BBQ/Getränke offen, Aquarium C offen 
+Sektor D: Bierwagen S1, BBQ S1 in der Pause, Aquarium D1 + D4
+Kiesplatz: Bierwagen Bierhof S1, Getränke, Pommes, Fanshop Bar, BBQ S1 
+Bierrucksäcke: 2x Bier-Runner im Einsatz (Terminals Side-Event 1 und 2)
+Just Eat beim Stand A2, A5, B1, C1, C3, C5 ",ausverkauft,1164.4290436017436,,,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20231111_SL,2023-11-11,2023/24,SL,FC Winterthur,18:00,Samstag,15848.0,19200.0,16488.0,False,IST aus Zählung,14.857310070671378,0.4802897233217109,0.8559475374504856,17.30233451864968,0.9167814513361979,14.990008165054281,0.3543829756102311,0.7500689975141394,15.613310931394645,0.8125533574231926,13.34012662773051,0.4173436730674544,0.8587500000000001,17.935607099329673,0.828369510348309,14.857310070671376,0.4159661285382797,0.8085329837470809,16.436140930239066,0.8630955024251573,14.141025672579001,im Erwartungsband,über Erwartung,über Erwartung,im Erwartungsband,im Erwartungsband,0.027886462842555367,1.367590013751049,2.178604153512579,-0.8721732398431932,1.0861440513789318,False,False,False,False,False,False,False,"Stände Plattform / Kiesplatz:
+Sektor A: Foyer Bierstand A3
+Sektor B: BBQ S2 offen, Bier S3 offen (ab 14.30), Aquarium offen 
+Sektor C: 1x BBQ/Getränke offen, Aquarium C offen 
+Sektor D: Bierwagen S1, BBQ S1 in der Pause, Aquarium D1 + D4
+Kiesplatz: Bierwagen Bierhof S1, Getränke, Pommes, Fanshop Bar, BBQ S1 
+Bierrucksäcke: 2x Bier-Runner im Einsatz (Terminals Side-Event 1 und 2)
+Just Eat beim Stand A2, A5, B1, C1, C3, C5 ",ausverkauft,-11351.675140967958,,,Abweichung v.a. über Ø Bon (Warenkorb),im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),über Erwartung – SOLL ist Kapazitätswert (nur bedingt interpretierbar)
+20231206_SL,2023-12-06,2023/24,SL,Yverdon Sport,18:30,Mittwoch,9112.0,13814.0,9670.0,True,IST aus Zählung,13.004082528533802,0.43468744076827026,0.8200298069150441,15.79550048801163,0.8483568699175821,13.082744355347788,0.3135234610420059,0.697094102788441,14.253571399310125,0.7519079077569296,11.642786609378346,0.21074771269323794,0.7000144780657305,15.591210526315791,0.8340649692712906,13.004082528533802,0.3720985017035982,0.7640518969061476,15.004742383450363,0.798677806810072,12.341782723511356,unter Erwartung,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,-3.9224424721368707,-1.2295571372424197,0.9567559686499838,0.9207592097610876,1.1490344282591338,True,False,True,False,True,False,False,"Nachholtermin. Spiel wurde aufgrund Schnee vom 03.12. auf 06.12.23 verschoben.
+
+Aufgrund Personalmangel konnten nicht alle Stände geöffnet werden!
+
+Kiesplatz (erst ab 17.00 Uhr offen)
+Bierwagen Bierhof S1, BBQ S1 (in der Pause und nach dem Spiel Plattform D)
+
+folgende Stände waren geschlossen:
+Kiesplatz:Getränke-Contrailer, Pommes Contrailer, Fanshop-Bar
+Sektor D: Bier S1
+Sektor A: Foyer Bierstand A3
+Sektro B: Bier S3, BBQ S2, 
+Sektor B4 (Gäste): Stand geschlossen
+Sektor C: Sektor C Aussen","Effektiv verkauft: 15'455, Spiel wurde wegen Schnee verschoben. Viele Stornierungen.",-6034.875823364528,884.6129038615223,6902.147524572705,Stände geschlossen (Catering-Bemerkung); Personalmangel; Schnee/Verschiebung,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20231216_SL,2023-12-16,2023/24,SL,FC Zürich,18:00,Samstag,17108.0,20029.0,17814.0,False,IST aus Zählung,14.087558452186112,0.5040877801202305,0.8702834520514114,17.578284332655713,0.9002042073729897,14.83456578261074,0.3764614741113358,0.7721367627034749,15.862323007937997,0.7978607660542288,13.201793076322105,0.47743136342484876,0.8894103549852713,16.264674719935215,0.8661444938040683,14.087558452186112,0.4392708797760076,0.8266317957174171,16.698276078983746,0.8474890078932313,13.99438701191,im Erwartungsband,über Erwartung,im Erwartungsband,im Erwartungsband,im Erwartungsband,0.7566684140492552,1.9618101301243354,-0.6565338819115555,0.4624405044916016,0.14586257360594396,False,False,False,False,False,False,True,"Alle Stände offen
+
+Ausserordendlich B4 > Aussenstand Bier S3, in der Box neu 6 anstatt 4 Kassen
+
+Winterzauber mit zusätzlichen Ständen.
+Betrieben durch Migros:
+2x Raclette (Side Event 1 und 2) > 2 war auch in der Pause und nach dem Spiel offen
+1x Crêpes (Side Event 3) > War auch in der Pause und nach dem Spiel offen
+1x Glühwein (Side Event 4 > nur bis Spielbeginn
+1x  Kafi Luz / Punsch (Aussen Felx) > nur bis Spielbeginn
+
+andere Betreiber:
+1x Bechinger Wurststand (Umsatzbeteiligung 25%)
+1x Marronistand (Standmiete)
+",ausverkauft,-1593.9770002437301,,,"Plattform-Event/Zusatzprogramm (z.B. Winterzauber, Kids Day)",im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),über Erwartung – SOLL ist Kapazitätswert (nur bedingt interpretierbar)
+20240128_SL,2024-01-28,2023/24,SL,FC Lugano,14:15,Sonntag,13391.0,17179.0,14041.0,True,IST aus Zählung,12.216253453812262,0.47428396080795765,0.8757418664287647,16.05967712961174,0.8544029288500268,12.774014697830488,0.3488946770374937,0.7806843738549539,14.491959579914784,0.7572665954546095,11.368037411134548,0.40838788576361407,0.8173351184585831,15.5472201102452,0.7857516242252259,12.216253453812264,0.4101299584380487,0.8335757931621953,15.25569375114797,0.8043698136284745,12.050538451675907,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,-0.035453651857266386,-0.4232478013494451,0.472352844428633,-0.49736713645220004,0.3002222482210046,False,False,False,False,False,False,False,"Alle Stände offen
+Bierhof erst ab 12.00 Uhr offen",,-2219.0895936079614,278.9985507333546,2044.9902054029753,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20240131_SL,2024-01-31,2023/24,SL,Servette FC,20:30,Mittwoch,9306.0,14219.0,9953.0,True,IST aus Zählung,13.346953578336556,0.41225718440098125,0.7777603107592101,16.224386982705305,0.9071604181019656,13.924396389840965,0.29409280477157246,0.6386733394321108,14.64059074567119,0.804026131174274,12.39180185960355,0.4192663347220811,0.6999789014698643,14.795324597974986,0.9021061680636149,13.346953578336553,0.35089322826771463,0.713232628980871,15.412157860377093,0.8540378687862502,13.135766482298939,über Erwartung,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,1.4235804493041955,-0.2399354629073125,-1.019251048272112,1.162939717682476,0.35059091342257886,False,False,False,False,False,False,False,"Alle Stände offen
+Bierhof erst ab 18.00 Uhr offen
+BBQ S1  ab der Pause auf der Plattform",Effektiv verkauft: 14'650,-1965.3071157260367,188.4547514790047,1509.178091764337,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20240217_SL,2024-02-17,2023/24,SL,FC Winterthur,18:00,Samstag,15203.0,18467.0,15756.0,True,IST mit Ergänzung (Formel),14.619249490232193,0.45516497022554553,0.8840027716475132,17.906530012808883,0.8754425044529325,15.05862538885227,0.33164165335738627,0.7937767090106326,16.15852591978174,0.7759141998209317,13.401191468004745,0.38597528916929547,0.8531975957112687,17.73228418701133,0.8244425442346905,14.619249490232189,0.391670372238983,0.8441410658570007,17.010089045778745,0.8241773294211808,14.205756652884304,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,-0.1179170670040344,0.26468922279478574,1.0375885878158917,0.006833250438040855,0.6306886790284734,False,False,False,True,True,False,False,"Alle Stände offen
+Probleme mit Handhelds bei den Aussenstände Sektor D während der Pause",,-6286.331606199896,-167.24693681876863,-1467.0148174984074,technische Probleme (Kasse/App/Internet),im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20240224_SL,2024-02-24,2023/24,SL,Stade Lausanne-Ouchy,18:00,Samstag,12394.0,16192.0,12960.0,True,IST aus Zählung,14.536086009359368,0.48080969454519146,0.8651445924455818,17.624874232088693,0.9070466523482257,15.107614887442608,0.35485970997228944,0.7641633700444381,15.90436488299974,0.8039252993511319,13.444788916880567,0.4190572969592746,0.8003952569169961,16.35738605411295,0.8886558011941262,14.536086009359364,0.41647226649846264,0.8201210596875725,16.7425335837835,0.8539307650591407,14.251971554812625,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,0.05229088486626525,-0.4818354906516579,-0.580747459980269,0.8465564585111736,0.4338920858619549,True,False,False,True,True,False,False,"Catering Sektor B4 geschlossen. Übrige Stände alle geöffnet.
+Probleme mit Handheld BBQ Trailer vor dem Spiel.
+Bei Spielbeginn Ausfall Internet im ganzen Stadion und damit auch Ausfall aller Kassen für ca. 10 Minuten.",,-3521.3145496522793,319.4001984611739,2785.697253742845,Stände geschlossen (Catering-Bemerkung); technische Probleme (Kasse/App/Internet),im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20240309_SL,2024-03-09,2023/24,SL,FC Lugano,20:30,Samstag,12793.0,16790.0,13453.0,True,IST aus Zählung,14.130696474634565,0.5129322403452901,0.8770269031120286,17.67058065579091,0.9006661260141373,15.154937441359403,0.3848042323340118,0.7827085459595144,15.945609525683974,0.7982701695627464,13.486902894047661,0.472553159402805,0.8012507444907683,16.53471142412878,0.8546079887438442,14.130696474634563,0.44800547857235584,0.8352148442258978,16.785951841624787,0.8479238769681671,14.29661392207894,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,0.4862946676665873,-0.8590261018620715,-0.37631509506733923,0.16676341231007089,-0.2565948163595689,False,False,False,False,False,False,False,"Alle Stände offen
+erster Einsatz Controllingfunktionen (Pro Sektor 1 Person)",,2122.5819051559147,570.257234552824,4834.879136358268,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20240401_SL,2024-04-01,2023/24,SL,FC Luzern,16:30,Montag,15515.0,18200.0,16116.0,False,IST aus Zählung,12.145472123751208,0.4507519459889305,0.8929982053694682,16.197645845835243,0.8472761728267831,13.01609691748214,0.32770590499931357,0.8082513588472603,14.616460031740003,0.7509500741879733,11.583474749721441,0.48793103448275854,0.8854945054945056,16.195702621400947,0.749919432806961,12.145472123751206,0.3874351937610433,0.8557232088560246,15.386755444665075,0.7976603944298444,12.278909967239821,über Erwartung,im Erwartungsband,im Erwartungsband,unter Erwartung,im Erwartungsband,2.0164322292069006,0.9955956447055779,1.2786061181285076,-1.3107685470804695,-0.2401852930101569,False,False,False,False,False,False,False,"Alle Stände offen.
+Luzern Fans wurden bei Spielanpfiff in den Sektor B4 reingelassen trotz eigendlich geschlossenem Gästesektor (784 Fans). Catering Gästesektor wurde kurzfristig noch geöffnet (Angebot ohne Pommes & Nuggets).
+
+Fanshop-Bar wurde abgebrochen. Neu Bier S3 am ehemaligen Standort Fanshop-Bar.
+
+Kiesplatz Süd: Bechinger Wurststand (Umsatzbeteiligung 25%)","ausverkauft, geschlossener Gästesektor",2070.288141725858,,,Abweichung v.a. über Bons je Anwesendem (Frequenz),im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20240407_SL,2024-04-07,2023/24,SL,BSC Young Boys,16:30,Sonntag,15970.0,18917.0,16706.0,False,IST aus Zählung,13.265021916092673,0.5241944928791259,0.9208161581582754,17.20640893169406,0.8632410115526403,13.91633091919335,0.3955378167184379,0.8545119983962403,15.526749432205024,0.7650998841437793,12.384624118366407,0.454855195911414,0.8831210022730878,16.51663807890223,0.8031308703819662,13.265021916092676,0.45918612590470126,0.8920604483602754,16.345017592846702,0.8126903456588395,13.128157812161236,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,-0.0858725501493284,-0.3363788228868498,0.26064606671004587,-0.25130197530533266,0.22797561555987583,False,False,False,False,False,False,True,"Espen-Kids-Day ab 13.30 Uhr 
+> Zusätzlicher Stand (Neuer Grillanhänger) auf der Plattform bis Spielbeginn (Side Event 1+2)
+
+Alle Stände offen 
+Sektor C aussen noch mit Zelt (Kasse BBQ S3)
+
+Bierhof: Klappe Bierwagen war defekt. > entsprechend weniger Umsatz.",ausverkauft (ohne Gästesektor),-2185.7197397851037,,,"Plattform-Event/Zusatzprogramm (z.B. Winterzauber, Kids Day)",im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20240413_SL,2024-04-13,2023/24,SL,Yverdon Sport,20:30,Samstag,14095.0,17747.0,14817.0,True,IST aus Zählung,14.877339482085846,0.5365841552099454,0.866022770285857,18.00113490960307,0.9223501811098839,15.615018401995668,0.4074908791950192,0.7655209115483619,16.24389565227004,0.8174889831032235,13.896344850737446,0.46997816593886466,0.8349016735222855,17.1208442194644,0.8689606243348705,14.877339482085842,0.4715620850024579,0.8212318469737944,17.099957809714844,0.8683381320779325,14.730637479917254,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,-0.031280207585613985,0.36046101648148093,0.030460792911023507,0.015219821206948174,0.21782991497315227,False,False,False,False,False,False,False,"Alle Stände offen
+
+Bierhof: Klappe Bierwagen war defekt. > entsprechend weniger Umsatz",letztes Heimspiel vor Gruppentrennung,-2067.764720566252,-242.5984117560722,-2165.531357705959,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20240512_SL,2024-05-12,2023/24,SL,Servette FC,16:30,Sonntag,14865.0,18489.0,15534.0,False,IST aus Zählung,13.076293306424487,0.47948321465998983,0.922581875504016,17.351976393590025,0.8462544583858393,14.067068491237197,0.3536440246440852,0.8575274677172404,15.65810685346086,0.7500445175821906,12.518770696305532,0.3982584784601283,0.8401752393314943,15.810891491784613,0.8270433905146317,13.07629330642449,0.4151813444500354,0.8943938479055683,16.483297621822008,0.7966985107252209,13.270358126705665,im Erwartungsband,unter Erwartung,im Erwartungsband,im Erwartungsband,im Erwartungsband,-0.3451098725249625,-1.7895913958277119,-1.0392920164342687,0.7939059876091923,-0.32382912332250197,False,False,False,True,True,False,False,"Alle Stände offen
+Sektor C aussen noch mit Zelt (Kasse BBQ S3)
+Bierhof: hatte Probleme mit dem Handheld deshalb zusätzlich Aussen Flex 1.1",ausverkauft (ohne Gästesektor),2884.7735534796466,,,technische Probleme (Kasse/App/Internet),im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),unter Erwartung – SOLL ist Kapazitätswert (nur bedingt interpretierbar)
+20240525_SL,2024-05-25,2023/24,SL,FC Zürich,20:30,Samstag,17628.0,20029.0,18379.0,False,IST aus Zählung,14.224622759246653,0.548901248447152,0.8919765516913304,17.78272746379663,0.9148447298658792,15.44824069431922,0.41952732955987404,0.806595789225756,16.046808758739452,0.8108368201494426,13.747923601423311,0.5121922065503227,0.9176194517948973,17.948010163910958,0.7925459496255957,14.224622759246655,0.48394529897908983,0.8544036803147607,16.89248432943859,0.8612721937314157,14.573305487839718,im Erwartungsband,über Erwartung,über Erwartung,unter Erwartung,im Erwartungsband,0.5560866284284774,2.404902495711112,1.5124639144020147,-1.7661806748248752,-0.5323252609654945,False,False,False,False,False,False,False,"Alle Stände offen
+
+Zusatzsektor für Gästefans mit Zusatzstand > Grillstand (Kassen: Side Event 1 + 2)
+Einsingen der Fans auf der grossen Treppe um 17.30 Uhr:
+Bierhof, Getränkecontrailer und BBQ S1 auf dem Kiesplatz bereit 3.5h vor Spielbeginn geöffnet (17.00)  ",ausverkauft (Zusatz Gästesektor im B3),6146.579139638521,,,Abweichung v.a. über Bons je Anwesendem (Frequenz),im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),über Erwartung – SOLL ist Kapazitätswert (nur bedingt interpretierbar)
+20240728_SL,2024-07-28,2024/25,SL,BSC Young Boys,16:30,Sonntag,15081.0,18720.0,15717.0,False,IST aus Zählung,13.838136065247662,,0.9054876924752595,16.3331822632978,0.9168335359649348,14.04397715314471,,0.8287355710206443,14.738765621548662,0.8125995205953297,12.498220916027517,,0.8395833333333333,16.076799168014787,0.8607519395265566,13.838136065247658,,0.87193958691508,15.515506605740658,0.8631445370219445,13.248574602561808,,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,,-0.9872528536506289,0.8867908549473112,-0.058953396019449114,0.9570355618805251,False,False,False,False,False,False,False,"Alle Stände offen
+
+Ersatzgerät 1: BBQ S1
+Ersatzgerät 2: Aqua D4",ausverkauft (exkl. Gästesektor),-8891.176418765308,,,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20240811_SL,2024-08-11,2024/25,SL,Grasshopper Club Zürich,14:15,Sonntag,15785.0,18810.0,16413.0,False,IST aus Zählung,13.937614093404171,,0.8928021407467251,16.816887664136363,0.9257097549810233,14.734714330705824,,0.807933407393824,15.175252548462892,0.8204666099133284,13.112931816360977,,0.8725677830940989,15.77777097421004,0.8833702882483371,13.93761409340417,,0.855469897791358,15.97499663168664,0.8715009721354177,13.900190802722905,,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,,0.5467223890724894,-0.3099951884405163,0.28730100467495656,0.05910087474390042,False,False,False,False,False,False,False,"Alle Stände offen
+Zusätzlicher Glacéstand auf dem Kiesplatz: SideEvent 3
+
+Ersatzgerät 1: Aqua D4
+Ersatzgerät 2: Aqua D1","ausverkauft (exkl. Gästesektor), über 30 Grad",-590.7266434037582,,,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20240921_SL,2024-09-21,2024/25,SL,FC Luzern,18:00,Samstag,15528.0,19574.0,16069.0,False,IST aus Zählung,16.385677176641547,,0.8733988245710956,17.70319885898345,0.9863576243419,16.704999441468463,,0.7770053196514902,15.975043597018079,0.8742194752204516,14.866356669829724,,0.8209359354245427,17.54736518613034,0.9337970118495621,16.385677176641547,,0.8305914649947934,16.816937104566374,0.9285973533948215,15.758885743166504,,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,,-0.25188573055911395,1.0609694713699305,0.11859172439908956,0.8573481980236792,False,False,False,False,False,False,False,"Alle Stände offen
+Bierrunner im Sektor D im Einsatz
+
+Ersatzgerät 1: Aqua D4
+Ersatzgerät 2: Aqua D1",ausverkauft (exkl. Gästesektor),-9732.817379000473,,,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20240924_SL,2024-09-24,2024/25,SL,FC Zürich,20:30,Dienstag,13993.0,18893.0,14636.0,True,IST aus Zählung,13.309446347331193,,0.8220660604247144,16.000763895098704,0.9652850619510952,14.864219298080402,,0.700012457264991,14.43879735215675,0.855542634305747,13.228182765171297,,0.7746784523368443,14.717803282614621,0.9043092975058958,13.30944634733119,,0.7665411928601082,15.199729845001734,0.9087587824927065,14.022361054280188,,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,,0.17275636426279875,-0.8040076703382263,-0.10424292591700586,-1.1469761951501534,False,False,False,False,False,False,False,"Alle Stände offen
+Bierrunner im Sektor D im Einsatz
+
+Ersatz 1 > Aqua D4
+Ersatz 2 > Bier S1
+Side Event 1 > B3 aussen (Gästesektor)
+Side Event 2 > B3 aussen (Gästesektor)
+Side Event 3 >  Aqua D1
+Side Event 4 > BBQ S1
+Bierrunner > nach dem Spiel D4 da Kasse D21 nach Spiel defekt",Verschiebedatum wegen UECL Playoff,9975.815494337312,-153.73724329397413,-1227.6945547246505,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20241006_SL,2024-10-06,2024/25,SL,Servette FC,16:30,Sonntag,14452.0,18380.0,15110.0,True,IST aus Zählung,12.454121244258001,,0.8635949592201828,15.734298428124323,0.9175406932750311,13.51327557436308,,0.7617728784472015,14.198343777301524,0.8132262817996578,12.025931229155434,,0.8220892274211099,15.218310663906033,0.8183642402435649,12.454121244258,,0.8181627990066523,14.946604235650454,0.8638102837961202,12.747930135434391,,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,,0.09988315496214566,0.4495490609398167,-1.1478385597718663,-0.5125489863811697,False,False,False,False,False,False,False,"Alle Stände offen
+
+ca. 100 Gästefans im Sektor B2/B3 / Türe zwischen B3/B4 wurde in der Pause geöffnet
+Ersatz 1 und 2 > Aqua D4
+BBQ S1 > ab 16.45 Uhr bis Ende Veranstaltung auf der Plattform Sektor D","ausverkauft (exkl. Gästesektor), Boykott Servette-Fans",4246.126095281212,-72.16775425772997,-539.2715768709513,Boykott Gästefans,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20241030_SL,2024-10-30,2024/25,SL,FC Winterthur,20:30,Mittwoch,11072.0,15781.0,11658.0,True,IST mit Ergänzung (Formel),13.948832457502956,,0.7615722395278107,15.360916829771352,0.9516985798326199,14.084283257513038,,0.6173386722911799,13.861411036528171,0.8435007876422406,12.53409071210925,,0.738736455230974,14.59749271923183,0.9555635838150289,13.948832457502956,,0.6941924083947864,14.591914955734355,0.8959679133132038,13.286597907843452,,im Erwartungsband,im Erwartungsband,über Erwartung,im Erwartungsband,,0.8241347307938522,0.009536793065278229,1.367677616745542,1.069177632175153,False,False,False,False,False,False,False,"Alle Stände offen
+
+Zuteilung Kassen:
+- Ersatz 1: Aqua D4
+- Ersatz 2:Aqua D1
+- Side Event 1: B4",Dicker Nebel,-7332.260933830023,-702.9496031218769,-5883.195744009155,Abweichung v.a. über Bons je Anwesendem (Frequenz); Nebel,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20241102_SL,2024-11-02,2024/25,SL,FC Sion,20:30,Samstag,12906.0,17160.0,13550.0,True,IST mit Ergänzung (Formel),14.360271487004946,,0.8406852450250585,16.567130094752514,0.9559279073120491,15.063130575433892,,0.7271646181280194,14.949875875502592,0.8472492865217104,13.405200789335234,,0.7896270396270396,15.945424056722521,0.9005888733922207,14.360271487004944,,0.789482665869695,15.737742485180444,0.8999495749409104,14.210006681197095,,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,,0.0032605906052340042,0.3271471504246134,0.015081736824733311,0.23122429884517315,False,False,False,False,False,False,False,"Alle Stände offen
+
+Zuteilung Kassen:
+- Ersatz 1: Aqua D4
+- Ersatz 2: Aqua D1",,-1939.3175837560973,-2.477453676034407,-21.346144430599487,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20241124_SL,2024-11-24,2024/25,SL,Yverdon Sport,16:30,Sonntag,12388.0,16510.0,13016.0,True,IST aus Zählung,11.876393431678832,,0.8827333784459988,15.761187061369837,0.8992297380883827,13.458226345815735,,0.7917525427247833,14.222607589270362,0.796997083343634,11.976941017042511,,0.7883706844336765,14.505053912219006,0.8187762350661931,11.876393431678833,,0.8425131670463304,14.972146763739277,0.8465716027084188,12.695998705806591,,unter Erwartung,im Erwartungsband,im Erwartungsband,unter Erwartung,,-1.3581137294881203,-0.7908987266684666,-0.709019017988615,-1.4669155151788993,False,True,False,True,True,False,False,"Alle Stände offen
+Bierrunner nicht im Einsatz
+Technische Probleme mit Just Eat
+
+Zuteilung Kassen:
+- Ersatz 1: Aqua D4
+- Ersatz 2: Aqua D1",kaltes Spiel; viel Schnee ein paar Tage zuvor,10153.270135894665,893.8923879349153,6369.73061081876,Runner/Bauchläden ganz oder teilweise nicht im Einsatz; technische Probleme (Kasse/App/Internet); kalt (Bemerkung Historie); Schnee/Verschiebung,unter Erwartung – möglicher Clubhebel (operativer Hinweis dokumentiert) → Prüfkandidat Phase 2,unter Erwartung – Bemerkung: kaltes Spiel; viel Schnee ein paar Tage zuvor
+20241208_SL,2024-12-08,2024/25,SL,FC Basel,16:30,Sonntag,16236.0,19700.0,17018.0,False,IST mit Ergänzung (Formel),12.058418413962965,,0.9034068008048912,15.773702722801973,0.8330925443353753,12.57250869323826,,0.8252908666244615,14.233901493757145,0.7383789702085689,11.188710249473951,,0.8638578680203046,14.62576433356512,0.8244641537324464,12.058418413962967,,0.8692267372687351,14.984035863150227,0.7843073472655927,11.860445053944446,,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,,-0.1742326743552834,-0.6039007330956979,1.0604864209498461,0.3638838599119477,False,True,False,False,True,False,True,"Alle Stände offen
+Bierrunner nicht im Einsatz --> Kassen bei Bierbuffets Aqua D1+D4
+
+Winterzauber: ab 13.30 / Ende ca. 19.15 Uhr
+Umsatz Glühweinhäuschen zu Gunsten Caritas (CHF 5'410.20 exkl. MwSt.) Betrag im Gesamtumsatz enthalten
+Kassen: 
+- Side Event 1: Glühwein Plattfrom- Side Event 2: Süsses
+- Side Event 3: Pommes
+- Side Event 4: Raclette
+- Ersatz 1: Glühwein Freizeitgebäude
+- Bierrunner 10 > Aqua D1
+- Bierrunner 11 > Aqua D4","Plattform-Event ""Winterzauber""",-3214.2954732607063,,,"Runner/Bauchläden ganz oder teilweise nicht im Einsatz; Plattform-Event/Zusatzprogramm (z.B. Winterzauber, Kids Day)",im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20250126_SL,2025-01-26,2024/25,SL,FC Lausanne-Sport,14:15,Sonntag,12277.0,16544.0,12977.0,True,IST mit Ergänzung (Formel),12.546125629048309,0.4741702761015444,0.859287948307153,15.660338836344941,0.9050536193875626,13.239559445592302,0.3487911072367798,0.7551623170186835,14.131603991316817,0.8021588525918943,11.78234178092773,0.3666401273885351,0.7843931334622823,14.222417760648758,0.8821373299666042,12.546125629048309,0.4100196579307733,0.8127323329060206,14.876347226556186,0.8520544424284567,12.489716346533998,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,-0.8992980403655142,-0.6619885121500412,-1.1217524224486484,0.7369127208192583,0.09905485580682505,False,False,False,False,False,False,False,"Alle Stände offen
+
+Kassen: 
+- Ersatz 1: Aqua D1
+- Ersatz 2: Aqua D4",Beginn Sportferien in SG,-692.536761428196,468.84371559720654,3529.303293763409,Ferienbeginn,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20250205_SL,2025-02-05,2024/25,SL,FC Lugano,20:30,Mittwoch,8763.0,13684.0,9529.0,True,IST aus Zählung,12.893173558027122,0.37943030183281967,0.7334890401457546,14.853327865462028,0.9498591759280011,13.508482581846728,0.26641009571629387,0.5816002564199197,13.40337201777242,0.8418705039839305,12.02166577937116,0.38331920305214073,0.6963607132417422,14.186700136739287,0.9088211799612005,12.893173558027122,0.32028983412998585,0.6616983148816491,14.109737030956072,0.8942362233505569,12.743408601524877,über Erwartung,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,1.3627035238472331,0.5972433880709843,0.13574362403265994,0.34360157645073836,0.2568275927481611,False,False,False,False,False,False,False,"Alle Stände offen
+
+Kassen: 
+- Ersatz 1:  D1",effektiv verkauft: 14'495; kalt und neblig,-1312.3903138291785,-474.320259159514,-3669.296054059211,kalt (Bemerkung Historie),im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20250222_SL,2025-02-22,2024/25,SL,FC Basel,20:30,Samstag,15953.0,19335.0,16734.0,False,IST aus Zählung,14.08966408030342,0.5378193942286462,0.867826910369788,16.79594876336017,0.9668676732953908,15.382777699916407,0.4086910244259475,0.7683163526279628,15.15635766650185,0.8569453199288355,13.689665818962606,0.4779889489343615,0.865477114041893,16.522523601373155,0.8527549677176707,14.08966408030342,0.47280035522186,0.823516227576466,15.955105979144298,0.9102487174508774,14.511550092228116,im Erwartungsband,im Erwartungsband,im Erwartungsband,unter Erwartung,im Erwartungsband,0.1023660917274211,1.2052976344188107,0.8720275964016109,-1.3857073759658323,-0.6485281295449231,False,True,False,False,True,False,False,"Alle Stände offen
+Bier-Runner nicht im Einsatz
+
+Kassen: 
+- Ersatz 1: Aqua D1
+- Bier-Runner: Aqua D4",,6730.347548234684,,,Runner/Bauchläden ganz oder teilweise nicht im Einsatz; Abweichung v.a. über Bons je Anwesendem (Frequenz),im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20250308_SL,2025-03-08,2024/25,SL,Grasshopper Club Zürich,20:30,Samstag,14801.0,18887.0,15550.0,True,IST aus Zählung,14.177905398171397,0.5096518695127165,0.8436650086634129,16.817176596424034,0.959162985550578,15.356939290304737,0.38170112558179087,0.7315897281014097,15.175513275686763,0.8501165715004937,13.666671324744623,0.4212442306442176,0.823317625880235,15.736571263467177,0.9009526383352476,14.177905398171399,0.4447611743459297,0.7931845077473607,15.975271099377364,0.9029952097250765,14.487175081245198,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,-0.4713964572175175,0.7308498438502159,-0.37566989115147736,-0.048095399801205856,-0.4743377584638656,False,False,False,True,True,False,False,"Alle Stände offen
+Probleme mit Terminal (Provider): Zeitweise hat nur Twint und Postkarte funktioniert
+
+Kassen: 
+- Ersatz 1 vor Spielende: Aqua D1
+- Ersatz 1 nach Spielende: Bierhof
+- Bierrunner Kasse 10: Aqua D4
+- Side Event 1: BBQ S1",,4577.500579175297,-569.1242021755976,-4841.393458953237,technische Probleme (Kasse/App/Internet),im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20250315_SL,2025-03-15,2024/25,SL,FC Lausanne-Sport,18:00,Samstag,13401.0,17579.0,14131.0,True,IST mit Ergänzung (Formel),14.119267875338391,0.4704647017510553,0.8317023270820816,16.786831654152092,0.9697165382530298,15.373437970611606,0.3454217016100926,0.7139587389489606,15.148130553524249,0.8594702998821285,13.681354070881959,0.40067266213350883,0.8038568746800159,15.469896884752664,0.9126930826057756,14.119267875338393,0.40642792172278647,0.7783738034351725,15.946445292827155,0.9129307552782912,14.50273933305975,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,-0.11764912175041314,0.5792543970111489,-0.7570982764437906,-0.005529909722439675,-0.5890411102209661,False,False,False,False,False,False,False,"Alle Stände offen
+
+Kassen: 
+- Ersatz 1: Aqua D1 
+- Bierrunner Kasse 10: Aqua D4
+- Side Event 1: BBQ S1",,5138.901004923916,-447.966909413102,-3794.9788759746198,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20250406_SL,2025-04-06,2024/25,SL,Servette FC,14:15,Sonntag,14505.0,18410.0,15292.0,True,IST aus Zählung,12.819513525751589,0.4631964965360944,0.8552948475661947,15.551262435653738,0.9096505877148962,13.221076849924707,0.33884913517809034,0.7490772136078184,14.033175437792234,0.8062331955477852,11.765893479906142,0.4188911704312115,0.8306355241716459,15.034528112146411,0.8526714925887625,12.819513525751589,0.3994028363211588,0.8077137237103388,14.772731434595197,0.8563822161659486,12.472280541499503,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,0.39670717534246697,0.5813323298594563,0.43834977635193384,-0.09222606141916663,0.603608414600569,False,False,False,False,False,False,False,"Alle Stände offen
+
+Kassen: 
+- Ersatz 1 bis Spielende: 
+- Ersatz 1 nach Spielende: Bierhof 
+- Ersatz 2:",ausverkauft (exkl. Gästesektor),-5036.614436576508,-421.99034649266366,-3245.826572759581,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20250421_SL,2025-04-21,2024/25,SL,FC Sion,16:30,Montag,15610.0,18450.0,16344.0,True,IST aus Zählung,13.250884563075095,0.4668191218806346,0.8622358275278116,15.786979647605202,0.9186631216325186,13.603857638502573,0.3421190563107169,0.7596815231434206,14.245882348418238,0.8142211022435207,12.106543340404253,0.4312391788276034,0.8858536585365854,16.033354625967153,0.826457399103139,13.250884563075095,0.4029010076235633,0.8164471995637089,14.996648115384215,0.8648669836952402,12.833381943089703,im Erwartungsband,über Erwartung,über Erwartung,im Erwartungsband,im Erwartungsband,0.5736791684896839,2.0887221382754375,1.6680275491664724,-0.9648003764222142,0.7037271859192206,False,False,False,False,False,False,False,"Alle Stände offen
+
+Kassen: 
+- Ersatz 2:",ausverkauft (exkl. Gästesektor); Ostermontag; letztes Spiel vor Tabellenteilung,-6517.215897971965,-1280.5491680495704,-10181.045521900025,Abweichung v.a. über Ø Bon (Warenkorb),im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),über Erwartung – Bemerkung: ausverkauft (exkl. Gästesektor); Ostermontag; letztes Spiel vor Tabellenteilung
+20250510_SL,2025-05-10,2024/25,SL,FC Winterthur,18:00,Samstag,13818.0,19153.0,14583.0,True,IST aus Zählung,15.690456755851711,0.4945615644660046,0.8722468835251481,17.597416599920688,0.98367914725258,16.513017337879194,0.3675595029142421,0.7752020424163064,15.87958761678651,0.8718455118854213,14.69550515701271,0.3699494074433433,0.761395081710437,16.884256012176536,0.9292951223042408,15.69045675585171,0.42990769557254893,0.8291262241134277,16.716450542131664,0.9260757256658012,15.577776845450186,im Erwartungsband,unter Erwartung,im Erwartungsband,im Erwartungsband,im Erwartungsband,-1.231083224770915,-1.5727186618891125,0.24924637729046245,0.07370454689448654,0.15842790748910893,False,False,False,False,False,False,False,"Alle Stände offen
+Just Eat Rabattaktion
+
+Kassen:
+Ersatz 1: Aqua D1
+Ersatz 2: Aqua D2",,-1557.0110019282452,1297.2545704444813,12212.710043334073,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),unter Erwartung – ungeklärt (keine Bemerkung)
+20250517_SL,2025-05-17,2024/25,SL,FC Zürich,18:00,Samstag,14328.0,19850.0,15103.0,False,IST aus Zählung,15.063456108402017,0.5106150151884781,0.894075243219667,17.76037180747196,0.9707557033077772,16.33244668565032,0.38261114350130343,0.8099999291998995,16.02663542242485,0.8603913231564554,14.534809089374757,0.4649638940893287,0.7608564231738034,15.848817676691445,0.9504466778336125,15.063456108402017,0.4457131572629384,0.8571154088002221,16.871247847301213,0.9139090677034853,15.407433093747931,im Erwartungsband,unter Erwartung,unter Erwartung,im Erwartungsband,im Erwartungsband,0.38197210694741246,-2.379712453009591,-1.5600138133375971,0.8325628912239266,-0.49630582005315005,False,False,False,False,False,False,False,"Alle Stände offen
+Erweiterung Gästesektor --> Nutzung Stand B3 gegen aussen
+
+Kassen:
+Ersatz 1: Aqua D4
+Ersatz 2: Aqua D1
+SideEvent 1: B3 gegen aussen
+Side Event 2: B3 gegen aussen",ausverkauft (exkl. Gästesektor),4928.502246036266,,,Abweichung v.a. über Ø Bon (Warenkorb),im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),unter Erwartung – SOLL ist Kapazitätswert (nur bedingt interpretierbar)
+20250726_SL,2025-07-26,2025/26,SL,FC Basel,18:00,Samstag,16201.0,19555.0,16908.0,True,IST aus Zählung,16.270300415439003,0.5235310343013716,0.8706575265332959,17.312398918556248,1.0664169308020353,17.17751805663898,0.3949020461239032,0.7727199549382712,15.622392862212118,0.9451769080550076,15.286867325389581,0.5292186474064347,0.8646381999488622,17.31899717677577,0.9394481822109746,16.270300415439003,0.45852565546846197,0.8271067440361242,16.445701483762313,1.0039684543614797,16.204642529575406,über Erwartung,im Erwartungsband,über Erwartung,unter Erwartung,im Erwartungsband,1.393852087357019,1.0848712343544995,1.2911088249689588,-1.4107173176178176,0.08888444206732317,False,False,False,False,False,False,False,"Alle Stände offen inkl. Bauchläden im Sektor C und D
+
+Bauchläden Sektor C: Kasse Bier-Runner
+Bauchläden Sektor D: Kasse Ersatz 1",ausverkauft (exkl. Gästesektor),-1063.7234088761422,-733.9276203735914,-7164.733719999962,Abweichung v.a. über Bons je Anwesendem (Frequenz),im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20250809_SL,2025-08-09,2025/26,SL,FC Winterthur,18:00,Samstag,15794.0,19070.0,16489.0,False,IST mit Ergänzung (Formel),17.698948402167268,0.5268424659362226,0.8702006984242703,18.247332503199214,1.0627977280192837,18.32464181374331,0.39807962275172754,0.7720077987973142,16.46605986804303,0.9419691693207283,16.307732424924655,0.4106215241703844,0.8646565285789197,17.174808986472712,1.0305179181967836,17.69894840216727,0.46182444954814544,0.8265267451046008,17.333830200788448,1.0005611890425703,17.286797143517127,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,-1.0253691956579722,1.1006588615389692,-0.22998411809255342,0.6265404808255858,0.5179314106164375,False,False,False,False,False,False,False,"Alle Stände offen inkl. Bauchläden im Sektor B, C, D
+
+Bauchläden Sektor C: Kasse Bier-Runner
+Bauchläden Sektor D: Kasse Ersatz 1
+Buachladen SektorB: Kasse Ersatz 2",ausverkauft (exkl. Gästesektor),-6509.516979120383,,,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20250824_SL,2025-08-24,2025/26,SL,FC Luzern,16:30,Sonntag,17038.0,19359.0,17735.0,False,IST aus Zählung,13.879312174158455,0.4703259587251859,0.8927980726939377,16.057274042432844,0.9578635622328676,14.69406145140476,0.34529578872306804,0.8079268115391918,14.489791077896813,0.8489648785010545,13.07675341327496,0.39986464384411485,0.9161113693889147,15.560684399770464,0.8919474116680361,13.879312174158455,0.40629357387478,0.8554646423693294,15.25341096789133,0.9017718795413914,13.86184036264771,im Erwartungsband,über Erwartung,im Erwartungsband,im Erwartungsband,im Erwartungsband,-0.1314705067208034,2.298553611250201,0.4976884070613212,-0.23265317724845946,0.027688546222891946,False,False,False,False,False,False,False,"Alle Stände offen inkl. Bauchläden im Sektor B, C, D",ausverkauft (exkl. Gästesektor),-297.68472452007813,,,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),über Erwartung – SOLL ist Kapazitätswert (nur bedingt interpretierbar)
+20250913_SL,2025-09-13,2025/26,SL,FC Lugano,20:30,Samstag,14487.0,17912.0,15131.0,True,IST aus Zählung,15.46732487010109,0.5126346927990109,0.8600125615965094,16.84595749405823,1.0243132903824506,16.46971740026395,0.3845223330949035,0.756271047378827,15.201484632509333,0.9078599942662202,14.656971045196359,0.4687747557433324,0.844740955783832,16.493091078548098,0.9378063091047145,15.467324870101091,0.44771097436522594,0.8136446961959842,16.002611160864703,0.9643303676300071,15.536929267337074,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,0.41753416442068614,0.8258151889257895,0.7533483256165026,-0.5923474130987363,-0.0986967335186129,False,False,False,False,False,False,False,"Alle Stände offen inkl. Bauchläden im Sektor B, C, D",,1008.3589027576825,-556.9962017375295,-5169.14472221204,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20251004_SL,2025-10-04,2025/26,SL,FC Thun,18:00,Samstag,13892.0,18022.0,14574.0,True,IST aus Zählung,14.884658633283907,0.44972693372022454,0.8619639314394847,17.407079685512773,1.0270765727265165,16.81046581842445,0.32679421896767336,0.7592637337621786,15.707831058550404,0.9103091214195963,14.960214845760593,0.4758734298853731,0.8086782820996561,16.56606935856273,0.8985027353872732,14.88465863328391,0.38645285743696206,0.8161042073903082,16.535642319630625,0.9669318344895494,15.858378867366755,über Erwartung,im Erwartungsband,im Erwartungsband,unter Erwartung,unter Erwartung,1.7991775183045975,-0.18285553121178397,0.04587508702952445,-1.5588552878440833,-1.3928981706027372,False,False,False,False,False,False,False,"Alle Stände offen
+Side Event 4 : Bierhof",schlechtes Wetter (Regen und Sturmböhen),13526.921491878868,133.8300255881324,1195.2085474578005,Abweichung v.a. über Bons je Anwesendem (Frequenz),unter Erwartung – ungeklärte Abweichung (kein dokumentierter Mechanismus),im Erwartungsband
+20251025_SL,2025-10-25,2025/26,SL,Grasshopper Club Zürich,18:00,Samstag,15310.0,19010.0,16042.0,False,IST aus Zählung,15.967433676875864,0.45124852033666224,0.8644126766733184,16.84216084771768,0.9836752751448229,15.923090032584247,0.32814791175239527,0.7630335052369019,15.19805860813397,0.8718420799942614,14.170508448062488,0.37920489296636084,0.8438716465018411,17.122743545070357,0.932527759634226,15.967433676875865,0.3879112786660745,0.8191958510525428,15.999004583136808,0.92607208030541,15.02126099320542,im Erwartungsband,im Erwartungsband,über Erwartung,im Erwartungsband,über Erwartung,-0.1811833906741367,0.6620033855483733,1.6938948492933892,0.14753935751568914,1.3427303203120333,False,False,False,False,False,False,False,"Alle Stände offen
+Ersatz 1: Aqua D4",ausverkauft (exkl. Gästesektor),-14485.903786994519,,,Abweichung v.a. über Ø Bon (Warenkorb),über Erwartung – positiver Ausreisser (was lief gut? Muster prüfen),im Erwartungsband
+20251109_SL,2025-11-09,2025/26,SL,BSC Young Boys,16:30,Sonntag,15825.0,18742.0,16648.0,False,IST aus Zählung,13.018218100085784,0.49079718929463,0.9014406442569676,15.551431445745786,0.9485121867870883,13.927194629801964,0.3640655119270525,0.822047865320016,14.03332794941515,0.8406766528787776,12.394292110109317,0.4510098581389757,0.888272329527265,15.287422190105191,0.8515639810426541,13.018218100085784,0.42622045026871763,0.8666675274581896,14.772891983663795,0.8929681127581764,13.138406239575305,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,0.49545844314138493,0.7557846555073475,0.8543332697202592,-1.0083153278790142,-0.20200849578487592,False,False,False,False,False,False,False,"Alle Stände offen
+Ersatz 1: Bier S2
+Ersatz 2: Aqua D1
+
+-> viele Fans sind bereits in der 80 Minute gegangen",ausverkauft (exkl. Gästesektor),1901.9773074216698,,,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20251123_SL,2025-11-23,2025/26,SL,FC Lausanne-Sport,16:30,Sonntag,11738.0,15824.0,12464.0,True,IST aus Zählung,12.338522233583092,0.4475167708018502,0.8655088738898917,15.04301467684046,0.9313127656254436,13.192169235548123,0.324831569306803,0.7647262482279729,13.574541934897997,0.8254326191014136,11.740167594233295,0.4009322103197318,0.7876643073811931,13.641289816124928,0.9044982109388311,12.33852223358309,0.3843364647826339,0.8205817396553681,14.289927696040202,0.8767758752000371,12.445010154950598,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,0.34245038679077444,-0.7857524515775798,-1.1591991921966798,0.6611259800074389,-0.18889761607977937,False,False,False,False,False,True,True,"Alle Stände offen
+
+Wahlsonntag
+Erster Einsatz BBQ S4 auf der Plattform
+Side Event 1: Raclette
+Side Event 2: Suppe
+> erste 100 Liter Bier im Bierstand S1 waren kostenlos
+> alle Saisonabonennten haben einen Punschgutschein erhalten (nur vor dem Spiel bei den Ständen des FCSG einlösbar) > nur ca. 1/4 wurde eingelöst
+
+Ersatz 1: Aqua B","Abstimmung Stadionname, sehr kalt",1249.9552210118097,520.885448306545,3856.1740110481205,"Gratis-/Gutscheinaktion; Plattform-Event/Zusatzprogramm (z.B. Winterzauber, Kids Day); kalt (Bemerkung Historie); Abstimmungs-/Wahlsonntag",im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20251206_SL,2025-12-06,2025/26,SL,FC Zürich,20:30,Samstag,14000.0,18854.0,14763.0,True,IST aus Zählung,15.20270726113387,0.5501695238729454,0.8818488367156699,16.822199514821886,0.991861910942732,15.786444102786266,0.4207755108152416,0.7903447262798305,15.18004586558925,0.879097984216469,14.048902509853686,0.4488462323871758,0.7830168664474382,15.087396445443694,1.007642857142857,15.202707261133872,0.4852249285465345,0.841379759560553,15.980042559238992,0.9337793136126172,14.892354218769405,im Erwartungsband,unter Erwartung,unter Erwartung,über Erwartung,im Erwartungsband,-0.7194230696855779,-1.4454747887824793,-1.4343692262254275,1.616850705143499,0.4533804916819452,False,True,True,False,True,False,True,"Alle Stände offen
+Bauchladen Sektor B nicht im Einsatz (zu wenig Personal)
+Externe Stände: neben Crepes, Bechinger wie immer
+
+Winterzauber
+Auf der Plattform:
+BBQ S4
+Bier S1
+Side Event 1: Raclette
+Side Event 2: Suppe
+Side Event 3+4: Heissgetränke
+Ersatz 2: Crêpes Stand (Händler ex. Partner)
+
+Gästesektor
+Zusatzsektor B3: Kasse Ersatz 1",Winterzauber,-4344.9425931025335,1100.373986754667,10037.198159038799,"Runner/Bauchläden ganz oder teilweise nicht im Einsatz; Personalmangel; Plattform-Event/Zusatzprogramm (z.B. Winterzauber, Kids Day); Abweichung v.a. über Bons je Anwesendem (Frequenz)",im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),unter Erwartung – Bemerkung: Winterzauber
+20251216_SL,2025-12-16,2025/26,SL,FC Sion,20:30,Dienstag,9953.0,15313.0,10736.0,True,IST aus Zählung,13.715925240861468,0.40038127021196307,0.7721615889836236,15.173068273023583,1.0138405376391557,14.768012272006835,0.28397618341933034,0.6312320513062213,13.691899926836278,0.8985778797659493,13.142564805783476,0.38420709563274047,0.7011036374322471,14.25591101945428,0.9621219732743896,13.715925240861468,0.33976314591386697,0.7066214996518541,14.413470518140086,0.9544708904584585,13.931602863183242,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,0.9477481135687997,-0.09934097141411741,-0.2742825501188612,0.16956859831780755,-0.34296061544644874,True,True,False,False,True,False,False,"folgende Stände waren geschlossen:
+BBQ S1, BBQ S2, Bier S2, A3, Runner B und D
+Bier S1 haben wir nach Spielbeginn geschlossen 
+BBQ S4 wurde nicht vom Kiesplatz auf die Plattform gezogen","Kalt, neblig, vor Weihnachten",2146.6393749686167,84.49502416884089,695.3564608347626,Stände geschlossen (Catering-Bemerkung); Runner/Bauchläden ganz oder teilweise nicht im Einsatz; kalt (Bemerkung Historie),im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20260125_SL,2026-01-25,2025/26,SL,Servette FC,16:30,Sonntag,10510.0,15290.0,11214.0,True,IST mit Ergänzung (Formel),12.908344328250882,0.4724308200823249,0.856667682819085,15.20175858664781,0.9437860251310983,13.313466899261119,0.3472078918255022,0.7511645730597751,13.717789542301256,0.8364878044725383,11.848114579702692,0.3754467476769121,0.7334205362982342,13.723113381541248,0.940627973358706,12.90834432825088,0.4083327868518517,0.8094373916182585,14.440724530455721,0.8885187111444397,12.559437936290177,im Erwartungsband,unter Erwartung,im Erwartungsband,im Erwartungsband,im Erwartungsband,-0.6792841029111765,-1.6297868300202296,-1.2719173533987964,1.2104141922424225,0.6023260291396119,False,False,False,False,False,False,False,"Alle Stände offen
+BBQ S1 neu Plattform Sektor C
+BBQ S4 neu Kiesplatz / Sektor D --> Stand bleibt heute Ausnahmsweise nach der Pause auf der Plattform stehen
+
+Kassen
+Ersatz 1: Runner C
+Ersatz 2: Runner C
+Side Event 2: Buffet Sektor C (Aqua C) > ein Teil auf Händler Side Event
+Runner C: Buffet Sektor C (Aqua C)",Beginn Sportferien,-3667.006179506993,1162.2977178431704,9002.003492315898,Ferienbeginn,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),unter Erwartung – Bemerkung: Beginn Sportferien
+20260211_SL,2026-02-11,2025/26,SL,BSC Young Boys,20:30,Mittwoch,9090.0,14021.0,9815.0,True,IST aus Zählung,13.338521452145214,0.4389953260098684,0.818520928621103,15.467010215389067,1.0101849779855332,14.930953684046832,0.3173045561599732,0.6949379595764302,13.957147771685399,0.8953379175421471,13.287572002949796,0.3932892730045755,0.7000213964767135,13.915661654998281,0.9585258525852586,13.338521452145212,0.37619888655492467,0.7622097899060366,14.692697069032384,0.9510293972963859,14.085315834211201,im Erwartungsband,im Erwartungsband,unter Erwartung,im Erwartungsband,im Erwartungsband,0.35527802402841857,-1.1911917096085196,-1.3558830795664263,0.1667539172412215,-1.197476132173923,True,True,False,True,True,False,False,"Bier S2 auf dem Kiesplatz geschossen
+Runner C nicht im Einsatz
+Bechinger nicht vor Ort
+
+technische Probleme mit Just Eat im Sektor B","Kalt, nass",6788.36093297984,871.9434642725398,6978.261961954252,Stände geschlossen (Catering-Bemerkung); Runner/Bauchläden ganz oder teilweise nicht im Einsatz; technische Probleme (Kasse/App/Internet); Abweichung v.a. über Ø Bon (Warenkorb); kalt (Bemerkung Historie),im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20260214_SL,2026-02-14,2025/26,SL,Grasshopper Club Zürich,18:00,Samstag,11153.0,16017.0,11848.0,True,IST aus Zählung,14.332434322603785,0.4474686845567518,0.866890699689027,17.03900495170964,0.9699587959278966,15.757734968492928,0.3247889160255572,0.7668646411820328,15.375687135505553,0.8596850154905079,14.023353258470456,0.37173968093188153,0.7397140538178185,14.90300578034682,0.9617143369496997,14.332434322603781,0.3842904452570267,0.822330411494712,16.185994230748303,0.9131588265479496,14.865271071074659,im Erwartungsband,unter Erwartung,unter Erwartung,im Erwartungsband,im Erwartungsband,-0.2626643352708659,-1.8302570567348173,-2.06077349764998,1.1003069120688014,-0.8023804287819788,False,True,False,False,True,False,False,"Runner C und B nicht im Einsatz
+Bechinger nicht vor Ort","Kalt, nass",5942.7282556957,1323.2662009108026,11379.3755495253,Runner/Bauchläden ganz oder teilweise nicht im Einsatz; Abweichung v.a. über Ø Bon (Warenkorb); kalt (Bemerkung Historie),im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),"unter Erwartung – Bemerkung: Kalt, nass"
+20260228_SL,2026-02-28,2025/26,SL,FC Winterthur,18:00,Samstag,13529.0,17586.0,14251.0,True,IST aus Zählung,15.809154032291206,0.4826256307196475,0.8537735118303753,16.895442999815845,1.0311376229294336,16.499823249822633,0.35652661071120095,0.7467698010940413,15.246139449878527,0.9139084743212448,14.683763281793302,0.4091768826619964,0.8103605140452633,16.243794706680923,0.9732426639071624,15.809154032291204,0.4182409563505972,0.8058057295757758,16.049619311456155,0.9707550730161928,15.565330025149644,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,-0.18387324426747037,0.11021597376170066,0.3000910281603363,0.054354252434893516,0.34166089639639474,False,False,False,False,False,False,False,"Alle Stände offen
+Kassen:
+Ersatz 1 > D3",,-3298.6949926181687,-80.10043968040785,-759.7921133770909,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20260308_SL,2026-03-08,2025/26,SL,FC Basel,14:00,Sonntag,16250.0,19115.0,17022.0,False,IST aus Zählung,13.509671558813062,0.49897809545034494,0.9075690355535766,15.814374195578127,0.9463804605198122,14.175807340420592,0.371675884159421,0.8321939082467649,14.270602688605006,0.8387872807355501,12.615541158435224,0.4218015051740358,0.8905048391315722,15.230481672728754,0.8870153846153846,13.509671558813062,0.4342428985847216,0.874657456022484,15.022671230976961,0.8909612185839914,13.37293838156462,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,-0.25005635365025114,0.5746173103156387,0.34282390232007603,-0.09426784209286375,0.22361085446648843,False,False,False,False,False,False,False,Alle Stände offen,ausverkauft (exkl. Gästesektor),-2221.914130287199,,,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20260317_SL,2026-03-17,2025/26,SL,FC Lugano,19:00,Dienstag,10489.0,15841.0,11089.0,True,IST mit Ergänzung (Formel),12.729210601582611,0.4312573045746109,0.7726929783226781,14.97697585004822,1.0427946297769863,14.96950511980733,0.310524246850873,0.6319354552814361,13.51494970269717,0.9242402060962267,13.321880258760142,0.25127134035597526,0.700018938198346,15.274761468939484,0.8333492229955192,12.729210601582611,0.3688400160184426,0.7072477944641925,14.227194920711247,0.9817294553700221,14.12168384927839,unter Erwartung,im Erwartungsband,über Erwartung,unter Erwartung,unter Erwartung,-2.7290160345519845,-0.13008863698770418,1.7728866552628944,-3.480173794051753,-2.2819417256208667,True,True,False,False,True,False,False,"folgende Stände waren geschlossen:
+BBQ S1, BBQ S2, Bier S2, A3, Runner B, C und D, Getränke Contrailer, Pommes Contrailer
+BBQ S4 wurde nicht vom Kiesplatz auf die Plattform gezogen
+B4: reduziertes Angebot: Sandwiches, Getränke, Snacks
+
+Öffnung Kiesplatz
+Bierhofe: KO-2.5h / BBQ S4: KO-1.5h",effektiv verkauft: 16'437; Verschiededatum wegen Schnee-Absage,14605.65189508103,114.5123121072738,874.5908023725877,Stände geschlossen (Catering-Bemerkung); Runner/Bauchläden ganz oder teilweise nicht im Einsatz; Abweichung v.a. über Bons je Anwesendem (Frequenz); Schnee/Verschiebung,unter Erwartung – möglicher Clubhebel (operativer Hinweis dokumentiert) → Prüfkandidat Phase 2,im Erwartungsband
+20260406_SL,2026-04-06,2025/26,SL,FC Zürich,16:30,Montag,16851.0,20036.0,17617.0,False,IST aus Zählung,14.327840954162594,0.5174030210461,0.895845532312058,15.86403662248426,0.9610356526886097,14.228410061885665,0.38905027238831014,0.8128812689118884,14.31541715639011,0.8517763367238476,12.66235413929425,0.42366998577524895,0.8792673188261131,15.560611492562122,0.9207762150614207,14.327840954162593,0.452436021678028,0.8594062632494331,15.069847445648287,0.9047582150542297,13.422561865854592,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,über Erwartung,-0.5751442967594242,0.657236200283899,0.7996941917786098,0.37271725096810304,1.434676513463893,False,False,False,False,False,False,False,"Alle Stände offen
+Gästesektor wurde erweitert > Zusatzsektor B3
+
+Kassen:
+Ersatz 1 > Zusatzsektor Gäste B3
+Side Event 1 > Runner D",ausverkauft (Zusatzgästesektor B3),-15254.857917078127,,,,über Erwartung – positiver Ausreisser (was lief gut? Muster prüfen),im Erwartungsband
+20260503_SL,2026-05-03,2025/26,SL,FC Sion,14:00,Sonntag,15116.0,18536.0,15875.0,False,IST mit Ergänzung (Formel),14.448681531953083,0.47037481973484985,0.9034976973480257,16.292646761228063,0.945527337178938,14.75415482650922,0.3453401293536162,0.8254410685322305,14.70218712418504,0.838031148252816,13.130232585838058,0.4110729386892177,0.8564415192058696,14.949094458384863,0.9665255358560466,14.44868153195308,0.40634088594543216,0.8693451463358981,15.477000401622478,0.8901580534267456,13.918530255724963,im Erwartungsband,im Erwartungsband,im Erwartungsband,über Erwartung,im Erwartungsband,0.09634476593587168,-0.40954661248553353,-0.8660071187263801,1.7480978972291055,0.8217134418711185,False,False,False,False,False,False,False,"Alle Stände geöffnet
+
+Cup T-Shirt Verkauf
+BBQ S1 und Bier S1 ab 10.00 Uhr auf Plattform D (BBQ S1 in der Pause Sektor C)
+Kiesplatz bereits ab 11.00 Uhr geöffnet (BBQ S4 in der Pause Sektor D)
+
+Kassen:
+Ersatz 1 > tbd",keine Scans beim VIP,-8013.766691464201,,,Abweichung v.a. über Bons je Anwesendem (Frequenz),im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20260517_SL,2026-05-17,2025/26,SL,FC Thun,16:30,Sonntag,14698.0,18531.0,15471.0,False,IST aus Zählung,13.661568680516734,0.45889529147217134,0.8900601636229811,15.711995777159444,0.9475790845719101,14.164575750311139,0.334982053754788,0.8034983913605968,14.178218272056341,0.8398496342511026,12.605545778003068,0.4381383322559793,0.8348712967459933,14.98266948710901,0.9118247380596,13.661568680516734,0.3952578322012277,0.8519313808730258,14.925418105305932,0.8920896522220809,13.362342910079025,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,0.8686399856096678,-0.48512441808903867,0.09553563617844915,0.4647190879303482,0.48680518244257487,False,False,False,False,False,False,False,"Alle Stände geöffnet
+
+Cup T-Shirt Verkauf
+BBQ S1 und Bier S1 ab 13.30 Uhr auf Plattform D (BBQ S1 in der Pause Sektor C)
+
+Kassen:
+Ersatz 1 > Runner D",ausverkauft (exkl. Gästesektor),-4398.020373893434,,,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20260726_SL,2026-07-26,2026/27,SL,FC Zürich,16:30,Sonntag,15870.0,19326.0,16524.0,False,IST aus Zählung,15.853239895496888,0.5144356391527379,0.9054348576591655,16.81702294222586,0.9969924953699527,15.671112292366939,0.386229882539416,0.828647949284474,15.175374620942259,0.8836452769172597,13.946264743532385,0.4189906219151036,0.8550139708165166,15.764829697445682,1.005608065532451,15.853239895496886,0.4494941972148014,0.871870651629237,15.975125137452228,0.9386094553410442,14.783554405317213,im Erwartungsband,im Erwartungsband,im Erwartungsband,über Erwartung,über Erwartung,-0.6111170892892179,-0.5370697199800779,-0.3306720185616517,1.464343718036167,1.5355926179181467,False,True,False,False,True,False,True,"Sittermarsch - Event im Kubel: 11.00 - 14.00 Uhr
+Bierstand 1+2 = Kassen Side Event 1-4
+BQS1
+
+Stadion
+Alle Stände geöffnet ausser Runner B, C, D
+BBQ S1 in der Pause nicht auf die Plattform D gezogen
+Zusatzsektor Gästefans im B3
+
+Kassenzuteilung Stadion:
+Ersatz 1 = B3 gegen Aussen, Gästesektor
+Ersatz 3 =  Pommes Trailer
+Runner B = B3
+Runner C = C4
+Runner D = D3",ausverkauft (exkl. Gästesektor),-16975.908729151404,,,"Runner/Bauchläden ganz oder teilweise nicht im Einsatz; Plattform-Event/Zusatzprogramm (z.B. Winterzauber, Kids Day); Abweichung v.a. über Bons je Anwesendem (Frequenz)",über Erwartung – positiver Ausreisser (was lief gut? Muster prüfen),im Erwartungsband
+20260809_SL,2026-08-09,2026/27,SL,FC Luzern,16:30,Sonntag,16364.0,19416.0,17016.0,False,IST aus Zählung,15.606435745666747,0.4771146836286528,0.8844323432206739,16.818943969123133,1.0459754195857673,16.613763667651224,0.3514773650339906,0.7944627254845379,15.177108120558879,0.9270593746501011,14.785162799733087,0.4106796686835458,0.8763906056860321,16.675397619463965,0.9358958689806893,15.606435745666746,0.4128784976794472,0.8446923221426177,15.976949993443789,0.9847239808091193,15.672817249700643,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,-0.044665998058822896,0.9948863109893863,1.0677097899095112,-1.080120471449202,-0.09329922331360822,False,True,False,False,True,False,False,"Alle Stände geöffnet ausser Runner B
+BBQ S4 in der Pause nicht auf die Plattform gezogen.
+
+Kassenzuteilung
+Ersatz 1 = D3.1
+Runner C = 1x Runner C, 1x C4",,1086.266932010692,,,Runner/Bauchläden ganz oder teilweise nicht im Einsatz,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20260830_SL,2026-08-30,2026/27,SL,FC Thun,16:30,Sonntag,14637.0,18100.0,15301.0,True,IST aus Zählung,15.062553261642195,0.4516567500476935,0.9033438054142778,16.941238241315457,0.9968066127582628,16.206700789223312,0.32851144536852905,0.8251867842897352,15.287464240122354,0.8834805271396599,14.422903467791146,0.4084001826126656,0.8453591160220996,15.420759046699084,0.9767711962833914,15.062553261642195,0.38830275476212944,0.8691446794086142,16.093121940677122,0.9384344578583891,15.288809012292045,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,0.41265987366444823,-0.7308562535705971,-1.0649649085325466,0.8503698391396587,-0.32772995899347573,False,False,False,False,False,False,False,"Alle Stände geöffnet
+BBQ S4 in der Pause auf der Plattfrom
+
+Kassenzuteilung:
+Ersatz 1 = D3.2
+Ersatz 2 = D4.1
+Runner C16 = C4",,3311.7054222618535,430.5186972959144,3890.8264848915146,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
+20260912_SL,2026-09-12,2026/27,SL,FC Sion,18:00,Samstag,14044.0,17814.0,14689.0,True,IST aus Zählung,16.996214913694008,0.4706270122250137,0.8607647686361296,17.837047714873076,1.1138668654574422,18.943934310453105,0.34556902482608876,0.7574234645519827,16.095826362058464,0.9872323004907596,16.85886223317731,0.4176566980745596,0.8245761760413158,17.156245399836028,0.990672173170037,16.99621491369401,0.40658510259915476,0.8145923417392431,16.94408518717811,1.0486397608454403,17.87101504375982,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,im Erwartungsband,0.2248576742953787,0.25342554301584524,0.3105120773906241,-1.2077266862864808,-1.1032379827975414,False,False,False,False,False,False,False,"Alle Stände geöffnet
+BBQ S1 vor dem Spiel auf der Plattform Sektor D und in der Pause im Sektor C
+
+Kassenzuteilung:
+Ersatz 1
+Ersatz 2",,12285.6930266442,-177.85202425712353,-1813.686736265755,,im Erwartungsband (Abweichung vom Saisonmittel durch Kontext erklärt),im Erwartungsband
