@@ -16,6 +16,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import platform
 import sys
 import time
@@ -115,7 +116,9 @@ def _md5(pfad: Path) -> str:
 
 
 def _laufinfo(datenstand, dauer: float) -> dict:
-    eingaben = sorted(p for p in config.DATA_DIR.rglob("*") if p.is_file() and not p.name.startswith("."))
+    # followlinks: Datenordner darf aus Verknüpfungen bestehen (z.B. «Zutritt» → «Zutritte» der Lieferung)
+    eingaben = sorted(Path(w) / f for w, _, dateien in os.walk(config.DATA_DIR, followlinks=True)
+                      for f in dateien if not f.startswith("."))
     eingaben += [config.KONTEXT_FILE, config.WETTER_FILE, config.RESULTATE_FILE, config.OVERRIDES_FILE]
     pakete = {}
     for p in ("pandas", "numpy", "openpyxl", "python-calamine", "statsmodels", "matplotlib", "xlsxwriter"):

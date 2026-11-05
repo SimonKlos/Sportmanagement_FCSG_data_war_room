@@ -91,11 +91,32 @@ Frühere Hinweise, die technischen Rechenkern-/Notebook-Roots unverändert zu la
 
 **Entschieden:** Die Anstosszeit wird als **Anstoss-Slot** modelliert (Samstag 17–19.59 Uhr als Referenz, Samstag ab 20 Uhr, Nachmittag vor 17 Uhr, Werktagabend) statt nur «Abendspiel ab 20 Uhr» + «Werktag». Anlass: Hinweis des Caterers, Samstag 18 Uhr sei der umsatzstärkste Termin; die Daten bestätigen das. Dazu als Sensitivitäten: inkl. 2021/22 mit Covid-Variable und ohne 2023/24 (Bons-Erfassungsbruch, erfüllt die offene Sensitivitätsprüfung aus D-041).
 
-**Umsetzung:** `Rechenkern/fcsg/analysis/anstoss_slot.py` + `run4.py`, Ergebnisse in `Baseline Analyse Rechnungen/run4_anstoss-slot_2026-11-02/`. Run 3 bleibt unverändert und Zahlenbasis für Bericht/Excel/Deliverables (D-028), bis das Team die Übernahme des Slot-Modells entscheidet (**offen**). Quelle: Reto, Chat; Umsetzung Agent.
+**Umsetzung:** `Rechenkern/fcsg/analysis/anstoss_slot.py` + `run4.py`, Ergebnisse in `Baseline Analyse Rechnungen/run4_anstoss-slot_2026-11-02/`. Run 3 bleibt unverändert und Zahlenbasis für Bericht/Excel/Deliverables (D-028), bis das Team die Übernahme des Slot-Modells entscheidet – **entschieden 03.11.2026, siehe D-048**. Quelle: Reto, Chat; Umsetzung Agent.
 
 ## D-047 – Spielrechner für den FCSG (Reto, 02.11.2026)
 
 **Entschieden:** Das Team baut ein Werkzeug für den FCSG: erwartete Anwesende, Kundenfranken und Umsatz für ein angesetztes Spiel (aus Kontext und Anstoss-Slot) sowie Beobachtung vs. Erwartung für vergangene Spiele; Grundlage Run 4 (`erwartung_je_spiel`, `koeffizienten`). **Arbeitsannahme (Agent, offen):** als einzelne, offline nutzbare HTML-Datei ohne Python/Server beim FCSG, erzeugt aus dem Rechenkern; enthält Clubzahlen je Spiel und bleibt daher intern/beim FCSG (keine öffentliche Publikation). Start mit künstlichen, markierten Testdaten. Quelle: Reto, Chat.
+
+## D-048 – Run 4 wird Zahlenbasis (Team, 03.11.2026)
+
+**Entschieden:** Das Slot-Modell aus D-046 ersetzt in **allen** Kontextmodellen des Rechenkerns «Werktag + Abendspiel ab 20 Uhr». Das gilt für die Phase-1-Kontextmodelle, die Diagnosekarte und die Nebenmodelle der Ideen-Grundlage (Elastizität, Ankunft–Konsum, Durchsatz, Kiesplatz, Promo, Gästeanteil, Frühindikator T-7). Der vollständige Lauf **Run 4 (komplett)** wird Zahlenbasis für Bericht, Excel, Diagramme, Lesehilfe und Folienleitfaden. Er löst damit D-028/D-034 als Referenz auf Run 3 ab; die Rechenlogik ausserhalb der Anstoss-Kontrolle bleibt unverändert.
+
+**Unverändert:** Run 3 bleibt als eingefrorenes Archiv erhalten (D-042). Er ist über den Code-Stand vor dieser Änderung reproduzierbar (Commit auf `main` vor Branch `feature/run4-komplett`). Die Run-3-Spezifikation bleibt in `models.VARIABLEN_RUN3` als Vergleich (run4.py). Deskriptive Auswertungen nach Werktag/Wochenende oder Abend ab 20 Uhr bleiben als Beschreibung erhalten.
+
+**Prüfung vor Übernahme (Agent, 03.11.2026):** KF-Modell innerhalb Saison 82 % (Run 3: 33 %). Gegenproben: Slot allein 64 %; Permutationstest mit 1000 Läufen innerhalb der Saisons (Median 27 %, Maximum 41 %); Vorhersagefehler je ausgelassener Saison −48 bis −84 %; Muster in jeder Saison gleich (Sonntagnachmittag tiefster, Samstag 17–19.59 höchster Ø KF). Ursache des Sprungs: Run 3 legte Samstag 18 Uhr und Sonntag 16.30 Uhr in dieselbe Kategorie «kein Abendspiel». Quelle: Team (Call 03.11.2026), Umsetzung Agent.
+
+## D-049 – Storyline und Massnahmen-Darstellung (Team, 03.11.2026)
+
+**Entschieden:**
+1. Die Massnahmen kommen auf eine **Matrix Wirkung × Umsetzungsaufwand/Komplexität** mit Quick Wins und Leuchtturmprojekten. Rund **6 Massnahmen** werden quantifiziert. Die Hauptpräsentation bleibt top-line, Details kommen in den Anhang.
+2. Die **Abo-Obergrenze** (vom Club bereits erwogen) wird aufgenommen und gegen die No-Show-Baseline quantifiziert.
+3. **Kundenfranken-Initiativen** wie Fast Lane, Loyalty-/Punkteprogramme und Gutscheine sind mit den vorhandenen Daten nur annahmebasiert. Sie erscheinen als separater, recherchebasierter Teil (Benchmarks anderer Clubs, «Moonshots»), nicht als quantifizierte Massnahme. Risiken wie die Akzeptanz in der Fankurve (Beispiel Fast Lane bei einem Bundesligisten mit Sponsor-Bezug) gehören in diesen Teil.
+4. Begründung für den Research-Teil: Rund 82 % der Spiel-zu-Spiel-Schwankung des KF erklärt der Spielkontext (D-048). Clubhebel verändern vor allem das Niveau über alle Spiele, und das ist nur mit Piloten messbar, nicht aus der Historie.
+5. Die Begründung der Feldauswahl gehört in die Storyline: Die Felder stammen aus den Baseline-Befunden und den ursprünglich gesammelten Ideen und sind in drei Arbeitsrichtungen geclustert.
+
+**Phasenwechsel:** Damit beginnt die Massnahmenquantifizierung (bisher «später»). Methodische Leitplanken bleiben: Umsatz primär (D-039), keine Kausalität aus Korrelation, Hebel nicht addieren.
+
+**Offen:** (a) Die Zusammenfassung des Calls nennt **8 Felder**, das Repo führt **9 Chancenfelder**. Klären, ob ein Feld gestrichen oder zusammengelegt wurde. (b) Welche rund 6 Massnahmen quantifiziert werden. (c) Ob No-Show je Sektor für Abos verfügbar ist: Einzeltickets 21/22–24/25 je Platzgruppe ja; für Abos nur, wenn das Zutrittsfeld «Coding» Abo/Einzel unterscheidet (Rückfrage FCSG). (d) Gruppenbestellungen mit No-Show (Vermutung: Sponsorentickets): Auswertung nur nach Tarif/Kanal, nie nach Käufer; braucht eigene Freigabe. Quelle: Team (Call 03.11.2026).
 
 ## Bestätigte Arbeitsregeln zu den Quellen-Widersprüchen (11.10.2026)
 

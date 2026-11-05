@@ -157,13 +157,12 @@ def elastizitaet(k: pd.DataFrame, ctx: pd.DataFrame) -> pd.DataFrame:
     varianten = [
         ("Retos Stichprobe (SL 25/26 + 26/27)", d[d["saison"] >= "2025/26"], "ln_umsatz ~ ln_anwesende + C(saison)"),
         ("SL 21/22–26/27 mit Saison-Effekten", d, "ln_umsatz ~ ln_anwesende + C(saison)"),
-        ("SL 22/23–26/27 + Kontext (Top-Gegner, Abend, Temperatur)", d[d["saison"] >= config.MODELL_AB_SAISON],
-         "ln_umsatz ~ ln_anwesende + C(saison) + top_gegner + abendspiel + temp_anpfiff_c"),
+        ("SL 22/23–26/27 + Kontext (Top-Gegner, Anstoss-Slot, Temperatur)", d[d["saison"] >= config.MODELL_AB_SAISON],
+         "ln_umsatz ~ ln_anwesende + C(saison) + top_gegner + " + " + ".join(config.SLOTS) + " + temp_anpfiff_c"),
     ]
     for name, x, formel in varianten:
-        x = x.dropna(subset=["temp_anpfiff_c"]) if "temp" in formel else x
-        fit = smf.ols(formel, data=x.assign(top_gegner=x["top_gegner"].astype(float),
-                                            abendspiel=x["abendspiel"].astype(float))).fit(cov_type="HC3")
+        x = x.dropna(subset=["temp_anpfiff_c", *config.SLOTS]) if "temp" in formel else x
+        fit = smf.ols(formel, data=x.assign(top_gegner=x["top_gegner"].astype(float))).fit(cov_type="HC3")
         b, se = fit.params["ln_anwesende"], fit.bse["ln_anwesende"]
         rows.append({"variante": name, "spiele": int(fit.nobs), "elastizitaet": b, "ki95_unten": b - 1.96 * se,
                      "ki95_oben": b + 1.96 * se, "p_wert_gegen_1": 2 * (1 - _phi(abs((b - 1) / se))),

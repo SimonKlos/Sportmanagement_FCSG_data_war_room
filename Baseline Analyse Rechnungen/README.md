@@ -4,15 +4,17 @@ Interner Sammelpunkt für alle Rechenstände, Gegenrechnungen und analytischen P
 
 ## Verbindliche Zahlenbasis
 
-- [Run 3 – Kontext v5](run3_kontext-v5_2026-10-14/README.md): jüngster geteilter Analyse-Stand, fachliche Zahlenbasis gemäss D-028/D-034.
-- [Phase-1-Rechnung](run3_kontext-v5_2026-10-14/ralf_kern_phase1/): Baseline, Modelle, Tabellen, Prüfprotokoll und Ergebnis-Excel.
-- [Ideen-Grundlage](run3_kontext-v5_2026-10-14/ralf_ideen_grundlage/): vertiefende Analysen, bestehende Chancenfelder und Szenariobausteine derselben Zahlenbasis.
+- [Run 4 (komplett) – Anstoss-Slot](run4_komplett_2026-11-05/README.md): **Zahlenbasis ab 05.11.2026** (D-048). Ganzer Rechenkern mit Anstoss-Slot statt Werktag + Abendspiel.
+- [Phase-1-Rechnung](run4_komplett_2026-11-05/kern_phase1/): Baseline, Modelle, Tabellen, Prüfprotokoll und Ergebnis-Excel.
+- [Ideen-Grundlage](run4_komplett_2026-11-05/ideen_grundlage/): vertiefende Analysen, Chancenfelder und Szenariobausteine derselben Zahlenbasis.
+- [Run-4-Voranalyse](run4_anstoss-slot_2026-11-02/README.md): Slot-Modell mit Sensitivitäten (2021/22 mit Covid, ohne 2023/24) und Koeffizienten für den Spielrechner.
+- [Run 3 – Kontext v5](run3_kontext-v5_2026-10-14/README.md): bisherige Zahlenbasis (D-028/D-034), jetzt eingefrorenes Archiv.
 - [Gegenrechnung](run3_kontext-v5_2026-10-14/abgleich_simon_ralf/): interner Abgleich der Kernzahlen.
 - [Frühere Baseline](run3_kontext-v5_2026-10-14/simon_baseline/): Gegenrechnung/Erklärmaterial, keine konkurrierende freigegebene Zahlenbasis.
 
 - [Run 4 – Anstoss-Slot](run4_anstoss-slot_2026-11-02/README.md): ergänzende Kontextmodelle mit Anstoss-Slot und Sensitivitäten (D-046); Übernahme als Zahlenbasis offen.
 
-Run 1 und Run 2 bleiben als historische Archive erhalten. Doppelte Diagramme und interne Abstimmungen werden dort zur Nachvollziehbarkeit **nicht gelöscht oder nachträglich umgeschrieben**.
+Run 1 bis Run 3 bleiben als historische Archive erhalten. Doppelte Diagramme und interne Abstimmungen werden dort zur Nachvollziehbarkeit **nicht gelöscht oder nachträglich umgeschrieben**.
 
 ## Wo liegt die Rechenlogik?
 

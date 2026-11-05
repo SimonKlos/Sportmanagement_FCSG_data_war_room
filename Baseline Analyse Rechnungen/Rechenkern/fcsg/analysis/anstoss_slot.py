@@ -16,32 +16,20 @@ import pandas as pd
 import statsmodels.formula.api as smf
 
 from .. import config
-from ..utils import minuten
+from ..utils import anstoss_slot
 from . import models
 
-REFERENZ_SLOT = "Samstag 17–19.59 Uhr"
-SLOTS = {
-    "slot_sa_abend": "Samstag ab 20 Uhr",
-    "slot_nachmittag": "Nachmittag vor 17 Uhr (Sonntag/Feiertag)",
-    "slot_werktag_abend": "Werktagabend ab 17 Uhr",
-}
+REFERENZ_SLOT = config.REFERENZ_SLOT
+SLOTS = config.SLOTS
 UEBRIGE = ["top_gegner", "temp_anpfiff_c", "regen_anreise", "schulferien"]
 PREDS_SLOT = [*SLOTS, *UEBRIGE]
-PREDS_RUN3 = models.HAUPT
+PREDS_RUN3 = models.HAUPT_RUN3
 MIN_SPIELE = 20
 
 
 def slot(wochentag: str, anpfiff: str | None) -> str | None:
-    """Anstoss-Slot aus Wochentag und Anpfiffzeit (HH:MM). Fehlende Anpfiffzeit bleibt fehlend."""
-    m = minuten(anpfiff) if isinstance(anpfiff, str) else np.nan
-    if np.isnan(m):
-        return None
-    if m < 17 * 60:
-        return SLOTS["slot_nachmittag"]
-    if wochentag == "Samstag":
-        return REFERENZ_SLOT if m < 20 * 60 else SLOTS["slot_sa_abend"]
-    # Mo–Fr und (bisher nicht beobachtet) Sonntag ab 17 Uhr
-    return SLOTS["slot_werktag_abend"]
+    """Anstoss-Slot aus Wochentag und Anpfiffzeit (HH:MM). Fehlende Anpfiffzeit bleibt fehlend (utils.anstoss_slot)."""
+    return anstoss_slot(wochentag, anpfiff)
 
 
 def ergaenze_slot(d: pd.DataFrame, kontext: pd.DataFrame) -> pd.DataFrame:
@@ -86,15 +74,13 @@ def _effekt(b: float, se: float, art: str, pbar: float, schritt: float = 1.0) ->
 
 
 def _label(var: str) -> str:
-    if var in SLOTS:
-        return f"{SLOTS[var]} (vs. {REFERENZ_SLOT})"
     if var == "covid":
         return "Covid-Massnahmen (Kontexttabelle)"
-    return models.VARIABLEN[var]["label"]
+    return models.label(var)
 
 
 def _schritt(var: str) -> float:
-    return models.VARIABLEN[var]["schritt"] if var in models.VARIABLEN else 1.0
+    return models.ALLE_VARIABLEN[var]["schritt"] if var in models.ALLE_VARIABLEN else 1.0
 
 
 def schaetze(d: pd.DataFrame) -> dict[str, pd.DataFrame]:

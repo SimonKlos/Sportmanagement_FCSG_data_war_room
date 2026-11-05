@@ -207,6 +207,21 @@ def anpfiff_slot(hhmm: str | None) -> str | None:
     return "Abend (ab 20 Uhr)"
 
 
+def anstoss_slot(wochentag_: str | None, hhmm: str | None) -> str | None:
+    """Anstoss-Slot aus Wochentag und Anpfiffzeit (config.SLOTS, Referenz Samstag 17–19.59 Uhr).
+
+    Fehlende Anpfiffzeit bleibt fehlend. Mo–Fr und (bisher nicht beobachtet) Sonntag ab 17 Uhr = Werktagabend.
+    """
+    m = minuten(hhmm) if isinstance(hhmm, str) else np.nan
+    if np.isnan(m):
+        return None
+    if m < 17 * 60:
+        return config.SLOTS["slot_nachmittag"]
+    if wochentag_ == "Samstag":
+        return config.REFERENZ_SLOT if m < 20 * 60 else config.SLOTS["slot_sa_abend"]
+    return config.SLOTS["slot_werktag_abend"]
+
+
 _TEAM_MUSTER = [
     (r"lausanne[- ]?ouchy|stade[- ]lausanne|\bslo\b", "Lausanne Ouchy"),
     (r"lausanne|\bls\b", "Lausanne"),

@@ -7,6 +7,11 @@ from __future__ import annotations
 
 import pandas as pd
 
+from .. import config
+
+_NACHM = f"{config.SLOTS['slot_nachmittag']} (vs. {config.REFERENZ_SLOT})"
+_WT = f"{config.SLOTS['slot_werktag_abend']} (vs. {config.REFERENZ_SLOT})"
+
 
 def _pct(x, d=0) -> str:
     return "–" if pd.isna(x) else f"{x * 100:.{d}f} %"
@@ -168,12 +173,14 @@ def phase2_kandidaten(res: dict[str, pd.DataFrame]) -> pd.DataFrame:
          f"Gratis/Promo {g('Tarifgruppe', 'Gratis/Promo')}, Inhouse {g('Verkaufskanal', 'Inhouse (Geschäftsstelle/Kasse)')} "
          f"vs. Online-Shop {g('Verkaufskanal', 'Online-Shop')}.",
          "Aktuelle Eintrittsdaten je Einzelticket (ZKS) ab 23/24; Zweitmarkt-Nutzung je Segment."),
-        ("Abendspiele: weniger Anwesende, mehr Konsum", "Programm/Angebot (Clubhebel); Anstosszeit selbst = Liga",
-         f"Anwesenheitsquote {e('Anwesenheitsquote (IST/SOLL)', 'Abendspiel (Anpfiff ab 20 Uhr)')}; "
-         f"KF {e('Kundenfranken exkl. MwSt', 'Abendspiel (Anpfiff ab 20 Uhr)')}, getragen von Bons/Anwesende.",
-         "Viertelstunden-Umsätze, um den Mehrkonsum zeitlich zu verorten."),
-        ("Werktagsspiele: tieferer Ø Bon", "Angebot für späte Ankünfte (Clubhebel)",
-         f"Ø Bon {e('Ø Bon exkl. MwSt', 'Werktag (Mo–Fr) statt Wochenende')}; KF {e('Kundenfranken exkl. MwSt', 'Werktag (Mo–Fr) statt Wochenende')}.",
+        ("Sonntagnachmittag: mehr Anwesende, weniger Konsum", "Programm/Angebot (Clubhebel); Anstosszeit selbst = Liga/TV",
+         f"Je gegenüber Samstag 17–19.59 Uhr: Anwesenheitsquote {e('Anwesenheitsquote (IST/SOLL)', _NACHM)}; "
+         f"KF {e('Kundenfranken exkl. MwSt', _NACHM)}; Bons/Anwesende {e('Bons je Public-Anwesendem', _NACHM)}; "
+         f"Ø Bon {e('Ø Bon exkl. MwSt', _NACHM)}.",
+         "Viertelstunden-Umsätze, um den Konsum zeitlich zu verorten."),
+        ("Werktagabende: weniger Anwesende, tieferer Ø Bon", "Angebot für späte Ankünfte (Clubhebel)",
+         f"Je gegenüber Samstag 17–19.59 Uhr: Anwesenheitsquote {e('Anwesenheitsquote (IST/SOLL)', _WT)}; "
+         f"Ø Bon {e('Ø Bon exkl. MwSt', _WT)}; KF {e('Kundenfranken exkl. MwSt', _WT)}.",
          "Zeitdaten Catering; Ankunft nach Eingang an Werktagen."),
         ("Frühere Toröffnung Tribünen A/B/C", "Toröffnung/Programm (Clubhebel)",
          "Einlass-Beginn heute: " + ", ".join(f"{s_} {v:.0f} min" for s_, v in ein.items()) + " vor Anpfiff. Natürliches Experiment "
@@ -211,7 +218,10 @@ BESCHREIBUNG = {
     "anpfiff": "Anpfiffzeit (Mehrheit aus Historie, Catering, Kontext, Resultate, Ticket-Export)",
     "anpfiff_quellen": "Quellen, die den gewählten Anpfiff nennen", "anpfiff_abweichungen": "Abweichende Quellenwerte",
     "wochentag": "Wochentag", "wochenende": "Samstag/Sonntag", "anpfiff_slot": "Nachmittag (<17), Vorabend (17–19), Abend (≥20)",
-    "abendspiel": "Anpfiff ab 20 Uhr", "winter": "Monate November–Februar",
+    "abendspiel": "Anpfiff ab 20 Uhr (nur noch deskriptiv; Modelle nutzen den Anstoss-Slot)", "winter": "Monate November–Februar",
+    "anstoss_slot": "Anstoss-Slot: Samstag 17–19.59 Uhr (Referenz), Samstag ab 20 Uhr, Nachmittag vor 17 Uhr, Werktagabend ab 17 Uhr",
+    "slot_sa_abend": "1 = Samstag ab 20 Uhr (Dummy zum Anstoss-Slot)", "slot_nachmittag": "1 = Anpfiff vor 17 Uhr (Dummy zum Anstoss-Slot)",
+    "slot_werktag_abend": "1 = Werktag ab 17 Uhr (Dummy zum Anstoss-Slot)",
     "soll": "SOLL laut Historie (verkauft/ausgegeben; bei ausverkauften Spielen teils Kapazitätswert)",
     "ist": "IST laut Historie (anwesend, Drehkreuz-Zählung inkl. VIP und Gäste)", "ist_vip": "IST VIP (Hospitality)",
     "ist_gaeste": "IST Gästesektor", "zweitmarkt": "Über den Zweitmarkt weiterverkaufte Tickets",

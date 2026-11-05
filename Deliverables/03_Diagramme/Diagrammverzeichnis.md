@@ -1,6 +1,6 @@
 # Diagramme – vertraulich
 
-Alle Dateien sind eigenständige SVG mit Titel, Beschreibung und eingebetteten Stilen. Schrift: lokales Arial/Sans-Serif, keine Netzressourcen. Datenstand 12.09.2026; Reviewentwurf 01.11.2026.
+Alle Dateien sind eigenständige SVG mit Titel, Beschreibung und eingebetteten Stilen. Schrift: lokales Arial/Sans-Serif, keine Netzressourcen. Datenstand 12.09.2026; Reviewentwurf 05.11.2026, Zahlenbasis Run 4.
 
 - [G01.svg](G01.svg): Saison-KPI · Meisterschaft · KF inkl. MwSt.
 - [G02.svg](G02.svg): Saison-KPI · Meisterschaft · gewichtete No-Show-Quote
@@ -10,4 +10,4 @@ Alle Dateien sind eigenständige SVG mit Titel, Beschreibung und eingebetteten S
 - [G06.svg](G06.svg): KPI-Definitionen · Umsatz und Nenner
 - [G07.svg](G07.svg): Chancenregister · neun bestehende Felder
 
-Quellengrundlage: Phase-1-Ergebnisstand und Chancen-Grundlage vom 14.10.2026; nähere Begriffe und Einschränkungen siehe `../05_Methodik/Lesehilfe.md`. Technische IDs G01–G07 stimmen mit dem Bericht überein. G06–G07 sind Schemata; übrige sind Datenvisualisierungen. Die diagramspezifischen Hinweise im SVG und im Bericht dürfen bei Wiederverwendung nicht entfallen. G04-Bonziele bleiben unter Erfassungsvorbehalt.
+Quellengrundlage: Phase-1-Ergebnisstand und Chancen-Grundlage Run 4 vom 05.11.2026; nähere Begriffe und Einschränkungen siehe `../05_Methodik/Lesehilfe.md`. Technische IDs G01–G07 stimmen mit dem Bericht überein. G06–G07 sind Schemata; übrige sind Datenvisualisierungen. Die diagramspezifischen Hinweise im SVG und im Bericht dürfen bei Wiederverwendung nicht entfallen. G04-Bonziele bleiben unter Erfassungsvorbehalt (Gegenrechnung ohne 2023/24 stabil).

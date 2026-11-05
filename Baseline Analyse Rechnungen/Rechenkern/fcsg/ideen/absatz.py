@@ -202,7 +202,7 @@ def _adjusted_rand(a: np.ndarray, b: np.ndarray) -> float:
 # --------------------------------------------------------------------------------------------
 # Frühindikator T-7
 # --------------------------------------------------------------------------------------------
-KONTEXT_T7 = ["top_gegner", "werktag", "abendspiel", "winter", "schulferien"]
+KONTEXT_T7 = ["top_gegner", *config.SLOTS, "winter", "schulferien"]   # Anstoss-Slot statt Werktag + Abend (D-048)
 
 
 def _design(x: pd.DataFrame, preds: list[str], saisons: list[str]) -> np.ndarray:
@@ -262,7 +262,7 @@ def fruehindikator(d: pd.DataFrame) -> dict[str, pd.DataFrame]:
         ("ist", "IST (Anwesende)", x),
         ("noshow_quote", "No-Show-Quote (nur ticketbasiertes SOLL)", x[x["soll_ticketbasiert"].fillna(False).astype(bool)]),
     ]:
-        s = stichprobe.dropna(subset=[ziel, "log_einzel_t7"])
+        s = stichprobe.dropna(subset=[ziel, "log_einzel_t7", *KONTEXT_T7])
         basis = _saison_bis_dato(s, ziel)
         m_ktx = _rolling(s, ziel, KONTEXT_T7)
         m_t7 = _rolling(s, ziel, KONTEXT_T7 + ["log_einzel_t7"])

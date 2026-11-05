@@ -18,6 +18,8 @@ import statsmodels.formula.api as smf
 from .. import config
 from . import modell
 
+ZEIT = " + ".join(config.SLOTS)      # Anstoss-Slot statt Werktag + Abendspiel (ab Run 4, D-048)
+
 SEED = 1879
 
 
@@ -202,7 +204,7 @@ def alkohol_modelle(alk: pd.DataFrame, d: pd.DataFrame) -> dict[str, pd.DataFram
 # Durchsatz-Knick
 # --------------------------------------------------------------------------------------------
 def durchsatz_knick(d: pd.DataFrame, n_boot: int = 999) -> pd.DataFrame:
-    x = d[d["hauptstichprobe"] & d["transaktionen"].notna() & d["temp_anpfiff_c"].notna()].copy()
+    x = d[d["hauptstichprobe"] & d["transaktionen"].notna() & d["temp_anpfiff_c"].notna()].dropna(subset=list(config.SLOTS)).copy()
     x["log_bons"] = np.log(x["transaktionen"])
     x["log_umsatz"] = np.log(x["umsatz_exkl"])
     x["log_anw"] = np.log(x["public_netto"])
@@ -212,7 +214,7 @@ def durchsatz_knick(d: pd.DataFrame, n_boot: int = 999) -> pd.DataFrame:
         for q in (0.60, 0.75, 0.90):
             c = float(np.quantile(x["log_anw"], q))
             x["knick"] = np.clip(x["log_anw"] - c, 0, None)
-            formel = f"{ziel} ~ log_anw + knick + C(saison) + top_gegner + werktag + abendspiel + temp_anpfiff_c"
+            formel = f"{ziel} ~ log_anw + knick + C(saison) + top_gegner + {ZEIT} + temp_anpfiff_c"
             fit = smf.ols(formel, data=x).fit(cov_type="HC3")
             # Wild-Bootstrap (Rademacher) unter H0: kein Knick
             f0 = smf.ols(formel.replace(" + knick", ""), data=x).fit()
@@ -230,7 +232,7 @@ def durchsatz_knick(d: pd.DataFrame, n_boot: int = 999) -> pd.DataFrame:
                          "p_wild_bootstrap": p_boot, "p_bonferroni_3_knoten": min(1.0, 3 * p_boot), "spiele": int(fit.nobs)})
     out = pd.DataFrame(rows)
     out["lesart"] = ("Knick = Elastizität sinkt oberhalb des Knotens (negativer Wert) – z.B. weil Stände bei vollem Haus an die "
-                     "Grenze kommen. Kontrolle: Saison, Top-Gegner, Werktag, Abend, Temperatur. Nicht belastbar, wenn p (Bonferroni) ≥ 0.05.")
+                     "Grenze kommen. Kontrolle: Saison, Top-Gegner, Anstoss-Slot, Temperatur. Nicht belastbar, wenn p (Bonferroni) ≥ 0.05.")
     return out
 
 
@@ -304,7 +306,7 @@ def kiesplatz_wetter(m, d: pd.DataFrame) -> dict[str, pd.DataFrame]:
     kp = m.fact_kiesplatz[m.fact_kiesplatz["ist_total"] & m.fact_kiesplatz["match_id"].notna()]
     kp = kp.groupby("match_id").agg(kies_brutto=("brutto_total", "sum"), kies_normal=("brutto_normal", "sum")).reset_index()
     x = d[(d["wettbewerb"] == "SL")].merge(kp, on="match_id", how="inner")
-    x = x[(x["kies_brutto"] > 0) & x["umsatz_inkl"].notna() & x["temp_anpfiff_c"].notna()].copy()
+    x = x[(x["kies_brutto"] > 0) & x["umsatz_inkl"].notna() & x["temp_anpfiff_c"].notna()].dropna(subset=list(config.SLOTS)).copy()
     x["kies_je_anw"] = x["kies_brutto"] / x["public_netto"]
     x["stadion_je_anw"] = (x["umsatz_inkl"] - x["kies_brutto"]) / x["public_netto"]
     x["anteil_kies"] = x["kies_brutto"] / x["umsatz_inkl"]
@@ -313,11 +315,11 @@ def kiesplatz_wetter(m, d: pd.DataFrame) -> dict[str, pd.DataFrame]:
     for ziel, label in (("kies_je_anw", "Kiesplatz CHF je Anwesendem (brutto)"), ("stadion_je_anw", "Stadion (ohne Kiesplatz) CHF je Anwesendem"),
                         ("anteil_kies", "Kiesplatz-Anteil am Catering")):
         y = np.log(x[ziel]) if ziel != "anteil_kies" else x[ziel] * 100
-        fit = smf.ols("y ~ temp_anpfiff_c + regen + abendspiel + werktag + top_gegner + C(saison)",
-                      data=x.assign(y=y, abendspiel=x["abendspiel"].astype(float), werktag=x["werktag"].astype(float),
-                                    top_gegner=x["top_gegner"].astype(float))).fit(cov_type="HC3")
+        fit = smf.ols(f"y ~ temp_anpfiff_c + regen + {ZEIT} + top_gegner + C(saison)",
+                      data=x.assign(y=y, top_gegner=x["top_gegner"].astype(float))).fit(cov_type="HC3")
         resid[ziel] = fit.resid
-        for var, schritt, einheit in (("temp_anpfiff_c", 5, "+5 °C"), ("regen", 1, "Regen bei Anreise"), ("abendspiel", 1, "Abendspiel")):
+        for var, schritt, einheit in (("temp_anpfiff_c", 5, "+5 °C"), ("regen", 1, "Regen bei Anreise"),
+                                      *((c, 1, f"{lab} (vs. {config.REFERENZ_SLOT})") for c, lab in config.SLOTS.items())):
             b, se = fit.params[var] * schritt, fit.bse[var] * schritt
             if ziel == "anteil_kies":
                 eff, lo, hi, eh = b, b - 1.96 * se, b + 1.96 * se, "Pp."
@@ -340,12 +342,12 @@ def kiesplatz_wetter(m, d: pd.DataFrame) -> dict[str, pd.DataFrame]:
 def phi_evidenz(res: dict, d: pd.DataFrame, absatz_merkmale: pd.DataFrame) -> pd.DataFrame:
     el = res["elastizitaet"].copy()
     el["art"] = "Elastizität Umsatz ~ Public-Anwesende (Phase 1)"
-    x = d[d["hauptstichprobe"] & d["temp_anpfiff_c"].notna()].merge(
+    x = d[d["hauptstichprobe"] & d["temp_anpfiff_c"].notna()].dropna(subset=list(config.SLOTS)).merge(
         absatz_merkmale[["match_id", "einzel_alle", "anteil_gratis"]], on="match_id", how="inner").copy()
     x["gratis_anteil_ist"] = x["anteil_gratis"] * x["einzel_alle"] / x["ist"] * 100
     x["log_kf"] = np.log(x["kf_exkl"])
-    fit = smf.ols("log_kf ~ gratis_anteil_ist + C(saison) + top_gegner + werktag + abendspiel + temp_anpfiff_c",
-                  data=x.astype({"top_gegner": float, "werktag": float, "abendspiel": float})).fit(cov_type="HC3")
+    fit = smf.ols(f"log_kf ~ gratis_anteil_ist + C(saison) + top_gegner + {ZEIT} + temp_anpfiff_c",
+                  data=x.astype({"top_gegner": float})).fit(cov_type="HC3")
     b, se = fit.params["gratis_anteil_ist"] * 5, fit.bse["gratis_anteil_ist"] * 5
     promo = pd.DataFrame([{"art": "KF und Anteil Gratis-/Promotickets am IST (je +5 Pp.)", "variante": "SL ab 2022/23, Kontextkontrollen",
                            "spiele": int(fit.nobs), "elastizitaet": np.nan, "effekt_pct": (np.exp(b) - 1) * 100,

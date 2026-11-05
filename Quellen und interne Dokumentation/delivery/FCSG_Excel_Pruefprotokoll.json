@@ -107,8 +107,8 @@
   "played_core_matches": 108,
   "cancelled_out_of_scope_rows": 1,
   "calculator_number_formats_and_validations_exact": true,
-  "output": "/data/cache/scratch/fcsg-review/Deliverables/02_Excel/FCSG_Baseline_und_Chancenfelder.xlsx",
-  "output_sha256": "827872bd26cc16904561c04d38fecf4a427907ad62bd8bfea2e23deec32b7ff8",
+  "output": "Deliverables/02_Excel/FCSG_Baseline_und_Chancenfelder.xlsx",
+  "output_sha256": "f56535d910e2622bd6f10a24398c45df8a9089bf8e4e038b4bd3bba9a74bd377",
   "sheets": [
     "00_Einstieg",
     "01_Navigation",
@@ -143,10 +143,10 @@
     "32_Datenwoerterbuch"
   ],
   "source_files_sha256": {
-    "FCSG_Phase1_Ergebnisse.xlsx": "b4eadb584674d1128ce3fdbe11273f66b78e9a186c5a18c3416485d126852c0d",
-    "Ideen_Grundlage_FCSG.xlsx": "67f1c5e19462f4b42b73d727b83f88d65d84415ad37b3412451e23b65cd55bc4"
+    "FCSG_Phase1_Ergebnisse.xlsx": "a87fd32140aa85687edbf90809a1411428b1fecd4002cd866fc2e169d242c75a",
+    "Ideen_Grundlage_FCSG.xlsx": "6a986e9c685e775a4ee7c302abd47eeaeff6edcaa072c91575f431c8f2db8a37"
   },
-  "archived_files_unchanged": 149,
+  "archived_files_unchanged": 289,
   "source_table_checks": [
     {
       "target": "03_Abdeckung",
@@ -269,7 +269,7 @@
       ],
       "rows": 109,
       "columns": 61,
-      "numeric_boolean_date_cells_exact": 4575
+      "numeric_boolean_date_cells_exact": 4578
     },
     {
       "target": "06_Rechnerbasis",
@@ -452,11 +452,15 @@
         24,
         25,
         26,
-        27
+        27,
+        28,
+        29,
+        30,
+        31
       ],
       "rows": 71,
-      "columns": 28,
-      "numeric_boolean_date_cells_exact": 1491
+      "columns": 32,
+      "numeric_boolean_date_cells_exact": 1704
     },
     {
       "target": "13_Toroeffnung",
@@ -591,9 +595,9 @@
         8,
         9
       ],
-      "rows": 9,
+      "rows": 15,
       "columns": 10,
-      "numeric_boolean_date_cells_exact": 54
+      "numeric_boolean_date_cells_exact": 90
     },
     {
       "target": "23_Kontext",
@@ -614,9 +618,9 @@
         11,
         12
       ],
-      "rows": 30,
+      "rows": 35,
       "columns": 13,
-      "numeric_boolean_date_cells_exact": 210
+      "numeric_boolean_date_cells_exact": 245
     },
     {
       "target": "24_Modellguete",
@@ -759,7 +763,7 @@
       "numeric_boolean_date_cells_exact": 9
     }
   ],
-  "exact_numeric_boolean_date_cells": 10705,
+  "exact_numeric_boolean_date_cells": 10992,
   "formula_texts_exact": 39,
   "formula_caches_exact": 39,
   "defined_names_exact": 9,
@@ -863,7 +867,7 @@
   "limitations": [
     "Static analytical export; no raw-data validation or automatic refresh.",
     "Excel/LibreOffice engine not available; original caches retained, formula arithmetic independently checked.",
-    "Historical voucher transaction counting limits 2023/24 comparability; no sensitivity re-run.",
+    "Historical voucher transaction counting limits 2023/24 comparability; context models re-estimated without 2023/24 in Run 4 (stable), trend decomposition remains provisional.",
     "Club share and contractual revenue basis unconfirmed; no 20% scaling applied."
   ]
 }

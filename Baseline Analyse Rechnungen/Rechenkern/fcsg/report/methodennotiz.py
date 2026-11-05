@@ -331,7 +331,8 @@ def text(res: dict[str, pd.DataFrame], info: dict) -> str:
     a("## 9. Kontextmodelle und Kontext-Effekt-Matrix\n")
     a("**Vorgehen:** Je Zielgrösse ein eigenes Modell (keine Gesamtumsatz-Regression): Anwesenheitsquote und Frühankunft-Anteil "
       "(logit), KF, Bons je Anwesendem und Ø Bon (log), jeweils mit Saison-Effekten (Preise, MwSt, Definitionswechsel, Trend) und "
-      "sechs vorab festgelegten Kontextvariablen: Top-Gegner (FCB/YB/FCZ), Werktag, Abendspiel (≥ 20 Uhr), Temperatur zum Anpfiff "
+      "vorab festgelegten Kontextvariablen: Top-Gegner (FCB/YB/FCZ), Anstoss-Slot (Samstag ab 20 Uhr, Nachmittag vor 17 Uhr, "
+      "Werktagabend; Referenz Samstag 17–19.59 Uhr; ab Run 4 statt Werktag + Abendspiel ≥ 20 Uhr, D-048), Temperatur zum Anpfiff "
       "(MeteoSchweiz), Regen bei Anreise, Schulferien. Robuste Standardfehler (HC3). Clubhebel (Stände, Zweitmarkt, Kommunikation, "
       "Payment) werden bewusst nicht herauskontrolliert.\n")
     a("**Validierung:** (1) Leave-one-season-out auf saisonbereinigten Werten gegen das Saisonmittel als Basislinie; "

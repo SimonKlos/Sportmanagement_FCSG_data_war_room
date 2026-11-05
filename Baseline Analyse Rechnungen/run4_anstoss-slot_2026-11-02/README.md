@@ -3,6 +3,9 @@
 > **Vertraulich – echte FCSG-Daten, aggregiert (keine Personendaten).** Intern, privates Repo (D-024).
 > Run 4 **ergänzt** Run 3, ersetzt ihn nicht: Bericht, Excel und Deliverables beruhen weiter auf Run 3, bis das Team die
 > Übernahme entscheidet (D-046).
+> **Nachtrag 05.11.2026:** Übernahme entschieden (D-048). Zahlenbasis ist jetzt [Run 4 komplett](../run4_komplett_2026-11-05/README.md).
+> Hinweis: Das Laufprotokoll dieser Voranalyse listet die Rohdateien wegen einer Ordner-Verknüpfung nicht auf. Das ist im Code behoben;
+> die Prüfsummen derselben Lieferung stehen im Laufprotokoll von Run 4 komplett.
 
 ## Was wurde gerechnet
 

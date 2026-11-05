@@ -13,9 +13,9 @@ from openpyxl.worksheet.table import Table, TableStyleInfo
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / 'Deliverables/02_Excel'
-RUN = ROOT / 'Baseline Analyse Rechnungen/run3_kontext-v5_2026-10-14'
-BASE = RUN / 'ralf_kern_phase1/FCSG_Phase1_Ergebnisse.xlsx'
-IDEAS = RUN / 'ralf_ideen_grundlage/Ideen_Grundlage_FCSG.xlsx'
+RUN = ROOT / 'Baseline Analyse Rechnungen/run4_komplett_2026-11-05'   # Zahlenbasis ab 05.11.2026 (D-048)
+BASE = RUN / 'kern_phase1/FCSG_Phase1_Ergebnisse.xlsx'
+IDEAS = RUN / 'ideen_grundlage/Ideen_Grundlage_FCSG.xlsx'
 OUT.mkdir(parents=True, exist_ok=True)
 TARGET = OUT / 'FCSG_Baseline_und_Chancenfelder.xlsx'
 def digest(p): return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -99,11 +99,11 @@ def export(book,source,name,title,note,cols=None):
     vals=list(book[source].values)
     idx=list(range(len(vals[0]))) if cols is None else [vals[0].index(c) for c in cols]
     rows=[tuple(row[j] for j in idx) for row in vals]
-    return table(name,title,rows,note,'Analyse-Export 14.10.2026 | '+source,{'source_book':'baseline' if book is b else 'opportunities','source_sheet':source,'column_indices':idx})
+    return table(name,title,rows,note,'Analyse-Export Run 4, 05.11.2026 | '+source,{'source_book':'baseline' if book is b else 'opportunities','source_sheet':source,'column_indices':idx})
 
 intro=[('Bereich','Leseschlüssel','Abgrenzung','Status'),
 ('Zweck','Baseline verstehen → Chancenfelder prüfen → isolierte Szenarien diskutieren.','Privater Arbeitsentwurf zur Partnerprüfung; keine öffentliche Veröffentlichung.','Keine Massnahmenfreigabe'),
-('Datenstand','Bestehende Analyse-Exporte vom 14.10.2026; fachliche Einordnung vom 01.11.2026.','2021/22 bis Teilstand 2026/27; Zeitraum und Stichprobe je Tabelle beachten.','Keine neue Berechnung'),
+('Datenstand','Analyse-Exporte Run 4 vom 05.11.2026 (Kontextmodelle mit Anstoss-Slot, Referenz Samstag 17–19.59 Uhr); fachliche Einordnung vom 01.11.2026.','2021/22 bis Teilstand 2026/27; Zeitraum und Stichprobe je Tabelle beachten.','Keine Berechnung im Excel'),
 ('Baseline','Saisonübersicht und Spielbaseline enthalten dieselben bestehenden Werte.','Herren-Pflichtspiele SL/Cup/UEFA gemäss bestehendem Kernscope; nicht jede Quelle deckt jedes Spiel.','Werteexport'),
 ('Phase 2','Primäres Prüfkriterium: inkrementeller Umsatz, nicht Deckungsbeitrag.','Catering: zusätzlicher Public-Catering-Systemumsatz exkl. MwSt.; nicht automatisch Cluberlös.','Umsatzbasis immer nennen'),
 ('Chancenfelder','Neun bestehende Felder als Hypothesen und Pilotansätze, nicht als bewiesene Potenziale.','Historische Assoziationen und Residuen sind keine kausale Massnahmenwirkung.','Keine Potenzialsumme'),
@@ -149,8 +149,8 @@ exports=[(b,'B1_NoShow_Kontext','07_NoShow_Kontext','No-Show im Spielkontext','Z
 (b,'C4_Zahlungswege','17_Zahlungswege','Catering | Zahlungswege','Umsätze inkl. MwSt.; Zahlungsweganteile sind keine Anteile fehlender Bons. Kombinierte Kanalbezeichnungen beibehalten.'),
 (i,'K11_Mobiler_Verkauf_Effekt','18_Mobiler_Verkauf','Mobiler Verkauf | historische Assoziationen','Beobachtungsdaten und kleine Teilstichproben. Einsatz-Codierung aus ausdrücklichen Angaben; kein kausaler Massnahmeneffekt.'),
 (i,'K14_Kiesplatz_Wetter','19_Kiesplatz','Kiesplatz und Wetter','Kiesplatz ist Teil des Catering-Totals, niemals addieren. Wetterassoziation kein quantifiziertes Massnahmenpotenzial.'),
-(b,'K1_Kontext_Effekt_Matrix','23_Kontext','Bestehende Kontext-Effekt-Matrix','Effekte gemäss Einheitsspalte lesen. Historische Assoziationen; Bons-/Bon-Ergebnisse mit Zählgrenze 2023/24 interpretieren.'),
-(b,'K2_Modellguete','24_Modellguete','Kontextmodelle | Güte und Validierung','Unveränderte bestehende Modelloutputs, keine Neuschätzung. Transformierte RMSE sind keine CHF-Prognosefehler.'),
+(b,'K1_Kontext_Effekt_Matrix','23_Kontext','Kontext-Effekt-Matrix (Anstoss-Slot)','Effekte gemäss Einheitsspalte lesen; Slot-Effekte gegenüber Samstag 17–19.59 Uhr. Historische Assoziationen; Bons-/Bon-Ergebnisse mit Zählgrenze 2023/24 interpretieren.'),
+(b,'K2_Modellguete','24_Modellguete','Kontextmodelle | Güte und Validierung','Unveränderte Modelloutputs Run 4; im Excel keine Neuschätzung. Transformierte RMSE sind keine CHF-Prognosefehler.'),
 (b,'K6_Diagnosekarte','25_Diagnose','Spielbezogene Kontextdiagnose','Erwartungswerte und Residuen sind Diagnostik, keine Umsatzpotenziale; aus Freitext abgeleitete Hinweise sind Hypothesen.'),
 (i,'F1_Randfelder_Kategorien','26_Randfelder','Weitere Anlässe | explorative Übersicht','Ausserhalb Kernscope: kleine Fallzahlen und teils fehlende/geschätzte Zuschauerzahlen. Überlappende Kategorien nicht addieren.')]
 for args in exports: export(*args)
@@ -190,8 +190,8 @@ table('22_Ideensteckbrief','Ideensteckbrief | Vorlage',list(i['Ideen_Steckbrief'
 w['22_Ideensteckbrief']['B15']='Primär zusätzlicher Umsatz; Erlösempfänger und MwSt.-Basis nennen. Clubbeteiligung separat prüfen; Warenkosten des Partners nicht als Clubkosten abziehen.'
 limits=[('Thema','Einordnung','Folge für Review','Stand'),
 ('Freigabe','Privater Entwurf, nicht freigegebene Baseline.','Partnerprüfung von Scope, Nennern und Vertragsbasis ausstehend.','Offen'),
-('Statische Ausgabe','Alle analytischen Tabellen sind unveränderte Werteexporte; keine Rohdaten enthalten.','Keine automatische Baseline-Aktualisierung; nur Szenarien enthalten Formeln.','Exportstand 14.10.2026'),
-('Bons 2023/24','Kassensystemwechsel und Gutschein-Transaktionszählung im Übergang.','Bonsrate und Ø Bon historisch eingeschränkt vergleichbar. Daraus folgt kein Nachweis falscher Umsatzwerte; keine Sensitivitäts-Neuberechnung vorgenommen.','Knapper Vorbehalt'),
+('Statische Ausgabe','Alle analytischen Tabellen sind unveränderte Werteexporte; keine Rohdaten enthalten.','Keine automatische Baseline-Aktualisierung; nur Szenarien enthalten Formeln.','Exportstand Run 4, 05.11.2026'),
+('Bons 2023/24','Kassensystemwechsel und Gutschein-Transaktionszählung im Übergang.','Bonsrate und Ø Bon historisch eingeschränkt vergleichbar. Daraus folgt kein Nachweis falscher Umsatzwerte. Kontextmodelle ohne 2023/24 gegengerechnet: Anstoss-Effekte stabil; Trendzerlegung über 2023/24 bleibt vorläufig.','Knapper Vorbehalt'),
 ('Public-Nenner','Definition: tatsächlich anwesende Public-Zuschauer ohne VIP.','Durchgängige Feldabgrenzung von Public Netto, Gästen, Personal und Freikarten bleibt zu verproben.','Offen'),
 ('Club-Beteiligung','Club erhält einen Anteil; Satz, Umsatzbasis und Geltungsbereich nicht bestätigt.','20 % nur optionales unbestätigtes Szenario; hier weder angesetzt noch versteckt in Baseline/Rechner skaliert.','Kein Vertragsnachweis'),
 ('Kosten / DB','Warenkosten trägt der Cateringpartner.','Nicht als Clubkosten abziehen; zusätzliche Clubkosten separat prüfen. Phase 2 primär inkrementeller Umsatz.','Keine DB-Rechnung'),
@@ -204,8 +204,8 @@ limits=[('Thema','Einordnung','Folge für Review','Stand'),
 ('Reviewfragen','Vertragsbasis; Nennerdefinition; stabile Bonsabdeckung; aktuelle aggregierte Ticketnutzung; Kassenzeit-/Sektordaten.','Für Piloten Zielgrösse, Umsatzempfänger, Vergleichsgruppe und Annahmen dokumentieren.','Partnerprüfung')]
 table('30_Grenzen','Einordnung, Grenzen und offene Prüfungen',limits,'Diese Hinweise ergänzen die bestehenden Zahlen; sie ersetzen weder Rohdatenprüfung noch Baseline-Freigabe.')
 source_rows=[('Quelle','Verwendung','Übernahme','Abgrenzung'),
-('Analyse-Export 14.10.2026 | FCSG_Phase1_Ergebnisse.xlsx','Saison-/Spielbaseline, Abdeckung, Ticketnutzung, Ankunft, Kontext','Statische Zellwerte; Quellblatt je Tabelle benannt.','Keine Rohdaten; keine personenbezogenen Einzelzeilen.'),
-('Chancen-Export 14.10.2026 | Ideen_Grundlage_FCSG.xlsx','Neun Chancenfelder, thematische Belege, Rechnerbasis','Numerische Werte unverändert; isolierte Rechnerformeln und neun definierte Namen erhalten.','Interne Vergleiche, Abstimmungen und alte Grafikbilder nicht übernommen.'),
+('Analyse-Export Run 4, 05.11.2026 | FCSG_Phase1_Ergebnisse.xlsx','Saison-/Spielbaseline, Abdeckung, Ticketnutzung, Ankunft, Kontext','Statische Zellwerte; Quellblatt je Tabelle benannt.','Keine Rohdaten; keine personenbezogenen Einzelzeilen.'),
+('Chancen-Export Run 4, 05.11.2026 | Ideen_Grundlage_FCSG.xlsx','Neun Chancenfelder, thematische Belege, Rechnerbasis','Numerische Werte unverändert; isolierte Rechnerformeln und neun definierte Namen erhalten.','Interne Vergleiche, Abstimmungen und alte Grafikbilder nicht übernommen.'),
 ('Fachliche Einordnung 01.11.2026','Umsatzbasis, Clubbeteiligung, Bonsvergleichbarkeit','Erklärtexte, keine Änderung historischer Werte.','Keine Vertragsfreigabe oder neue Analyse.'),
 ('Review-Edition','Thematische Neuordnung, KPI-Lesehilfe und Grenzen','Redaktionelle Formulierungen und Labels angepasst; keine neue analytische Modellierung.','Keine externen Datenverbindungen oder öffentlichen Uploads.')]
 table('31_Quellen','Quellen und Übernahmeprinzip',source_rows,'Die vollständigen Zellabgleiche und Prüfergebnisse liegen im begleitenden lokalen Prüfprotokoll.')
@@ -405,6 +405,6 @@ for name in ['Hebel_Rechner','Szenarien']:
     assert [(str(d.sqref),d.formula1,d.formula2) for d in f[name].data_validations.dataValidation]==[(str(d.sqref),d.formula1,d.formula2) for d in iform[name].data_validations.dataValidation]
 for dn in f.defined_names.values():
     for sheet,coord in dn.destinations:assert sheet in f.sheetnames and f[sheet][coord].value is not None
-report={'all_17_season_competition_scopes_reconciled':all_scope_reconciliations,'opportunity_rows':9,'played_core_matches':108,'cancelled_out_of_scope_rows':1,'calculator_number_formats_and_validations_exact':True,'output':str(TARGET),'output_sha256':digest(TARGET),'sheets':f.sheetnames,'source_files_sha256':{BASE.name:digest(BASE),IDEAS.name:digest(IDEAS)},'archived_files_unchanged':len(archive_before),'source_table_checks':checks,'exact_numeric_boolean_date_cells':numeric_cells,'formula_texts_exact':formula_count,'formula_caches_exact':cache_count,'defined_names_exact':len(f.defined_names),'formula_arithmetic_checks':calc_evidence,'season_match_reconciliation_SL':season,'broken_sheet_references':0,'external_links':0,'images':0,'metadata_creator':f.properties.creator,'calculation_engine_execution':False,'limitations':['Static analytical export; no raw-data validation or automatic refresh.','Excel/LibreOffice engine not available; original caches retained, formula arithmetic independently checked.','Historical voucher transaction counting limits 2023/24 comparability; no sensitivity re-run.','Club share and contractual revenue basis unconfirmed; no 20% scaling applied.']}
+report={'all_17_season_competition_scopes_reconciled':all_scope_reconciliations,'opportunity_rows':9,'played_core_matches':108,'cancelled_out_of_scope_rows':1,'calculator_number_formats_and_validations_exact':True,'output':TARGET.relative_to(ROOT).as_posix(),'output_sha256':digest(TARGET),'sheets':f.sheetnames,'source_files_sha256':{BASE.name:digest(BASE),IDEAS.name:digest(IDEAS)},'archived_files_unchanged':len(archive_before),'source_table_checks':checks,'exact_numeric_boolean_date_cells':numeric_cells,'formula_texts_exact':formula_count,'formula_caches_exact':cache_count,'defined_names_exact':len(f.defined_names),'formula_arithmetic_checks':calc_evidence,'season_match_reconciliation_SL':season,'broken_sheet_references':0,'external_links':0,'images':0,'metadata_creator':f.properties.creator,'calculation_engine_execution':False,'limitations':['Static analytical export; no raw-data validation or automatic refresh.','Excel/LibreOffice engine not available; original caches retained, formula arithmetic independently checked.','Historical voucher transaction counting limits 2023/24 comparability; context models re-estimated without 2023/24 in Run 4 (stable), trend decomposition remains provisional.','Club share and contractual revenue basis unconfirmed; no 20% scaling applied.']}
 (Path(__file__).resolve().parent/'FCSG_Excel_Pruefprotokoll.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps({k:report[k] for k in ['output','sheets','archived_files_unchanged','exact_numeric_boolean_date_cells','formula_texts_exact','formula_caches_exact','defined_names_exact','formula_arithmetic_checks','season_match_reconciliation_SL']},ensure_ascii=False,indent=2))

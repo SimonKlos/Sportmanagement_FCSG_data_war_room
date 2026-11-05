@@ -62,7 +62,7 @@ BLAETTER = [
     ("mobiler_verkauf_effekt", "K11_Mobiler_Verkauf_Effekt", "KF/Bons/Ø Bon vs. Kontexterwartung nach mobilem Verkauf (inkl. MDE)."),
     ("mobiler_verkauf_codierung", "K12_Mobiler_Verkauf_Codierung", "Codierung mobiler Verkauf je Saison (aus Bemerkungen)."),
     ("zahlungswege_ideen", "K13_Zahlungswege_Ideen", "Zahlungswege und digitale Kanäle je Saison."),
-    ("kiesplatz_wetter", "K14_Kiesplatz_Wetter", "Kiesplatz und Stadion nach Temperatur, Regen, Abend (Substitutionstest)."),
+    ("kiesplatz_wetter", "K14_Kiesplatz_Wetter", "Kiesplatz und Stadion nach Temperatur, Regen, Anstoss-Slot (Substitutionstest)."),
     ("kiesplatz_je_spiel_ideen", "K15_Kiesplatz_je_Spiel", "Kiesplatz je Spiel (Teilmenge des Catering-Totals)."),
     ("phi_evidenz", "K16_Phi_Evidenz", "Evidenz zu φ: Elastizität und Promo-Anteil."),
     ("reto_gaeste_test", "K17_Reto_Gaeste_Test", "Idee 1: KF und Gästeanteil im Nenner."),

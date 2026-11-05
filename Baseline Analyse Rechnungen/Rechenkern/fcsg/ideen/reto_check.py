@@ -9,19 +9,23 @@ import numpy as np
 import pandas as pd
 import statsmodels.formula.api as smf
 
+from .. import config
 from .fmt import chf_k, dez, ki, p, pct, z
+
+ZEIT = " + ".join(config.SLOTS)      # Anstoss-Slot statt Werktag + Abendspiel (ab Run 4, D-048)
 
 
 def gaeste_test(res: dict) -> pd.DataFrame:
     """Idee 1: Hängt der KF vom Anteil der Gästefans im Nenner (Public Netto) ab?"""
     d = res["modell_daten"]
-    x = d[d["hauptstichprobe"] & d["ist_gaeste"].notna() & d["temp_anpfiff_c"].notna() & d["public_netto"].gt(0)].copy()
+    x = d[d["hauptstichprobe"] & d["ist_gaeste"].notna() & d["temp_anpfiff_c"].notna() & d["public_netto"].gt(0)].dropna(
+        subset=list(config.SLOTS)).copy()
     x["gaeste_anteil"] = x["ist_gaeste"] / x["public_netto"] * 100
     x["log_kf"] = np.log(x["kf_exkl"])
     rows = []
-    for name, formel in [("ohne Top-Gegner-Kontrolle", "log_kf ~ gaeste_anteil + C(saison) + werktag + abendspiel + temp_anpfiff_c"),
-                         ("mit Top-Gegner-Kontrolle", "log_kf ~ gaeste_anteil + C(saison) + werktag + abendspiel + temp_anpfiff_c + top_gegner")]:
-        fit = smf.ols(formel, data=x.astype({"werktag": float, "abendspiel": float, "top_gegner": float})).fit(cov_type="HC3")
+    for name, formel in [("ohne Top-Gegner-Kontrolle", f"log_kf ~ gaeste_anteil + C(saison) + {ZEIT} + temp_anpfiff_c"),
+                         ("mit Top-Gegner-Kontrolle", f"log_kf ~ gaeste_anteil + C(saison) + {ZEIT} + temp_anpfiff_c + top_gegner")]:
+        fit = smf.ols(formel, data=x.astype({"top_gegner": float})).fit(cov_type="HC3")
         b, se = fit.params["gaeste_anteil"] * 5, fit.bse["gaeste_anteil"] * 5
         rows.append({"spezifikation": name, "spiele": int(fit.nobs), "gaeste_anteil_mittel": x["gaeste_anteil"].mean(),
                      "effekt_pct_je_5pp": (np.exp(b) - 1) * 100, "ki95_unten": (np.exp(b - 1.96 * se) - 1) * 100,
@@ -70,7 +74,7 @@ def tabelle(kz: dict) -> pd.DataFrame:
          "umformulieren: «mobiler Verkauf/Standbesetzung» statt Knick; Pilot", "Blätter Durchsatz_Knick, Mobiler_Verkauf*"),
         (6, "Wetter-Switching Stadion/Kiesplatz", "Regen/Kälte verschieben Konsum vom Kiesplatz ins Stadion.", "vorhanden",
          f"Kein Switching: Kiesplatz und Stadion schwanken gemeinsam (Residuen r = {dez(kz['kies_r_resid'])}). Der Kiesplatz reagiert "
-         f"stärker auf Wärme ({pct(kz['kies_temp'])} je +5 °C, Stadion {pct(kz['stadion_temp'])}) und auf Abendspiele ({pct(kz['kies_abend'])}).",
+         f"stärker auf Wärme ({pct(kz['kies_temp'])} je +5 °C, Stadion {pct(kz['stadion_temp'])}) und auf den Anstoss (Sonntagnachmittag {pct(kz['kies_nachm'])}, Werktagabend {pct(kz['kies_wt'])} vs. Samstag 17–19.59 Uhr).",
          "keine CHF-Hebelzahl (Wetter extern)", "ok (kein Stadionausbau)", "umformulieren: Wetter-/Kiesplatz-Playbook",
          "Blatt Kiesplatz_Wetter"),
         (7, "KF-Zerlegung Frequenz × Bon (inkl. Pick Up)", "Streuung kommt v.a. aus der Frequenz.", "vorhanden",
