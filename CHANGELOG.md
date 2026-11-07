@@ -1,5 +1,11 @@
 # Changelog
 
+## Spielrechner v2 – 07.11.2026
+- D-050: `Rechenkern/spielrechner/` neu aufgebaut (Generator `build.py`, Vorlage `vorlage.html`, Testdaten, README). Ablauf in vier Schritten: Spielplan importieren (CSV/Excel-Einfügen) → Kontext automatisch (Anstoss-Slot, Top-Gegner, Schulferien Stadt SG aus Kontexttabelle v5 bzw. Kanton SG via OpenHolidays, Wetter via Open-Meteo bzw. Normalwerte MeteoSchweiz) → Erwartung je Spiel mit Band und KF-Treibern → IST eintragen, Vergleich und Lernen des Saisonniveaus.
+- Speicherung im Browser plus Saisondatei (JSON), Export als CSV; Design in FCSG-Grün (Hero, Schritt-Navigation, Karten, Dark Mode, mobil).
+- Tests: `tests/test_spielrechner.py` (Aufbau, Kalender, Normalwerte gegen Stundenwerte) und `tests/spielrechner_logik.test.mjs` (Rechenlogik im Browsercode gegen die Python-Formel, Wetterfenster wie `extern.py`, Saisonlernen). Live-Abruf und Darstellung mit Testdaten in Chrome geprüft.
+- Die erzeugte Datei mit echten Werten bleibt ausserhalb des Repos (`.gitignore`).
+
 ## Folienleitfaden: Abo-Daten je Sektor und Call-Abgleich – 07.11.2026
 - Folie 18: «Leere Plätze = vor allem Abo-Plätze» mit der Zwei-Saisons-Näherung belegt; Tribünenwerte 2026/27 nur noch als Fussnote mit Vorbehalt (4 Spiele, indirekt geschätzt). Sprechnotiz zur Nachfrage (ausverkauft 35 von 78 Kontextspielen).
 - M3 Abo-Obergrenze als «Leuchtturm mit Datenvorbehalt» ohne Wirkungszahl im Hauptteil; Rechenweg im Anhang 15c als Illustration mit Gegenprobe. Datenagenda: Abo-Besuche je Sektor zuerst.

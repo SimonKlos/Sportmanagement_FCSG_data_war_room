@@ -1,6 +1,7 @@
 """TESTDATEN für den Spielrechner – vollständig künstlich (Zufallszahlen, erfundene Gegner), keine Clubzahlen.
 
-Gleiches Schema wie die Run-4-Tabellen `koeffizienten.csv` und `erwartung_je_spiel.csv` sowie `mart_match.csv`.
+Gleiches Schema wie die Run-4-Tabellen `koeffizienten.csv` und `erwartung_je_spiel.csv`, `mart_match.csv` und die
+Blätter «Ferien» und «Paralellevent» der Spielkontext-Tabelle (erfundene Daten im Jahr 2099).
 """
 from __future__ import annotations
 
@@ -19,7 +20,7 @@ MODELLE = {  # ziel_code: (label, transformation, intercept, rmse)
 }
 
 
-def erzeuge(ordner: Path) -> tuple[Path, Path]:
+def erzeuge(ordner: Path) -> tuple[Path, Path, Path]:
     rng = np.random.default_rng(42)
     ordner.mkdir(parents=True, exist_ok=True)
     koeff, erw = [], []
@@ -47,4 +48,26 @@ def erzeuge(ordner: Path) -> tuple[Path, Path]:
                          "soll": rng.integers(14000, 18000, len(ids)), "ist_vip": rng.integers(500, 900, len(ids)),
                          "wochentag": [("Samstag", "Samstag", "Sonntag", "Mittwoch")[int(i[-2:]) % 4] for i in ids]})
     mart.to_csv(ordner / "mart_match.csv", index=False)
-    return tab, ordner / "mart_match.csv"
+    return tab, ordner / "mart_match.csv", kontext(ordner / "Kontext_TEST.xlsx")
+
+
+def kontext(pfad: Path) -> Path:
+    """TESTDATEN: Ferien 01.–14.07.2099 und 10.–20.10.2099, ein erfundener Parallelanlass am 18.10.2099."""
+    import datetime as dt
+
+    import openpyxl
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = "Ferien"
+    ws.append(["Datum", "Wochentag", "Schulferien Stadt SG", "Ferienart"])
+    tag = dt.date(2099, 7, 1)
+    while tag <= dt.date(2099, 12, 31):
+        ferien = dt.date(2099, 7, 1) <= tag <= dt.date(2099, 7, 14) or dt.date(2099, 10, 10) <= tag <= dt.date(2099, 10, 20)
+        ws.append([tag, "", "Ja" if ferien else "Nein", "Testferien" if ferien else None])
+        tag += dt.timedelta(days=1)
+    pe = wb.create_sheet("Paralellevent")
+    pe.append(["Datum", "Wochentag", "relevanter Parallelevent (Ja/Nein)", "Anzahl Events", "Parallelevents", "Grossevent (≥ 100'000 Besucher)"])
+    pe.append([dt.date(2099, 10, 18), "", "Ja", 1, "Testanlass", "Nein"])
+    pe.append([dt.date(2099, 10, 19), "", "Nein", 0, None, "Nein"])
+    wb.save(pfad)
+    return pfad

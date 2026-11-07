@@ -4,218 +4,984 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FCSG Spielrechner</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400..800&display=swap" rel="stylesheet">
 <style>
-  :root { --gruen:#00843d; --gruen-dunkel:#0b5e30; --grau:#f3f4f2; --linie:#d9ddd6; --text:#1d1f1c; --leise:#5c6358;
-          --rot:#b3261e; --blau:#1f5fa8; --bg:#ffffff; --karte:#ffffff; }
-  @media (prefers-color-scheme: dark) {
-    :root { --grau:#1e221f; --linie:#363c37; --text:#e8ebe6; --leise:#a5ada1; --bg:#121513; --karte:#191d1a; --gruen:#3fb36f; }
+:root {
+  --gruen:#00843D; --gruen-tief:#0A4A2A; --gruen-nacht:#06331D; --gruen-hell:#E3F2E8; --mint:#7BD3A0;
+  --gold:#F2B705; --gold-soft:#FFF4CC; --rot:#C8364B; --rot-soft:#FBE3E7; --blau:#2763B8; --blau-soft:#E2ECFA;
+  --bg:#F3F6F4; --surface:#FFFFFF; --surface-2:#F7FAF8; --ink:#13261B; --muted:#5A6B61; --linie:#DDE6E0;
+  --schatten:0 1px 2px rgba(10,40,25,.06), 0 8px 24px rgba(10,40,25,.06);
+  --font:"Montserrat", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:#0B1A12; --surface:#11241A; --surface-2:#163021; --ink:#E9F2EC; --muted:#9DB3A6; --linie:#24402F;
+    --gruen-hell:#173A26; --gold-soft:#3D3415; --rot-soft:#3F1E25; --blau-soft:#18294A; --gruen:#2FB36A;
+    --schatten:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25); color-scheme: dark;
   }
-  * { box-sizing: border-box; }
-  body { margin:0; font-family: -apple-system, "Segoe UI", Arial, sans-serif; color:var(--text); background:var(--bg); line-height:1.45; }
-  header { background:var(--gruen-dunkel); color:#fff; padding:16px 20px; }
-  header h1 { margin:0; font-size:1.3rem; }
-  header p { margin:4px 0 0; opacity:.85; font-size:.9rem; }
-  .test { background:#ffe14d; color:#000; font-weight:700; padding:8px 20px; }
-  nav { display:flex; gap:4px; padding:0 16px; border-bottom:1px solid var(--linie); background:var(--grau); flex-wrap:wrap; }
-  nav button { border:0; background:none; padding:12px 14px; font-size:.95rem; cursor:pointer; color:var(--text); border-bottom:3px solid transparent; }
-  nav button.aktiv { border-bottom-color:var(--gruen); font-weight:600; }
-  main { max-width:1100px; margin:0 auto; padding:16px; }
-  section { display:none; } section.aktiv { display:block; }
-  .raster { display:grid; grid-template-columns: minmax(260px, 340px) 1fr; gap:20px; }
-  @media (max-width: 760px) { .raster { grid-template-columns: 1fr; } }
-  .karte { background:var(--karte); border:1px solid var(--linie); border-radius:8px; padding:16px; }
-  label { display:block; font-size:.85rem; color:var(--leise); margin:10px 0 4px; }
-  select, input { width:100%; padding:8px; border:1px solid var(--linie); border-radius:6px; font-size:.95rem; background:var(--bg); color:var(--text); }
-  .kacheln { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:12px; }
-  .kachel { border:1px solid var(--linie); border-radius:8px; padding:12px; background:var(--karte); }
-  .kachel .wert { font-size:1.6rem; font-weight:700; color:var(--gruen); }
-  .kachel .band { font-size:.85rem; color:var(--leise); }
-  .kachel .titel { font-size:.85rem; color:var(--leise); }
-  table { width:100%; border-collapse:collapse; font-size:.88rem; }
-  th, td { padding:6px 8px; border-bottom:1px solid var(--linie); text-align:right; white-space:nowrap; }
-  th:first-child, td:first-child, th:nth-child(2), td:nth-child(2), th:nth-child(3), td:nth-child(3) { text-align:left; }
-  th { background:var(--grau); position:sticky; top:0; }
-  .tabellenrahmen { overflow-x:auto; max-height:70vh; }
-  .ueber { color:var(--blau); font-weight:600; } .unter { color:var(--rot); font-weight:600; }
-  .hinweis { font-size:.85rem; color:var(--leise); }
-  .filter { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:12px; } .filter > div { min-width:180px; }
-  h2 { font-size:1.15rem; margin:4px 0 12px; } h3 { font-size:1rem; margin:16px 0 8px; }
+}
+:root[data-theme="dark"] {
+  --bg:#0B1A12; --surface:#11241A; --surface-2:#163021; --ink:#E9F2EC; --muted:#9DB3A6; --linie:#24402F;
+  --gruen-hell:#173A26; --gold-soft:#3D3415; --rot-soft:#3F1E25; --blau-soft:#18294A; --gruen:#2FB36A;
+  --schatten:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25); color-scheme: dark;
+}
+* { box-sizing:border-box; }
+html { -webkit-text-size-adjust:100%; }
+body { margin:0; font-family:var(--font); color:var(--ink); background:var(--bg); line-height:1.5; font-size:15px; }
+button, input, select, textarea { font:inherit; color:inherit; }
+a { color:var(--gruen); }
+.wrap { max-width:1240px; margin:0 auto; padding:0 20px; }
+@media (max-width:640px) { .wrap { padding:0 16px; } }
+
+/* ---------- Kopf ---------- */
+.topbar { position:sticky; top:0; z-index:20; background:rgba(6,51,29,.92); backdrop-filter:saturate(1.4) blur(10px); color:#fff; }
+.topbar .wrap { display:flex; align-items:center; gap:14px; height:60px; }
+.marke { display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:-.01em; }
+.marke .zeichen { width:32px; height:32px; border-radius:10px; background:linear-gradient(135deg,var(--mint),var(--gruen)); display:grid; place-items:center; color:var(--gruen-nacht); font-size:13px; font-weight:800; }
+.tabs { display:flex; gap:2px; margin-left:auto; overflow-x:auto; scrollbar-width:none; min-width:0; }
+body { overflow-x:hidden; }
+@media (max-width:640px) { .marke .name { display:none; } .tabs button { padding:8px 9px; font-size:13px; } }
+body.kompakt .hero { padding:22px 0 20px; }
+body.kompakt .hero h1, body.kompakt .hero .lead, body.kompakt .hero .eyebrow, body.kompakt .hero .pills { display:none; }
+@media (max-width:640px) { body.kompakt .hero { display:none; } }
+.leiste > div:first-child { min-width:0; }
+.tabs::-webkit-scrollbar { display:none; }
+.tabs button { background:none; border:0; color:rgba(255,255,255,.75); padding:8px 12px; border-radius:10px; cursor:pointer; font-weight:600; font-size:14px; white-space:nowrap; }
+.tabs button:hover { color:#fff; background:rgba(255,255,255,.08); }
+.tabs button.aktiv { color:var(--gruen-nacht); background:var(--mint); }
+.thema { background:rgba(255,255,255,.1); border:0; color:#fff; width:36px; height:36px; border-radius:10px; cursor:pointer; flex:none; }
+.testband { background:var(--gold); color:#1d1a00; font-weight:700; text-align:center; padding:6px 12px; font-size:13px; }
+
+.hero { background:radial-gradient(1200px 400px at 85% -10%, rgba(123,211,160,.28), transparent 60%),
+         linear-gradient(115deg,var(--gruen-nacht) 0%,var(--gruen-tief) 55%,#0E6B3B 100%); color:#fff; padding:44px 0 34px; position:relative; overflow:hidden; }
+.hero::after { content:""; position:absolute; right:-80px; bottom:-120px; width:420px; height:420px; border-radius:50%; border:48px solid rgba(255,255,255,.04); }
+.hero .eyebrow { text-transform:uppercase; letter-spacing:.12em; font-size:12px; font-weight:700; color:var(--mint); }
+.hero h1 { font-size:clamp(28px,4.4vw,46px); line-height:1.08; letter-spacing:-.03em; margin:10px 0 12px; font-weight:800; max-width:820px; }
+.hero p.lead { font-size:clamp(15px,1.8vw,18px); color:rgba(255,255,255,.82); max-width:720px; margin:0 0 22px; }
+.pills { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
+.pill { display:inline-flex; align-items:center; gap:6px; font-size:12.5px; font-weight:600; padding:5px 10px; border-radius:999px; background:rgba(255,255,255,.1); color:#fff; border:1px solid rgba(255,255,255,.14); }
+.pill .punkt { width:7px; height:7px; border-radius:50%; background:var(--mint); }
+.pill.warn .punkt { background:var(--gold); }
+.schritte { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+@media (max-width:900px) { .schritte { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:520px) { .schritte { grid-template-columns:1fr; } }
+.schritt { background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12); border-radius:14px; padding:14px 16px; cursor:pointer; text-align:left; color:#fff; transition:transform .15s ease, background .15s ease; }
+.schritt:hover { transform:translateY(-2px); background:rgba(255,255,255,.11); }
+.schritt .nr { width:26px; height:26px; border-radius:50%; display:inline-grid; place-items:center; font-weight:800; font-size:13px; background:rgba(255,255,255,.14); margin-bottom:8px; }
+.schritt.fertig .nr { background:var(--mint); color:var(--gruen-nacht); }
+.schritt b { display:block; font-size:15px; }
+.schritt span { font-size:13px; color:rgba(255,255,255,.72); }
+
+/* ---------- Bausteine ---------- */
+main { padding:28px 0 60px; }
+section.ansicht { display:none; } section.ansicht.aktiv { display:block; }
+h2 { font-size:clamp(20px,2.4vw,26px); letter-spacing:-.02em; margin:0 0 6px; font-weight:800; }
+h3 { font-size:16px; margin:22px 0 10px; font-weight:700; letter-spacing:-.01em; }
+.unterzeile { color:var(--muted); margin:0 0 20px; }
+.karte { background:var(--surface); border:1px solid var(--linie); border-radius:14px; padding:18px; box-shadow:var(--schatten); }
+.raster2 { display:grid; grid-template-columns:minmax(280px,360px) 1fr; gap:18px; align-items:start; }
+@media (max-width:900px) { .raster2 { grid-template-columns:1fr; } }
+.kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(190px,100%),1fr)); gap:12px; margin-bottom:18px; }
+.kpi { background:var(--surface); border:1px solid var(--linie); border-radius:14px; padding:14px 16px; box-shadow:var(--schatten); }
+.kpi .t { font-size:12.5px; color:var(--muted); font-weight:600; }
+.kpi .w { font-size:clamp(20px,2.4vw,26px); font-weight:800; letter-spacing:-.02em; margin-top:2px; }
+.kpi .b { font-size:12.5px; color:var(--muted); }
+.kpi.akzent { background:linear-gradient(135deg,var(--gruen),#0E6B3B); color:#fff; border-color:transparent; }
+.kpi.akzent .t, .kpi.akzent .b { color:rgba(255,255,255,.8); }
+.btn { display:inline-flex; align-items:center; gap:8px; border:1px solid var(--linie); background:var(--surface); padding:9px 14px; border-radius:10px; cursor:pointer; font-weight:600; font-size:14px; transition:transform .15s ease, box-shadow .15s ease; }
+.btn:hover { transform:translateY(-1px); box-shadow:var(--schatten); }
+.btn.primaer { background:var(--gruen); color:#fff; border-color:transparent; box-shadow:0 10px 24px rgba(0,132,61,.28); }
+.btn.hell { background:#fff; color:var(--gruen-nacht); border-color:transparent; }
+.btn.geist { background:rgba(255,255,255,.1); color:#fff; border-color:rgba(255,255,255,.2); }
+.btn:disabled { opacity:.5; cursor:not-allowed; transform:none; }
+.leiste { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:16px; }
+.leiste .rechts { margin-left:auto; display:flex; gap:10px; flex-wrap:wrap; }
+label { display:block; font-size:12.5px; color:var(--muted); font-weight:600; margin:12px 0 5px; }
+input, select, textarea { width:100%; padding:9px 11px; border:1px solid var(--linie); border-radius:10px; background:var(--surface-2); font-size:14px; }
+input:focus, select:focus, textarea:focus { outline:2px solid var(--gruen); outline-offset:1px; }
+textarea { min-height:150px; font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:13px; }
+.feld2 { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.chip { display:inline-flex; align-items:center; gap:5px; font-size:12px; font-weight:600; padding:3px 8px; border-radius:999px; background:var(--surface-2); border:1px solid var(--linie); white-space:nowrap; }
+.chip.gruen { background:var(--gruen-hell); border-color:transparent; color:var(--gruen); }
+.chip.gold { background:var(--gold-soft); border-color:transparent; color:#8A6400; }
+.chip.rot { background:var(--rot-soft); border-color:transparent; color:var(--rot); }
+.chip.blau { background:var(--blau-soft); border-color:transparent; color:var(--blau); }
+:root[data-theme="dark"] .chip.gold { color:var(--gold); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .chip.gold { color:var(--gold); } }
+.hinweis { font-size:13px; color:var(--muted); }
+.leer { text-align:center; padding:40px 20px; color:var(--muted); }
+.leer b { display:block; color:var(--ink); font-size:17px; margin-bottom:6px; }
+
+/* Tabelle */
+.tabrahmen { overflow-x:auto; border:1px solid var(--linie); border-radius:14px; background:var(--surface); box-shadow:var(--schatten); }
+table { width:100%; border-collapse:collapse; font-size:13.5px; }
+th, td { padding:10px 10px; border-bottom:1px solid var(--linie); text-align:left; white-space:nowrap; vertical-align:middle; }
+th { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); background:var(--surface-2); position:sticky; top:0; }
+td.z, th.z { text-align:right; font-variant-numeric:tabular-nums; }
+tbody tr { cursor:pointer; transition:background .1s ease; }
+tbody tr:hover { background:var(--surface-2); }
+tbody tr.vorbei td { color:var(--muted); }
+tbody tr:last-child td { border-bottom:0; }
+.klein { font-size:12px; color:var(--muted); display:block; }
+td.umbruch { white-space:normal; min-width:110px; max-width:220px; }
+td.umbruch .chip { margin:1px 0; }
+
+/* Detail */
+.ergebnisse { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr)); gap:12px; }
+.treiber { display:grid; gap:8px; }
+.treiber .zeile { display:grid; grid-template-columns:minmax(110px,170px) 1fr 64px; gap:10px; align-items:center; font-size:13px; }
+.treiber .balken { height:10px; border-radius:6px; background:var(--surface-2); position:relative; overflow:hidden; }
+.treiber .balken i { position:absolute; top:0; bottom:0; border-radius:6px; }
+.treiber .mitte { position:absolute; left:50%; top:-3px; bottom:-3px; width:1px; background:var(--muted); opacity:.5; }
+.vergleich { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; }
+.status { font-weight:700; }
+.status.ueber { color:var(--blau); } .status.unter { color:var(--rot); } .status.im { color:var(--gruen); }
+.toast { position:fixed; bottom:20px; left:50%; transform:translateX(-50%) translateY(20px); background:var(--gruen-nacht); color:#fff; padding:12px 18px; border-radius:12px; box-shadow:0 12px 30px rgba(0,0,0,.25); opacity:0; transition:all .2s ease; z-index:50; max-width:90vw; font-size:14px; }
+.toast.zeigen { opacity:1; transform:translateX(-50%) translateY(0); }
+.lesetext h3:first-child { margin-top:0; }
+.lesetext p { margin:0 0 10px; max-width:860px; }
+svg text { font-family:var(--font); }
+.zurueck { background:none; border:0; color:var(--gruen); font-weight:700; cursor:pointer; padding:0; margin-bottom:10px; }
 </style>
 </head>
 <body>
-<header>
-  <h1>FCSG Spielrechner</h1>
-  <p id="untertitel"></p>
+<div class="testband" id="testband" hidden>TESTDATEN – künstlich erzeugt, keine Clubzahlen</div>
+<header class="topbar">
+  <div class="wrap">
+    <div class="marke"><span class="zeichen">SG</span><span class="name">Spielrechner</span></div>
+    <nav class="tabs" id="tabs">
+      <button data-ansicht="plan" class="aktiv">Saisonplan</button>
+      <button data-ansicht="detail">Spiel</button>
+      <button data-ansicht="rueckblick">Rückblick</button>
+      <button data-ansicht="daten">Daten</button>
+      <button data-ansicht="lesehilfe">Lesehilfe</button>
+    </nav>
+    <button class="thema" id="thema" title="Hell/Dunkel umschalten" aria-label="Hell/Dunkel umschalten">◐</button>
+  </div>
 </header>
-<div class="test" id="testbanner" hidden>TESTDATEN – künstlich erzeugt, keine Clubzahlen</div>
-<nav>
-  <button data-tab="vorab" class="aktiv">Spiel vorab</button>
-  <button data-tab="danach">Spiele im Rückblick</button>
-  <button data-tab="saison">Saisonübersicht</button>
-  <button data-tab="lesehilfe">Lesehilfe</button>
-</nav>
-<main>
-  <section id="vorab" class="aktiv">
-    <h2>Erwartung für ein angesetztes Spiel</h2>
-    <div class="raster">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">FC St.Gallen 1879 · Matchday-Planung</div>
+    <h1>Jedes Heimspiel vorab einschätzen – und danach fair vergleichen.</h1>
+    <p class="lead">Spielplan importieren, Wetter und Ferien holt der Rechner selbst. Er schätzt Anwesende, Kundenfranken und Catering-Umsatz je Spiel. Nach dem Spiel IST eintragen, und das Modell lernt das Niveau der Saison.</p>
+    <div class="pills" id="pills"></div>
+    <div class="schritte" id="schritte">
+      <button class="schritt" data-ziel="daten"><span class="nr">1</span><b>Spielplan importieren</b><span id="s1">CSV oder aus Excel einfügen</span></button>
+      <button class="schritt" data-ziel="kontext"><span class="nr">2</span><b>Kontext holen</b><span id="s2">Wetter und Ferien automatisch</span></button>
+      <button class="schritt" data-ziel="plan"><span class="nr">3</span><b>Prognose je Spiel</b><span id="s3">Anwesende, KF, Umsatz</span></button>
+      <button class="schritt" data-ziel="ist"><span class="nr">4</span><b>IST eintragen</b><span id="s4">nach dem Spiel</span></button>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+  <!-- ======================= Saisonplan ======================= -->
+  <section class="ansicht aktiv" id="plan">
+    <div class="leiste">
+      <div><h2>Saisonplan</h2><p class="unterzeile" id="plan_unterzeile">Erwartung je Heimspiel aus dem Kontextmodell.</p></div>
+      <div class="rechts">
+        <select id="plan_saison" aria-label="Saison" style="width:auto"></select>
+        <button class="btn" id="btn_kontext">↻ Wetter &amp; Ferien aktualisieren</button>
+        <button class="btn primaer" id="btn_import_plan">＋ Spielplan importieren</button>
+      </div>
+    </div>
+    <div class="kpis" id="plan_kpis"></div>
+    <div id="plan_tabelle"></div>
+    <p class="hinweis" style="margin-top:12px">Wetter: <span class="chip gruen">Prognose</span> Open-Meteo bis ca. 16 Tage · <span class="chip">Normalwert</span> Mittel MeteoSchweiz St. Gallen für Monat und Uhrzeit · <span class="chip blau">Ist-Wetter</span> nach dem Spiel (Open-Meteo, Rückblick 92 Tage). Summen sind Summen der Erwartungen, kein Potenzial.</p>
+  </section>
+
+  <!-- ======================= Spiel im Detail ======================= -->
+  <section class="ansicht" id="detail">
+    <button class="zurueck" id="zurueck">← zurück zum Saisonplan</button>
+    <div id="detail_inhalt"></div>
+  </section>
+
+  <!-- ======================= Rückblick ======================= -->
+  <section class="ansicht" id="rueckblick">
+    <h2>Rückblick: beobachtet vs. erwartet</h2>
+    <p class="unterzeile">Historische Meisterschaftsspiele aus Run 4 und eigene IST-Einträge. Erwartung ohne das jeweilige Spiel geschätzt; «über/unter» = ausserhalb des 80 %-Bands. Rund 10 % pro Richtung sind auch zufällig zu erwarten.</p>
+    <div class="leiste">
+      <select id="rb_saison" style="width:auto" aria-label="Saison"></select>
+      <select id="rb_ziel" style="width:auto" aria-label="Kennzahl"></select>
+    </div>
+    <div class="karte" style="margin-bottom:16px"><div id="rb_grafik"></div></div>
+    <div class="kpis" id="rb_kpis"></div>
+    <div id="rb_tabelle"></div>
+  </section>
+
+  <!-- ======================= Daten ======================= -->
+  <section class="ansicht" id="daten">
+    <h2>Daten</h2>
+    <p class="unterzeile">Spielplan und IST-Werte einlesen, Saisondatei sichern, Quellen einstellen. Alles bleibt in dieser Datei und in diesem Browser.</p>
+    <div class="raster2">
       <div class="karte">
-        <label for="e_saison">Saisonniveau (Preise, Sortiment)</label><select id="e_saison"></select>
-        <label for="e_tag">Wochentag der Ansetzung</label>
-        <select id="e_tag"><option>Montag</option><option>Dienstag</option><option>Mittwoch</option><option>Donnerstag</option>
-          <option>Freitag</option><option selected>Samstag</option><option>Sonntag</option></select>
-        <label for="e_zeit">Anstosszeit</label><input id="e_zeit" type="time" value="18:00">
-        <p class="hinweis" id="slot_info"></p>
-        <label for="e_top">Gegner</label>
-        <select id="e_top"><option value="0">übriger Gegner</option><option value="1">Top-Gegner (FCB, YB, FCZ)</option></select>
-        <label for="e_temp">Temperatur bei Anpfiff (°C, Prognose)</label><input id="e_temp" type="number" step="1" value="12">
-        <label for="e_regen">Regen bei Anreise (Prognose)</label>
-        <select id="e_regen"><option value="0">nein</option><option value="1">ja</option></select>
-        <label for="e_ferien">Schulferien Stadt St.Gallen</label>
-        <select id="e_ferien"><option value="0">nein</option><option value="1">ja</option></select>
-        <label for="e_soll">Erwartete vergebene Tickets (SOLL)</label><input id="e_soll" type="number" step="100">
-        <label for="e_vip">Erwartete VIP-Gäste</label><input id="e_vip" type="number" step="10">
+        <h3 style="margin-top:0">1 · Spielplan importieren</h3>
+        <p class="hinweis">Spalten: <b>Datum</b>, <b>Anstoss</b>, <b>Gegner</b>, optional <b>Wettbewerb</b>, <b>SOLL</b> (erwartete vergebene Tickets), <b>VIP</b>. Trennzeichen Semikolon, Komma oder Tab (direkt aus Excel kopiert).</p>
+        <input type="file" id="datei_plan" accept=".csv,.txt,text/csv">
+        <label for="text_plan">… oder Zeilen einfügen</label>
+        <textarea id="text_plan" placeholder="Datum;Anstoss;Gegner;Wettbewerb&#10;14.11.2026;18:00;FC Basel 1893;Super League"></textarea>
+        <div class="leiste" style="margin-top:10px">
+          <button class="btn primaer" id="btn_plan_lesen">Spielplan übernehmen</button>
+          <button class="btn" id="btn_vorlage_plan">Vorlage herunterladen</button>
+        </div>
+        <p class="hinweis" id="plan_meldung"></p>
       </div>
-      <div>
-        <div class="kacheln" id="ergebnis"></div>
-        <p class="hinweis" id="vorab_hinweis"></p>
+      <div class="karte">
+        <h3 style="margin-top:0">4 · IST-Werte importieren</h3>
+        <p class="hinweis">Spalten: <b>Datum</b>, <b>IST</b> (Zuschauer total), <b>VIP</b>, <b>SOLL</b>, <b>Umsatz</b> (Catering exkl. MwSt), <b>Bons</b>. Einzelne Spiele lassen sich auch direkt im Spiel erfassen.</p>
+        <input type="file" id="datei_ist" accept=".csv,.txt,text/csv">
+        <label for="text_ist">… oder Zeilen einfügen</label>
+        <textarea id="text_ist" placeholder="Datum;IST;VIP;SOLL;Umsatz;Bons"></textarea>
+        <div class="leiste" style="margin-top:10px">
+          <button class="btn primaer" id="btn_ist_lesen">IST übernehmen</button>
+          <button class="btn" id="btn_vorlage_ist">Vorlage herunterladen</button>
+        </div>
+        <p class="hinweis" id="ist_meldung"></p>
+      </div>
+    </div>
+    <div class="raster2" style="margin-top:18px">
+      <div class="karte">
+        <h3 style="margin-top:0">Saisondatei</h3>
+        <p class="hinweis">Der Rechner speichert automatisch in diesem Browser. Die Saisondatei sichert alles (Spielplan, Kontext, IST) unabhängig vom Browser und lässt sich weitergeben oder auf einem anderen Gerät laden.</p>
+        <div class="leiste">
+          <button class="btn primaer" id="btn_speichern">Saisondatei speichern</button>
+          <label class="btn" for="datei_saison" style="margin:0">Saisondatei laden</label>
+          <input type="file" id="datei_saison" accept=".json,application/json" hidden>
+          <button class="btn" id="btn_export">Übersicht als CSV</button>
+        </div>
+        <p class="hinweis" id="speicher_meldung"></p>
+        <h3>Zurücksetzen</h3>
+        <button class="btn" id="btn_reset">Alle eigenen Einträge löschen</button>
+      </div>
+      <div class="karte">
+        <h3 style="margin-top:0">Quellen</h3>
+        <label for="q_wetter">Wetterprognose</label>
+        <select id="q_wetter">
+          <option value="openmeteo">Open-Meteo (automatisch)</option>
+          <option value="aus">Kein Abruf – nur Normalwerte und Handeingabe</option>
+        </select>
+        <p class="hinweis">Open-Meteo ist für nicht-kommerzielle Nutzung kostenlos (CC BY 4.0). Für den Betrieb beim FCSG ein Abo abschliessen oder auf MeteoSchweiz Open Data umstellen. Gesendet werden nur die Koordinaten der Messstation St. Gallen.</p>
+        <label for="q_ferien">Schulferien</label>
+        <select id="q_ferien">
+          <option value="auto">Stadt St. Gallen (hinterlegt), danach Kanton SG (OpenHolidays)</option>
+          <option value="aus">Nur hinterlegte Liste Stadt St. Gallen</option>
+        </select>
+        <p class="hinweis" id="q_info"></p>
       </div>
     </div>
   </section>
 
-  <section id="danach">
-    <h2>Beobachtet vs. erwartet</h2>
-    <div class="filter">
-      <div><label for="f_saison">Saison</label><select id="f_saison"></select></div>
-      <div><label for="f_ziel">Kennzahl</label><select id="f_ziel"></select></div>
-    </div>
-    <div class="tabellenrahmen"><table id="t_spiele"></table></div>
-    <p class="hinweis">Erwartung = Modell aus Saison, Anstoss, Gegner, Wetter und Ferien, geschätzt ohne das jeweilige Spiel
-      (Leave-one-match-out). «über/unter Erwartung» = ausserhalb des 80 %-Bands. Abweichungen sind Prüfhinweise, kein entgangener Umsatz.</p>
-  </section>
-
-  <section id="saison">
-    <h2>Saisonübersicht</h2>
-    <div class="tabellenrahmen"><table id="t_saison"></table></div>
-    <p class="hinweis">Anzahl Spiele über bzw. unter dem 80 %-Erwartungsband je Kennzahl. Rund 10 % pro Richtung sind auch zufällig zu erwarten.</p>
-  </section>
-
-  <section id="lesehilfe">
+  <!-- ======================= Lesehilfe ======================= -->
+  <section class="ansicht" id="lesehilfe">
     <h2>Lesehilfe</h2>
-    <div class="karte" id="lesetext"></div>
+    <div class="karte lesetext" id="lesetext"></div>
   </section>
 </main>
-<script id="daten" type="application/json">__DATEN__</script>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script id="daten-json" type="application/json">__DATEN__</script>
+
+<!-- Rechenlogik ohne DOM: wird von tests/spielrechner_logik.test.mjs geprüft -->
+<script id="logik">
+"use strict";
+(function (root) {
+  const Z80 = 1.2816;
+  const WERKTAGE = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"];
+  const TAGE = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
+  const VARIABLEN = ["top_gegner", "temp_anpfiff_c", "regen_anreise", "schulferien", "slot_sa_abend", "slot_nachmittag", "slot_werktag_abend"];
+  const DAEMPFUNG = 3;   // Saisonniveau: Mittel der Abweichungen mit 3 «virtuellen» Spielen ohne Abweichung
+  const MIN_MODELLSPIELE = 10;   // darunter gilt der Modellwert einer Saison als vorläufig und wird mit IST-Einträgen verfeinert
+
+  const pad = n => String(n).padStart(2, "0");
+  const iso = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+
+  function parseDatum(s) {
+    s = String(s || "").trim();
+    let m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
+    if (m) return `${m[1]}-${pad(+m[2])}-${pad(+m[3])}`;
+    m = s.match(/^(\d{1,2})[.\/](\d{1,2})[.\/](\d{2,4})/);
+    if (m) { let j = +m[3]; if (j < 100) j += 2000; return `${j}-${pad(+m[2])}-${pad(+m[1])}`; }
+    return null;
+  }
+  function parseZeit(s) {
+    const m = String(s || "").trim().match(/^(\d{1,2})[:.h](\d{2})/);
+    if (!m) return null;
+    const h = +m[1], mi = +m[2];
+    return (h < 24 && mi < 60) ? `${pad(h)}:${pad(mi)}` : null;
+  }
+  function parseZahl(s) {
+    if (s == null) return null;
+    const t = String(s).trim().replace(/['’\s]/g, "").replace(/CHF/i, "");
+    if (t === "") return null;
+    const n = Number(t.includes(",") && !t.includes(".") ? t.replace(",", ".") : t.replace(/,/g, ""));
+    return isFinite(n) ? n : null;
+  }
+  const wochentag = isoDatum => TAGE[new Date(isoDatum + "T12:00:00").getDay()];
+  const tagesgruppe = t => WERKTAGE.includes(t) ? "Werktag" : t;
+  function saisonVon(isoDatum) {
+    const [j, m] = isoDatum.split("-").map(Number);
+    const a = m >= 7 ? j : j - 1;
+    return `${a}/${pad((a + 1) % 100)}`;
+  }
+  // Gleiche Regel wie fcsg/utils.anstoss_slot: Zeitfenster statt fixer Zeiten
+  function slotCode(tag, zeit) {
+    const z = parseZeit(zeit); if (!z) return null;
+    const [h, m] = z.split(":").map(Number), min = h * 60 + m;
+    if (min < 17 * 60) return "slot_nachmittag";
+    if (tag === "Samstag") return min < 20 * 60 ? "referenz" : "slot_sa_abend";
+    return "slot_werktag_abend";
+  }
+  function istTopGegner(name, muster) {
+    const n = " " + String(name || "").toLowerCase().replace(/[^a-zäöüé0-9 ]/g, " ").replace(/\s+/g, " ") + " ";
+    if (n.includes("grasshopper") || n.includes(" gc ")) return false;   // GC Zürich ist kein Top-Gegner (config.TOP_GEGNER)
+    return muster.some(p => n.includes(" " + p + " ") || (p.length > 3 && n.includes(p)));
+  }
+  function istMeisterschaft(w) {
+    const t = String(w || "").toLowerCase();
+    return t === "" || t.includes("super league") || t === "sl" || t.includes("meisterschaft");
+  }
+
+  // ---------- Tabellen-Import ----------
+  function zerlege(text) {
+    const zeilen = String(text || "").replace(/\r/g, "").split("\n").filter(z => z.trim() !== "");
+    if (!zeilen.length) return [];
+    const kopf = zeilen[0];
+    const trenner = kopf.includes("\t") ? "\t" : (kopf.split(";").length >= kopf.split(",").length ? ";" : ",");
+    return zeilen.map(z => z.split(trenner).map(x => x.trim().replace(/^"|"$/g, "")));
+  }
+  function spalte(kopf, namen) {
+    const k = kopf.map(h => h.toLowerCase());
+    for (const n of namen) { const i = k.findIndex(h => h.includes(n)); if (i >= 0) return i; }
+    return -1;
+  }
+  function parseSpielplan(text) {
+    const z = zerlege(text); const fehler = []; const spiele = [];
+    if (z.length < 2) return {spiele, fehler: ["Keine Datenzeilen gefunden."]};
+    const k = z[0];
+    const iD = spalte(k, ["datum", "date"]), iZ = spalte(k, ["anstoss", "anpfiff", "zeit", "uhrzeit", "time"]);
+    const iG = spalte(k, ["gegner", "gast", "opponent", "away"]), iW = spalte(k, ["wettbewerb", "competition", "liga"]);
+    const iS = spalte(k, ["soll", "tickets"]), iV = spalte(k, ["vip"]);
+    if (iD < 0 || iG < 0) return {spiele, fehler: ["Spalten «Datum» und «Gegner» sind nötig."]};
+    z.slice(1).forEach((r, n) => {
+      const d = parseDatum(r[iD]);
+      if (!d) { fehler.push(`Zeile ${n + 2}: Datum nicht lesbar`); return; }
+      spiele.push({datum: d, anstoss: iZ >= 0 ? parseZeit(r[iZ]) : null, gegner: (r[iG] || "").slice(0, 80),
+                   wettbewerb: iW >= 0 ? (r[iW] || "").slice(0, 60) : "", soll: iS >= 0 ? parseZahl(r[iS]) : null,
+                   vip: iV >= 0 ? parseZahl(r[iV]) : null});
+    });
+    return {spiele, fehler};
+  }
+  function parseIst(text) {
+    const z = zerlege(text); const fehler = []; const werte = [];
+    if (z.length < 2) return {werte, fehler: ["Keine Datenzeilen gefunden."]};
+    const k = z[0];
+    const iD = spalte(k, ["datum", "date"]), iI = spalte(k, ["ist", "zuschauer", "anwesend"]), iV = spalte(k, ["vip"]);
+    const iS = spalte(k, ["soll"]), iU = spalte(k, ["umsatz", "catering"]), iB = spalte(k, ["bons", "bon"]);
+    if (iD < 0) return {werte, fehler: ["Spalte «Datum» ist nötig."]};
+    z.slice(1).forEach((r, n) => {
+      const d = parseDatum(r[iD]);
+      if (!d) { fehler.push(`Zeile ${n + 2}: Datum nicht lesbar`); return; }
+      werte.push({datum: d, ist: iI >= 0 ? parseZahl(r[iI]) : null, vip: iV >= 0 ? parseZahl(r[iV]) : null,
+                  soll: iS >= 0 ? parseZahl(r[iS]) : null, umsatz: iU >= 0 ? parseZahl(r[iU]) : null,
+                  bons: iB >= 0 ? parseZahl(r[iB]) : null});
+    });
+    return {werte, fehler};
+  }
+
+  // ---------- Wetter ----------
+  // Wie fcsg/sources/extern.py: Temperatur des Intervalls, das die Anpfiffminute enthält (Ende = aufgerundete Stunde);
+  // Regen = Summe der Intervalle mit Ende in (Anpfiff − 2 h, aufgerundete Stunde] ≥ 0.5 mm.
+  function anpfiffFenster(isoDatum, zeit) {
+    const [h, m] = zeit.split(":").map(Number);
+    const ko = new Date(`${isoDatum}T${pad(h)}:${pad(m)}:00`);
+    const ende = new Date(ko); if (m > 0) ende.setHours(h + 1, 0, 0, 0);
+    const enden = [];
+    for (let t = new Date(ende); t > new Date(ko.getTime() - 2 * 3600e3); t = new Date(t.getTime() - 3600e3)) enden.unshift(new Date(t));
+    return {ende, enden};
+  }
+  const stundenSchluessel = d => `${iso(d)}T${pad(d.getHours())}:00`;
+  function wetterAusStunden(stunden, isoDatum, zeit) {
+    // stunden: {"2026-11-14T18:00": {temp, regen_mm}} – Werte zum Ende der Stunde (Open-Meteo-Konvention)
+    const {ende, enden} = anpfiffFenster(isoDatum, zeit);
+    const h = stunden[stundenSchluessel(ende)];
+    if (!h || h.temp == null) return null;
+    let summe = 0;
+    for (const e of enden) { const x = stunden[stundenSchluessel(e)]; if (!x || x.regen_mm == null) return null; summe += x.regen_mm; }
+    return {temp: h.temp, regen_mm: Math.round(summe * 10) / 10, regen: summe >= 0.5 ? 1 : 0};
+  }
+  function klimaFuer(klima, isoDatum, zeit) {
+    const {ende, enden} = anpfiffFenster(isoDatum, zeit);
+    const mo = String(ende.getMonth() + 1), st = String(ende.getHours());
+    const t = (klima.temp[mo] || {})[st];
+    const p = ((enden.length >= 3 ? klima.regen3 : klima.regen2)[mo] || {})[st];
+    if (t == null) return null;
+    return {temp: Math.round(t * 10) / 10, regen: p == null ? 0 : p, regen_wahrsch: p};
+  }
+
+  // ---------- Ferien ----------
+  function inFerien(liste, isoDatum) {
+    const p = liste.find(f => f.von <= isoDatum && isoDatum <= f.bis);
+    return p ? p : null;
+  }
+
+  // ---------- Modell ----------
+  const vorwaerts = art => art === "log" ? Math.exp : (z => 1 / (1 + Math.exp(-z)));
+  const rueckwaerts = art => art === "log" ? Math.log : (p => Math.log(p / (1 - p)));
+  function kontextTeil(k, x) {
+    let z = 0; for (const v of VARIABLEN) if (k.terme[v] != null) z += k.terme[v] * (x[v] || 0);
+    return z;
+  }
+  function saisonTerm(k, saison) {
+    return (k.terme["Intercept"] || 0) + (k.terme[`C(saison)[T.${saison}]`] || 0);
+  }
+  function hatSaison(D, saison) { return D.saisons.includes(saison); }
+  // Niveau einer Saison auf der transformierten Skala.
+  // Saison mit ≥ 10 Modellspielen: Modellwert. Sonst Startwert (Modellwert bzw. Basis-Saison) + Mittel der IST-Abweichungen,
+  // gedämpft mit den Modellspielen (bzw. 3 virtuellen Spielen) als Gewicht. IST-Spiele, die schon im Modell sind, zählen nicht doppelt.
+  function saisonNiveau(D, ziel, saison, beobachtungen) {
+    const k = D.modelle[ziel]; if (!k) return null;
+    const modellDaten = new Set(D.spiele.filter(s => s.ziel_code === ziel && s.saison === saison).map(s => s.datum));
+    const bekannt = hatSaison(D, saison), nModell = modellDaten.size;
+    if (bekannt && nModell >= MIN_MODELLSPIELE) return {z: saisonTerm(k, saison), quelle: "modell", n: 0, n_modell: nModell};
+    const start = saisonTerm(k, bekannt ? saison : D.meta.basis_saison), gewicht = bekannt ? Math.max(nModell, DAEMPFUNG) : DAEMPFUNG;
+    const r = (beobachtungen || []).filter(b => b.saison === saison && !modellDaten.has(b.datum) && b.y != null && isFinite(b.y) && b.y > 0 &&
+                                                (ziel !== "anwesenheitsquote" || b.y < 1))
+      .map(b => rueckwaerts(k.transformation)(b.y) - (start + kontextTeil(k, b.x)));
+    const offset = r.length ? r.reduce((a, b) => a + b, 0) / (r.length + gewicht) : 0;
+    return {z: start + offset, quelle: r.length ? "gelernt" : (bekannt ? "vorlaeufig" : "basis"), n: r.length, n_modell: nModell, offset};
+  }
+  function vorhersage(D, ziel, x, niveau) {
+    const k = D.modelle[ziel]; if (!k || !niveau) return null;
+    const z = niveau.z + kontextTeil(k, x), f = vorwaerts(k.transformation);
+    return {wert: f(z), unten: f(z - Z80 * k.rmse), oben: f(z + Z80 * k.rmse), z};
+  }
+  // Beitrag je Merkmal in % gegenüber Referenz (Samstag 17–19.59, übriger Gegner, 0 °C → Mittel 10 °C, kein Regen, keine Ferien)
+  function treiber(D, ziel, x) {
+    const k = D.modelle[ziel]; if (!k) return [];
+    const prozent = beitrag => k.transformation === "log" ? Math.exp(beitrag) - 1 : null;
+    const out = [];
+    const slot = ["slot_sa_abend", "slot_nachmittag", "slot_werktag_abend"].find(s => x[s]);
+    out.push({name: "Anstoss-Slot", wert: slot ? k.terme[slot] || 0 : 0});
+    out.push({name: "Top-Gegner", wert: (k.terme.top_gegner || 0) * (x.top_gegner || 0)});
+    out.push({name: "Temperatur (vs. 10 °C)", wert: (k.terme.temp_anpfiff_c || 0) * ((x.temp_anpfiff_c ?? 10) - 10)});
+    out.push({name: "Regen bei Anreise", wert: (k.terme.regen_anreise || 0) * (x.regen_anreise || 0)});
+    out.push({name: "Schulferien", wert: (k.terme.schulferien || 0) * (x.schulferien || 0)});
+    return out.map(o => ({...o, prozent: prozent(o.wert)}));
+  }
+  // IST-Kennzahlen wie im Rechenkern: Public = IST − VIP; KF = Umsatz / Public; Bons/Kopf = Bons / Public; Ø Bon = Umsatz / Bons
+  function istKennzahlen(e) {
+    if (!e) return {};
+    const pub = (e.ist != null) ? e.ist - (e.vip || 0) : null;
+    return {
+      anwesenheitsquote: (e.ist != null && e.soll) ? e.ist / e.soll : null,
+      kf_exkl: (e.umsatz != null && pub > 0) ? e.umsatz / pub : null,
+      bons_pro_anwesende: (e.bons != null && pub > 0) ? e.bons / pub : null,
+      bon_exkl: (e.umsatz != null && e.bons > 0) ? e.umsatz / e.bons : null,
+      public: pub,
+    };
+  }
+  function bandStatus(wert, v) {
+    if (wert == null || !v) return null;
+    return wert > v.oben ? "ueber" : (wert < v.unten ? "unter" : "im");
+  }
+
+  root.SR = {Z80, WERKTAGE, parseDatum, parseZeit, parseZahl, wochentag, tagesgruppe, saisonVon, slotCode, istTopGegner,
+             istMeisterschaft, parseSpielplan, parseIst, anpfiffFenster, wetterAusStunden, klimaFuer, inFerien, saisonNiveau,
+             vorhersage, treiber, istKennzahlen, bandStatus, kontextTeil, hatSaison, iso};
+})(typeof window !== "undefined" ? window : globalThis);
+</script>
+
 <script>
 "use strict";
-const D = JSON.parse(document.getElementById("daten").textContent);
-const fmt = (x, n = 0) => (x == null || isNaN(x)) ? "–" : x.toLocaleString("de-CH", {minimumFractionDigits: n, maximumFractionDigits: n});
-const pct = (x, n = 1) => (x == null || isNaN(x)) ? "–" : fmt(x * 100, n) + " %";
+const D = JSON.parse(document.getElementById("daten-json").textContent);
+const SR = window.SR;
 const $ = id => document.getElementById(id);
-const Z80 = 1.2816;
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
+const fmt = (x, n = 0) => (x == null || !isFinite(x)) ? "–" : x.toLocaleString("de-CH", {minimumFractionDigits: n, maximumFractionDigits: n});
+const pct = (x, n = 1) => (x == null || !isFinite(x)) ? "–" : fmt(x * 100, n) + " %";
+const chf = (x, n = 0) => (x == null || !isFinite(x)) ? "–" : "CHF " + fmt(x, n);
+const datumKurz = d => { const [j, m, t] = d.split("-"); return `${t}.${m}.${j}`; };
+const SPEICHER = "fcsg_spielrechner_v2" + (D.meta.testdaten ? "_test" : "");
+const heute = SR.iso(new Date());
+const SLOT_LABEL = Object.fromEntries(D.slots.map(s => [s.code, s.label]));
+const SLOT_KURZ = {referenz: "Sa 17–20", slot_sa_abend: "Sa ab 20", slot_nachmittag: "Nachmittag", slot_werktag_abend: "Werktagabend"};
 
-document.querySelectorAll("nav button").forEach(b => b.addEventListener("click", () => {
-  document.querySelectorAll("nav button, main section").forEach(e => e.classList.remove("aktiv"));
-  b.classList.add("aktiv"); $(b.dataset.tab).classList.add("aktiv");
-}));
-$("untertitel").textContent = D.meta.untertitel;
-$("testbanner").hidden = !D.meta.testdaten;
+// ---------- Zustand ----------
+let S = {version: 2, spiele: [], einstellungen: {wetter: "openmeteo", ferien: "auto"}, letzterAbruf: null, ferienKanton: []};
+function laden() {
+  try { const t = localStorage.getItem(SPEICHER); if (t) S = Object.assign(S, JSON.parse(t)); } catch (e) { /* Speicher nicht verfügbar */ }
+}
+function sichern() {
+  try { localStorage.setItem(SPEICHER, JSON.stringify(S)); } catch (e) { /* Speicher nicht verfügbar */ }
+}
+function toast(t) { const e = $("toast"); e.textContent = t; e.classList.add("zeigen"); clearTimeout(toast.t); toast.t = setTimeout(() => e.classList.remove("zeigen"), 3200); }
+const spielVon = datum => S.spiele.find(s => s.datum === datum);
 
-// ---------- Spiel vorab ----------
-function option(sel, wert, text, aktiv) { const o = document.createElement("option"); o.value = wert; o.textContent = text; if (aktiv) o.selected = true; sel.appendChild(o); }
-D.saisons.forEach(s => option($("e_saison"), s, s, s === D.meta.basis_saison));
-// Gleiche Regel wie fcsg/analysis/anstoss_slot.py: Zeitfenster statt fixer Zeiten
-const WERKTAGE = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"];
-function slotCode(tag, zeit) {
-  const [h, m] = (zeit || "").split(":").map(Number); if (isNaN(h)) return null;
-  const min = h * 60 + (m || 0);
-  if (min < 17 * 60) return "slot_nachmittag";
-  if (tag === "Samstag") return min < 20 * 60 ? "referenz" : "slot_sa_abend";
-  return "slot_werktag_abend";
-}
-const tagesgruppe = t => WERKTAGE.includes(t) ? "Werktag" : t;
-function setzeVorgaben() {
-  const v = D.saison_mittel[$("e_saison").value] || {};
-  $("e_soll").value = Math.round((v.soll || 0) / 100) * 100;
-  $("e_vip").value = Math.round((v.ist_vip || 0) / 10) * 10;
-}
-setzeVorgaben();
-$("e_saison").addEventListener("change", () => { setzeVorgaben(); rechne(); });
-
-function vorhersage(ziel, x) {
-  const k = D.modelle[ziel]; if (!k) return null;
-  let z = k.terme["Intercept"] || 0;
-  const s = "C(saison)[T." + x.saison + "]"; if (k.terme[s] != null) z += k.terme[s];
-  for (const v of ["top_gegner", "temp_anpfiff_c", "regen_anreise", "schulferien", "slot_sa_abend", "slot_nachmittag", "slot_werktag_abend"])
-    if (k.terme[v] != null) z += k.terme[v] * (x[v] || 0);
-  const r = k.transformation === "log" ? (t => Math.exp(t)) : (t => 1 / (1 + Math.exp(-t)));
-  return {wert: r(z), unten: r(z - Z80 * k.rmse), oben: r(z + Z80 * k.rmse)};
-}
-function rechne() {
-  const x = {saison: $("e_saison").value, top_gegner: +$("e_top").value, temp_anpfiff_c: +$("e_temp").value,
-             regen_anreise: +$("e_regen").value, schulferien: +$("e_ferien").value};
-  const tag = $("e_tag").value, code = slotCode(tag, $("e_zeit").value);
-  const slot = D.slots.find(s => s.code === code);
-  for (const s of D.slots) if (s.code !== "referenz") x[s.code] = (code === s.code) ? 1 : 0;
-  const n = code ? ((D.ansetzungen[tagesgruppe(tag)] || {})[code] || 0) : 0;
-  $("slot_info").innerHTML = !slot ? "Bitte Anstosszeit eingeben." :
-    `→ gerechnet als: <b>${slot.label}</b> (${n} Vergleichsspiele ${tagesgruppe(tag) === "Werktag" ? "an Werktagen" : "am " + tag})` +
-    (n < 3 ? `<br><span class="unter">Für diese Ansetzung gibt es kaum Vergleichsspiele – Erwartung nur grob.</span>` : "");
-  const soll = +$("e_soll").value, vip = +$("e_vip").value;
-  const q = vorhersage("anwesenheitsquote", x), kf = vorhersage("kf_exkl", x);
-  const bons = vorhersage("bons_pro_anwesende", x), bon = vorhersage("bon_exkl", x);
-  const pub = v => Math.max(0, v * soll - vip);
-  const k = [];
-  if (q) {
-    k.push(["Anwesenheitsquote (IST/SOLL)", pct(q.wert), `80 %-Band ${pct(q.unten)} bis ${pct(q.oben)}`]);
-    k.push(["Erwartete Anwesende", fmt(q.wert * soll), `${fmt(q.unten * soll)} bis ${fmt(q.oben * soll)}`]);
-    k.push(["davon Public (ohne VIP)", fmt(pub(q.wert)), "Anwesende − VIP"]);
+// ---------- Kontext je Spiel ----------
+function ferienFuer(datum) {
+  if (D.ferien_stadt_bis && datum <= D.ferien_stadt_bis) {
+    const f = SR.inFerien(D.ferien_stadt, datum);
+    return {wert: f ? 1 : 0, quelle: "Stadt SG", name: f ? f.name : null};
   }
-  if (kf) k.push(["Kundenfranken exkl. MwSt", "CHF " + fmt(kf.wert, 2), `80 %-Band CHF ${fmt(kf.unten, 2)} bis ${fmt(kf.oben, 2)}`]);
-  if (q && kf) k.push(["Catering-Umsatz exkl. MwSt", "CHF " + fmt(pub(q.wert) * kf.wert), `Band nur aus KF: CHF ${fmt(pub(q.wert) * kf.unten)} bis ${fmt(pub(q.wert) * kf.oben)}`]);
-  if (bons) k.push(["Bons je Anwesendem", fmt(bons.wert, 2), `${fmt(bons.unten, 2)} bis ${fmt(bons.oben, 2)}`]);
-  if (bon) k.push(["Ø Bon exkl. MwSt", "CHF " + fmt(bon.wert, 2), `CHF ${fmt(bon.unten, 2)} bis ${fmt(bon.oben, 2)}`]);
-  $("ergebnis").innerHTML = k.map(([t, w, b]) => `<div class="kachel"><div class="titel">${t}</div><div class="wert">${w}</div><div class="band">${b}</div></div>`).join("");
-  $("vorab_hinweis").textContent = "Erwartungswerte aus dem Kontextmodell (Run 4). Nur vor dem Spiel bekannte Merkmale verwenden " +
-    "(Wetterprognose, nicht gemessenes Wetter). Das Band zeigt die typische Streuung vergleichbarer Spiele, keine Garantie.";
+  const k = SR.inFerien(S.ferienKanton || [], datum);
+  if (S.ferienKanton && S.ferienKanton.length && datum <= (S.ferienKantonBis || "")) return {wert: k ? 1 : 0, quelle: "Kanton SG", name: k ? k.name : null};
+  return {wert: 0, quelle: "unbekannt", name: null};
 }
-document.querySelectorAll("#vorab input, #vorab select").forEach(e => e.addEventListener("input", rechne));
-rechne();
+function wetterFuer(sp) {
+  let w = null;
+  if (sp.wetter && sp.wetter.temp != null) w = {...sp.wetter};
+  else if (sp.anstoss) { const k = SR.klimaFuer(D.klima, sp.datum, sp.anstoss); if (k) w = {temp: k.temp, regen: k.regen, regen_wahrsch: k.regen_wahrsch, quelle: "normal"}; }
+  const o = sp.override || {};
+  if (o.temp != null || o.regen != null) {
+    w = {...(w || {temp: 10, regen: 0}), quelle: "manuell"};
+    if (o.temp != null) w.temp = o.temp;
+    if (o.regen != null) w.regen = o.regen;
+  }
+  return w;
+}
+function kontext(sp) {
+  const tag = SR.wochentag(sp.datum), slot = SR.slotCode(tag, sp.anstoss);
+  const w = wetterFuer(sp), f = (sp.override && sp.override.ferien != null) ? {wert: sp.override.ferien, quelle: "manuell"} : ferienFuer(sp.datum);
+  const top = (sp.override && sp.override.top != null) ? sp.override.top : (SR.istTopGegner(sp.gegner, D.top_gegner_muster) ? 1 : 0);
+  const x = {top_gegner: top, temp_anpfiff_c: w ? w.temp : 10, regen_anreise: w ? w.regen : 0, schulferien: f.wert,
+             slot_sa_abend: slot === "slot_sa_abend" ? 1 : 0, slot_nachmittag: slot === "slot_nachmittag" ? 1 : 0,
+             slot_werktag_abend: slot === "slot_werktag_abend" ? 1 : 0};
+  const anlass = D.anlaesse.find(a => a.datum === sp.datum);
+  const n = slot ? ((D.ansetzungen[SR.tagesgruppe(tag)] || {})[slot] || 0) : 0;
+  return {tag, slot, wetter: w, ferien: f, top, x, anlass, vergleichsspiele: n, saison: SR.saisonVon(sp.datum)};
+}
+// IST-Spiele als Lernbasis für das Saisonniveau; das zu beurteilende Spiel selbst wird ausgelassen (fairer Vergleich)
+function beobachtungen(ziel, ohne) {
+  return S.spiele.filter(s => s.ist && s.datum !== ohne && SR.istMeisterschaft(s.wettbewerb) && s.anstoss)
+    .map(s => ({saison: SR.saisonVon(s.datum), datum: s.datum, x: kontext(s).x, y: SR.istKennzahlen(s.ist)[ziel]}))
+    .filter(b => b.y != null);
+}
+function prognose(sp) {
+  const c = kontext(sp), out = {c};
+  for (const z of D.ziele) {
+    const niv = SR.saisonNiveau(D, z.code, c.saison, beobachtungen(z.code, sp.datum));
+    out[z.code] = SR.vorhersage(D, z.code, c.x, niv); out[z.code + "_niveau"] = niv;
+  }
+  const mittel = D.saison_mittel[SR.hatSaison(D, c.saison) ? c.saison : D.meta.basis_saison] || D.saison_mittel[D.meta.basis_saison] || {};
+  const soll = sp.soll ?? (sp.ist && sp.ist.soll) ?? mittel.soll ?? null;
+  const vip = sp.vip ?? mittel.ist_vip ?? 0;
+  out.soll = soll; out.vip = vip; out.soll_quelle = sp.soll != null ? "eingegeben" : "Saisonmittel";
+  const q = out.anwesenheitsquote, kf = out.kf_exkl;
+  if (q && soll) {
+    out.anwesende = {wert: q.wert * soll, unten: q.unten * soll, oben: q.oben * soll};
+    out.public = Math.max(0, q.wert * soll - vip);
+    if (kf) out.umsatz = {wert: out.public * kf.wert, unten: out.public * kf.unten, oben: out.public * kf.oben};
+  }
+  return out;
+}
+
+// ---------- Abruf Wetter und Ferien ----------
+async function holeWetter() {
+  if (S.einstellungen.wetter !== "openmeteo") return {ok: 0, info: "Wetterabruf ausgeschaltet"};
+  const st = D.station;
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${st.lat}&longitude=${st.lon}&elevation=${st.hoehe_m}` +
+              `&hourly=temperature_2m,precipitation&timezone=Europe%2FZurich&forecast_days=16&past_days=92`;
+  const r = await fetch(url); if (!r.ok) throw new Error("Wetterdienst antwortet nicht (" + r.status + ")");
+  const j = await r.json(); const stunden = {};
+  j.hourly.time.forEach((t, i) => { stunden[t] = {temp: j.hourly.temperature_2m[i], regen_mm: j.hourly.precipitation[i]}; });
+  let n = 0;
+  for (const sp of S.spiele) {
+    if (!sp.anstoss) continue;
+    const w = SR.wetterAusStunden(stunden, sp.datum, sp.anstoss);
+    if (w) { sp.wetter = {...w, quelle: sp.datum < heute ? "gemessen" : "prognose", abruf: new Date().toISOString()}; n++; }
+  }
+  return {ok: n, info: `${n} Spiele mit Wetter von Open-Meteo`};
+}
+async function holeFerienKanton() {
+  if (S.einstellungen.ferien !== "auto" || !S.spiele.length) return {ok: 0};
+  const bisStadt = D.ferien_stadt_bis || "0000";
+  const spaeter = S.spiele.filter(s => s.datum > bisStadt).map(s => s.datum).sort();
+  if (!spaeter.length) return {ok: 0};
+  const von = spaeter[0].slice(0, 4) + "-01-01", bis = spaeter[spaeter.length - 1].slice(0, 4) + "-12-31";
+  const r = await fetch(`https://openholidaysapi.org/SchoolHolidays?countryIsoCode=CH&subdivisionCode=CH-SG&validFrom=${von}&validTo=${bis}&languageIsoCode=DE`,
+                        {headers: {accept: "application/json"}});
+  if (!r.ok) throw new Error("Ferien-Dienst antwortet nicht (" + r.status + ")");
+  const j = await r.json();
+  S.ferienKanton = j.map(f => ({von: f.startDate, bis: f.endDate, name: (f.name.find(n => n.language === "DE") || f.name[0] || {}).text || "Schulferien"}));
+  S.ferienKantonBis = bis;
+  return {ok: S.ferienKanton.length};
+}
+async function kontextAktualisieren() {
+  if (!S.spiele.length) { toast("Zuerst einen Spielplan importieren."); zeige("daten"); return; }
+  const btn = $("btn_kontext"); btn.disabled = true; btn.textContent = "… wird geholt";
+  const meldungen = [];
+  try { const w = await holeWetter(); meldungen.push(w.info); } catch (e) { meldungen.push("Wetter: " + e.message + " – Normalwerte bleiben"); }
+  try { const f = await holeFerienKanton(); if (f.ok) meldungen.push(`${f.ok} Ferienperioden Kanton SG`); } catch (e) { meldungen.push("Ferien: " + e.message); }
+  S.letzterAbruf = new Date().toISOString(); sichern();
+  btn.disabled = false; btn.textContent = "↻ Wetter & Ferien aktualisieren";
+  toast(meldungen.join(" · ")); alles();
+}
+
+// ---------- Ansichten ----------
+function zeige(name, ohneHash) {
+  if (!ohneHash) { try { history.replaceState(null, "", "#" + (name === "detail" && aktuell ? "spiel=" + aktuell : name)); } catch (e) { /* file:// ohne History */ } }
+  document.querySelectorAll("#tabs button").forEach(b => b.classList.toggle("aktiv", b.dataset.ansicht === name));
+  document.querySelectorAll("section.ansicht").forEach(s => s.classList.toggle("aktiv", s.id === name));
+  document.body.classList.toggle("kompakt", name !== "plan");
+  window.scrollTo({top: document.querySelector("main").offsetTop - 70, behavior: "smooth"});
+}
+$("tabs").addEventListener("click", e => { const b = e.target.closest("button"); if (b) zeige(b.dataset.ansicht); });
+$("schritte").addEventListener("click", e => {
+  const b = e.target.closest(".schritt"); if (!b) return;
+  if (b.dataset.ziel === "kontext") kontextAktualisieren();
+  else if (b.dataset.ziel === "ist") { const offen = S.spiele.find(s => s.datum < heute && !s.ist); offen ? oeffne(offen.datum) : zeige("daten"); }
+  else zeige(b.dataset.ziel);
+});
+
+function wetterChip(w) {
+  if (!w) return '<span class="chip">kein Anstoss</span>';
+  const icon = w.regen >= 0.5 ? "🌧" : (w.temp < 5 ? "❄︎" : (w.temp > 18 ? "☀︎" : "⛅︎"));
+  const regen = w.quelle === "normal" ? ` · Regen ${fmt((w.regen_wahrsch || 0) * 100)} %` : (w.regen ? " · Regen" : "");
+  const kl = {prognose: "gruen", gemessen: "blau", manuell: "gold", normal: ""}[w.quelle] || "";
+  const name = {prognose: "Prognose", gemessen: "Ist-Wetter", manuell: "manuell", normal: "Normalwert"}[w.quelle];
+  return `<span class="chip ${kl}" title="${name}">${icon} ${fmt(w.temp, 0)} °C${regen}</span><span class="klein">${name}</span>`;
+}
+function statusChip(sp, p) {
+  if (!sp.ist) return sp.datum < heute ? '<span class="chip gold">IST fehlt</span>' : '<span class="chip">offen</span>';
+  const st = SR.bandStatus(SR.istKennzahlen(sp.ist).kf_exkl, p.kf_exkl);
+  return st ? `<span class="chip ${st === "ueber" ? "blau" : st === "unter" ? "rot" : "gruen"}">KF ${st === "ueber" ? "über" : st === "unter" ? "unter" : "im Band"}</span>` : '<span class="chip">IST erfasst</span>';
+}
+
+function niveauText(niv, saison) {
+  if (!niv) return "–";
+  if (niv.quelle === "modell") return `Modellwert ${saison} (${niv.n_modell} Spiele)`;
+  if (niv.quelle === "vorlaeufig") return `vorläufiger Modellwert ${saison} (nur ${niv.n_modell} Spiele), wird mit IST verfeinert`;
+  if (niv.quelle === "gelernt") return niv.n_modell ? `Modellwert ${saison} (${niv.n_modell} Spiele) + ${niv.n} IST-Spiele` : `gelernt aus ${niv.n} IST-Spielen`;
+  return `Basis ${D.meta.basis_saison}, noch kein IST in ${saison}`;
+}
+function saisonListe() {
+  const s = [...new Set(S.spiele.map(x => SR.saisonVon(x.datum)))].sort();
+  return s;
+}
+function zeichnePlan() {
+  const saisons = saisonListe(), sel = $("plan_saison"), alt = sel.value;
+  sel.innerHTML = saisons.length ? saisons.map(s => `<option ${s === alt ? "selected" : ""}>${s}</option>`).join("") : "<option>–</option>";
+  if (!alt && saisons.length) sel.value = saisons.find(s => S.spiele.some(x => SR.saisonVon(x.datum) === s && x.datum >= heute)) || saisons[saisons.length - 1];
+  const saison = sel.value;
+  const spiele = S.spiele.filter(s => SR.saisonVon(s.datum) === saison).sort((a, b) => a.datum.localeCompare(b.datum));
+  if (!spiele.length) {
+    $("plan_kpis").innerHTML = "";
+    $("plan_tabelle").innerHTML = `<div class="karte leer"><b>Noch kein Spielplan</b>Spielplan als CSV importieren oder direkt aus Excel einfügen. Danach holt der Rechner Wetter und Ferien.<div style="margin-top:14px"><button class="btn primaer" onclick="zeige('daten')">Spielplan importieren</button></div></div>`;
+    return;
+  }
+  const ps = spiele.map(s => [s, prognose(s)]);
+  const sl = ps.filter(([s]) => SR.istMeisterschaft(s.wettbewerb));
+  const summe = sl.reduce((a, [, p]) => a + (p.umsatz ? p.umsatz.wert : 0), 0);
+  const kfm = sl.length ? sl.reduce((a, [, p]) => a + (p.kf_exkl ? p.kf_exkl.wert : 0), 0) / sl.length : null;
+  const mitIst = ps.filter(([s]) => s.ist);
+  const st = mitIst.map(([s, p]) => SR.bandStatus(SR.istKennzahlen(s.ist).kf_exkl, p.kf_exkl));
+  const niv = sl.length ? SR.saisonNiveau(D, "kf_exkl", saison, beobachtungen("kf_exkl")) : null;
+  const nivText = niveauText(niv, saison);
+  $("plan_kpis").innerHTML = [
+    ["Heimspiele", fmt(spiele.length), `${sl.length} Meisterschaft · ${spiele.filter(s => s.datum >= heute).length} noch offen`, ""],
+    ["Erwarteter Catering-Umsatz", chf(summe), "Meisterschaft, exkl. MwSt, Summe der Erwartungen", "akzent"],
+    ["Ø erwarteter Kundenfranken", chf(kfm, 2), "Saisonniveau: " + nivText, ""],
+    ["IST erfasst", `${mitIst.length} / ${spiele.filter(s => s.datum < heute).length}`, `KF über Band ${st.filter(x => x === "ueber").length} · unter ${st.filter(x => x === "unter").length}`, ""],
+  ].map(([t, w, b, k]) => `<div class="kpi ${k}"><div class="t">${t}</div><div class="w">${w}</div><div class="b">${b}</div></div>`).join("");
+  let h = `<div class="tabrahmen"><table><thead><tr><th>Datum</th><th>Anstoss</th><th>Gegner</th><th>Wetter</th><th>Kontext</th>
+           <th class="z">Anwesende</th><th class="z">KF</th><th class="z">Catering-Umsatz</th><th>Status</th></tr></thead><tbody>`;
+  for (const [s, p] of ps) {
+    const c = p.c;
+    const kontextChips = [c.top ? '<span class="chip gold">Top-Gegner</span>' : "", c.ferien.wert ? `<span class="chip">Ferien</span>` : "",
+                          c.anlass ? `<span class="chip" title="${esc(c.anlass.name)}">Anlass</span>` : "",
+                          !SR.istMeisterschaft(s.wettbewerb) ? `<span class="chip rot" title="Modell aus Meisterschaftsspielen">${esc(s.wettbewerb || "anderer Wettbewerb")}</span>` : ""].join(" ");
+    h += `<tr data-datum="${s.datum}" class="${s.datum < heute ? "vorbei" : ""}">
+      <td><b>${datumKurz(s.datum)}</b><span class="klein">${c.tag}</span></td>
+      <td>${s.anstoss || "–"}<span class="klein">${c.slot ? SLOT_KURZ[c.slot] : "Anstoss fehlt"}</span></td>
+      <td class="umbruch">${esc(s.gegner)}</td><td>${wetterChip(c.wetter)}</td><td class="umbruch">${kontextChips}</td>
+      <td class="z">${p.anwesende ? fmt(p.anwesende.wert) : "–"}</td>
+      <td class="z"><b>${p.kf_exkl ? fmt(p.kf_exkl.wert, 2) : "–"}</b><span class="klein">${p.kf_exkl ? fmt(p.kf_exkl.unten, 2) + "–" + fmt(p.kf_exkl.oben, 2) : ""}</span></td>
+      <td class="z">${p.umsatz ? chf(p.umsatz.wert) : "–"}</td><td>${statusChip(s, p)}</td></tr>`;
+  }
+  $("plan_tabelle").innerHTML = h + "</tbody></table></div>";
+  $("plan_unterzeile").textContent = `Saison ${saison} · Erwartung je Heimspiel aus dem Kontextmodell (Run 4). Zeile anklicken für Details und IST.`;
+}
+$("plan_tabelle").addEventListener("click", e => { const tr = e.target.closest("tr[data-datum]"); if (tr) oeffne(tr.dataset.datum); });
+$("plan_saison").addEventListener("change", zeichnePlan);
+
+// ---------- Detail ----------
+let aktuell = null;
+function oeffne(datum) { aktuell = datum; zeichneDetail(); zeige("detail"); }
+function vonHash() {
+  const h = decodeURIComponent(location.hash.slice(1));
+  if (h.startsWith("spiel=") && spielVon(h.slice(6))) { aktuell = h.slice(6); zeichneDetail(); zeige("detail", true); }
+  else if (["plan", "rueckblick", "daten", "lesehilfe"].includes(h)) zeige(h, true);
+}
+window.addEventListener("hashchange", vonHash);
+$("zurueck").addEventListener("click", () => zeige("plan"));
+function kachel(t, w, b, akz) { return `<div class="kpi ${akz || ""}"><div class="t">${t}</div><div class="w">${w}</div><div class="b">${b || ""}</div></div>`; }
+function zeichneDetail() {
+  const sp = spielVon(aktuell);
+  if (!sp) { $("detail_inhalt").innerHTML = '<div class="karte leer"><b>Kein Spiel gewählt</b>Im Saisonplan ein Spiel anklicken.</div>'; return; }
+  const p = prognose(sp), c = p.c, o = sp.override || {}, ist = sp.ist || {};
+  const w = c.wetter, niv = p.kf_exkl_niveau;
+  const warn = [];
+  if (!SR.istMeisterschaft(sp.wettbewerb)) warn.push("Das Modell stammt aus Meisterschaftsspielen. Für Cup und Europacup ist die Erwartung nur grob.");
+  if (c.slot && c.vergleichsspiele < 3) warn.push(`Für diese Ansetzung gibt es kaum Vergleichsspiele (${c.vergleichsspiele}). Erwartung nur grob.`);
+  if (c.ferien.quelle === "Kanton SG") warn.push("Ferien aus dem Kalender des Kantons SG. Die Stadt St. Gallen kann abweichen (z.B. Sportferien).");
+  if (c.ferien.quelle === "unbekannt") warn.push("Für dieses Datum sind keine Ferien hinterlegt. «Wetter & Ferien aktualisieren» oder von Hand setzen.");
+  const kfT = SR.treiber(D, "kf_exkl", c.x);
+  const max = Math.max(0.2, ...kfT.map(t => Math.abs(t.prozent || 0)));
+  const treiberHtml = kfT.map(t => {
+    const pr = t.prozent || 0, breite = Math.abs(pr) / max * 50;
+    const farbe = pr >= 0 ? "var(--gruen)" : "var(--rot)";
+    return `<div class="zeile"><span>${t.name}</span><div class="balken"><span class="mitte"></span><i style="background:${farbe};left:${pr >= 0 ? 50 : 50 - breite}%;width:${breite}%"></i></div><b style="text-align:right">${pr >= 0 ? "+" : ""}${fmt(pr * 100, 1)} %</b></div>`;
+  }).join("");
+  const k = SR.istKennzahlen(sp.ist);
+  const vgl = sp.ist ? D.ziele.map(z => {
+    const v = p[z.code], b = k[z.code]; if (b == null || !v) return "";
+    const st = SR.bandStatus(b, v), f = z.prozent ? (x => pct(x)) : (x => fmt(x, 2));
+    const abw = z.prozent ? fmt((b - v.wert) * 100, 1) + " Pp." : fmt((b / v.wert - 1) * 100, 1) + " %";
+    return kachel(z.label, f(b), `erwartet ${f(v.wert)} · ${abw} · <span class="status ${st}">${st === "ueber" ? "über Band" : st === "unter" ? "unter Band" : "im Band"}</span>`);
+  }).join("") : "";
+  $("detail_inhalt").innerHTML = `
+    <div class="leiste"><div><h2>${datumKurz(sp.datum)} · ${esc(sp.gegner)}</h2>
+      <p class="unterzeile">${c.tag}, ${sp.anstoss || "Anstoss offen"} · ${c.slot ? esc(SLOT_LABEL[c.slot]) : "Slot unbekannt"} · Saison ${c.saison}${c.anlass ? " · Anlass: " + esc(c.anlass.name) : ""}</p></div>
+      <div class="rechts"><button class="btn" id="d_loeschen">Spiel entfernen</button></div></div>
+    ${warn.length ? `<div class="karte" style="border-color:var(--gold);background:var(--gold-soft);margin-bottom:16px">${warn.map(esc).join("<br>")}</div>` : ""}
+    <div class="raster2">
+      <div class="karte">
+        <h3 style="margin-top:0">Kontext</h3>
+        <div class="feld2">
+          <div><label for="d_zeit">Anstoss</label><input id="d_zeit" type="time" value="${sp.anstoss || ""}"></div>
+          <div><label for="d_top">Gegner</label><select id="d_top"><option value="">auto (${c.top ? "Top" : "übrig"})</option><option value="1" ${o.top === 1 ? "selected" : ""}>Top-Gegner</option><option value="0" ${o.top === 0 ? "selected" : ""}>übriger Gegner</option></select></div>
+        </div>
+        <div class="feld2">
+          <div><label for="d_temp">Temperatur °C</label><input id="d_temp" type="number" step="0.5" placeholder="${w ? fmt(w.temp, 1) + " (" + w.quelle + ")" : ""}" value="${o.temp ?? ""}"></div>
+          <div><label for="d_regen">Regen bei Anreise</label><select id="d_regen"><option value="">automatisch</option><option value="1" ${o.regen === 1 ? "selected" : ""}>ja</option><option value="0" ${o.regen === 0 ? "selected" : ""}>nein</option></select></div>
+        </div>
+        <label for="d_ferien">Schulferien</label><select id="d_ferien"><option value="">automatisch (${c.ferien.wert ? "ja" : "nein"}, ${c.ferien.quelle})</option><option value="1" ${o.ferien === 1 ? "selected" : ""}>ja</option><option value="0" ${o.ferien === 0 ? "selected" : ""}>nein</option></select>
+        <div class="feld2">
+          <div><label for="d_soll">Erwartete vergebene Tickets</label><input id="d_soll" type="number" step="50" placeholder="${fmt(p.soll)} (Saisonmittel)" value="${sp.soll ?? ""}"></div>
+          <div><label for="d_vip">Erwartete VIP-Gäste</label><input id="d_vip" type="number" step="10" placeholder="${fmt(p.vip)}" value="${sp.vip ?? ""}"></div>
+        </div>
+        <p class="hinweis">Leere Felder = automatisch. Wetter: ${w ? (w.quelle === "normal" ? `Normalwert (Regenwahrscheinlichkeit ${fmt((w.regen_wahrsch || 0) * 100)} %)` : ({prognose: "Prognose", gemessen: "Ist-Wetter", manuell: "manuell"}[w.quelle])) : "–"}. Tickets: Ticketstand z.B. T−7 eintragen, das verbessert die Anwesenheitsprognose.</p>
+      </div>
+      <div>
+        <div class="ergebnisse">
+          ${kachel("Kundenfranken exkl. MwSt", p.kf_exkl ? chf(p.kf_exkl.wert, 2) : "–", p.kf_exkl ? `80 %-Band ${chf(p.kf_exkl.unten, 2)} – ${fmt(p.kf_exkl.oben, 2)}` : "", "akzent")}
+          ${kachel("Erwartete Anwesende", p.anwesende ? fmt(p.anwesende.wert) : "–", p.anwesende ? `${fmt(p.anwesende.unten)} – ${fmt(p.anwesende.oben)} · Quote ${pct(p.anwesenheitsquote.wert)}` : "SOLL fehlt")}
+          ${kachel("Catering-Umsatz exkl. MwSt", p.umsatz ? chf(p.umsatz.wert) : "–", p.umsatz ? `Band aus KF: ${chf(p.umsatz.unten)} – ${fmt(p.umsatz.oben)}` : "")}
+          ${kachel("Bons je Anwesendem", p.bons_pro_anwesende ? fmt(p.bons_pro_anwesende.wert, 2) : "–", p.bons_pro_anwesende ? `${fmt(p.bons_pro_anwesende.unten, 2)} – ${fmt(p.bons_pro_anwesende.oben, 2)}` : "")}
+          ${kachel("Ø Bon exkl. MwSt", p.bon_exkl ? chf(p.bon_exkl.wert, 2) : "–", p.bon_exkl ? `${chf(p.bon_exkl.unten, 2)} – ${fmt(p.bon_exkl.oben, 2)}` : "")}
+        </div>
+        <div class="karte" style="margin-top:14px">
+          <h3 style="margin-top:0">Was den Kundenfranken bei diesem Spiel treibt</h3>
+          <div class="treiber">${treiberHtml}</div>
+          <p class="hinweis" style="margin:10px 0 0">Gegenüber Samstag 17–19.59 Uhr, übrigem Gegner, 10 °C, trocken, keine Ferien. Saisonniveau: ${niveauText(niv, c.saison)}. Anstoss und Spielplan setzt die Liga, sie sind Kontext und kein Hebel.</p>
+        </div>
+      </div>
+    </div>
+    <div class="karte" style="margin-top:18px">
+      <h3 style="margin-top:0">Nach dem Spiel: IST eintragen</h3>
+      <div class="feld2" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">
+        <div><label for="i_ist">Zuschauer IST</label><input id="i_ist" type="number" value="${ist.ist ?? ""}"></div>
+        <div><label for="i_vip">davon VIP</label><input id="i_vip" type="number" value="${ist.vip ?? ""}"></div>
+        <div><label for="i_soll">Vergebene Tickets (SOLL)</label><input id="i_soll" type="number" value="${ist.soll ?? ""}"></div>
+        <div><label for="i_umsatz">Catering-Umsatz exkl. MwSt</label><input id="i_umsatz" type="number" step="0.01" value="${ist.umsatz ?? ""}"></div>
+        <div><label for="i_bons">Anzahl Bons</label><input id="i_bons" type="number" value="${ist.bons ?? ""}"></div>
+      </div>
+      <div class="leiste" style="margin-top:12px"><button class="btn primaer" id="i_speichern">IST speichern</button>${sp.ist ? '<button class="btn" id="i_loeschen">IST löschen</button>' : ""}
+        <span class="hinweis">Leere Felder bleiben leer (fehlend ≠ 0). Bei Meisterschaftsspielen lernt der Rechner daraus das Saisonniveau.</span></div>
+      ${vgl ? `<h3>Beobachtet vs. erwartet</h3><div class="vergleich">${vgl}</div><p class="hinweis">Fairer Vergleich: Erwartung mit dem tatsächlichen Wetter (nach «Wetter & Ferien aktualisieren»). Abweichungen sind Prüfhinweise, kein entgangener Umsatz.</p>` : ""}
+    </div>`;
+  const num = id => { const v = $(id).value; return v === "" ? null : Number(v); };
+  const sel = id => { const v = $(id).value; return v === "" ? null : Number(v); };
+  const aendern = () => {
+    sp.anstoss = SR.parseZeit($("d_zeit").value) || sp.anstoss;
+    sp.override = {top: sel("d_top"), temp: num("d_temp"), regen: sel("d_regen"), ferien: sel("d_ferien")};
+    sp.soll = num("d_soll"); sp.vip = num("d_vip");
+    sichern(); zeichneDetail(); zeichnePlan(); zeichneKopf();
+  };
+  ["d_zeit", "d_top", "d_temp", "d_regen", "d_ferien", "d_soll", "d_vip"].forEach(id => $(id).addEventListener("change", aendern));
+  $("i_speichern").addEventListener("click", () => {
+    const e = {ist: num("i_ist"), vip: num("i_vip"), soll: num("i_soll"), umsatz: num("i_umsatz"), bons: num("i_bons")};
+    sp.ist = Object.values(e).some(v => v != null) ? e : null;
+    sichern(); toast("IST gespeichert"); alles(); zeichneDetail();
+  });
+  if ($("i_loeschen")) $("i_loeschen").addEventListener("click", () => { sp.ist = null; sichern(); alles(); zeichneDetail(); });
+  $("d_loeschen").addEventListener("click", () => {
+    if (!confirm("Dieses Spiel aus dem Saisonplan entfernen?")) return;
+    S.spiele = S.spiele.filter(s => s !== sp); sichern(); alles(); zeige("plan");
+  });
+}
 
 // ---------- Rückblick ----------
-const ZIELE = D.ziele;
-option($("f_saison"), "", "alle Saisons", true);
-D.saisons.forEach(s => option($("f_saison"), s, s));
-ZIELE.forEach((z, i) => option($("f_ziel"), z.code, z.label, i === 1));
-function status(r) { return r.beobachtet > r.band80_oben ? "über" : (r.beobachtet < r.band80_unten ? "unter" : "im Band"); }
-function zeigeSpiele() {
-  const s = $("f_saison").value, z = $("f_ziel").value;
-  const meta = ZIELE.find(x => x.code === z);
-  const f = meta.prozent ? (v => pct(v)) : (v => fmt(v, 2));
-  const rows = D.spiele.filter(r => r.ziel_code === z && (!s || r.saison === s));
-  let h = `<thead><tr><th>Datum</th><th>Gegner</th><th>Anstoss</th><th>beobachtet</th><th>erwartet</th><th>80 %-Band</th><th>Abweichung</th><th>Status</th></tr></thead><tbody>`;
-  for (const r of rows) {
-    const st = status(r), kl = st === "über" ? "ueber" : (st === "unter" ? "unter" : "");
-    const abw = meta.prozent ? fmt((r.beobachtet - r.erwartet) * 100, 1) + " Pp." : fmt((r.beobachtet / r.erwartet - 1) * 100, 1) + " %";
-    h += `<tr><td>${r.datum}</td><td>${r.gegner || ""}</td><td>${r.anstoss_slot || ""}</td><td>${f(r.beobachtet)}</td><td>${f(r.erwartet)}</td>` +
-         `<td>${f(r.band80_unten)} – ${f(r.band80_oben)}</td><td>${abw}</td><td class="${kl}">${st}</td></tr>`;
-  }
-  $("t_spiele").innerHTML = h + "</tbody>";
+function rbZeilen(ziel) {
+  const hist = D.spiele.filter(r => r.ziel_code === ziel).map(r => ({...r, quelle: "Run 4"}));
+  const eigen = S.spiele.filter(s => s.ist && SR.istMeisterschaft(s.wettbewerb)).map(s => {
+    const p = prognose(s), v = p[ziel], b = SR.istKennzahlen(s.ist)[ziel];
+    return (v && b != null) ? {datum: s.datum, saison: p.c.saison, gegner: s.gegner, anstoss_slot: SLOT_LABEL[p.c.slot] || "", beobachtet: b,
+                               erwartet: v.wert, band80_unten: v.unten, band80_oben: v.oben, quelle: "IST-Eintrag"} : null;
+  }).filter(Boolean);
+  const daten = new Set(eigen.map(e => e.datum));
+  return [...hist.filter(h => !daten.has(h.datum)), ...eigen].sort((a, b) => a.datum.localeCompare(b.datum));
 }
-$("f_saison").addEventListener("change", zeigeSpiele); $("f_ziel").addEventListener("change", zeigeSpiele);
-zeigeSpiele();
-
-// ---------- Saison ----------
-(function () {
-  let h = "<thead><tr><th>Saison</th><th>Kennzahl</th><th></th><th>Spiele</th><th>über</th><th>im Band</th><th>unter</th></tr></thead><tbody>";
-  for (const s of D.saisons) for (const z of ZIELE) {
-    const r = D.spiele.filter(x => x.saison === s && x.ziel_code === z.code); if (!r.length) continue;
-    const n = st => r.filter(x => status(x) === st).length;
-    h += `<tr><td>${s}</td><td>${z.label}</td><td></td><td>${r.length}</td><td class="ueber">${n("über")}</td><td>${n("im Band")}</td><td class="unter">${n("unter")}</td></tr>`;
+function zeichneRueckblick() {
+  const ziel = $("rb_ziel").value, saison = $("rb_saison").value, meta = D.ziele.find(z => z.code === ziel);
+  const rows = rbZeilen(ziel).filter(r => !saison || r.saison === saison);
+  const f = meta.prozent ? (v => pct(v)) : (v => fmt(v, 2));
+  const st = r => r.beobachtet > r.band80_oben ? "ueber" : (r.beobachtet < r.band80_unten ? "unter" : "im");
+  const abw = r => meta.prozent ? (r.beobachtet - r.erwartet) * 100 : (r.beobachtet / r.erwartet - 1) * 100;
+  const n = s => rows.filter(r => st(r) === s).length;
+  $("rb_kpis").innerHTML = kachel("Spiele", fmt(rows.length), saison || "alle Saisons") + kachel("über Band", fmt(n("ueber")), "", "") +
+    kachel("im Band", fmt(n("im")), `${pct(rows.length ? n("im") / rows.length : null, 0)} der Spiele`) + kachel("unter Band", fmt(n("unter")), "");
+  // Grafik: Abweichung je Spiel mit Bandbreite
+  const W = 1000, H = 220, P = 30;
+  if (rows.length) {
+    const werte = rows.map(abw), bandO = rows.map(r => meta.prozent ? (r.band80_oben - r.erwartet) * 100 : (r.band80_oben / r.erwartet - 1) * 100);
+    const m = Math.max(5, ...werte.map(Math.abs), ...bandO) * 1.15;
+    const y = v => H / 2 - v / m * (H / 2 - P), bx = (W - 2 * P) / rows.length;
+    let g = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Abweichung je Spiel">`;
+    g += `<rect x="${P}" y="${y(Math.max(...bandO))}" width="${W - 2 * P}" height="${y(-Math.max(...bandO)) - y(Math.max(...bandO))}" fill="var(--gruen-hell)" rx="6"/>`;
+    g += `<line x1="${P}" x2="${W - P}" y1="${y(0)}" y2="${y(0)}" stroke="var(--muted)" stroke-opacity=".5"/>`;
+    rows.forEach((r, i) => {
+      const v = werte[i], s = st(r), farbe = s === "ueber" ? "var(--blau)" : s === "unter" ? "var(--rot)" : "var(--gruen)";
+      const x = P + i * bx + bx * 0.15, top = Math.min(y(v), y(0)), hoehe = Math.abs(y(v) - y(0));
+      g += `<rect x="${x}" y="${top}" width="${Math.max(2, bx * 0.7)}" height="${Math.max(1, hoehe)}" rx="2" fill="${farbe}"><title>${datumKurz(r.datum)} ${esc(r.gegner)}: ${fmt(v, 1)}${meta.prozent ? " Pp." : " %"}</title></rect>`;
+    });
+    g += `<text x="${P}" y="16" font-size="12" fill="var(--muted)">Abweichung von der Erwartung (${meta.prozent ? "Pp." : "%"}), grün hinterlegt ≈ typisches 80 %-Band</text></svg>`;
+    $("rb_grafik").innerHTML = g;
+  } else $("rb_grafik").innerHTML = '<p class="hinweis">Keine Spiele für diese Auswahl.</p>';
+  let h = `<div class="tabrahmen"><table><thead><tr><th>Datum</th><th>Gegner</th><th>Anstoss-Slot</th><th class="z">beobachtet</th><th class="z">erwartet</th><th class="z">80 %-Band</th><th class="z">Abweichung</th><th>Status</th><th>Quelle</th></tr></thead><tbody>`;
+  for (const r of rows.slice().reverse()) {
+    const s = st(r);
+    h += `<tr style="cursor:default"><td>${datumKurz(r.datum)}</td><td>${esc(r.gegner)}</td><td>${esc(r.anstoss_slot)}</td><td class="z">${f(r.beobachtet)}</td><td class="z">${f(r.erwartet)}</td>
+          <td class="z">${f(r.band80_unten)} – ${f(r.band80_oben)}</td><td class="z">${fmt(abw(r), 1)}${meta.prozent ? " Pp." : " %"}</td>
+          <td><span class="status ${s}">${s === "ueber" ? "über" : s === "unter" ? "unter" : "im Band"}</span></td><td><span class="chip">${r.quelle}</span></td></tr>`;
   }
-  $("t_saison").innerHTML = h + "</tbody>";
-})();
+  $("rb_tabelle").innerHTML = h + "</tbody></table></div>";
+}
+function fuelleRueckblickAuswahl() {
+  const saisons = [...new Set([...D.saisons, ...saisonListe()])].sort();
+  const alt = $("rb_saison").value;
+  $("rb_saison").innerHTML = `<option value="">alle Saisons</option>` + saisons.map(s => `<option ${s === alt ? "selected" : ""}>${s}</option>`).join("");
+  if (!$("rb_ziel").options.length) $("rb_ziel").innerHTML = D.ziele.map((z, i) => `<option value="${z.code}" ${i === 1 ? "selected" : ""}>${z.label}</option>`).join("");
+}
+$("rb_saison").addEventListener("change", zeichneRueckblick); $("rb_ziel").addEventListener("change", zeichneRueckblick);
 
+// ---------- Import / Export ----------
+function leseDatei(input, ziel) {
+  const f = input.files[0]; if (!f) return;
+  const r = new FileReader(); r.onload = () => { $(ziel).value = r.result; }; r.readAsText(f, "utf-8");
+}
+$("datei_plan").addEventListener("change", () => leseDatei($("datei_plan"), "text_plan"));
+$("datei_ist").addEventListener("change", () => leseDatei($("datei_ist"), "text_ist"));
+$("btn_import_plan").addEventListener("click", () => zeige("daten"));
+$("btn_plan_lesen").addEventListener("click", () => {
+  const {spiele, fehler} = SR.parseSpielplan($("text_plan").value);
+  let neu = 0, akt = 0;
+  for (const s of spiele) {
+    const alt = spielVon(s.datum);
+    if (alt) { Object.assign(alt, {anstoss: s.anstoss || alt.anstoss, gegner: s.gegner || alt.gegner, wettbewerb: s.wettbewerb || alt.wettbewerb,
+                                   soll: s.soll ?? alt.soll, vip: s.vip ?? alt.vip}); if (s.anstoss && alt.wetter) alt.wetter = null; akt++; }
+    else { S.spiele.push({...s, wetter: null, override: null, ist: null}); neu++; }
+  }
+  sichern();
+  $("plan_meldung").innerHTML = `${neu} neue, ${akt} aktualisierte Spiele.` + (fehler.length ? `<br><span style="color:var(--rot)">${fehler.map(esc).join("<br>")}</span>` : "");
+  if (spiele.length) { toast(`${neu + akt} Spiele übernommen – Wetter und Ferien werden geholt`); $("plan_saison").value = ""; alles(); zeige("plan"); kontextAktualisieren(); }
+});
+$("btn_ist_lesen").addEventListener("click", () => {
+  const {werte, fehler} = SR.parseIst($("text_ist").value);
+  let ok = 0; const fehlend = [];
+  for (const w of werte) {
+    const sp = spielVon(w.datum);
+    if (!sp) { fehlend.push(datumKurz(w.datum)); continue; }
+    const {datum, ...rest} = w; sp.ist = rest; ok++;
+  }
+  sichern(); alles();
+  $("ist_meldung").innerHTML = `${ok} Spiele mit IST.` + (fehlend.length ? `<br>Nicht im Spielplan: ${fehlend.join(", ")}` : "") +
+    (fehler.length ? `<br><span style="color:var(--rot)">${fehler.map(esc).join("<br>")}</span>` : "");
+});
+function download(name, inhalt, typ) {
+  const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([inhalt], {type: typ})); a.download = name;
+  document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+}
+$("btn_vorlage_plan").addEventListener("click", () => download("Spielplan_Vorlage.csv",
+  "﻿Datum;Anstoss;Gegner;Wettbewerb;SOLL;VIP\n14.11.2026;18:00;Beispielgegner;Super League;;\n", "text/csv"));
+$("btn_vorlage_ist").addEventListener("click", () => download("IST_Vorlage.csv", "﻿Datum;IST;VIP;SOLL;Umsatz;Bons\n", "text/csv"));
+$("btn_speichern").addEventListener("click", () => {
+  download(`FCSG_Spielrechner_Saisondatei_${heute}${D.meta.testdaten ? "_TEST" : ""}.json`, JSON.stringify({...S, gespeichert: new Date().toISOString(), testdaten: D.meta.testdaten}, null, 1), "application/json");
+  $("speicher_meldung").textContent = "Saisondatei gespeichert. Sie enthält Clubzahlen – vertraulich behandeln.";
+});
+$("datei_saison").addEventListener("change", () => {
+  const f = $("datei_saison").files[0]; if (!f) return;
+  const r = new FileReader();
+  r.onload = () => {
+    try {
+      const j = JSON.parse(r.result);
+      if (!Array.isArray(j.spiele)) throw new Error("keine Saisondatei");
+      if (!!j.testdaten !== !!D.meta.testdaten) throw new Error(j.testdaten ? "Saisondatei mit Testdaten" : "Saisondatei mit echten Daten in Testversion");
+      S = Object.assign({version: 2, spiele: [], einstellungen: {wetter: "openmeteo", ferien: "auto"}}, j); sichern(); alles();
+      $("speicher_meldung").textContent = `${S.spiele.length} Spiele geladen.`;
+    } catch (e) { $("speicher_meldung").textContent = "Datei nicht lesbar: " + e.message; }
+  };
+  r.readAsText(f, "utf-8");
+});
+$("btn_export").addEventListener("click", () => {
+  const z = [["Datum", "Wochentag", "Anstoss", "Slot", "Gegner", "Wettbewerb", "Temperatur", "Wetterquelle", "Regen", "Ferien", "Top-Gegner",
+              "SOLL", "Anwesende erwartet", "KF erwartet", "KF Band unten", "KF Band oben", "Umsatz erwartet", "IST", "VIP", "Umsatz IST", "Bons", "KF IST"]];
+  for (const s of S.spiele.slice().sort((a, b) => a.datum.localeCompare(b.datum))) {
+    const p = prognose(s), c = p.c, k = SR.istKennzahlen(s.ist), i = s.ist || {}, r2 = v => v == null ? "" : Math.round(v * 100) / 100;
+    z.push([datumKurz(s.datum), c.tag, s.anstoss || "", c.slot ? SLOT_LABEL[c.slot] : "", s.gegner, s.wettbewerb, c.wetter ? r2(c.wetter.temp) : "",
+            c.wetter ? c.wetter.quelle : "", c.wetter ? r2(c.wetter.regen) : "", c.ferien.wert, c.top, p.soll ?? "", p.anwesende ? Math.round(p.anwesende.wert) : "",
+            p.kf_exkl ? r2(p.kf_exkl.wert) : "", p.kf_exkl ? r2(p.kf_exkl.unten) : "", p.kf_exkl ? r2(p.kf_exkl.oben) : "", p.umsatz ? Math.round(p.umsatz.wert) : "",
+            i.ist ?? "", i.vip ?? "", i.umsatz ?? "", i.bons ?? "", r2(k.kf_exkl)]);
+  }
+  download(`FCSG_Spielrechner_Uebersicht_${heute}.csv`, "﻿" + z.map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(";")).join("\n"), "text/csv");
+});
+$("btn_reset").addEventListener("click", () => {
+  if (!confirm("Alle eigenen Einträge (Spielplan, Kontext, IST) in diesem Browser löschen? Vorher Saisondatei speichern.")) return;
+  S = {version: 2, spiele: [], einstellungen: S.einstellungen, letzterAbruf: null, ferienKanton: []}; sichern(); alles();
+});
+$("q_wetter").addEventListener("change", () => { S.einstellungen.wetter = $("q_wetter").value; sichern(); zeichneKopf(); });
+$("q_ferien").addEventListener("change", () => { S.einstellungen.ferien = $("q_ferien").value; sichern(); });
+
+// ---------- Kopf ----------
+function zeichneKopf() {
+  const spiele = S.spiele, vorbei = spiele.filter(s => s.datum < heute);
+  const mitWetter = spiele.filter(s => s.wetter && s.wetter.temp != null).length;
+  const abruf = S.letzterAbruf ? new Date(S.letzterAbruf).toLocaleString("de-CH", {dateStyle: "short", timeStyle: "short"}) : "noch nie";
+  $("pills").innerHTML = [
+    ["Modell Run 4 · Basis " + D.meta.basis_saison, ""],
+    [`Wetter: ${S.einstellungen.wetter === "openmeteo" ? "Open-Meteo" : "nur Normalwerte"} · Abruf ${abruf}`, S.letzterAbruf ? "" : "warn"],
+    [`Ferien Stadt SG hinterlegt bis ${D.ferien_stadt_bis ? datumKurz(D.ferien_stadt_bis) : "–"}`, ""],
+  ].map(([t, k]) => `<span class="pill ${k}"><span class="punkt"></span>${esc(t)}</span>`).join("");
+  const set = (i, ok, text) => { document.querySelectorAll(".schritt")[i].classList.toggle("fertig", ok); $("s" + (i + 1)).textContent = text; };
+  set(0, spiele.length > 0, spiele.length ? `${spiele.length} Spiele importiert` : "CSV oder aus Excel einfügen");
+  set(1, mitWetter > 0, mitWetter ? `${mitWetter} Spiele mit Wetter · Rest Normalwert` : "Wetter und Ferien automatisch");
+  set(2, spiele.length > 0, spiele.length ? "Erwartung für alle Spiele bereit" : "Anwesende, KF, Umsatz");
+  const ist = vorbei.filter(s => s.ist).length;
+  set(3, vorbei.length > 0 && ist === vorbei.length, vorbei.length ? `${ist} von ${vorbei.length} gespielten Spielen` : "nach dem Spiel");
+  $("q_wetter").value = S.einstellungen.wetter; $("q_ferien").value = S.einstellungen.ferien;
+  $("q_info").textContent = `Normalwerte: MeteoSchweiz St. Gallen ${D.klima.jahre}. Ferien Stadt SG bis ${D.ferien_stadt_bis ? datumKurz(D.ferien_stadt_bis) : "–"}, danach Kanton SG.`;
+}
+
+// ---------- Thema ----------
+function setzeThema(t) { if (t) document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme; }
+try { setzeThema(localStorage.getItem("fcsg_thema")); } catch (e) { /* Speicher nicht verfügbar */ }
+$("thema").addEventListener("click", () => {
+  const dunkel = document.documentElement.dataset.theme ? document.documentElement.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  const neu = dunkel ? "light" : "dark"; setzeThema(neu);
+  try { localStorage.setItem("fcsg_thema", neu); } catch (e) { /* Speicher nicht verfügbar */ }
+});
+
+function alles() { zeichneKopf(); zeichnePlan(); fuelleRueckblickAuswahl(); zeichneRueckblick(); if (aktuell && spielVon(aktuell)) zeichneDetail(); }
+$("testband").hidden = !D.meta.testdaten;
 $("lesetext").innerHTML = D.meta.lesehilfe;
+$("btn_kontext").addEventListener("click", kontextAktualisieren);
+laden(); alles(); vonHash();
+window.zeige = zeige;
 </script>
 </body>
 </html>

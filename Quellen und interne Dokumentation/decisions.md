@@ -126,6 +126,18 @@ Frühere Hinweise, die technischen Rechenkern-/Notebook-Roots unverändert zu la
 
 **Nachtrag 07.11.2026 – Research-Teil:** Öffentliche Benchmarks zu M1–M4, Kundenfranken-Ideen und Upgrade per Gebot in `Deliverables/06_Research/Research_Benchmarks.md` (Agent-Recherche im Auftrag von Reto; Umfang mit Reto abgestimmt). Nur öffentliche Quellen mit Link und Datum, keine vertraulichen Praxisinfos; Zahlen anderer Clubs/Anbieter nur als offengelegte Annahme.
 
+## D-050 – Spielrechner v2: Spielplan-Import, automatischer Kontext, IST und Lernen (Reto, 07.11.2026)
+
+**Entschieden (Reto):** Der Spielrechner (D-047) wird ausgebaut. Der FCSG importiert den Spielplan; das Tool holt Wetter und Schulferien automatisch, schätzt Anwesende, KF, Bons, Ø Bon und Catering-Umsatz je Spiel und nimmt nach dem Spiel IST-Werte auf. Design im Stil der Impulse-Seite, in FCSG-Grün. Wetterquelle **Open-Meteo, austauschbar**; Speicherung **im Browser plus Saisondatei** (JSON). Quelle: Reto, Chat.
+
+**Lizenzvorbehalt:** Open-Meteo ist kostenlos nur für nicht-kommerzielle Nutzung (CC BY 4.0). Für den Betrieb beim FCSG braucht es ein Abo oder die Umstellung auf MeteoSchweiz Open Data; der Entscheid liegt beim FCSG. Im Tool ist der Abruf abschaltbar (dann Normalwerte und Handeingabe).
+
+**Arbeitsannahmen (Agent, offen bis Teambestätigung):**
+1. Schulferien primär **Stadt St. Gallen** aus der Spielkontext-Tabelle v5 (wie im Modell), danach Kanton SG über OpenHolidays mit Hinweis. Grund: Die Kantonsferien weichen ab (keine Sportferien, Beginn einen Tag später).
+2. Wetter für Spiele ohne Prognose als **Normalwert** (MeteoSchweiz St. Gallen 2018–2026, Monat × Stunde); Regen geht als Wahrscheinlichkeit in die Erwartung ein.
+3. **Saisonniveau lernt** aus IST-Einträgen: bei Saisons ohne bzw. mit weniger als 10 Modellspielen Startwert plus gedämpftes Mittel der Abweichungen (Gewicht = Modellspiele, mindestens 3). Die Koeffizienten der Kontextmerkmale bleiben fix bis zur nächsten Neuschätzung im Rechenkern.
+4. Parallelanlässe, TV und Tabellenstand bleiben Hinweise, weil sie nicht im Modell sind. Cup und Europacup nur grob (Modell aus Meisterschaft).
+
 ## Bestätigte Arbeitsregeln zu den Quellen-Widersprüchen (11.10.2026)
 
 Details: `Quellen und interne Dokumentation/briefing/10_synthese_widersprueche.md`.
