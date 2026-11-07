@@ -9,6 +9,7 @@ Separater Hauptordner für die extern ausgerichteten Projektunterlagen. **Vertra
 3. **`03_Diagramme/`** – neutrale, wiederverwendbare Management-Abbildungen mit Quellen und Stichproben; keine internen Autorenvergleiche.
 4. **`04_Praesentationskonzept/`** – ausführlicher **Folienleitfaden**, keine fertige PPT/PPTX. Grundlage für die vom Team erstellte Präsentation (PowerPoint oder Folienwerkzeug); der Leitfaden enthält Storyline, Kernzahlen und Hinweise je Folie. Nicht als bereits erstellte oder beschlossene Präsentation behandeln.
 5. **`05_Methodik/`** – knappe externe Lesehilfe zu Quellenstand, Begriffen, Umsatzperspektive und verbleibenden Einschränkungen.
+6. **`06_Research/`** – Benchmarks anderer Clubs aus öffentlichen Quellen (mit Link und Datum) zu den Massnahmen und zu Ideen für den Kundenfranken. Label «Research / Benchmark»: kein Wirkungsnachweis für den FCSG.
 
 ## Einheitliche Logik
 

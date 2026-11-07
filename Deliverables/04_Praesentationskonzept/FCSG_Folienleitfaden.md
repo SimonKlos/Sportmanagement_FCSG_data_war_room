@@ -1,6 +1,6 @@
 # FCSG «Untapped Business» – Folienleitfaden zur Abschlusspräsentation (Storyline v3)
 
-**Arbeitsstatus:** Folienkonzept für die vom Team erstellte Präsentation (PowerPoint oder Folienwerkzeug). Stand **05.11.2026**, Zahlenbasis **Run 4** (D-048). Kein fertiges Deck und keine formelle Baseline-Freigabe. Ausschliesslich Markdown; keine PPT/PPTX-Produktion durch den Agenten (D-042).
+**Arbeitsstatus:** Folienkonzept für die vom Team erstellte Präsentation (PowerPoint oder Folienwerkzeug). Stand **07.11.2026** (Nachtrag Abo-Daten je Sektor und Call-Abgleich), Zahlenbasis **Run 4** (D-048). Kein fertiges Deck und keine formelle Baseline-Freigabe. Ausschliesslich Markdown; keine PPT/PPTX-Produktion durch den Agenten (D-042).
 
 **Aufbau:** Der Leitfaden folgt Folie für Folie der Team-Vorlage «Abschlusspräsentation v2 (Storyline mit Stickern)», 47 Folien. Je Folie stehen Aussage, Inhalt mit Run-4-Zahlen, Visual, Quellen und unter **Sticker-Update** die Änderung gegenüber dem grünen Sticker der Vorlage. Neu sind die Entscheide aus dem Team-Call vom 03.11.2026 (D-049): Massnahmen auf einer Matrix Wirkung × Aufwand, rund 6 Massnahmen inkl. Abo-Obergrenze, KF-Initiativen als separater Research-Teil, Hauptteil top-line und Details im Anhang.
 
@@ -227,11 +227,15 @@ Basis: Meisterschaft ab 2022/23, 76 Modellspiele, Saisoneffekte und Kontextkontr
 
 - 2025/26 Meisterschaft: ΣSOLL − ΣIST = **60'942** (Ø 3'207 je Spiel, No-Show 18.1 %); in den **11** Spielen mit ticketbasiertem SOLL **41'442**.
 - Zweitmarkt **5'716** Weiterverkäufe; Wiederbesetzung rund 9 % (Definition W); 70 % in den letzten 2 Tagen, 36 % am Spieltag (gepoolt 2025/26 + Teilstand, 7'607 Tickets); Gebühr für Käufer 10.8 %.
-- Leere Plätze sind vor allem Abo-Plätze. Einzeltickets werden zu 91–97 % genutzt. Abo-Anwesenheit 2026/27 (Näherung, 4 Spiele): **D 71–74 %**, B 82–85 %, C 86–89 %. In D bleiben je Spiel rund 1'100 vergebene Plätze leer.
+- **Leere Plätze sind vor allem Abo-Plätze.** Beleg über zwei Saisons (2021/22 und 2022/23, 35 Spiele mit validem Eintritt): No-Show Einzeltickets **9.3 % / 9.6 %**, Rest (≈ Abos) **29.4 % / 22.5 %**. Der Rest enthält neben Abos auch VIP, Gäste und Freikarten; deshalb als Näherung beschriften (M §4, «Ticket-Typ-Näherung»; P `B2_Tickettyp_NoShow`).
+
+**Je Sektor nur Fussnote, keine Kacheln:** Abo-Anwesenheit 2026/27 D 71–74 %, B 82–85 %, C 86–89 % (W `N7_Tribuene_2627`). Diese Werte sind indirekt geschätzt (Scans je Eingang minus angenommene Nutzung der Einzeltickets), beruhen auf 4 Sommerspielen und einem Abo-Snapshot. Für frühere Saisons fehlen die Abo-Bestände je Sektor. Fussnotentext: «Je Sektor erste Näherung aus 4 Spielen 2026/27; Abo-Besuche je Sektor sind Teil der Datenagenda.»
 
 **Mechanismen:** Aktivieren (Inhaber kommt) | Weitergeben (Zweitmarkt früher und sichtbarer). Erfolgskriterium: zusätzliche Scans.
 
-**Sticker-Update:** Abo-Anwesenheit je Tribüne als Überleitung zur Abo-Obergrenze ergänzen (Folie 24/Anhang 15b). Quellen W `N1`, `N3`, `N5`, `N7_Tribuene_2627` (Run 4, identisch).
+**Sprechnotiz Nachfrage:** Weitergeben bringt nur dann zusätzliche Besucher, wenn jemand den Platz will. In der Schweiz ist die Verknappung geringer als in Deutschland; Spiele sind nur teilweise ausverkauft (35 von 78 Kontextspielen als ausverkauft geführt, No-Show dort 14.0 % gegenüber 20.8 %; M §4, «No-Show nach Kontext»). Aktivieren wirkt dagegen in jedem Spiel.
+
+**Sticker-Update:** Hauptaussage «leere Plätze = vor allem Abo-Plätze» mit der Zwei-Saisons-Näherung belegen. Tribünenwerte nicht als Kachel, nur als Fussnote mit Vorbehalt. Quellen W `N1`, `N3`, `N5`, `N7_Tribuene_2627`; P `B2_Tickettyp_NoShow` (Run 4, identisch).
 
 ## Folie 19 (S. 17) – Feld 2: Gruppen- und Gratistickets
 
@@ -241,11 +245,17 @@ Basis: Meisterschaft ab 2022/23, 76 Modellspiele, Saisoneffekte und Kontextkontr
 | Inhouse, gratis, ab 10 Tickets | 9'061 | 24.3 % |
 | Online-Shop, bezahlt, 2–4 Tickets | 82'669 | 3.7 % |
 
-46 % aller No-Shows bei Einzeltickets stammen aus Inhouse-Bestellungen ab 10 Tickets.
+~~46 % aller No-Shows bei Einzeltickets stammen aus Inhouse-Bestellungen ab 10 Tickets.~~ **Korrigiert (D-049d, 07.11.2026):** Rechnerisch stimmt der Wert (45.5 %), aber rund **32 Pp. davon sind das Gästekontingent** (Sektor B4, Bestellungen ab 50 Tickets). Dort ist der Eintritt im Zutrittssystem unvollständig erfasst, die No-Show also eher überschätzt. Für FCSG-Massnahmen relevant sind die Grossbestellungen **ausserhalb des Gästesektors: 13 % aller Einzelticket-No-Shows** (11'204 Tickets, No-Show 23.8 %).
 
-**Neu aus dem Call (Hypothese):** Ein grosser Teil dürften vom Club ausgegebene **Sponsorentickets** sein (Grössenordnung rund 20 je Sponsor, über das Sponsoringbudget bezahlt). Fanclub-Gruppenkontingente sind in der Schweiz weniger verbreitet als in Deutschland. **Prüfung:** Auswertung nach Tarif und Kanal, nie nach Käufer; braucht eigene Freigabe (D-049d).
+**Hypothese aus dem Call geprüft:** Sponsorentickets sind ein **kleiner Teil**. Der Sponsorentarif in Grossbestellungen umfasst 3'985 Tickets mit 20.2 % No-Show, das sind rund **4 % aller Einzelticket-No-Shows**. Den Rest teilen sich Gratis/Promo (26.4 %), Hospitality, Mitarbeitende und wenige Vollpreis-Gruppen. Fanclub-Kontingente spielen bei Heimspielen in der Schweiz kaum eine Rolle. Quelle: Teamnotiz `team/2026-11-07_grossbestellungen_noshow.md` (35 Spiele 2021/22–2022/23, nur Aggregate). Rückfrage FCSG: Unter welchen Tarifen werden Sponsoren- und Gästekontingente erfasst?
 
-**Sticker-Update:** Hypothese Sponsorentickets als «zu prüfen» ergänzen; Pilotidee «Sponsoren bestätigen Kontingent bis T−3, Rückgabe in den Verkauf».
+**Folienvorschlag:** Balken «Online 2–4 Tickets 3.7 % | Grossbestellungen ohne Gäste 23.8 % | Gästekontingent 29.3 % (Erfassung unvollständig, grau)». Callout: «13 % der Einzelticket-No-Shows liegen in Grossbestellungen des Clubs, davon knapp ein Drittel im Sponsorentarif.»
+
+**Einordnung:** Sponsorentickets laufen über das Sponsoringbudget und sind keine direkten Matchday-Ticketeinnahmen. Der Hebel liegt deshalb bei Anwesenheit und Catering-Umsatz, nicht beim Ticketerlös.
+
+**Ideen aus der Praxis (Research / Benchmark):** Clubs bemessen Kontingente nach der Nutzung, z.B. Mainz 05 bei Fanclub-Auswärtskontingenten nach dem Auswärtsschnitt der Vorsaison (Research-Dossier, Abschnitt 2). Übertragen auf den FCSG: Nutzung je Sponsoren- und Promo-Kontingent nach jedem Spiel zurückmelden, nicht bestätigte Plätze bis T−3 zurück in den Verkauf, Folgekontingent nach Nutzung bemessen.
+
+**Sticker-Update:** Die Zahl «46 %» ersetzen durch «13 % ohne Gästekontingent», Sponsoren-Hypothese als «geprüft: kleiner Teil (≈ 4 %)» markieren. Pilotidee «Kontingent bis T−3 bestätigen, Nutzungsbericht je Kontingent, Rückgabe in den Verkauf». Satz zum Sponsoringbudget ergänzen. Wirkung von M2 kleiner einschätzen als bisher.
 
 ## Folie 20 (S. 18) – Feld 3: Zeitfenster vor dem Anpfiff
 
@@ -302,13 +312,15 @@ Lesart: Bei späten Samstagsspielen haben Fans offenbar schon gegessen. Am Sonnt
 | Nr. | Massnahme (Felder) | Mechanismus in einem Satz | Wirkung (Vorschlag) | Aufwand (Vorschlag) | Quadrant |
 |---|---|---|---|---|---|
 | M1 | Zweitmarkt früher und sichtbarer (1) | Abo-Inhaber geben ungenutzte Plätze früher frei, Erinnerung T−3 | mittel | tief | Quick Win |
-| M2 | Gruppen-/Sponsorenkontingente bestätigen (2) | Kontingent bis T−3 bestätigen, Rest zurück in den Verkauf | mittel | tief | Quick Win |
-| M3 | Abo-Obergrenze je Sektor (1) | Abo-Bestand v.a. in D begrenzen, Plätze als Einzeltickets verkaufen | mittel bis hoch (Anwesenheit), Catering klein | hoch (Fanakzeptanz, Ticketerlös) | Leuchtturm |
+| M2 | Gruppen-/Sponsorenkontingente bestätigen (2) | Kontingent bis T−3 bestätigen, Nutzungsbericht je Kontingent, Rest zurück in den Verkauf | **tief bis mittel** (13 % der Einzelticket-No-Shows, D-049d) | tief | Quick Win |
+| M3 | Abo-Obergrenze je Sektor (1) | Abo-Bestand v.a. in D begrenzen, Plätze als Einzeltickets verkaufen | **unsicher** (Anwesenheit möglicherweise mittel bis hoch, Catering klein) | hoch (Fanakzeptanz, Ticketerlös) | Leuchtturm **mit Datenvorbehalt** |
 | M4 | Frühere Toröffnung + Vorprogramm (3, 4) | Tore wie in D früher öffnen, Zeitfenster mit Angebot füllen | offen (Ankunft belegt, Konsum offen) | mittel | Pilot |
 | M5 | Angebot nach Anstoss-Slot (5, 4) | Food-Angebot vor Samstag-20-Uhr-Spielen, Getränke-/Familienangebot am Sonntagnachmittag; Runner-Einsatz im Test | mittel | mittel | Pilot |
 | M6 | Wetter-/Kiesplatz-Playbook mit T−7 (6, 7) | Ware, Personal und Kiesplatz-Öffnung nach Prognose und Wetter planen | tief bis mittel | tief | Quick Win |
 
 Querschnitt: **Spielrechner** als Planungswerkzeug (Feld 6) für M5/M6.
+
+**M3 auf der Matrix (Vorschlag, Teamentscheid D-049b):** Punkt mit offenem Rand oder Fragezeichen zeichnen und mit «Daten zuerst: Abo-Besuche je Sektor» beschriften. Begründung: Dass leere Plätze vor allem Abo-Plätze sind, ist über zwei Saisons belegt. Wie stark das je Sektor gilt, zeigt nur eine Näherung aus 4 Spielen 2026/27. Die Abo-Obergrenze ist eine Idee, über die der Club bereits nachdenkt; deshalb gehört sie auf die Matrix, aber ohne Wirkungszahl im Hauptteil.
 
 **Visual:** 2×2-Matrix (x = Aufwand, y = Wirkung), sechs nummerierte Punkte; KF-Research-Ideen als graue gestrichelte Wolke ausserhalb der Matrix (Folie 24b).
 
@@ -321,9 +333,17 @@ Querschnitt: **Spielrechner** als Planungswerkzeug (Feld 6) für M5/M6.
 **Label:** Research / Benchmark – keine Quantifizierung.
 
 - **Begründung:** Der Kontext erklärt 82 % der Spiel-zu-Spiel-Schwankung des KF. Solche Initiativen verschieben das Niveau aller Spiele und lassen sich nur mit Pilot und Vergleich bewerten.
-- **Fast Lane / Mobile Order:** Beispiel eines Bundesligisten. Dort umstritten, unter anderem wegen der Rolle eines Kreditkarten-Sponsors. Angaben zur eigenen App («Umsatz verdoppelt») sind nicht belegt.
-- **Loyalty:** Punkte und Gutscheine; Beispiel eines Bundesligisten mit Telekom-Partner, Punkte sammeln mit dem Handy in der Tasche.
+- **Fast Lane / Mobile Order:** Eintracht Frankfurt hat Click & Collect über die Club-App an neun Kiosken; Karteninhaber eines Kreditkarten-Partners nutzen an ausgewählten Spieltagen eine Fast Lane an den Ständen. Bevorzugung nach Zahlungsmittel ist in der Fanszene umstritten. Zahlen zur Wirkung gibt es nur von Anbietern (+16 % bis +25 % Umsatz je Besucher, nicht unabhängig geprüft). Angaben zur eigenen App («Umsatz verdoppelt») sind nicht belegt.
+- **Loyalty:** Borussia Dortmund und Vodafone, «FanModus» (seit 24.10.2026): Handy im Stadion gesperrt lassen, Punkte bzw. Lose für Trikots und Fanshop-Gutscheine sammeln, Standortprüfung über die App. Weitere Punkteprogramme bei Hertha BSC, VfL Bochum, TSV 1860. Kein gefundenes Programm koppelt Punkte an Catering-Käufe oder veröffentlicht eine Umsatzwirkung.
+- **Abo-Mindestnutzung (Brücke zu M1/M3):** HC Fribourg-Gottéron verlangt 18 von 26 Heimspielen, per Scan validiert; Freigabe auf dem offiziellen Zweitmarkt zählt als Nutzung, sonst kann die Verlängerung abgelehnt werden. Ähnlich 1. FC Köln (12 Spiele, rund 150 Kündigungen 2025) und Liverpool (15 Spiele, Angebot auf der Börse zählt auch ohne Verkauf).
+
+**Quelle für alle Beispiele:** `Deliverables/06_Research/Research_Benchmarks.md` (öffentliche Quellen mit Link und Datum).
 - **Risiken:** Akzeptanz in der Fankurve (Sichtweise der aktiven Fanszene), Sponsorenbezug, Datenschutz.
+- **Laufende Club-Initiative «Upgrade per Gebot»:** Der FCSG arbeitet bereits daran. Fans bieten wie bei einer Airline, wie viel ihnen ein Upgrade für ein einzelnes Spiel wert ist, z.B. von der Gegentribüne auf die Haupttribüne mit Catering im geschlossenen Bereich (attraktiv an kalten Winterspielen). Als **Club-Initiative** würdigen, nicht als eigene Massnahme. Gründe: Der Gebotsmechanismus ist ein Preisthema, und Dynamic Pricing ist ausserhalb unseres Auftrags. Zudem fehlen Catering-Daten je Stand und Sektor, die Umsatzwirkung ist also nicht messbar.
+  - **Anschluss an unsere Daten (ohne Preisaussage):** Spiele für ein Angebot auswählen. Im Winter (Nov–Feb) liegt die No-Show um +2.7 Pp. über dem Saisonmittel (M §4), je +5 °C steigt der KF um +2.8 %. Spielrechner und T−7 zeigen früh, welche Spiele schwach werden. Messen: zusätzliche Scans und Catering-Umsatz im geschlossenen Bereich, dafür braucht es die Zuordnung Kasse → Stand → Sektor (Datenagenda).
+  - **Geklärt (07.11.2026):** Der Zielbereich ist **Public**, also im Scope. Der frei werdende Platz auf der Gegentribüne kommt auf den **Ticket-Zweitmarkt**. Damit hängt die Initiative an M1: Zusätzliche Besucher entstehen nur, wenn der Platz wieder verkauft wird. Heute liegt die Wiederbesetzung über den Zweitmarkt bei rund 9 %, 70 % der Weiterverkäufe fallen in die letzten 2 Tage (Folie 18). An kalten, nicht ausverkauften Spielen ist die Nachfrage eher tief. Ohne Wiederverkauf bleibt es eine Verschiebung von Konsum in den geschlossenen Bereich, mit zusätzlichem Erlös nur aus dem Upgrade selbst.
+
+**Aufbau zweiteilig:** Teil 1 «Was die Daten zeigen» (Folien 18–25), Teil 2 «Research: was andere machen» (diese Folie). Quantifizierung im Research-Teil nur annahmebasiert und als solche beschriftet.
 
 **Offen:** öffentliches Benchmarking anderer Clubs (Team-Aufgabe); mögliche vertrauliche Inputs aus der Praxis.
 
@@ -332,6 +352,8 @@ Querschnitt: **Spielrechner** als Planungswerkzeug (Feld 6) für M5/M6.
 ## Folie 25 (S. 23) – Massnahmen auf einen Blick (ersetzt «Shortlist: drei Massnahmen»)
 
 Hauptteil top-line: **eine** Folie mit sechs Mini-Karten (Mechanismus, Felder, Ziel-KPI, Rechenbaustein). Die ausführlichen Steckbriefe M1–M6 kommen in den Anhang (Folien 26–28 werden zu Anhang 15a–f).
+
+**Mini-Karte M3:** statt Rechenbaustein «Daten zuerst: Abo-Besuche je Sektor; Rechenweg als Illustration im Anhang 15c».
 
 **Sticker-Update:** Folien 26–28 («Massnahme 1–3») in den Anhang verschieben und auf M1–M6 erweitern (siehe Anhang 15). Korridore nur mit offengelegter Annahme.
 
@@ -351,9 +373,9 @@ Messprinzipien: Hypothese vorab; Kontext über den Spielrechner herausrechnen (E
 ## Folie 30 (S. 28) – Übergabe und nächste Schritte
 
 **Was der FCSG erhält:** Spielkontext-Tabelle v5; Excel mit Hebel-Rechner; Bericht und Lesehilfe; **Spielrechner (Entwurf)**. Er liefert erwartete Anwesende, KF und Umsatz für ein angesetztes Spiel und den Rückblick «Beobachtung vs. Erwartung». Er ist offline nutzbar und enthält Clubzahlen, bleibt also beim FCSG (D-047).
-**Datenagenda:** Kassen-Zeitdaten je Stand; Abo-Besuche je Spiel/Sektor; Zweitmarkt-Angebot und -Verkauf; Eintritt je Ticket nach Tarif/Kanal; Spieltagsprotokolle.
+**Datenagenda:** (1) Abo-Besuche je Spiel und Sektor über alle Saisons (Abo-Bestände je Sektor; Zutrittsfeld «Coding» Abo/Einzel?); (2) Eintritt je Ticket nach Tarif/Kanal; (3) Zweitmarkt-Angebot und -Verkauf; (4) Kassen-Zeitdaten je Stand; (5) Spieltagsprotokolle.
 
-**Sticker-Update:** Spielrechner als viertes Item ergänzen. Datenagenda um «Abo-Besuche je Sektor» (für M3) schärfen.
+**Sticker-Update:** Spielrechner als viertes Item ergänzen. «Abo-Besuche je Sektor» als ersten Datenpunkt nennen: Er entscheidet, ob M3 vom Leuchtturm mit Vorbehalt zur bewertbaren Massnahme wird.
 
 ## Folie 31 (S. 29) – Fazit und Diskussionsfragen
 
@@ -432,13 +454,19 @@ Gleiche Struktur je Massnahme: Mechanismus · Befund · Pilot und KPI · Vorauss
 | | Basis (Run 4, 2025/26 Meisterschaft) | Rechenweg | Beispiel mit offengelegter Annahme |
 |---|---|---|---|
 | **M1** Zweitmarkt | 60'942 SOLL−IST; 5'716 Weiterverkäufe | −1 Pp. No-Show ≈ CHF 29k–49k je Saison (φ 0.6–1.0) | Annahme Team: x Pp. weniger No-Show → x × 29k–49k |
-| **M2** Kontingente | Inhouse ≥10 Tickets: No-Show 24–29 % (2021/22–22/23) | wie M1, nur Anteil der Kontingente | erst aktuelle Quote nach Tarif/Kanal prüfen |
-| **M3** Abo-Obergrenze | D: Ø 3'614 Abos je Spiel, Abo-Anwesenheit 71–74 % (Näherung 2026/27, 4 Spiele); Einzeltickets 91–97 % genutzt; Ø Abo-Preis D CHF 304 | je 100 Abos, die als Einzeltickets verkauft werden: zusätzliche Anwesende je Spiel ≈ 100 × (Einzel- minus Abo-Nutzung) = **17–26**; × 19 Spiele × KF 14.51 × φ | **≈ CHF 2'800–7'100 Catering-Umsatz je Saison je 100 Abos** (φ 0.6–1.0). Nur bei genügend Nachfrage nach Einzeltickets in D. Ticketerlös (Abo vs. Einzel) und Fanakzeptanz separat bewerten |
+| **M2** Kontingente | Grossbestellungen ohne Gästekontingent: 11'204 Tickets, No-Show 23.8 %, 13 % aller Einzelticket-No-Shows (2021/22–22/23); Sponsorentarif ≈ 4 % | wie M1, nur Anteil der Kontingente | aktuelle Quote nach Tarif/Kanal beim FCSG erfragen |
+| **M3** Abo-Obergrenze (Illustration) | Belegt: No-Show Rest (≈ Abos) 22.5–29.4 % vs. Einzeltickets 9.3–9.6 % (2021/22–2022/23, 35 Spiele). Nur Näherung: D Ø 3'614 Abos je Spiel, Abo-Anwesenheit 71–74 % (2026/27, 4 Spiele); Ø Abo-Preis D CHF 304 | je 100 Abos, die als Einzeltickets verkauft werden: zusätzliche Anwesende je Spiel ≈ 100 × (Einzel- minus Abo-Nutzung) = **17–26**; × 19 Spiele × KF 14.51 × φ | **≈ CHF 2'800–7'100 Catering-Umsatz je Saison je 100 Abos** (φ 0.6–1.0), **Illustration mit Näherungswerten**. Gegenprobe mit der Zwei-Saisons-Näherung ohne Sektorbezug: Nutzungsdifferenz rund 13–20 Pp., also 13–20 zusätzliche Anwesende je 100 Abos, gleiche Grössenordnung, etwas tiefer. Nur bei genügend Nachfrage nach Einzeltickets in D. Ticketerlös (Abo vs. Einzel) und Fanakzeptanz separat bewerten |
 | **M4** Toröffnung | Ankunft +22.6 min (D); Konsumwirkung offen | +CHF 1 KF ≈ CHF 262k je Saison, nur wenn der Pilot einen KF-Effekt zeigt | kein Beispiel ohne Pilotdaten |
 | **M5** Angebot nach Slot | Samstag ab 20 Uhr Food −14.9 %; Sonntagnachmittag Alkohol −26.4 % | +CHF 1 Ø Bon ≈ CHF 244k je Saison; ein Slot betrifft nur einen Teil der Spiele (Anteil × Baustein) | Annahme Team: Spielanteil und KF-Hebel je Slot |
 | **M6** Wetter-Playbook | Kiesplatz +8.1 % je +5 °C; Regen −16.8 % | eher Kosten/Verfügbarkeit als Umsatz; Wirkung über T−7-Planung | keine CHF-Hebelzahl (Wetter extern) |
 
-**Lesart M3:** Für den Catering-Umsatz ist die Abo-Obergrenze eher klein. Ihr Wert liegt bei Anwesenheit und Stimmung (volle Kurve) und beim Ticketing. Abgeleitet aus W `N7_Tribuene_2627` und P `B10_Abo_Snapshot`; Näherung aus 4 Sommerspielen, deshalb Bandbreite.
+**Benchmarks je Steckbrief (Research-Dossier):**
+- **M1:** Mindestnutzung, bei der die Freigabe auf dem Zweitmarkt als Nutzung zählt (Fribourg-Gottéron 18/26, Liverpool 15 Spiele). Das gibt dem Abo-Inhaber einen Grund, den Platz früh freizugeben.
+- **M2:** Kontingente nach Nutzung bemessen (Mainz 05, Fanclub-Auswärtskontingente).
+- **M3:** Abo-Obergrenzen bei Bundesligisten (Köln 25'500 bei 50'000 Plätzen) und Entzug bei Nichtnutzung (Köln rund 150 Abos). Fanverträglichere Vorstufe: Mindestnutzung mit Zweitmarkt statt fixer Obergrenze. Härtefallregeln einplanen.
+- **M4:** Fanzonen und Vorprogramm mehrere Stunden vor Anpfiff (Liverpool, Manchester City, OGC Nice). Keine veröffentlichte Umsatzwirkung; der eigene Befund in Sektor D (+22.6 min) ist stärker.
+
+**Lesart M3:** Für den Catering-Umsatz ist die Abo-Obergrenze eher klein. Ihr Wert liegt bei Anwesenheit und Stimmung (volle Kurve) und beim Ticketing. Abgeleitet aus W `N7_Tribuene_2627` und P `B10_Abo_Snapshot`; Näherung aus 4 Sommerspielen, deshalb Bandbreite. Auf der Folie als «Illustration» beschriften. Belastbar wird der Rechenweg erst mit Abo-Besuchen je Sektor über mehrere Saisons (Datenagenda Punkt 1).
 
 ---
 
@@ -461,6 +489,8 @@ Gleiche Struktur je Massnahme: Mechanismus · Befund · Pilot und KPI · Vorauss
 | Sortiment/Wetter | W `K2`, `K8`, `K14` (Run 4, Slot-Effekte) |
 | T−7 | W `A6_Fruehindikator` (Run 4: 1'120 → 849, −24.2 %, Band 84.1 % von 44) |
 | Rechenbausteine | W `R1_Faustwerte`; identisch mit Run 3 |
-| Abo-Obergrenze M3 | W `N7_Tribuene_2627`, P `B10_Abo_Snapshot`; Rechenweg offengelegt, Szenario |
+| Abo-Obergrenze M3 | W `N7_Tribuene_2627`, P `B10_Abo_Snapshot`; Rechenweg offengelegt, Illustration |
+| Abo vs. Einzel No-Show | M §4 «Ticket-Typ-Näherung», P `B2_Tickettyp_NoShow` (21/22: 9.3 % / 29.4 %, 22/23: 9.6 % / 22.5 %) |
+| Ausverkauft vs. nicht | M §4 «No-Show nach Kontext» (35 / 43 Spiele, No-Show 14.0 % / 20.8 %) |
 
-**Verbleibend offen:** 8 vs. 9 Felder (D-049a); Auswahl und Platzierung der Massnahmen (D-049b); Abo-Besuche je Sektor (D-049c); Sponsorentickets nach Tarif/Kanal (D-049d); historischer Public-Nennerabgleich; Beteiligungssatz Catering; formelle Baseline-Freigabe; öffentliches Benchmarking für den Research-Teil.
+**Verbleibend offen:** 8 vs. 9 Felder (D-049a); Auswahl und Platzierung der Massnahmen (D-049b), inkl. Vorschlag «M3 mit Datenvorbehalt»; Abo-Besuche je Sektor (D-049c); Erfassung von Sponsoren- und Gästekontingenten beim FCSG bestätigen (D-049d ausgewertet); Upgrade per Gebot (Club-Initiative, Public, frei werdender Platz via Zweitmarkt): Messdesign mit dem FCSG abstimmen; historischer Public-Nennerabgleich; Beteiligungssatz Catering; formelle Baseline-Freigabe; Ergänzung des Research-Dossiers durch eigene Team-Benchmarks.
