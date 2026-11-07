@@ -1,5 +1,13 @@
 # Changelog
 
+## Folienleitfaden: Abo-Daten je Sektor und Call-Abgleich – 07.11.2026
+- Folie 18: «Leere Plätze = vor allem Abo-Plätze» mit der Zwei-Saisons-Näherung belegt; Tribünenwerte 2026/27 nur noch als Fussnote mit Vorbehalt (4 Spiele, indirekt geschätzt). Sprechnotiz zur Nachfrage (ausverkauft 35 von 78 Kontextspielen).
+- M3 Abo-Obergrenze als «Leuchtturm mit Datenvorbehalt» ohne Wirkungszahl im Hauptteil; Rechenweg im Anhang 15c als Illustration mit Gegenprobe. Datenagenda: Abo-Besuche je Sektor zuerst.
+- Folie 19/M2: Sponsorentickets laufen über das Sponsoringbudget; Nutzungsbericht je Kontingent als Praxisidee. Folie 24b: Research-Teil zweiteilig; Club-Initiative «Upgrade per Gebot» als gewürdigte Partner-Idee (nicht eigene Massnahme, Preisthema ausserhalb Scope) mit Anschluss an Winter-/Temperaturbefunde und Spielrechner.
+- D-049d ausgewertet (Freigabe 07.11.): neues Skript `Rechenkern/scripts/grossbestellungen_noshow.py` (nur Aggregate) und Teamnotiz `team/2026-11-07_grossbestellungen_noshow.md`. Inhouse-Grossbestellungen sind überwiegend Gästekontingent; ohne Gästesektor 13 % der Einzelticket-No-Shows, Sponsorentarif ≈ 4 %. Folie 19, M2 und Anhang 15 entsprechend korrigiert («46 %» nicht mehr verwenden).
+- Neu `Deliverables/06_Research/Research_Benchmarks.md`: öffentliche Benchmarks (Abo-Mindestnutzung u.a. Fribourg-Gottéron, Köln, Liverpool; Kontingente; Click & Collect/Fast Lane; BVB×Vodafone FanModus und Loyalty; Upgrade per Gebot; Vorprogramm). Folie 24b und Steckbriefe M1–M4 mit Benchmarks ergänzt.
+- Nachträge zu D-049. Keine Änderung an Rechenkern-Modellen oder Run-4-Ergebnissen.
+
 ## Run 4 komplett: Anstoss-Slot im ganzen Rechenkern – 05.11.2026
 - D-048 (Team, 03.11.): Der Anstoss-Slot (Referenz Samstag 17–19.59 Uhr) ersetzt «Werktag + Abendspiel ab 20 Uhr» in **allen** Kontextmodellen: Phase-1-Modelle und Diagnosekarte, Elastizität, Ankunft–Konsum, Durchsatz-Knick, Kiesplatz–Wetter, Promo, Gästeanteil, Frühindikator T-7. Zentrale Definition in `config.SLOTS`/`utils.anstoss_slot`; Dummies im Spielkalender (`dim_match`). Run-3-Spezifikation bleibt als `models.VARIABLEN_RUN3` (Vergleich in `run4.py`).
 - Textbausteine der Chancenfelder, Kernbefunde, Phase-2-Kandidaten, Methodennotiz, Datenwörterbuch und Grafik i13 auf die Slot-Effekte umgeschrieben (u.a. «Samstag ab 20 Uhr: Alkohol +6 %, Food −15 % gegenüber Samstag 17–19.59 Uhr» statt «Abendspiele sind Getränkespiele»).
