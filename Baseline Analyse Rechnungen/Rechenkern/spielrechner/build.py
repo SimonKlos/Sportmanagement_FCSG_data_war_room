@@ -15,6 +15,7 @@ Die Ausgabe mit echten Werten enthält Clubzahlen je Spiel (aggregiert) und ist 
 from __future__ import annotations
 
 import argparse
+import base64
 import json
 import sys
 from datetime import date, datetime
@@ -191,10 +192,20 @@ def daten(run4_tab: Path, mart: Path, kontext_xlsx: Path | None, wetter_csv: Pat
             **{k: v for k, v in m.items() if k != "basis_saison"}, **kal}
 
 
+LOGO = HIER / "assets" / "fcsg_logo.png"     # Clublogo (freigestellt), eingebettet als data-URI
+
+
+def _logo_html() -> str:
+    if not LOGO.exists():
+        return '<div class="logo-text">SG</div>'
+    b64 = base64.b64encode(LOGO.read_bytes()).decode("ascii")
+    return f'<img class="logo" src="data:image/png;base64,{b64}" alt="FC St.Gallen 1879">'
+
+
 def schreibe(d: dict, ziel: Path) -> None:
     html = (HIER / "vorlage.html").read_text(encoding="utf-8")
     payload = json.dumps(d, ensure_ascii=False, allow_nan=False).replace("</", "<\\/")
-    ziel.write_text(html.replace("__DATEN__", payload), encoding="utf-8")
+    ziel.write_text(html.replace("__LOGO__", _logo_html()).replace("__DATEN__", payload), encoding="utf-8")
 
 
 def main() -> int:

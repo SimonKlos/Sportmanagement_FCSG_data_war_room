@@ -15,6 +15,11 @@ Wetter und Ferien braucht der Browser Internet; ohne Internet rechnet das Tool m
 
 Weitere Ansichten: Rückblick (Run-4-Spiele und eigene IST-Einträge), Daten (Import, Saisondatei, Quellen), Lesehilfe.
 
+**Gestaltung:** angelehnt an die Impulse-Summit-Seite: dunkler Grundton, Hero mit FCSG-Logo, grosser Typografie und Faktenzeile
+(nächstes Heimspiel, erwarteter Saisonumsatz, fehlende IST), Saisonplan als Zeitleiste nach Monaten mit Farbkante je Anstoss-Slot,
+Hell/Dunkel umschaltbar, mobil nutzbar. Das Clublogo liegt freigestellt in `assets/fcsg_logo.png` und wird beim Erzeugen eingebettet
+(ohne Datei erscheint ein Textzeichen).
+
 **Rechenregeln** (identisch mit dem Rechenkern, geprüft in `tests/spielrechner_logik.test.mjs`):
 
 - Erwartung = Saisonniveau + Kontextterme aus `koeffizienten.csv` (log bzw. logit), Band = ± 1.2816 × RMSE (Leave-one-match-out).

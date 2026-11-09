@@ -2,7 +2,7 @@
 
 ## Spielrechner v2 – 07.11.2026
 - D-050: `Rechenkern/spielrechner/` neu aufgebaut (Generator `build.py`, Vorlage `vorlage.html`, Testdaten, README). Ablauf in vier Schritten: Spielplan importieren (CSV/Excel-Einfügen) → Kontext automatisch (Anstoss-Slot, Top-Gegner, Schulferien Stadt SG aus Kontexttabelle v5 bzw. Kanton SG via OpenHolidays, Wetter via Open-Meteo bzw. Normalwerte MeteoSchweiz) → Erwartung je Spiel mit Band und KF-Treibern → IST eintragen, Vergleich und Lernen des Saisonniveaus.
-- Speicherung im Browser plus Saisondatei (JSON), Export als CSV; Design in FCSG-Grün (Hero, Schritt-Navigation, Karten, Dark Mode, mobil).
+- Speicherung im Browser plus Saisondatei (JSON), Export als CSV. Gestaltung nach Vorbild Impulse-Summit-Seite: FCSG-Logo (`spielrechner/assets/fcsg_logo.png`, eingebettet), Hero mit grosser Typografie und Faktenzeile, Saisonplan als Zeitleiste mit Farbkante je Anstoss-Slot, Hell/Dunkel, mobil.
 - Tests: `tests/test_spielrechner.py` (Aufbau, Kalender, Normalwerte gegen Stundenwerte) und `tests/spielrechner_logik.test.mjs` (Rechenlogik im Browsercode gegen die Python-Formel, Wetterfenster wie `extern.py`, Saisonlernen). Live-Abruf und Darstellung mit Testdaten in Chrome geprüft.
 - Die erzeugte Datei mit echten Werten bleibt ausserhalb des Repos (`.gitignore`).
 
