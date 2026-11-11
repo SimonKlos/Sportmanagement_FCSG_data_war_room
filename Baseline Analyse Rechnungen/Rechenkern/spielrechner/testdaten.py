@@ -2,15 +2,32 @@
 
 Gleiches Schema wie die Run-4-Tabellen `koeffizienten.csv` und `erwartung_je_spiel.csv`, `mart_match.csv` und die
 Blätter «Ferien» und «Paralellevent» der Spielkontext-Tabelle (erfundene Daten im Jahr 2099).
+
+Demo-Modus (`demo=True`, für die öffentliche Vorschau): gleiche künstliche Zahlen, aber realistische Saisonbezeichnungen
+2023/24–2025/26 und Daten mit passendem Wochentag je Anstoss-Slot, damit der Rückblick lesbar ist. Gegner bleiben
+«Testgegner», Werte bleiben Zufallszahlen.
 """
 from __future__ import annotations
 
+import datetime as dt
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
 SAISONS = ["T1/T2", "T2/T3", "T3/T4"]          # bewusst keine echten Saisonbezeichnungen
+DEMO_SAISONS = ["2023/24", "2024/25", "2025/26"]
+DEMO_MONATE = [8, 8, 9, 9, 10, 10, 11, 2, 3, 3, 4, 5]
+SLOT_TAG = [5, 5, 6, 2]                          # Samstag, Samstag, Sonntag, Mittwoch (Python: Mo = 0)
+
+
+def _demo_datum(saison: str, i: int) -> str:
+    """Erstes Datum im Monat DEMO_MONATE[i] (ab Tag 1 + 7·(i mod 2)) mit dem Wochentag des Slots i mod 4."""
+    jahr = int(saison[:4]) + (1 if DEMO_MONATE[i] < 7 else 0)
+    d = dt.date(jahr, DEMO_MONATE[i], 1 + 7 * (i % 2))
+    while d.weekday() != SLOT_TAG[i % 4]:
+        d += dt.timedelta(days=1)
+    return d.isoformat()
 SLOT_LABELS = ["Samstag 17–19.59 Uhr", "Samstag ab 20 Uhr", "Nachmittag vor 17 Uhr (Sonntag/Feiertag)", "Werktagabend ab 17 Uhr"]
 MODELLE = {  # ziel_code: (label, transformation, intercept, rmse)
     "anwesenheitsquote": ("Anwesenheitsquote (IST/SOLL)", "logit", 1.5, 0.25),
@@ -20,21 +37,23 @@ MODELLE = {  # ziel_code: (label, transformation, intercept, rmse)
 }
 
 
-def erzeuge(ordner: Path) -> tuple[Path, Path, Path]:
+def erzeuge(ordner: Path, demo: bool = False) -> tuple[Path, Path, Path]:
     rng = np.random.default_rng(42)
+    saisons = DEMO_SAISONS if demo else SAISONS
     ordner.mkdir(parents=True, exist_ok=True)
     koeff, erw = [], []
     for code, (label, art, icpt, rmse) in MODELLE.items():
-        terme = {"Intercept": icpt, f"C(saison)[T.{SAISONS[1]}]": 0.05, f"C(saison)[T.{SAISONS[2]}]": 0.08,
+        terme = {"Intercept": icpt, f"C(saison)[T.{saisons[1]}]": 0.05, f"C(saison)[T.{saisons[2]}]": 0.08,
                  "slot_sa_abend": -0.03, "slot_nachmittag": -0.15, "slot_werktag_abend": -0.10,
                  "top_gegner": 0.10, "temp_anpfiff_c": 0.005, "regen_anreise": -0.02, "schulferien": -0.03}
         koeff += [{"zielgroesse": label, "ziel_code": code, "transformation": art, "term": t, "koeffizient": v,
                    "standardfehler": 0.02, "rmse_lomo_transformiert": rmse, "mittel_rueck": np.nan} for t, v in terme.items()]
         r = (lambda z: np.exp(z)) if art == "log" else (lambda z: 1 / (1 + np.exp(-z)))
-        for s in SAISONS:
+        for s in saisons:
             for i in range(12):
                 z = icpt + rng.normal(0, 0.1)
-                erw.append({"match_id": f"TEST_{s}_{i:02d}", "datum": f"2099-{1 + i % 12:02d}-{1 + SAISONS.index(s) * 9:02d}",
+                datum = _demo_datum(s, i) if demo else f"2099-{1 + i % 12:02d}-{1 + SAISONS.index(s) * 9:02d}"
+                erw.append({"match_id": f"TEST_{s}_{i:02d}", "datum": datum,
                             "saison": s, "anstoss_slot": SLOT_LABELS[i % 4], "zielgroesse": label, "ziel_code": code,
                             "beobachtet": r(z + rng.normal(0, rmse * 1.2)), "erwartet": r(z),
                             "band80_unten": r(z - 1.2816 * rmse), "band80_oben": r(z + 1.2816 * rmse)})

@@ -216,10 +216,13 @@ def main() -> int:
     ap.add_argument("--wetter", type=Path, default=KERN / "external" / "meteoschweiz_stg_stuendlich.csv")
     ap.add_argument("--ausgabe", type=Path, required=True)
     ap.add_argument("--testdaten", action="store_true", help="künstliche, markierte Testdaten verwenden")
+    ap.add_argument("--demo", action="store_true", help="mit --testdaten: realistische Saisons, Kalender aus --kontext (öffentliche Vorschau)")
     a = ap.parse_args()
     if a.testdaten:
         from testdaten import erzeuge
-        tab, mart, kontext = erzeuge(a.ausgabe.parent / "_testdaten")
+        tab, mart, kontext = erzeuge(a.ausgabe.parent / "_testdaten", demo=a.demo)
+        if a.demo and a.kontext:
+            kontext = a.kontext            # öffentliche Kalenderinformation (Ferien Stadt SG, Parallelanlässe)
     else:
         if not (a.run4 and a.mart and a.kontext):
             ap.error("--run4, --mart und --kontext angeben (oder --testdaten)")

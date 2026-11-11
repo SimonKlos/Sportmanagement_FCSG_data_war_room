@@ -38,6 +38,7 @@ Saisondatei mit echten Daten lässt sich nicht in die Testversion laden und umge
 ```bash
 cd "Baseline Analyse Rechnungen/Rechenkern"
 python spielrechner/build.py --testdaten --ausgabe <Ordner>/Spielrechner_TEST.html          # künstliche Testdaten
+python spielrechner/build.py --testdaten --demo --kontext "<Spielkontext_Tabelle_FCSG_5.xlsx>" --ausgabe <Ordner>/index.html   # öffentliche Demo (Vercel): künstliche Zahlen, realistische Saisons, echte Ferien/Anlässe
 python spielrechner/build.py --run4 "../run4_anstoss-slot_2026-11-02" \
     --mart "../run4_komplett_2026-11-05/kern_phase1/Tabellen/mart_match.csv" \
     --kontext "<Spielkontext_Tabelle_FCSG_5.xlsx>" --ausgabe <Ordner>/FCSG_Spielrechner.html

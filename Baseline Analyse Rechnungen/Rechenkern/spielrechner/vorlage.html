@@ -889,7 +889,7 @@ function zeichneDetail() {
 
 // ---------- Rückblick ----------
 function rbZeilen(ziel) {
-  const hist = D.spiele.filter(r => r.ziel_code === ziel).map(r => ({...r, quelle: "Run 4"}));
+  const hist = D.spiele.filter(r => r.ziel_code === ziel).map(r => ({...r, quelle: D.meta.testdaten ? "Testdaten" : "Run 4"}));
   const eigen = S.spiele.filter(s => s.ist && SR.istMeisterschaft(s.wettbewerb)).map(s => {
     const p = prognose(s), v = p[ziel], b = SR.istKennzahlen(s.ist)[ziel];
     return (v && b != null) ? {datum: s.datum, saison: p.c.saison, gegner: s.gegner, anstoss_slot: SLOT_LABEL[p.c.slot] || "", beobachtet: b,
