@@ -41,6 +41,8 @@ Thumbs.db
 # Ausnahme: geteilte Analyse-Läufe (aggregierte echte Ergebnisse, privates Repo, D-024)
 !Baseline Analyse Rechnungen/run*_*/
 !Baseline Analyse Rechnungen/run*_*/**
+!Baseline Analyse Rechnungen/gegenprobe_*/
+!Baseline Analyse Rechnungen/gegenprobe_*/**
 
 # Ralfs Rechenkern (Baseline Analyse Rechnungen/Rechenkern/): öffentliche Zusatzdaten und belegte Korrekturen versionieren (D-028, D-031)
 !Baseline Analyse Rechnungen/Rechenkern/external/*.csv

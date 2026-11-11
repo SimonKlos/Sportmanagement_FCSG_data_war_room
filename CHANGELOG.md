@@ -1,5 +1,8 @@
 # Changelog
 
+## Gegenprobe Tabellenstand und Form – 11.11.2026
+- Neues Skript `Rechenkern/scripts/gegenprobe_tabellenstand.py`, Ergebnis `Baseline Analyse Rechnungen/gegenprobe_tabellenstand_2026-11-11/`. Nur FCSG Punkte/Spiel wirkt knapp auf die Anwesenheitsquote (+0.5 Punkte/Spiel ≈ +3 Pp., p = 0.035); kein Effekt auf Kundenfranken, Bons, Ø Bon; Gegnermerkmale ohne Zusatznutzen. D-051 (Vorschlag: Modell unverändert, im Spielrechner nur als Hinweis).
+
 ## Spielrechner v2 – 07.11.2026
 - D-050: `Rechenkern/spielrechner/` neu aufgebaut (Generator `build.py`, Vorlage `vorlage.html`, Testdaten, README). Ablauf in vier Schritten: Spielplan importieren (CSV/Excel-Einfügen) → Kontext automatisch (Anstoss-Slot, Top-Gegner, Schulferien Stadt SG aus Kontexttabelle v5 bzw. Kanton SG via OpenHolidays, Wetter via Open-Meteo bzw. Normalwerte MeteoSchweiz) → Erwartung je Spiel mit Band und KF-Treibern → IST eintragen, Vergleich und Lernen des Saisonniveaus.
 - Speicherung im Browser plus Saisondatei (JSON), Export als CSV. Gestaltung nach Vorbild Impulse-Summit-Seite: FCSG-Logo (`spielrechner/assets/fcsg_logo.png`, eingebettet), Hero mit grosser Typografie und Faktenzeile, Saisonplan als Zeitleiste mit Farbkante je Anstoss-Slot, Hell/Dunkel, mobil.

@@ -138,6 +138,12 @@ Frühere Hinweise, die technischen Rechenkern-/Notebook-Roots unverändert zu la
 3. **Saisonniveau lernt** aus IST-Einträgen: bei Saisons ohne bzw. mit weniger als 10 Modellspielen Startwert plus gedämpftes Mittel der Abweichungen (Gewicht = Modellspiele, mindestens 3). Die Koeffizienten der Kontextmerkmale bleiben fix bis zur nächsten Neuschätzung im Rechenkern.
 4. Parallelanlässe, TV und Tabellenstand bleiben Hinweise, weil sie nicht im Modell sind. Cup und Europacup nur grob (Modell aus Meisterschaft).
 
+## D-051 – Tabellenstand und Form nicht ins Kontextmodell (Agent-Vorschlag, 11.11.2026; offen bis Teambestätigung)
+
+**Grundlage:** Gegenprobe `Baseline Analyse Rechnungen/gegenprobe_tabellenstand_2026-11-11/` (Auftrag Reto, 11.11.2026). Zusätzlich zum Run-4-Kontext ist nur **FCSG Punkte/Spiel vor dem Spiel** für die **Anwesenheitsquote** knapp belastbar (+0.5 Punkte/Spiel ≈ +3 Pp., p = 0.035, LOSO +2.7 Pp.); für Kundenfranken, Bons und Ø Bon sowie für alle Gegnermerkmale nicht. Bei 24 Tests ist ein Zufallstreffer möglich.
+
+**Vorschlag:** Hauptmodell (D-048) unverändert. Spielrechner zeigt Tabellenrang, Punkte/Spiel und Form beider Teams als Hinweis (Live-Abruf, z.B. TheSportsDB; Testschlüssel, für den Betrieb beim FCSG Lizenz klären wie bei D-050). NICHT_IM_MODELL-Begründung in `models.py` bei der nächsten Codeänderung auf dieses Ergebnis aktualisieren.
+
 ## Bestätigte Arbeitsregeln zu den Quellen-Widersprüchen (11.10.2026)
 
 Details: `Quellen und interne Dokumentation/briefing/10_synthese_widersprueche.md`.
