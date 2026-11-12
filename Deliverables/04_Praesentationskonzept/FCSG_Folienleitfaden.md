@@ -67,7 +67,7 @@ Vor dem Upload löschen. **Sticker-Update Folie 2:** Roter Faden ergänzen: «�
 
 **Claim:** «Matchday-Ertrag ist eine Multiplikation – jede Stufe ist ein eigener Hebel.»
 
-**Inhalt:** Formelzeile wie Vorlage. Referenzwerte laut Antrag: No-Show ~17 %, KF CHF 14.50. Fehlend bisher: systematische Sicht auf den Spielkontext; drei Datentöpfe kaum verknüpft. Beispiel-Callout: «−1 Pp. No-Show ≈ CHF 29k–49k Catering-Umsatz je Saison (Meisterschaft 2025/26, exkl. MwSt., je nach Konsum der zusätzlichen Besucher)».
+**Inhalt:** Formelzeile Kapazität × Verkaufsquote × Anwesenheit × KF, Ergebnis **«= Catering-Umsatz»** (nicht «Ticket- und Catering-Umsatz»: die ersten drei Stufen ergeben die Anwesenden, KF ist Catering-Umsatz je Anwesendem). Ticket-Umsatz als eigene, kurze Zeile daneben: «Ticket-Umsatz = vergebene Plätze × Ø Preis – No-Show kostet keinen Ticketfranken, aber den ganzen Konsum». Referenzwerte laut Antrag: No-Show ~17 %, KF CHF 14.50. Fehlend bisher: systematische Sicht auf den Spielkontext; drei Datentöpfe kaum verknüpft. Beispiel-Callout: «−1 Pp. No-Show ≈ CHF 29k–49k Catering-Umsatz je Saison (Meisterschaft 2025/26, exkl. MwSt., je nach Konsum der zusätzlichen Besucher)».
 
 **Quelle:** Projektantrag 25.09.2026, S. 1; W `R1_Faustwerte`, Basis 2025/26.
 
