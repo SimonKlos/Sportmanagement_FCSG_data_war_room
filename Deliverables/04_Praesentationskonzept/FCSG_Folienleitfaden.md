@@ -102,11 +102,13 @@ Inhalt wie Vorlage. **Sticker-Update:** In der Box «nicht geliefert» ergänzen
 | Anwesenheit und Catering-Umsatz | je 108 |
 | Bons | 70 |
 | Ankunft vollständig | 71 |
-| Einzelticket-Vorlauf vollständig | 96 |
+| Einzelticket-Vorlauf vollständig | 97 |
 | Eintritt je Einzelticket valide | 35 |
 | Kontextmodell / Diagnose | 76 |
 
-**Sticker-Update:** Quellenpfade auf Run 4 (P `05_Abdeckung`, T `abdeckung.csv`). Werte unverändert (identisch mit Run 3).
+**Sticker-Update:** Quellenpfade auf Run 4 (P `05_Abdeckung`, T `abdeckung.csv`). Werte unverändert (identisch mit Run 3). Korrektur 12.11.2026: Einzelticket-Vorlauf 97 statt 96 (Total in `abdeckung.csv` und Blatt `05_Abdeckung`).
+
+**Fussnote 108 → 76 (32 Spiele nicht im Kontextmodell, Daten bleiben in Baseline und Beschreibung):** 18 Meisterschaftsspiele 2021/22 (COVID-Saison, Modell ab 2022/23), 9 UEFA- und 3 Cup-Spiele (andere Wettbewerbe, zu wenige für eigene Schätzung) sowie 2 Meisterschaftsspiele 2022/23 mit geschätztem IST wegen Scanproblemen. Kurzform für die Folie: «Modell: Meisterschaft ab 2022/23 mit gezähltem IST – 2021/22 COVID, Cup/UEFA und 2 Spiele mit Scanproblemen ausgenommen».
 
 ## Folie 10 (S. 8) – Projektaufbau
 
