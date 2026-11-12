@@ -144,6 +144,12 @@ Frühere Hinweise, die technischen Rechenkern-/Notebook-Roots unverändert zu la
 
 **Vorschlag:** Hauptmodell (D-048) unverändert. Spielrechner zeigt Tabellenrang, Punkte/Spiel und Form beider Teams als Hinweis (Live-Abruf, z.B. TheSportsDB; Testschlüssel, für den Betrieb beim FCSG Lizenz klären wie bei D-050). NICHT_IM_MODELL-Begründung in `models.py` bei der nächsten Codeänderung auf dieses Ergebnis aktualisieren.
 
+## D-052 – Barcode-Abgleich Einzeltickets × Zutritt (Freigabe Reto, 12.11.2026; Club-Bestätigung offen)
+
+**Entscheid:** Für die Nicht-Scan-Quote je Saison dürfen die pseudonymen Barcodes von Einzeltickets und Scans pro Spieltag im Arbeitsspeicher abgeglichen werden; ausgegeben werden nur Zählungen (Skript `Rechenkern/scripts/barcode_abgleich.py`, Teamnotiz `team/2026-11-12_barcode_abgleich_noshow.md`). Ausnahme zur Regel «kein Rohdaten-Join Ticket × Scan» (Methodennotiz Run 4); D-006/D-035 bleiben bis zur Club-Antwort offen.
+
+**Ergebnis:** Validierung gegen ZKS-Feld 2022/23: 99.2 % Übereinstimmung. Nicht gescannte Einzeltickets (SL, vollständige Spiele): 9.6 % (22/23), 11.5 % (23/24), 6.9 % (25/26), 5.7 % (26/27, 4 Spiele). 2024/25 nicht abgleichbar (Scans und Ticket-Export überschneiden sich nicht), 2021/22 ohne Scans. Lesart: Obergrenze für No-Show, keine Ursache für den Rückgang.
+
 ## Bestätigte Arbeitsregeln zu den Quellen-Widersprüchen (11.10.2026)
 
 Details: `Quellen und interne Dokumentation/briefing/10_synthese_widersprueche.md`.
