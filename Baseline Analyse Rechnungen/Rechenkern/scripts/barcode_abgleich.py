@@ -8,6 +8,8 @@ werden nur Zählungen je Saison bzw. je Spiel. Keine Personenfelder werden geles
 Validierung: In 2022/23 liegen sowohl Scans als auch das ZKS-Eintrittsfeld vor → Übereinstimmung
 pro Ticket wird ausgegeben.
 
+Zusätzlich: Public-Abo-No-Show-Näherung je Saison (Funktion abo_quote).
+
 Lesart: «nicht gescannt» ist eine Obergrenze für No-Show (Barcode-Neuausstellung, Zweitmarkt,
 manueller Einlass möglich) – siehe Teamnotiz 2026-11-12_barcode_abgleich_noshow.md.
 
@@ -34,22 +36,24 @@ def lade_scans() -> pd.DataFrame:
     """Alle Herren-Scan-Lieferungen: Spieltag, Barcode, Lieferung."""
     teile = []
     for name, opts, cols in (
-        ("zugangsdaten_herren_inhouse.csv", dict(sep=";", header=None, encoding="utf-8-sig"), [0, 3]),
-        ("zugangsdaten_herren_alteSaisons.txt", dict(sep="\t"), ["Matchday", "Barcode"]),
-        ("Saison_2024-25_Transaktionen.csv", dict(sep=";", header=None, encoding="utf-8-sig"), [0, 3]),
+        ("zugangsdaten_herren_inhouse.csv", dict(sep=";", header=None, encoding="utf-8-sig"), [0, 3, 6]),
+        ("zugangsdaten_herren_alteSaisons.txt", dict(sep="\t"), ["Matchday", "Barcode", "Lesername"]),
+        ("Saison_2024-25_Transaktionen.csv", dict(sep=";", header=None, encoding="utf-8-sig"), [0, 3, 6]),
     ):
         if (ZUTRITT / name).exists():
             d = pd.read_csv(ZUTRITT / name, dtype=str, usecols=cols, **opts)
-            d.columns = ["datum", "bc"]
+            d.columns = ["datum", "bc", "leser"]
             teile.append(d.assign(lieferung=name))
     xl = ZUTRITT / "ErlaubteZutritteHerren.xlsx"
     if xl.exists():
-        d = pd.read_excel(xl, engine="calamine", dtype=str, usecols=["Datum", "UTId"])
-        d.columns = ["datum", "bc"]
+        d = pd.read_excel(xl, engine="calamine", dtype=str, usecols=["Datum", "UTId", "Lesername"])
+        d.columns = ["datum", "bc", "leser"]
         teile.append(d.assign(lieferung=xl.name))
     s = pd.concat(teile, ignore_index=True)
     s["datum"] = pd.to_datetime(s["datum"].str[:10], format="%Y-%m-%d", errors="coerce")
     s["bc"] = _norm(s["bc"])
+    leser = s["leser"].fillna("").str.strip()
+    s["sektor"] = leser.str.extract(r"^(HH|B4|[ABCD])", expand=False).fillna("?")
     return s
 
 
@@ -78,9 +82,35 @@ def lade_einzeltickets() -> pd.DataFrame:
     return pd.concat(teile, ignore_index=True)
 
 
+def abo_quote(g: pd.DataFrame) -> None:
+    """Public-Abo-No-Show-Näherung (SL, vollständig gescannte Spiele).
+
+    Bestand je Saison = Median(SOLL − Einzeltickets + Zweitmarkt) über Spiele ohne Kapazitäts-SOLL,
+    davon Hospitality-Anteil 859/13'052 (Abo-Snapshot 2026/27) abgezogen.
+    Besuche = Scans ohne Einzelticket-Treffer, ohne Hospitality-Leser (HH). Gäste (B4) sind bereits
+    Einzeltickets. Rest enthält auch Freikarten/Mitarbeitende/Medien → Quote ist eher Untergrenze.
+    """
+    hosp = 859 / 13052
+    x = g[g["vollstaendig"] & (g["wettbewerb"] == "SL")].copy()
+    x["bestand_roh"] = x["soll"] - x["einzeltickets"] + x["zweitmarkt"].fillna(0)
+    kap = x["soll_definition"].fillna("").str.contains("Kapazität|ausverkauft")
+    bestand = x[~kap].groupby("saison")["bestand_roh"].median()
+    x["bestand_public"] = x["saison"].map(bestand) * (1 - hosp)
+    x["abo_besuche"] = x["scans_rest"] - x["scans_rest_hospitality"].fillna(0)
+    x["abo_quote"] = 1 - x["abo_besuche"] / x["bestand_public"]
+    z = x.groupby("saison").agg(spiele=("match_id", "size"), bestand_spiele=("bestand_roh", lambda v: int((~kap[v.index]).sum())),
+                                bestand_public=("bestand_public", "first"), besuche_median=("abo_besuche", "median"),
+                                quote_min=("abo_quote", "min"), quote_max=("abo_quote", "max"))
+    z["abo_noshow_quote"] = 1 - x.groupby("saison")["abo_besuche"].sum() / x.groupby("saison")["bestand_public"].sum()
+    z["inkl_hospitality"] = 1 - x.groupby("saison")["scans_rest"].sum() / (x.groupby("saison")["bestand_public"].sum() / (1 - hosp))
+    print("\nGäste-Scans (B4) ohne Einzelticket-Treffer:", int(x["scans_rest_gaeste_b4"].fillna(0).sum()))
+    print(f"Public-Abo-No-Show (Näherung, SL):\n{z.round(3).to_string()}")
+
+
 def main() -> None:
     m = pd.read_csv(MART, parse_dates=["datum"])
-    m = m[m["spielstatus"] == "gespielt"][["match_id", "datum", "saison", "wettbewerb", "ist", "zks_valide"]]
+    m = m[m["spielstatus"] == "gespielt"][["match_id", "datum", "saison", "wettbewerb", "ist", "zks_valide",
+                                           "soll", "soll_definition", "zweitmarkt"]]
     tage = set(m["datum"])
     s = lade_scans()
     s = s[s["datum"].isin(tage)].drop_duplicates(["datum", "bc"])
@@ -96,6 +126,10 @@ def main() -> None:
     g["scans_einzelticket"] = s.groupby("datum")["einzel"].sum()
     g["einzeltickets"] = t.groupby("datum").size()
     g["einzeltickets_gescannt"] = t.groupby("datum")["gescannt"].sum()
+    rest = s[~s["einzel"]]
+    g["scans_rest"] = rest.groupby("datum").size()
+    g["scans_rest_gaeste_b4"] = rest[rest["sektor"] == "B4"].groupby("datum").size()
+    g["scans_rest_hospitality"] = rest[rest["sektor"] == "HH"].groupby("datum").size()
     g = g.reset_index()
     g["scan_ist_ratio"] = (g["scans"] / g["ist"]).round(3)
     g["nicht_scan_quote"] = (1 - g["einzeltickets_gescannt"] / g["einzeltickets"]).round(3)
@@ -117,6 +151,7 @@ def main() -> None:
         print(f"\n{titel} (nur vollständig gescannte Spiele):\n{z.round(3).to_string()}")
     print("\nNicht abgleichbar (Scans < 95 % IST oder keine Einzeltickets):",
           g.loc[~g["vollstaendig"]].groupby("saison").size().to_dict())
+    abo_quote(g)
     if OUT:
         g.to_csv(OUT, index=False)
         print("Je Spiel geschrieben:", OUT.name)

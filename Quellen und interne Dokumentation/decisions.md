@@ -150,6 +150,8 @@ Frühere Hinweise, die technischen Rechenkern-/Notebook-Roots unverändert zu la
 
 **Ergebnis:** Validierung gegen ZKS-Feld 2022/23: 99.2 % Übereinstimmung. Nicht gescannte Einzeltickets (SL, vollständige Spiele): 9.6 % (22/23), 11.5 % (23/24), 6.9 % (25/26), 5.7 % (26/27, 4 Spiele). 2024/25 nicht abgleichbar (Scans und Ticket-Export überschneiden sich nicht), 2021/22 ohne Scans. Lesart: Obergrenze für No-Show, keine Ursache für den Rückgang.
 
+**Nachtrag 13.11.2026 – Public-Abo-No-Show (Auftrag Reto):** Näherung über Bestand (SOLL − Einzeltickets + Zweitmarkt, ohne Kapazitäts-SOLL; minus Hospitality 6.6 %) und Besuche (Scans ohne Einzelticket-Treffer, ohne HH-Leser; Gäste bereits in Einzeltickets). Ergebnis SL: 27 % / 28 % / 31 % / 29 % (22/23, 23/24, 25/26, 26/27); eher Untergrenze. Kein neues 26/27-Direktverfahren über Abo-Barcodes (Entscheid Reto, 13.11.).
+
 ## Bestätigte Arbeitsregeln zu den Quellen-Widersprüchen (11.10.2026)
 
 Details: `Quellen und interne Dokumentation/briefing/10_synthese_widersprueche.md`.

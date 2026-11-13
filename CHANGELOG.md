@@ -3,6 +3,7 @@
 ## Barcode-Abgleich Einzeltickets × Zutritt – 12.11.2026
 - D-052 (Freigabe 12.11.): neues Skript `Rechenkern/scripts/barcode_abgleich.py` (nur Aggregate, IDs nur im Arbeitsspeicher) und Teamnotiz `team/2026-11-12_barcode_abgleich_noshow.md`. Eintritt je Einzelticket jetzt auch für 2023/24, 2025/26 und 2026/27; Validierung gegen ZKS 2022/23: 99.2 %. Nicht-Scan-Quote SL: 9.6 % → 11.5 % → (24/25 nicht abgleichbar) → 6.9 % → 5.7 %.
 - Befund: `Saison_2024-25_Transaktionen.csv` entspricht der bekannten Lieferung (+850 Scans), Lücke 2024/25 bleibt. Keine Änderung an Rechenkern-Modellen oder Run-4-Ergebnissen.
+- 13.11.: Public-Abo-No-Show-Näherung ergänzt (`abo_quote` im selben Skript, Teamnotiz Abschnitt «Ergänzung»): 27–31 % je Saison, eher Untergrenze.
 
 ## Gegenprobe Tabellenstand und Form – 11.11.2026
 - Neues Skript `Rechenkern/scripts/gegenprobe_tabellenstand.py`, Ergebnis `Baseline Analyse Rechnungen/gegenprobe_tabellenstand_2026-11-11/`. Nur FCSG Punkte/Spiel wirkt knapp auf die Anwesenheitsquote (+0.5 Punkte/Spiel ≈ +3 Pp., p = 0.035); kein Effekt auf Kundenfranken, Bons, Ø Bon; Gegnermerkmale ohne Zusatznutzen. D-051 (Vorschlag: Modell unverändert, im Spielrechner nur als Hinweis).
