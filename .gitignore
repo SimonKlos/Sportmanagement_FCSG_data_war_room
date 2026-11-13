@@ -41,6 +41,8 @@ Thumbs.db
 # Ausnahme: geteilte Analyse-Läufe (aggregierte echte Ergebnisse, privates Repo, D-024)
 !Baseline Analyse Rechnungen/run*_*/
 !Baseline Analyse Rechnungen/run*_*/**
+!Baseline Analyse Rechnungen/gegenprobe_*/
+!Baseline Analyse Rechnungen/gegenprobe_*/**
 
 # Ralfs Rechenkern (Baseline Analyse Rechnungen/Rechenkern/): öffentliche Zusatzdaten und belegte Korrekturen versionieren (D-028, D-031)
 !Baseline Analyse Rechnungen/Rechenkern/external/*.csv
@@ -54,3 +56,6 @@ Ergebnisse_Phase1/
 Ergebnisse_Ideen_Grundlage/
 # lokale Kopie des Übergabe-ZIPs
 FCSG_Uebergabe_*/
+
+# Spielrechner mit echten Werten (D-047) nie versionieren
+*Spielrechner*.html

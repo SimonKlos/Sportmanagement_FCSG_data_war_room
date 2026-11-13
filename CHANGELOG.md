@@ -1,5 +1,23 @@
 # Changelog
 
+## Barcode-Abgleich, Abo-No-Show und Folienleitfaden-Abgleich mit Deck «Endversion» – 12./13.11.2026
+- D-052 (Freigabe 12.11.): Skript `Rechenkern/scripts/barcode_abgleich.py` (nur Aggregate, Barcodes nur im Arbeitsspeicher), Lauf `Baseline Analyse Rechnungen/barcode_abgleich_2026-11-13/` (README + 4 Tabellen je Saison), Teamnotiz `team/2026-11-12_barcode_abgleich_noshow.md`. Eintritt je Einzelticket jetzt für 59 Spiele (2022/23–2026/27 ohne 2024/25); Validierung gegen ZKS 2022/23: 99.2 %. Nicht-Scan-Quote SL: 9.6 / 11.5 / 6.9 / 5.7 %.
+- Public-Abo-No-Show als Näherung (Bestand aus SOLL − Einzeltickets + Zweitmarkt, ohne Hospitality und weiterverkaufte Plätze; Besuche = Scans ohne Einzelticket-Treffer und ohne HH-Leser): 27.4 / 28.1 / 28.8 / 26.2 %, eher Untergrenze.
+- Befund: `Saison_2024-25_Transaktionen.csv` entspricht der bekannten Lieferung (+850 Scans), Lücke 2024/25 bleibt.
+- Folienleitfaden: Zuordnung Deck «Endversion» ↔ Leitfaden mit Änderungsliste je Deck-Seite; neue Folien 11a «So rechnen wir» und 15a «Wie die neun Felder entstanden» (inkl. Vorschlag Definition Evidenzlabel); Updates zu Diagnose (Lernfall nur mit bestätigtem Grund), Zwischenfazit, Rechenbausteine hierarchisch (KF = Bonsrate × Ø Bon), Feld 1 (vier Saisons), Feld 2 (Rest-Satz, Quelle Tarifgruppen), Feld 3 (Konsum offen, Grund), Feld 8, Datenagenda, Anhänge.
+- D-052b (13.11.): neues Skript `Rechenkern/scripts/noshow_segmente.py` – No-Show der Einzeltickets nach Segment für 2021/22 (ZKS) und 2022/23–2026/27 ohne 2024/25 (Barcode); Tabelle `noshow_segmente_je_saison.csv`. Gegenprobe deckt sich mit D-049d. Befund: Gratis-Tickets 21–36 % der Einzelticket-No-Shows; Sponsorentarif ab 2025/26 nicht bestimmbar (neues Ticketsystem). Folienleitfaden Deck S. 15 neu gefasst. `barcode_abgleich.py`: Lesefunktionen importierbar (`setze_pfade`), Ausgaben unverändert.
+- Tests wieder lauffähig: Zutrittsordner «Zutritt»/«Zutritte» in `config.py`, `pythonpath = ["src"]` in `pyproject.toml` (85/85 Fixture-Tests, 58/58 Rechenkern inkl. echte Daten).
+- Keine Änderung an Rechenkern-Modellen oder Run-4-Ergebnissen.
+
+## Gegenprobe Tabellenstand und Form – 11.11.2026
+- Neues Skript `Rechenkern/scripts/gegenprobe_tabellenstand.py`, Ergebnis `Baseline Analyse Rechnungen/gegenprobe_tabellenstand_2026-11-11/`. Nur FCSG Punkte/Spiel wirkt knapp auf die Anwesenheitsquote (+0.5 Punkte/Spiel ≈ +3 Pp., p = 0.035); kein Effekt auf Kundenfranken, Bons, Ø Bon; Gegnermerkmale ohne Zusatznutzen. D-051 (Vorschlag: Modell unverändert, im Spielrechner nur als Hinweis).
+
+## Spielrechner v2 – 07.11.2026
+- D-050: `Rechenkern/spielrechner/` neu aufgebaut (Generator `build.py`, Vorlage `vorlage.html`, Testdaten, README). Ablauf in vier Schritten: Spielplan importieren (CSV/Excel-Einfügen) → Kontext automatisch (Anstoss-Slot, Top-Gegner, Schulferien Stadt SG aus Kontexttabelle v5 bzw. Kanton SG via OpenHolidays, Wetter via Open-Meteo bzw. Normalwerte MeteoSchweiz) → Erwartung je Spiel mit Band und KF-Treibern → IST eintragen, Vergleich und Lernen des Saisonniveaus.
+- Speicherung im Browser plus Saisondatei (JSON), Export als CSV. Gestaltung nach Vorbild Impulse-Summit-Seite: FCSG-Logo (`spielrechner/assets/fcsg_logo.png`, eingebettet), Hero mit grosser Typografie und Faktenzeile, Saisonplan als Zeitleiste mit Farbkante je Anstoss-Slot, Hell/Dunkel, mobil.
+- Tests: `tests/test_spielrechner.py` (Aufbau, Kalender, Normalwerte gegen Stundenwerte) und `tests/spielrechner_logik.test.mjs` (Rechenlogik im Browsercode gegen die Python-Formel, Wetterfenster wie `extern.py`, Saisonlernen). Live-Abruf und Darstellung mit Testdaten in Chrome geprüft.
+- Die erzeugte Datei mit echten Werten bleibt ausserhalb des Repos (`.gitignore`).
+
 ## Folienleitfaden: Abo-Daten je Sektor und Call-Abgleich – 07.11.2026
 - Folie 18: «Leere Plätze = vor allem Abo-Plätze» mit der Zwei-Saisons-Näherung belegt; Tribünenwerte 2026/27 nur noch als Fussnote mit Vorbehalt (4 Spiele, indirekt geschätzt). Sprechnotiz zur Nachfrage (ausverkauft 35 von 78 Kontextspielen).
 - M3 Abo-Obergrenze als «Leuchtturm mit Datenvorbehalt» ohne Wirkungszahl im Hauptteil; Rechenweg im Anhang 15c als Illustration mit Gegenprobe. Datenagenda: Abo-Besuche je Sektor zuerst.
@@ -17,6 +35,11 @@
 - Deliverables auf Run 4: Generatoren `delivery/build_report.py` und `build_excel.py` lesen Run 4; modellabhängige Aussagen im Bericht (Kontexttabelle, Diagnose, T−7, Kiesplatz, Felder 5/7/8, Bons-Gegenrechnung) jetzt direkt aus den Run-Tabellen statt als fester Text. Excel-Rückleseprüfung bestanden (10'992 Zahlenzellen exakt, 39 Formeln, 9 Namen). Prüfprotokolle mit repo-relativen Pfaden (keine lokalen Pfade).
 - Lesehilfe (neuer Abschnitt Spielkontext/Anstosszeit), Excel- und Deliverables-README nachgeführt.
 - Folienleitfaden als Storyline v3 neu: Folie für Folie entlang der Team-Vorlage v2 mit Run-4-Zahlen und Sticker-Updates; neu Matrix Wirkung × Aufwand mit M1–M6 (inkl. Abo-Obergrenze mit offengelegtem Rechenweg), Research-Folie zu KF-Initiativen, Spielrechner in der Übergabe. Inhaltliche Verschiebungen durch Run 4: mobiler Verkauf −0.8 % statt −7.2 %, Erfolgsmuster Samstag entfällt, Diagnose 6/8 statt 12/6.
+
+## Spielrechner-Entwurf – 02.11.2026
+- D-047: `Rechenkern/spielrechner/` (Generator `build.py`, Vorlage `vorlage.html`, künstliche `testdaten.py`, README). Erzeugt eine einzelne, offline nutzbare HTML-Datei: Erwartung für ein angesetztes Spiel, Beobachtung vs. Erwartung im Rückblick, Saisonübersicht, Lesehilfe. Grundlage Run 4 (D-046).
+- Eingabe Wochentag + Anstosszeit statt Slot-Auswahl; Zuordnung über Zeitfenster wie im Rechenkern (robust gegen verschobene Anstosszeiten), Warnung bei seltenen Ansetzungen.
+- Test `tests/test_spielrechner.py` (Testdaten); fehlende VIP-Werte werden nicht als 0 gemittelt. `.gitignore`: erzeugte `*Spielrechner*.html` mit echten Werten werden nie versioniert.
 
 ## Run 4: Anstoss-Slot und Sensitivitäten – 02.11.2026
 - D-046: neues Modul `Rechenkern/fcsg/analysis/anstoss_slot.py` und Skript `Rechenkern/run4.py`; Kontextmodelle mit Anstoss-Slot (Referenz Samstag 17–19.59 Uhr) statt Werktag + Abendspiel, plus Sensitivitäten inkl. 2021/22 (Covid) und ohne 2023/24 (D-041). `models.py`/`run_all.py` unverändert; Run 3 bleibt Zahlenbasis.

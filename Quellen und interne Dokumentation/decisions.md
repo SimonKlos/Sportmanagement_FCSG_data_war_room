@@ -126,6 +126,34 @@ Frühere Hinweise, die technischen Rechenkern-/Notebook-Roots unverändert zu la
 
 **Nachtrag 07.11.2026 – Research-Teil:** Öffentliche Benchmarks zu M1–M4, Kundenfranken-Ideen und Upgrade per Gebot in `Deliverables/06_Research/Research_Benchmarks.md` (Agent-Recherche im Auftrag von Reto; Umfang mit Reto abgestimmt). Nur öffentliche Quellen mit Link und Datum, keine vertraulichen Praxisinfos; Zahlen anderer Clubs/Anbieter nur als offengelegte Annahme.
 
+## D-050 – Spielrechner v2: Spielplan-Import, automatischer Kontext, IST und Lernen (Reto, 07.11.2026)
+
+**Entschieden (Reto):** Der Spielrechner (D-047) wird ausgebaut. Der FCSG importiert den Spielplan; das Tool holt Wetter und Schulferien automatisch, schätzt Anwesende, KF, Bons, Ø Bon und Catering-Umsatz je Spiel und nimmt nach dem Spiel IST-Werte auf. Design im Stil der Impulse-Seite, in FCSG-Grün. Wetterquelle **Open-Meteo, austauschbar**; Speicherung **im Browser plus Saisondatei** (JSON). Quelle: Reto, Chat.
+
+**Lizenzvorbehalt:** Open-Meteo ist kostenlos nur für nicht-kommerzielle Nutzung (CC BY 4.0). Für den Betrieb beim FCSG braucht es ein Abo oder die Umstellung auf MeteoSchweiz Open Data; der Entscheid liegt beim FCSG. Im Tool ist der Abruf abschaltbar (dann Normalwerte und Handeingabe).
+
+**Arbeitsannahmen (Agent, offen bis Teambestätigung):**
+1. Schulferien primär **Stadt St. Gallen** aus der Spielkontext-Tabelle v5 (wie im Modell), danach Kanton SG über OpenHolidays mit Hinweis. Grund: Die Kantonsferien weichen ab (keine Sportferien, Beginn einen Tag später).
+2. Wetter für Spiele ohne Prognose als **Normalwert** (MeteoSchweiz St. Gallen 2018–2026, Monat × Stunde); Regen geht als Wahrscheinlichkeit in die Erwartung ein.
+3. **Saisonniveau lernt** aus IST-Einträgen: bei Saisons ohne bzw. mit weniger als 10 Modellspielen Startwert plus gedämpftes Mittel der Abweichungen (Gewicht = Modellspiele, mindestens 3). Die Koeffizienten der Kontextmerkmale bleiben fix bis zur nächsten Neuschätzung im Rechenkern.
+4. Parallelanlässe, TV und Tabellenstand bleiben Hinweise, weil sie nicht im Modell sind. Cup und Europacup nur grob (Modell aus Meisterschaft).
+
+## D-051 – Tabellenstand und Form nicht ins Kontextmodell (Agent-Vorschlag, 11.11.2026; offen bis Teambestätigung)
+
+**Grundlage:** Gegenprobe `Baseline Analyse Rechnungen/gegenprobe_tabellenstand_2026-11-11/` (Auftrag Reto, 11.11.2026). Zusätzlich zum Run-4-Kontext ist nur **FCSG Punkte/Spiel vor dem Spiel** für die **Anwesenheitsquote** knapp belastbar (+0.5 Punkte/Spiel ≈ +3 Pp., p = 0.035, LOSO +2.7 Pp.); für Kundenfranken, Bons und Ø Bon sowie für alle Gegnermerkmale nicht. Bei 24 Tests ist ein Zufallstreffer möglich.
+
+**Vorschlag:** Hauptmodell (D-048) unverändert. Spielrechner zeigt Tabellenrang, Punkte/Spiel und Form beider Teams als Hinweis (Live-Abruf, z.B. TheSportsDB; Testschlüssel, für den Betrieb beim FCSG Lizenz klären wie bei D-050). NICHT_IM_MODELL-Begründung in `models.py` bei der nächsten Codeänderung auf dieses Ergebnis aktualisieren.
+
+## D-052 – Barcode-Abgleich Einzeltickets × Zutritt (Freigabe Reto, 12.11.2026; Club-Bestätigung offen)
+
+**Entscheid:** Für die Nicht-Scan-Quote je Saison dürfen die pseudonymen Barcodes von Einzeltickets und Scans pro Spieltag im Arbeitsspeicher abgeglichen werden; ausgegeben werden nur Zählungen (Skript `Rechenkern/scripts/barcode_abgleich.py`, Teamnotiz `team/2026-11-12_barcode_abgleich_noshow.md`). Ausnahme zur Regel «kein Rohdaten-Join Ticket × Scan» (Methodennotiz Run 4); D-006/D-035 bleiben bis zur Club-Antwort offen.
+
+**Ergebnis:** Validierung gegen ZKS-Feld 2022/23: 99.2 % Übereinstimmung. Nicht gescannte Einzeltickets (SL, vollständige Spiele): 9.6 % (22/23), 11.5 % (23/24), 6.9 % (25/26), 5.7 % (26/27, 4 Spiele). 2024/25 nicht abgleichbar (Scans und Ticket-Export überschneiden sich nicht), 2021/22 ohne Scans. Lesart: Obergrenze für No-Show, keine Ursache für den Rückgang.
+
+**Nachtrag 13.11.2026 – Public-Abo-No-Show (Auftrag Reto):** Näherung über Bestand (Median SOLL − Einzeltickets + Zweitmarkt, ohne Kapazitäts-SOLL; minus Hospitality 6.6 %; minus je Spiel weiterverkaufte Zweitmarkt-Plätze) und Besuche (Scans ohne Einzelticket-Treffer, ohne HH-Leser; Gäste bereits in Einzeltickets). Ergebnis SL: 27.4 % / 28.1 % / 28.8 % / 26.2 % (22/23, 23/24, 25/26, 26/27); eher Untergrenze. Kein Direktverfahren über Abo-Barcodes für 26/27 (Entscheid Reto, 13.11.). Tabellen: `Baseline Analyse Rechnungen/barcode_abgleich_2026-11-13/`.
+
+**Nachtrag 13.11.2026 – D-052b No-Show nach Segment (Auftrag Reto):** D-049d über den Barcode-Abgleich auf 2023/24, 2025/26 und 2026/27 erweitert (Skript `Rechenkern/scripts/noshow_segmente.py`, Tabelle `barcode_abgleich_2026-11-13/noshow_segmente_je_saison.csv`; Gegenprobe 21/22–22/23 deckt sich mit D-049d). Gratis-Tickets: 16–25 % No-Show, 21–36 % aller Einzelticket-No-Shows (2025/26: 33 %). Inhouse ab 10 ohne Gästesektor 2025/26: 15.0 %, 11 % der No-Shows. Sponsorentarif ab 2025/26 nicht bestimmbar (neues Ticketsystem, andere Tarifnamen) – Rückfrage FCSG zu den Tarifen bleibt.
+
 ## Bestätigte Arbeitsregeln zu den Quellen-Widersprüchen (11.10.2026)
 
 Details: `Quellen und interne Dokumentation/briefing/10_synthese_widersprueche.md`.

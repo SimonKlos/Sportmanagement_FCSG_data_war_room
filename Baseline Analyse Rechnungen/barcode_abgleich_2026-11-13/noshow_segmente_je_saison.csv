@@ -1,0 +1,51 @@
+saison,spiele,eintritt_quelle,segment,tickets,noshows,noshow_quote,anteil_an_allen_noshows
+2021/22,18,ZKS,Alle Einzeltickets,97710.0,8964.0,0.092,1.0
+2021/22,18,ZKS,"Online-Shop, 2–4 Tickets",39831.0,1621.0,0.041,0.181
+2021/22,18,ZKS,Inhouse ab 10 Tickets,16192.0,4036.0,0.249,0.45
+2021/22,18,ZKS,– davon Gästesektor B4,9376.0,2101.0,0.224,0.234
+2021/22,18,ZKS,– davon ohne Gästesektor,6816.0,1935.0,0.284,0.216
+2021/22,18,ZKS,"   – ohne Gästesektor, gratis",5463.0,1410.0,0.258,0.157
+2021/22,18,ZKS,"   – ohne Gästesektor, bezahlt",1353.0,525.0,0.388,0.059
+2021/22,18,ZKS,"   – ohne Gästesektor, Tarif Sponsor/Dritte",3372.0,719.0,0.213,0.08
+2021/22,18,ZKS,Gratis-Tickets insgesamt (Preis 0),19409.0,3193.0,0.165,0.356
+2021/22,18,ZKS,Übrige Einzeltickets (ohne Inhouse ab 10),81518.0,4928.0,0.06,0.55
+2022/23,16,Barcode,Alle Einzeltickets,111605.0,10519.0,0.094,1.0
+2022/23,16,Barcode,"Online-Shop, 2–4 Tickets",49818.0,2081.0,0.042,0.198
+2022/23,16,Barcode,Inhouse ab 10 Tickets,16326.0,4749.0,0.291,0.451
+2022/23,16,Barcode,– davon Gästesektor B4,12035.0,4068.0,0.338,0.387
+2022/23,16,Barcode,– davon ohne Gästesektor,4291.0,681.0,0.159,0.065
+2022/23,16,Barcode,"   – ohne Gästesektor, gratis",3210.0,517.0,0.161,0.049
+2022/23,16,Barcode,"   – ohne Gästesektor, bezahlt",1081.0,164.0,0.152,0.016
+2022/23,16,Barcode,"   – ohne Gästesektor, Tarif Sponsor/Dritte",603.0,79.0,0.131,0.008
+2022/23,16,Barcode,Gratis-Tickets insgesamt (Preis 0),12323.0,2217.0,0.18,0.211
+2022/23,16,Barcode,Übrige Einzeltickets (ohne Inhouse ab 10),95279.0,5770.0,0.061,0.549
+2023/24,17,Barcode,Alle Einzeltickets,106912.0,12327.0,0.115,1.0
+2023/24,17,Barcode,"Online-Shop, 2–4 Tickets",49329.0,2833.0,0.057,0.23
+2023/24,17,Barcode,Inhouse ab 10 Tickets,16864.0,5453.0,0.323,0.442
+2023/24,17,Barcode,– davon Gästesektor B4,11528.0,4077.0,0.354,0.331
+2023/24,17,Barcode,– davon ohne Gästesektor,5336.0,1376.0,0.258,0.112
+2023/24,17,Barcode,"   – ohne Gästesektor, gratis",3933.0,1233.0,0.314,0.1
+2023/24,17,Barcode,"   – ohne Gästesektor, bezahlt",1403.0,143.0,0.102,0.012
+2023/24,17,Barcode,"   – ohne Gästesektor, Tarif Sponsor/Dritte",1557.0,729.0,0.468,0.059
+2023/24,17,Barcode,Gratis-Tickets insgesamt (Preis 0),12900.0,3169.0,0.246,0.257
+2023/24,17,Barcode,Übrige Einzeltickets (ohne Inhouse ab 10),90048.0,6874.0,0.076,0.558
+2025/26,19,Barcode,Alle Einzeltickets,126972.0,8702.0,0.069,1.0
+2025/26,19,Barcode,"Online-Shop, 2–4 Tickets",61055.0,3109.0,0.051,0.357
+2025/26,19,Barcode,Inhouse ab 10 Tickets,20110.0,1743.0,0.087,0.2
+2025/26,19,Barcode,– davon Gästesektor B4,13901.0,812.0,0.058,0.093
+2025/26,19,Barcode,– davon ohne Gästesektor,6209.0,931.0,0.15,0.107
+2025/26,19,Barcode,"   – ohne Gästesektor, gratis",3757.0,743.0,0.198,0.085
+2025/26,19,Barcode,"   – ohne Gästesektor, bezahlt",2452.0,188.0,0.077,0.022
+2025/26,19,Barcode,"   – ohne Gästesektor, Tarif Sponsor/Dritte",,,,
+2025/26,19,Barcode,Gratis-Tickets insgesamt (Preis 0),14646.0,2843.0,0.194,0.327
+2025/26,19,Barcode,Übrige Einzeltickets (ohne Inhouse ab 10),106862.0,6959.0,0.065,0.8
+2026/27,7,Barcode,Alle Einzeltickets,66949.0,3324.0,0.05,1.0
+2026/27,7,Barcode,"Online-Shop, 2–4 Tickets",33334.0,980.0,0.029,0.295
+2026/27,7,Barcode,Inhouse ab 10 Tickets,6971.0,869.0,0.125,0.261
+2026/27,7,Barcode,– davon Gästesektor B4,4248.0,397.0,0.093,0.119
+2026/27,7,Barcode,– davon ohne Gästesektor,2723.0,472.0,0.173,0.142
+2026/27,7,Barcode,"   – ohne Gästesektor, gratis",1317.0,357.0,0.271,0.107
+2026/27,7,Barcode,"   – ohne Gästesektor, bezahlt",1406.0,115.0,0.082,0.035
+2026/27,7,Barcode,"   – ohne Gästesektor, Tarif Sponsor/Dritte",,,,
+2026/27,7,Barcode,Gratis-Tickets insgesamt (Preis 0),4615.0,1113.0,0.241,0.335
+2026/27,7,Barcode,Übrige Einzeltickets (ohne Inhouse ab 10),59978.0,2455.0,0.041,0.739
