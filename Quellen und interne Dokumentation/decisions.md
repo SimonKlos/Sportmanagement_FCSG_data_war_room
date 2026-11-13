@@ -152,6 +152,8 @@ Frühere Hinweise, die technischen Rechenkern-/Notebook-Roots unverändert zu la
 
 **Nachtrag 13.11.2026 – Public-Abo-No-Show (Auftrag Reto):** Näherung über Bestand (Median SOLL − Einzeltickets + Zweitmarkt, ohne Kapazitäts-SOLL; minus Hospitality 6.6 %; minus je Spiel weiterverkaufte Zweitmarkt-Plätze) und Besuche (Scans ohne Einzelticket-Treffer, ohne HH-Leser; Gäste bereits in Einzeltickets). Ergebnis SL: 27.4 % / 28.1 % / 28.8 % / 26.2 % (22/23, 23/24, 25/26, 26/27); eher Untergrenze. Kein Direktverfahren über Abo-Barcodes für 26/27 (Entscheid Reto, 13.11.). Tabellen: `Baseline Analyse Rechnungen/barcode_abgleich_2026-11-13/`.
 
+**Nachtrag 13.11.2026 – D-052b No-Show nach Segment (Auftrag Reto):** D-049d über den Barcode-Abgleich auf 2023/24, 2025/26 und 2026/27 erweitert (Skript `Rechenkern/scripts/noshow_segmente.py`, Tabelle `barcode_abgleich_2026-11-13/noshow_segmente_je_saison.csv`; Gegenprobe 21/22–22/23 deckt sich mit D-049d). Gratis-Tickets: 16–25 % No-Show, 21–36 % aller Einzelticket-No-Shows (2025/26: 33 %). Inhouse ab 10 ohne Gästesektor 2025/26: 15.0 %, 11 % der No-Shows. Sponsorentarif ab 2025/26 nicht bestimmbar (neues Ticketsystem, andere Tarifnamen) – Rückfrage FCSG zu den Tarifen bleibt.
+
 ## Bestätigte Arbeitsregeln zu den Quellen-Widersprüchen (11.10.2026)
 
 Details: `Quellen und interne Dokumentation/briefing/10_synthese_widersprueche.md`.

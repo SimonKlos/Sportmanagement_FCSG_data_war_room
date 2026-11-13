@@ -3,6 +3,7 @@
 **Fragen:**
 1. Welcher Anteil der Einzeltickets wird pro Saison nicht gescannt?
 2. Wie hoch ist die No-Show der Public-Abos?
+3. In welchen Segmenten bleiben Einzeltickets leer?
 
 Bisher gab es Eintritt je Ticket nur für 2021/22–2022/23 aus dem ZKS-Feld.
 
@@ -55,6 +56,37 @@ Abgleichbar sind 59 von 108 Spielen (`abdeckung_je_saison.csv`). Nicht abgleichb
 | 2026/27 | 4 | ≈ 12'170 | 8'570 | **26.2 %** | 22–30 % | 29.0 % | 22.9 % |
 
 Datei: `abo_noshow_naeherung_je_saison.csv`.
+
+## Ergebnis 3: No-Show der Einzeltickets nach Segment (D-052b)
+
+**Skript:** `Rechenkern/scripts/noshow_segmente.py`. Es erweitert die Auswertung D-049d (vorher nur 2021/22–2022/23) auf alle Saisons mit Eintritt pro Ticket. Gezählt sind alle Pflichtspiele.
+
+**Eintritt pro Ticket:**
+- 2021/22: aus dem ZKS-Feld.
+- Ab 2022/23: aus dem Barcode-Abgleich. 2024/25 entfällt.
+
+**Ausgabe:** `noshow_segmente_je_saison.csv`. Gruppen unter 10 Tickets sind ausgeblendet.
+
+**Gegenprobe:** 2021/22 und 2022/23 zusammen ergeben für Grossbestellungen ohne Gäste 23.5 % Quote und 13.4 % Anteil an allen No-Shows, für den Sponsorentarif 20.1 % und 4.1 %. D-049d hatte 23.8 % / 13.1 % und 20.2 % / 3.9 %.
+
+**No-Show-Quote** (Anteil an allen No-Shows der Einzeltickets in Klammern):
+
+| Segment | 2021/22 | 2022/23 | 2023/24 | 2025/26 | 2026/27 (7 Spiele) |
+|---|---:|---:|---:|---:|---:|
+| Alle Einzeltickets | 9.2 % | 9.4 % | 11.5 % | 6.9 % | 5.0 % |
+| Online-Shop, 2–4 Tickets | 4.1 % (18 %) | 4.2 % (20 %) | 5.7 % (23 %) | 5.1 % (36 %) | 2.9 % (30 %) |
+| Inhouse ab 10, Gästesektor B4 | 22.4 % (23 %) | 33.8 % (39 %) | 35.4 % (33 %) | 5.8 % (9 %) | 9.3 % (12 %) |
+| Inhouse ab 10, ohne Gästesektor | 28.4 % (22 %) | 15.9 % (7 %) | 25.8 % (11 %) | 15.0 % (11 %) | 17.3 % (14 %) |
+| – davon gratis | 25.8 % (16 %) | 16.1 % (5 %) | 31.4 % (10 %) | 19.8 % (9 %) | 27.1 % (11 %) |
+| – davon Tarif Sponsor/Dritte | 21.3 % (8 %) | 13.1 % (1 %) | 46.8 % (6 %) | n. v. | n. v. |
+| Gratis-Tickets insgesamt (Preis 0) | 16.5 % (36 %) | 18.0 % (21 %) | 24.6 % (26 %) | 19.4 % (33 %) | 24.1 % (34 %) |
+
+**Lesart:**
+- **Gratis-Tickets bleiben am häufigsten leer.** 16–25 % von ihnen werden nicht genutzt, und sie machen in jeder Saison 21–36 % aller No-Shows der Einzeltickets aus. 2025/26 ist es ein Drittel.
+- **Grossbestellungen ausserhalb des Gästesektors:** 15–28 % bleiben leer. Sie machen 7–22 % der No-Shows aus, 2025/26 sind es 11 %. Innerhalb davon sind die Gratis-Tickets der grössere Teil.
+- **Sponsorentarif:** Bis 2023/24 sind es 1–8 % der No-Shows, stark schwankend. **Ab 2025/26 nicht bestimmbar:** Mit dem neuen Ticketsystem gibt es rund 320 statt rund 80 Tarifnamen, und «Sponsor» kommt kaum noch vor.
+- **Gästesektor:** 2022/23–2023/24 ein Drittel der No-Shows, ab 2025/26 noch 9–12 %. Das ist kein Hebel für den Club.
+- Die Segmente überschneiden sich, zum Beispiel «gratis» und «Inhouse ab 10». **Anteile nicht addieren.** Alles sind beschriebene Unterschiede, keine Ursachen.
 
 ## Lesart und Grenzen
 

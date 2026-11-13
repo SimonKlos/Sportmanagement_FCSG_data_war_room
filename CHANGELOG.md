@@ -5,6 +5,8 @@
 - Public-Abo-No-Show als Näherung (Bestand aus SOLL − Einzeltickets + Zweitmarkt, ohne Hospitality und weiterverkaufte Plätze; Besuche = Scans ohne Einzelticket-Treffer und ohne HH-Leser): 27.4 / 28.1 / 28.8 / 26.2 %, eher Untergrenze.
 - Befund: `Saison_2024-25_Transaktionen.csv` entspricht der bekannten Lieferung (+850 Scans), Lücke 2024/25 bleibt.
 - Folienleitfaden: Zuordnung Deck «Endversion» ↔ Leitfaden mit Änderungsliste je Deck-Seite; neue Folien 11a «So rechnen wir» und 15a «Wie die neun Felder entstanden» (inkl. Vorschlag Definition Evidenzlabel); Updates zu Diagnose (Lernfall nur mit bestätigtem Grund), Zwischenfazit, Rechenbausteine hierarchisch (KF = Bonsrate × Ø Bon), Feld 1 (vier Saisons), Feld 2 (Rest-Satz, Quelle Tarifgruppen), Feld 3 (Konsum offen, Grund), Feld 8, Datenagenda, Anhänge.
+- D-052b (13.11.): neues Skript `Rechenkern/scripts/noshow_segmente.py` – No-Show der Einzeltickets nach Segment für 2021/22 (ZKS) und 2022/23–2026/27 ohne 2024/25 (Barcode); Tabelle `noshow_segmente_je_saison.csv`. Gegenprobe deckt sich mit D-049d. Befund: Gratis-Tickets 21–36 % der Einzelticket-No-Shows; Sponsorentarif ab 2025/26 nicht bestimmbar (neues Ticketsystem). Folienleitfaden Deck S. 15 neu gefasst. `barcode_abgleich.py`: Lesefunktionen importierbar (`setze_pfade`), Ausgaben unverändert.
+- Tests wieder lauffähig: Zutrittsordner «Zutritt»/«Zutritte» in `config.py`, `pythonpath = ["src"]` in `pyproject.toml` (85/85 Fixture-Tests, 58/58 Rechenkern inkl. echte Daten).
 - Keine Änderung an Rechenkern-Modellen oder Run-4-Ergebnissen.
 
 ## Gegenprobe Tabellenstand und Form – 11.11.2026

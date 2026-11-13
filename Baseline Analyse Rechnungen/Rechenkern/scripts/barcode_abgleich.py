@@ -13,17 +13,29 @@ Zusätzlich: Public-Abo-No-Show-Näherung je Saison (Funktion abo_quote).
 Lesart: «nicht gescannt» ist eine Obergrenze für No-Show (Barcode-Neuausstellung, Zweitmarkt,
 manueller Einlass möglich) – siehe Teamnotiz 2026-11-12_barcode_abgleich_noshow.md.
 
-    python scripts/barcode_abgleich.py <Ordner Rohdaten> <mart_match.csv> [<Ausgabeordner>]\n\nAusgabe: nur Tabellen je Saison (keine IDs, keine Spielzeilen mit Ticketdaten).
+    python scripts/barcode_abgleich.py <Ordner Rohdaten> <mart_match.csv> [<Ausgabeordner>]
+
+Ausgabe: nur Tabellen je Saison (keine IDs, keine Spielzeilen mit Ticketdaten).
+Die Lesefunktionen sind importierbar (setze_pfade, lade_scans, lade_einzeltickets), z.B. für noshow_segmente.py.
 """
 import sys
 from pathlib import Path
 
 import pandas as pd
 
-DATEN, MART = Path(sys.argv[1]), Path(sys.argv[2])
-OUT = Path(sys.argv[3]) if len(sys.argv) > 3 else None  # Ordner
-ZUTRITT = next(p for p in (DATEN / "Zutritte", DATEN / "Zutritt") if p.exists())
-TICKETING = DATEN / "Ticketing"
+DATEN = MART = OUT = ZUTRITT = TICKETING = None  # gesetzt über setze_pfade() bzw. Kommandozeile
+
+
+def setze_pfade(daten, mart=None, out=None) -> None:
+    """Rohdatenordner (mit Ticketing/ und Zutritt/ bzw. Zutritte/), Spieltabelle und Ausgabeordner setzen."""
+    global DATEN, MART, OUT, ZUTRITT, TICKETING
+    DATEN = Path(daten)
+    MART = Path(mart) if mart else None
+    OUT = Path(out) if out else None
+    ZUTRITT = next(p for p in (DATEN / "Zutritte", DATEN / "Zutritt") if p.exists())
+    TICKETING = DATEN / "Ticketing"
+
+
 MIN_SCAN_IST = 0.95  # Spiel gilt als vollständig gescannt, wenn eindeutige Scans ≥ 95 % IST
 LEER = ["", "nan", "None"]
 
@@ -178,4 +190,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    setze_pfade(sys.argv[1], sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else None)
     main()

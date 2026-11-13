@@ -38,7 +38,7 @@ Gegenprobe: 2022/23 ≈ 9.4 % passt zur D-049d-Basis (20'345 / 215'123 = 9.5 %, 
 - **«Nicht gescannt» ist eine Obergrenze für No-Show,** kein Nachweis: Neuausstellung eines Tickets (z.B. Zweitmarkt), manueller Einlass oder Leser ohne Datenexport sind möglich.
 - Ab 2025/26 enthalten die Ticket-CSVs nur aktuelle Tickets (keine Stornos) – Definition leicht anders als die Exporte.
 - Der Rückgang von rund 10–11 % auf rund 6–7 % ist ein **beschriebener Unterschied, keine Ursache.** Mögliche Erklärungen (Ticketart, Tarifmix, Gratis-/Promo-Anteil, Zweitmarkt) sind nicht geprüft.
-- Aufschlüsselung nach Tarif/Kanal/Bestellgrösse (wie D-049d) für 2025/26 wäre technisch möglich, ist aber nicht gemacht.
+- Aufschlüsselung nach Tarif/Kanal/Bestellgrösse (wie D-049d): **gemacht am 13.11.2026 (D-052b)**, siehe `Baseline Analyse Rechnungen/barcode_abgleich_2026-11-13/README.md`, Ergebnis 3.
 
 ## Ergänzung 13.11.2026: Public-Abo-No-Show (Näherung)
 

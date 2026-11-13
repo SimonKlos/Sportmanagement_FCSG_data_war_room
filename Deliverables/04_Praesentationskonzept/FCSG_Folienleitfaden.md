@@ -63,7 +63,8 @@ Das Team-Deck «FCSG_Abschlusspraesentation_Endversion» (24 Folien + 16 Anhang)
 | 12 Chancenportfolio | Folie 16 | alle 9 Felder sind auf S. 14–18 behandelt; optional Folienverweise; Label-Legende |
 | 13 Bewertungslogik | Folie 17 | Rechenbausteine hierarchisch (KF = Bonsrate × Ø Bon) |
 | 14 Feld 1 | Folie 18 | Abo- vs. Einzel-Grafik über **vier Saisons** (B); Fussnote Gäste/Hospitality korrigieren |
-| 15 Feld 2 | Folie 19 | «Rest»-Satz korrigieren, Hinweis nur Einzeltickets, Quelle Tarifgruppen, Verlauf Nicht-Scan-Quote |
+| 15 Feld 2 | Folie 19 | **Neufassung mit 2025/26** (D-052b): Gratis-Tickets = 1/3 der No-Shows, Grossbestellungen ohne Gäste 11 %, Sponsor nur bis 2023/24; dazu Textkorrekturen |
+| 36 Anhang 10b (M2) | Anhang 15 | Befund auf 2025/26 umstellen |
 | 16 Felder 3 und 4 | Folie 20 | «Konsum offen» mit Grund (Kassendaten nur fürs ganze Stadion) |
 | 18 Felder 6, 8, 9 | Folie 23 | Feld 8 neu formulieren (Samstag-Vorteil ist in der Erwartung) |
 | 19, 21 Matrix/Massnahmen | Folien 24, 25 | M3-Begründung: Abo-No-Show über vier Saisons belegt, je Sektor offen |
@@ -385,6 +386,28 @@ Fussnote: «KF = Bonsrate × Ø Bon. Je Massnahme genau eine Zeile verwenden.» 
 - **Hinweis ergänzen:** «Nur Einzeltickets, Abos nicht erfasst. Die übrigen rund 54 % der Einzelticket-No-Shows sind normale kleine Käufe.»
 - **Quellenzeile ergänzen:** «Tarifgruppen über Stichworte im Tarifnamen, Näherung; Bestätigung FCSG offen».
 - **Neu als Fussnote (B):** «Nicht gescannte Einzeltickets je Saison: rund 10 % (2022/23–2023/24) → rund 6 % (ab 2025/26).» Der Unterschied ist beschrieben, die Ursache nicht geprüft.
+
+**Update 13.11.2026, Neufassung Deck S. 15 mit aktuellen Saisons (D-052b, B `noshow_segmente_je_saison.csv`).** Das ersetzt die Basis 2021/22–2022/23. Die obigen Textkorrekturen gelten sinngemäss weiter.
+
+- **Titel:** «Feld 2: Gratis-Tickets und Grossbestellungen bleiben am häufigsten leer – Sponsoren sind ein kleiner Teil»
+- **Balken 2025/26** (19 Pflichtspiele, Eintritt über Barcode-Abgleich), No-Show-Quote:
+
+  | Segment | No-Show |
+  |---|---:|
+  | Online-Shop, 2–4 Tickets | 5.1 % |
+  | Alle Einzeltickets | 6.9 % |
+  | Inhouse ab 10 Tickets, ohne Gästesektor | 15.0 % |
+  | Gratis-Tickets (Preis 0) | 19.4 % |
+
+- **Kachel 1:** «**1/3** der Einzelticket-No-Shows sind Gratis-Tickets (2025/26; je Saison 21–36 %)»
+- **Kachel 2:** «**11 %** der Einzelticket-No-Shows liegen in Grossbestellungen des Clubs ohne Gästesektor (2025/26; 2021/22–2026/27: 7–22 %)»
+- **Einordnung (rechts):**
+  - «Die Hypothese ‹Sponsoren sind der grosse Teil› ist geprüft: Bis 2023/24 betrifft der Sponsorentarif 1–8 % der No-Shows. Ab 2025/26 nicht mehr bestimmbar, weil das neue Ticketsystem andere Tarifnamen hat (Rückfrage FCSG).»
+  - «Pilotidee: Gratis- und Kontingenttickets bis T−3 bestätigen lassen, Nutzung je Kontingent zurückmelden, Rest zurück in den Verkauf.»
+  - Satz zum Sponsoringbudget und Mainz-Benchmark bleiben.
+- **Fussnote:** «Nur Einzeltickets, ohne Abos. Eintritt über den Abgleich von Ticket-Barcode und Drehkreuz-Scan (2022/23 gegen ZKS validiert: 99.2 %). 2024/25 nicht abgleichbar. Segmente überschneiden sich (gratis/Inhouse), Anteile nicht addieren. Tarifgruppen über Stichworte im Tarifnamen.»
+- **Sprechnotiz Gästesektor:** 2022/23–2023/24 rund ein Drittel der No-Shows, ab 2025/26 noch rund 10 %. Kein Clubhebel, deshalb nicht im Balken.
+- **Steckbrief M2 (Deck S. 36):** Befund auf die Zahlen 2025/26 umstellen (Inhouse ab 10 ohne Gäste 6'209 Tickets, 15.0 %, 11 % der No-Shows; Gratis-Tickets 33 %). Den Sponsorentarif nur bis 2023/24 nennen.
 
 ## Folie 20 (S. 18) – Feld 3: Zeitfenster vor dem Anpfiff
 
