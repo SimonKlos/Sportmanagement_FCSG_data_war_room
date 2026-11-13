@@ -58,7 +58,8 @@ def setze_datenpfade(daten: str | Path | None = None, kontext: str | Path | None
 
     TICKETING_DIR = DATA_DIR / "Ticketing"
     CATERING_DIR = DATA_DIR / "Catering"
-    ZUTRITT_DIR = DATA_DIR / "Zutritt"
+    # Lieferordner heisst je nach Ablage «Zutritt» oder «Zutritte» (Lieferung 01.10.2026)
+    ZUTRITT_DIR = next((DATA_DIR / n for n in ("Zutritt", "Zutritte") if (DATA_DIR / n).exists()), DATA_DIR / "Zutritt")
 
     HISTORIE_FILE = TICKETING_DIR / "Ticketing-Zuschauerzahlen-Historie.xlsx"
     CATERING_FILE = CATERING_DIR / "Umsatz Public Catering ab Saison 18-19_Neu.xlsx"
