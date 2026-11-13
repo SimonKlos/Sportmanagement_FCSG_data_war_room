@@ -42,24 +42,28 @@ Gegenprobe: 2022/23 ≈ 9.4 % passt zur D-049d-Basis (20'345 / 215'123 = 9.5 %, 
 
 ## Ergänzung 13.11.2026: Public-Abo-No-Show (Näherung)
 
-**Rechnung je Spiel** (SL, vollständig gescannte Spiele):
-- **Abo-Bestand je Saison** = Median von SOLL − Einzeltickets + Zweitmarkt über Spiele ohne Kapazitäts-SOLL. Gegenprobe 2026/27: rund 13'000 ≈ Abo-Snapshot 13'052.
-- **Public-Bestand** = Bestand − Hospitality-Anteil 6.6 % (859 von 13'052 Abos im Snapshot 2026/27, für frühere Saisons übernommen).
-- **Public-Abo-Besuche** = Scans ohne Einzelticket-Treffer, ohne Hospitality-Leser (HH).
-- **Gäste:** Kein zusätzlicher Abzug nötig. Gäste kommen über Einzeltickets; Scans am Gästesektor B4 ohne Einzelticket-Treffer: total 151 über alle Spiele. Die gescannten Einzeltickets am B4 entsprechen ungefähr «IST Gäste» der Historie.
+Tabellen und Methode: `Baseline Analyse Rechnungen/barcode_abgleich_2026-11-13/README.md`.
 
-| Saison | Spiele | Bestand-Spiele | Public-Abo-Bestand | Abo-Besuche (Median) | Abo-No-Show | Spanne je Spiel | Variante inkl. Hospitality |
-|---|---|---|---|---|---|---|---|
-| 2022/23 | 15 | 9 | ≈ 10'150 | 7'380 | **27 %** | 17–40 % | 23 % |
-| 2023/24 | 17 | 11 | ≈ 10'630 | 7'800 | **28 %** | 18–46 % | 24 % |
-| 2025/26 | 18 | 10 | ≈ 11'180 | 7'890 | **31 %** | 21–41 % | 26 % |
-| 2026/27 | 4 | 2 | ≈ 12'170 | 8'570 | **29 %** | 24–33 % | 23 % |
+**Rechnung je Spiel** (SL, vollständig gescannte Spiele):
+- **Abo-Bestand je Saison** = Median von SOLL − Einzeltickets + Zweitmarkt (Umkehrung der SOLL-Formel «Einzel + Abo − Zweitmarkt») über Spiele ohne Kapazitäts-SOLL. Gegenprobe 2026/27: rund 13'000 ≈ Abo-Snapshot 13'052.
+- **Public-Bestand** = Bestand − Hospitality-Anteil 6.6 % (859 von 13'052, Snapshot 2026/27, für frühere Saisons übernommen) − je Spiel die über den Zweitmarkt weiterverkauften Plätze (deren Besucher kommen mit neuem Ticket).
+- **Public-Abo-Besuche** = Scans ohne Einzelticket-Treffer, ohne Hospitality-Leser (HH).
+- **Gäste:** kein Abzug nötig – Gäste kommen über Einzeltickets; gescannte Einzeltickets am B4 ≈ «IST Gäste» der Historie.
+
+| Saison | Spiele | Public-Abo-Bestand | Abo-Besuche (Median) | **Abo-No-Show** | Spanne je Spiel |
+|---|---|---|---|---|---|
+| 2022/23 | 15 | ≈ 10'150 | 7'380 | **27.4 %** | 17–40 % |
+| 2023/24 | 17 | ≈ 10'630 | 7'800 | **28.1 %** | 18–46 % |
+| 2025/26 | 18 | ≈ 11'180 | 7'890 | **28.8 %** | 19–40 % |
+| 2026/27 | 4 | ≈ 12'170 | 8'570 | **26.2 %** | 22–30 % |
+
+Varianten: ohne Zweitmarkt-Abzug 27.4 / 28.1 / 30.8 / 29.0 %; inkl. Hospitality 22.9 / 23.7 / 25.5 / 22.9 %.
 
 **Lesart:**
-- Rund **jedes vierte bis dritte Public-Abo bleibt pro Spiel ungenutzt.** Das ist etwa das Drei- bis Fünffache der Einzelticket-Quote (6–12 %).
-- Die Quote ist **eher eine Untergrenze:** Im Rest stecken auch Freikarten, Mitarbeitende, Medien und Kontingente, die nicht als Einzeltickets laufen.
-- **Grösste Unsicherheit ist der Bestand:** Er stammt aus der SOLL-Herleitung (9–11 Spiele je Saison), der Hospitality-Anteil vor 2026/27 ist angenommen.
-- Abo-Quote und Einzel-Nicht-Scan-Quote hängen je Spiel nur mässig zusammen (r = 0.41). Beschreibung, keine Ursache.
+- Rund **jedes vierte Public-Abo bleibt pro Spiel ungenutzt** – etwa das Drei- bis Fünffache der Einzelticket-Quote (6–12 %).
+- Eher **Untergrenze** (Rest enthält Freikarten/Mitarbeitende/Medien).
+- Grösste Unsicherheit: Bestand (9–11 Spiele je Saison, Hospitality-Anteil vor 2026/27 angenommen, Zweitmarkt vor 2025/26 unbekannt).
+- Beschreibung, keine Ursache.
 
 ## Offene Rückfragen an den Club (neutral)
 1. Ist der technische Abgleich über pseudonyme Barcodes für die Analyse zulässig (D-006/D-035)?

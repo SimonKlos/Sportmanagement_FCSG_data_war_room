@@ -1,6 +1,6 @@
 # FCSG «Untapped Business» – Folienleitfaden zur Abschlusspräsentation (Storyline v3)
 
-**Arbeitsstatus:** Folienkonzept für die vom Team erstellte Präsentation (PowerPoint oder Folienwerkzeug). Stand **07.11.2026** (Nachtrag Abo-Daten je Sektor und Call-Abgleich), Zahlenbasis **Run 4** (D-048). Kein fertiges Deck und keine formelle Baseline-Freigabe. Ausschliesslich Markdown; keine PPT/PPTX-Produktion durch den Agenten (D-042).
+**Arbeitsstatus:** Folienkonzept für die vom Team erstellte Präsentation (PowerPoint oder Folienwerkzeug). Stand **13.11.2026** (Abgleich mit Deck «Endversion», Barcode-Abgleich D-052, zwei neue Folien), Zahlenbasis **Run 4** (D-048) plus Barcode-Abgleich (B). Kein fertiges Deck und keine formelle Baseline-Freigabe. Ausschliesslich Markdown; keine PPT/PPTX-Produktion durch den Agenten (D-042).
 
 **Aufbau:** Der Leitfaden folgt Folie für Folie der Team-Vorlage «Abschlusspräsentation v2 (Storyline mit Stickern)», 47 Folien. Je Folie stehen Aussage, Inhalt mit Run-4-Zahlen, Visual, Quellen und unter **Sticker-Update** die Änderung gegenüber dem grünen Sticker der Vorlage. Neu sind die Entscheide aus dem Team-Call vom 03.11.2026 (D-049): Massnahmen auf einer Matrix Wirkung × Aufwand, rund 6 Massnahmen inkl. Abo-Obergrenze, KF-Initiativen als separater Research-Teil, Hauptteil top-line und Details im Anhang.
 
@@ -22,7 +22,8 @@ Alle Pfade beziehen sich auf den Hauptordner des privaten Projekt-Repositories.
 | R | `Baseline Analyse Rechnungen/run4_komplett_2026-11-05/README.md` (Lauf, Prüfungen, Gegenproben zur Modellgüte) |
 | V | `Baseline Analyse Rechnungen/run4_anstoss-slot_2026-11-02/Tabellen/` (Sensitivitäten inkl. ohne 2023/24, CHF-Baustein je Slot) |
 | K | `Quellen und interne Dokumentation/team/2026-11-01_catering_klaerung_und_baseline_folgen.md` |
-| E | `Quellen und interne Dokumentation/decisions.md` (D-045 bis D-049) |
+| E | `Quellen und interne Dokumentation/decisions.md` (D-045 bis D-052) |
+| B | `Baseline Analyse Rechnungen/barcode_abgleich_2026-11-13/` (Nicht-Scan-Quote Einzeltickets und Public-Abo-No-Show je Saison, D-052) |
 
 **Quellenhierarchie:** M/P/T liefern Baseline- und Modellzahlen, I/W Chancenanalyse und Rechenbausteine, V die Sensitivitäten. K und E ergänzen fachliche Einschränkungen und Entscheide. Run 3 (14.10.2026) ist Archiv und keine zweite Zahlenbasis. Nur Zahlen aus Run 4 verwenden.
 
@@ -46,6 +47,28 @@ Alle Pfade beziehen sich auf den Hauptordner des privaten Projekt-Repositories.
 5. **Feld 8 (Erfolgsmuster):** Die Häufung an Samstag 18 Uhr war die Anstosszeit selbst. Jetzt sind es noch 2 von 6 Spitzenspielen an Samstagen.
 6. **Massnahmenteil:** «Shortlist drei Massnahmen» wird zu **Matrix Wirkung × Aufwand mit rund 6 Massnahmen**. Die Abo-Obergrenze ist neu dabei, Steckbriefe kommen in den Anhang, KF-Initiativen in einen eigenen Research-Teil.
 7. **Übergabe:** Der Spielrechner (Entwurf, D-047) kommt als Werkzeug für den FCSG dazu.
+
+### Update 13.11.2026: Abgleich mit dem Deck «Endversion»
+
+Das Team-Deck «FCSG_Abschlusspraesentation_Endversion» (24 Folien + 16 Anhang) nummeriert anders als dieser Leitfaden. Zuordnung und Änderungen je **Deck-Seite** (Details im jeweiligen Leitfaden-Abschnitt, markiert mit «Update 13.11.2026»):
+
+| Deck-Seite | Leitfaden | Änderung |
+|---|---|---|
+| 3 Matchday-Ertrag | Folie 5 | Formel endet mit **«= Catering-Umsatz»**, Ticket-Umsatz als eigene Zeile (Deck zeigt noch «Ticket- und Catering-Umsatz») |
+| 6 Datenbasis | Folien 8 + 9 | Einzelticket-Vorlauf **97** statt 96; Zeile «Eintritt je Einzelticket»: 35 (ZKS) **+ 59 über Barcode-Abgleich**; Box «Nicht geliefert»: Abo-Text anpassen; Fussnote 108 → 76 |
+| **neu nach 7** | Folie 11a | **«So rechnen wir»** |
+| 10 Diagnose | Folie 14 | Spalte «Lesart» → «Bekannter Grund?»; Callout Zufall/Lernfall |
+| 11 Zwischenfazit | Folie 15 | Toröffnung präzisieren, Gegenrechnung verständlich, Abo-No-Show nach «Belastbar (Näherung)» |
+| **neu vor 12** | Folie 15a | **«Wie die neun Felder entstanden»** inkl. Definition der Evidenzlabel |
+| 12 Chancenportfolio | Folie 16 | alle 9 Felder sind auf S. 14–18 behandelt; optional Folienverweise; Label-Legende |
+| 13 Bewertungslogik | Folie 17 | Rechenbausteine hierarchisch (KF = Bonsrate × Ø Bon) |
+| 14 Feld 1 | Folie 18 | Abo- vs. Einzel-Grafik über **vier Saisons** (B); Fussnote Gäste/Hospitality korrigieren |
+| 15 Feld 2 | Folie 19 | «Rest»-Satz korrigieren, Hinweis nur Einzeltickets, Quelle Tarifgruppen, Verlauf Nicht-Scan-Quote |
+| 16 Felder 3 und 4 | Folie 20 | «Konsum offen» mit Grund (Kassendaten nur fürs ganze Stadion) |
+| 18 Felder 6, 8, 9 | Folie 23 | Feld 8 neu formulieren (Samstag-Vorteil ist in der Erwartung) |
+| 19, 21 Matrix/Massnahmen | Folien 24, 25 | M3-Begründung: Abo-No-Show über vier Saisons belegt, je Sektor offen |
+| 23 Übergabe | Folie 30 | Datenagenda 1: «Abo-Besuche je Sektor; Abo-Bestände je Saison» |
+| 30, 33, 37 Anhang | Anhang 5, 13, 15c | Abo-Aussagen und Klärungspunkte aktualisieren |
 
 ---
 
@@ -94,6 +117,8 @@ Inhalt wie Vorlage. **Sticker-Update:** Leitplanke ergänzen: «Anstosszeit/Spie
 
 Inhalt wie Vorlage. **Sticker-Update:** In der Box «nicht geliefert» ergänzen: «Abo-Besuche je Spiel und Sektor (nur Näherung 2026/27)». Quelle bleibt; D-034.
 
+**Update 13.11.2026:** Text in der Box ersetzen durch «Abo-Besuche je Sektor; Abo-Bestände je Saison (Abo-No-Show nur als Näherung, B)». Zutritt-Kachel: «Eintritt je Ticket» bleibt – jetzt über Barcode-Abgleich auch 2022/23–2026/27 (ohne 2024/25).
+
 ## Folie 9 (S. 7) – Datenbasis: Abdeckung je Modul
 
 | Modul | Spiele |
@@ -103,7 +128,8 @@ Inhalt wie Vorlage. **Sticker-Update:** In der Box «nicht geliefert» ergänzen
 | Bons | 70 |
 | Ankunft vollständig | 71 |
 | Einzelticket-Vorlauf vollständig | 97 |
-| Eintritt je Einzelticket valide | 35 |
+| Eintritt je Einzelticket valide (ZKS-Feld, 2021/22–2022/23) | 35 |
+| Eintritt je Einzelticket über Barcode-Abgleich (2022/23–2026/27 ohne 2024/25; Update 13.11.2026, B) | 59 |
 | Kontextmodell / Diagnose | 76 |
 
 **Sticker-Update:** Quellenpfade auf Run 4 (P `05_Abdeckung`, T `abdeckung.csv`). Werte unverändert (identisch mit Run 3). Korrektur 12.11.2026: Einzelticket-Vorlauf 97 statt 96 (Total in `abdeckung.csv` und Blatt `05_Abdeckung`).
@@ -121,6 +147,29 @@ Inhalt wie Vorlage. **Sticker-Update:** In der Box «nicht geliefert» ergänzen
 Referenz Meisterschaft 2025/26, 19 Spiele: Public-Anwesende 261'924 (Ø 13'785 je Spiel); KF CHF 14.51 exkl. MwSt.; Bons je Anwesendem 0.932; Ø Bon CHF 15.57 exkl. MwSt. Den Antragswert 14.50 hier auflösen: 14.51 gerundet sowohl Meisterschaft als auch alle Pflichtspiele (Anhang 1).
 
 **Sticker-Update:** Pfade auf Run 4 (W `R3_Basis_Saison`, unverändert).
+
+## Folie 11a (neu, Update 13.11.2026) – So rechnen wir (Deck: nach S. 7)
+
+**Claim:** «Erst den Kontext herausrechnen, dann Abweichungen lesen.»
+
+**Label:** Methode.
+
+**Visual:** Pfeilkette mit vier Schritten:
+1. **Daten je Spiel bündeln:** Ticketing, Zutritt, Catering und Spielkontext je Heimspiel zu einer Zeile, verknüpft über das Datum. Jede Quelle wird vorher auf Spielebene summiert (108 Spiele).
+2. **Erwartung je Spiel:** Das Kontextmodell rechnet aus Saison, Anstoss-Slot, Temperatur, Regen, Schulferien und Top-Gegner, was für dieses Spiel normal wäre (76 Spiele ab 2022/23). Ergebnis: Erwartung mit 80 %-Band, die Grundlage des Spielrechners.
+3. **Abweichungen lesen:** beobachtet gegen erwartet. Daraus entstehen die Ausreisser (S. 10). Ein Lernfall wird ein Spiel nur mit bestätigtem Grund.
+4. **In CHF übersetzen:** isolierte Rechenbausteine (S. 13), nie addiert.
+
+**Fusszeile «Gegenproben»:**
+- Prüfung an ausgelassenen Saisons: Der KF-Fehler sinkt um 53 %.
+- Mit zufällig vertauschten Anstosszeiten erklärt das Modell im Median nur 27 % statt 82 %.
+- Gegenrechnung ohne 2023/24 (Kassensystemwechsel): Die Effekte bleiben gleich.
+
+**Kicker:** «Zusammenhänge, keine Kausalnachweise – Wirkung zeigt erst ein Pilot.»
+
+**Quelle:** M; R; T `modellguete.csv`; V `effekte.csv`.
+
+**Zeitbudget:** Folie 15 (Zwischenfazit) entsprechend kürzen. «Erwartung je Spiel» und «Gegenrechnung ohne 2023/24» sind hier erklärt.
 
 ## Folie 12 (S. 10) – Baseline je Saison
 
@@ -180,6 +229,11 @@ Basis: Meisterschaft ab 2022/23, 76 Modellspiele, Saisoneffekte und Kontextkontr
 
 **Sticker-Update:** Zählung 12/6 → **6 über / 8 unter**, Zufallserwartung ergänzen. Fallkarten ersetzen: Das frühere positive Beispiel Winterthur 09.08.2025 liegt jetzt im Band. Quellen auf Run 4.
 
+**Update 13.11.2026 (Deck S. 10):**
+- Spalte «Lesart» umbenennen in **«Bekannter Grund?»**. Einträge: «ja: Runner ganz/teilweise nicht im Einsatz, technische Probleme, kalt» · «nein (Abweichung v.a. über Bons je Anwesendem)» · «nein».
+- Callout neu: «Die Zahl der Ausreisser ist Zufall – ein einzelnes Spiel wird erst zum Lernfall, wenn der Club einen konkreten Grund bestätigt. Keine Summe, kein Potenzial.»
+- Grund: Der bisherige Kicker «Auffällige Spiele sind Lernfälle» widerspricht der Aussage «so viele wie der Zufall».
+
 ## Folie 15 (S. 13) – Zwischenfazit Phase 1
 
 **Belastbar:** verknüpfte Spieltabelle; Kontextzusammenhänge mit Anstoss-Slot (82 % der KF-Schwankung); Erwartung je Spiel (auch als Spielrechner); Ankunftseffekt der Toröffnung in D (+22.6 min).
@@ -187,6 +241,43 @@ Basis: Meisterschaft ab 2022/23, 76 Modellspiele, Saisoneffekte und Kontextkontr
 **Überleitung:** «Das Niveau, das der Club beeinflusst, zeigt kein historisches Modell – deshalb Piloten.»
 
 **Sticker-Update:** Punkt «Kontextzusammenhänge» mit Anstoss-Slot und 82 % präzisieren; D-041-Satz ergänzen: «Gegenrechnung ohne 2023/24 für Kontextmodelle gemacht, stabil.»
+
+**Update 13.11.2026 (Deck S. 11):**
+- **Belastbar:**
+  - «Ankunftseffekt der früheren Toröffnung in Sektor D: **im Median +22.6 min** gegenüber A/B/C (12 vs. 59 Spiele); Wirkung auf den Konsum offen, weil Kassendaten nur fürs ganze Stadion vorliegen.»
+  - «**Datenbruch Kassensystem 2023/24 geprüft:** Anstoss-Effekte ohne diese Saison gleich.»
+  - Neu (als Näherung): «**Abo-No-Show ≈ 26–29 %** je Saison gegenüber 6–12 % bei Einzeltickets (B).»
+- **Nicht messbar:**
+  - «Abo-Besuche je Spiel» ersetzen durch «**Abo-Besuche je Sektor**».
+  - Übrige Punkte bleiben.
+- Wenn Folie 11a eingefügt wird: «Erwartung je Spiel» und die Gegenrechnung hier nur noch stichwortartig.
+
+## Folie 15a (neu, Update 13.11.2026) – Wie die neun Felder entstanden (Deck: vor S. 12)
+
+**Claim:** «Ideen durch drei Filter: Leitplanken, Treiberbaum, Daten-Check.»
+
+**Visual links (Trichter):**
+1. **Ausgangsmaterial:** 12 Ausgangsideen aus der Ideenphase plus Befunde aus der Baseline (Phase 1).
+2. **Filter Leitplanken:** ausgeschlossen sind Preise/Dynamic Pricing, Hospitality und Stadionkapazität. Anstosszeit und Spielplan zählen nur als Kontext.
+3. **Filter Treiberbaum:** Jede Idee setzt an einer Stufe an: Anwesenheit, Kaufhäufigkeit (Bons je Fan), Warenkorb (Ø Bon) oder Planung.
+4. **Filter Daten-Check:** Gibt es einen Beleg in den Daten? Daraus folgt das Evidenzlabel.
+
+**Rechts (= Gliederung Folie 16):**
+
+| Arbeitsrichtung | Treiber | Felder |
+|---|---|---|
+| Anwesenheit / Ticketnutzung | vergebene Plätze nutzen (No-Show) | 1, 2 |
+| Kaufanlässe / Erlebnis | Kaufhäufigkeit, Zeitfenster vor Anpfiff | 3, 4 · Lernfelder 8, 9 |
+| Sortiment / Planung | Warenkorb, Ware und Personal | 5, 6, 7 |
+
+**Evidenzlabel (Vorschlag, aus den Begründungen je Feld in I abgeleitet; Teambestätigung offen):**
+- **stark:** Vollerhebung über mehrere Saisons; der Effekt bleibt nach Herausrechnen des Kontexts eindeutig (KI ohne Null).
+- **mittel:** klares Muster, aber eine Datenlücke. Entweder nur einzelne Saisons, oder die Umsatzwirkung ist offen bzw. an der Nachweisgrenze.
+- **schwach:** zu wenige Fälle, vom Zufall nicht zu unterscheiden. Solche Felder sind Lernkarten.
+
+**Quelle:** I (Chancenfelder, Evidenzbegründungen); W `02_Chancenfelder`; Anhang 12 (Ausgangsideen im Daten-Check); E D-049.
+
+**Hinweis:** Die Herkunft der 12 Ausgangsideen neutral benennen («Ideenphase»), ohne Personenbezug.
 
 ## Folie 16 (S. 14) – Chancenportfolio: neun Felder in drei Arbeitsrichtungen
 
@@ -203,6 +294,11 @@ Basis: Meisterschaft ab 2022/23, 76 Modellspiele, Saisoneffekte und Kontextkontr
 **Offen (D-049a):** Die Call-Zusammenfassung spricht von 8 Feldern. Bis zum Teamentscheid bleiben es 9. Mögliche Bündelung: Feld 8 in Feld 4 integrieren, weil das Erfolgsmuster nach Run 4 kein eigenständiger Befund mehr ist.
 
 **Sticker-Update:** Herkunftszeile ausformulieren (ohne Personenbezug). Feld 8 als «nach Run 4 schwach – Bündelung prüfen» markieren.
+
+**Update 13.11.2026 (Deck S. 12):**
+- Im Deck sind alle 9 Felder behandelt: S. 14 (F1), 15 (F2), 16 (F3, F4), 17 (F5, F7), 18 (F6, F8, F9).
+- Optional: an jede Feldkachel einen Folienverweis («→ S. 16») anhängen.
+- Unter die Legende die Kurzdefinition der Evidenzlabel setzen (siehe Folie 15a).
 
 ## Folie 17 (S. 15) – Bewertungslogik und Grössenordnungen
 
@@ -225,6 +321,17 @@ Basis: Meisterschaft ab 2022/23, 76 Modellspiele, Saisoneffekte und Kontextkontr
 
 **Sticker-Update:** Kriterien auf die Matrix-Achsen umstellen («Wirkung» und «Aufwand» statt Rangliste). Quelle W `R1_Faustwerte` (Run 4, Werte identisch).
 
+**Update 13.11.2026 (Deck S. 13):** Der KF ist kein eigener Hebel neben Bonsrate und Ø Bon, denn KF = Bonsrate × Ø Bon. Tabelle deshalb hierarchisch zeigen:
+
+| Isolierte Änderung | CHF je Saison | entspricht KF |
+|---|---:|---:|
+| **+CHF 1 Kundenfranken** (Kanal offen, z.B. M4) | 261'924 | +CHF 1.00 |
+| davon über **+CHF 1 Ø Bon** (z.B. M5) | 243'989 | ≈ +CHF 0.93 |
+| davon über **+1 % Bonsrate** | 37'995 | ≈ +CHF 0.15 |
+| −1 Pp. No-Show, φ 0.6 / 0.8 / 1.0 (mehr Besucher, nicht mehr KF) | 29'299 / 39'066 / 48'832 | – |
+
+Fussnote: «KF = Bonsrate × Ø Bon. Je Massnahme genau eine Zeile verwenden.» Die Werte stammen unverändert aus W `R1_Faustwerte`; «entspricht KF» = CHF je Saison / 261'924 Public-Anwesende.
+
 ## Folie 18 (S. 16) – Feld 1: Vergebene Plätze besser nutzen
 
 - 2025/26 Meisterschaft: ΣSOLL − ΣIST = **60'942** (Ø 3'207 je Spiel, No-Show 18.1 %); in den **11** Spielen mit ticketbasiertem SOLL **41'442**.
@@ -238,6 +345,20 @@ Basis: Meisterschaft ab 2022/23, 76 Modellspiele, Saisoneffekte und Kontextkontr
 **Sprechnotiz Nachfrage:** Weitergeben bringt nur dann zusätzliche Besucher, wenn jemand den Platz will. In der Schweiz ist die Verknappung geringer als in Deutschland; Spiele sind nur teilweise ausverkauft (35 von 78 Kontextspielen als ausverkauft geführt, No-Show dort 14.0 % gegenüber 20.8 %; M §4, «No-Show nach Kontext»). Aktivieren wirkt dagegen in jedem Spiel.
 
 **Sticker-Update:** Hauptaussage «leere Plätze = vor allem Abo-Plätze» mit der Zwei-Saisons-Näherung belegen. Tribünenwerte nicht als Kachel, nur als Fussnote mit Vorbehalt. Quellen W `N1`, `N3`, `N5`, `N7_Tribuene_2627`; P `B2_Tickettyp_NoShow` (Run 4, identisch).
+
+**Update 13.11.2026 (Deck S. 14):** Grafik «No-Show: Einzeltickets vs. Rest (≈ Abos)» durch vier Saisons aus dem Barcode-Abgleich ersetzen (B; Super League, nur vollständig gescannte Spiele):
+
+| Saison | Spiele | Einzeltickets nicht gescannt | Public-Abos nicht genutzt (Näherung) |
+|---|---:|---:|---:|
+| 2022/23 | 15 | 9.6 % | 27.4 % |
+| 2023/24 | 17 | 11.5 % | 28.1 % |
+| 2025/26 | 18 | 6.9 % | 28.8 % |
+| 2026/27 (4 Spiele) | 4 | 5.7 % | 26.2 % |
+
+- **Fussnote neu:** «Einzeltickets: Barcode-Abgleich mit den Scans (Validierung gegen ZKS 2022/23: 99.2 % Übereinstimmung). Abos: Bestand aus SOLL − Einzeltickets + Zweitmarkt, ohne Hospitality und weiterverkaufte Plätze. Gäste laufen über Einzeltickets. Näherung, eher Untergrenze. 2024/25 nicht abgleichbar.»
+- **Entfällt:** die alte Fussnote «Rest enthält neben Abos auch VIP, Gäste und Freikarten».
+- **Bleibt:** Die Werte 2021/22 (9.3 % / 29.4 %) können als Sprechnotiz bleiben, sind aber nicht direkt vergleichbar, weil damals VIP und Gäste im Rest enthalten waren.
+- **Kernaussage:** «Rund jedes vierte Public-Abo bleibt pro Spiel ungenutzt – drei- bis fünfmal so oft wie ein Einzelticket.»
 
 ## Folie 19 (S. 17) – Feld 2: Gruppen- und Gratistickets
 
@@ -259,11 +380,21 @@ Basis: Meisterschaft ab 2022/23, 76 Modellspiele, Saisoneffekte und Kontextkontr
 
 **Sticker-Update:** Die Zahl «46 %» ersetzen durch «13 % ohne Gästekontingent», Sponsoren-Hypothese als «geprüft: kleiner Teil (≈ 4 %)» markieren. Pilotidee «Kontingent bis T−3 bestätigen, Nutzungsbericht je Kontingent, Rückgabe in den Verkauf». Satz zum Sponsoringbudget ergänzen. Wirkung von M2 kleiner einschätzen als bisher.
 
+**Update 13.11.2026 (Deck S. 15):**
+- **Satz korrigieren:** «Den Rest teilen sich Gratis/Promo (26.4 %) …» ist irreführend, denn 26.4 % ist eine No-Show-Quote und kein Anteil. Neu: «Den Rest teilen sich Gratis/Promo, Hospitality, Mitarbeitende und einzelne Gruppen.»
+- **Hinweis ergänzen:** «Nur Einzeltickets, Abos nicht erfasst. Die übrigen rund 54 % der Einzelticket-No-Shows sind normale kleine Käufe.»
+- **Quellenzeile ergänzen:** «Tarifgruppen über Stichworte im Tarifnamen, Näherung; Bestätigung FCSG offen».
+- **Neu als Fussnote (B):** «Nicht gescannte Einzeltickets je Saison: rund 10 % (2022/23–2023/24) → rund 6 % (ab 2025/26).» Der Unterschied ist beschrieben, die Ursache nicht geprüft.
+
 ## Folie 20 (S. 18) – Feld 3: Zeitfenster vor dem Anpfiff
 
 Eingang C: mittlere Verweilzeit 27.4 min, 23.1 % kommen in den letzten 15 min (71 Spiele). Sektor D öffnet seit 02.04.2023 früher (90 statt 60 min). Das verschiebt die mediane Ankunft um **+22.6 min** (KI 19.0–26.1; 12 vs. 59 Spiele). Frühere Ankunft und KF hängen nach Kontextkontrolle **nicht** belastbar zusammen (P `D6_Ankunft_Konsum`, Run 4).
 
 **Sticker-Update:** Satz zu D6 ergänzen (Run 4: +0.5 % je +10 Pp. Frühankommende, KI −2.8 bis +3.9 %). Sonst unverändert.
+
+**Update 13.11.2026 (Deck S. 16):**
+- «Ankunft belegt, Umsatzwirkung offen» um den Grund ergänzen: «Kassendaten liegen nur fürs ganze Stadion vor. Der KF lässt sich deshalb nicht wie die Ankunft zwischen D und A/B/C vergleichen.»
+- Sprechnotiz: Die Umstellung ist dauerhaft. Der Konsum-Vergleich vorher/nachher ist nur innerhalb der Saison 2022/23 möglich (4 Spiele nach dem 02.04.2023, Frühling). In späteren Saisons steckt die Umstellung im Saisonniveau.
 
 ## Folie 21 (S. 19) – Feld 4: Mobiler Verkauf und Kaufmomente
 
@@ -305,6 +436,8 @@ Lesart: Bei späten Samstagsspielen haben Fans offenbar schon gegessen. Am Sonnt
 
 **Sticker-Update:** T−7-Werte ändern (1'338/922/31.1 % → **1'120/849/24.2 %**, Band 86.4 % → **84.1 %**). Feld 8 abschwächen. Quellen W `A6_Fruehindikator`, `D1_Ausreisser_Zaehlung` (Run 4).
 
+**Update 13.11.2026 (Deck S. 18):** «KF-Spitzenspiele» liest sich wie «höchster KF», gemeint ist aber «über der Erwartung». Feld 8 neu formulieren: «Der Samstag-18-Uhr-Vorteil ist seit Run 4 in der Erwartung eingerechnet. Die 6 Spiele, die noch besser liefen als erwartet, verteilen sich auf verschiedene Wochentage – Lernkarte, kein eigener Befund.»
+
 ## Folie 24 (S. 22) – Massnahmen auf der Matrix Wirkung × Aufwand (ersetzt «Priorisierungsergebnis»)
 
 **Claim:** «Quick Wins zuerst pilotieren, Leuchttürme vorbereiten.»
@@ -322,7 +455,7 @@ Lesart: Bei späten Samstagsspielen haben Fans offenbar schon gegessen. Am Sonnt
 
 Querschnitt: **Spielrechner** als Planungswerkzeug (Feld 6) für M5/M6.
 
-**M3 auf der Matrix (Vorschlag, Teamentscheid D-049b):** Punkt mit offenem Rand oder Fragezeichen zeichnen und mit «Daten zuerst: Abo-Besuche je Sektor» beschriften. Begründung: Dass leere Plätze vor allem Abo-Plätze sind, ist über zwei Saisons belegt. Wie stark das je Sektor gilt, zeigt nur eine Näherung aus 4 Spielen 2026/27. Die Abo-Obergrenze ist eine Idee, über die der Club bereits nachdenkt; deshalb gehört sie auf die Matrix, aber ohne Wirkungszahl im Hauptteil.
+**M3 auf der Matrix (Vorschlag, Teamentscheid D-049b):** Punkt mit offenem Rand oder Fragezeichen zeichnen und mit «Daten zuerst: Abo-Besuche je Sektor» beschriften. Begründung: Dass leere Plätze vor allem Abo-Plätze sind, ist über zwei Saisons belegt (Update 13.11.2026: als Näherung über vier Saisons, Public-Abo-No-Show 26–29 %, B). Wie stark das je Sektor gilt, zeigt nur eine Näherung aus 4 Spielen 2026/27. Die Abo-Obergrenze ist eine Idee, über die der Club bereits nachdenkt; deshalb gehört sie auf die Matrix, aber ohne Wirkungszahl im Hauptteil.
 
 **Visual:** 2×2-Matrix (x = Aufwand, y = Wirkung), sechs nummerierte Punkte; KF-Research-Ideen als graue gestrichelte Wolke ausserhalb der Matrix (Folie 24b).
 
@@ -379,6 +512,8 @@ Messprinzipien: Hypothese vorab; Kontext über den Spielrechner herausrechnen (E
 
 **Sticker-Update:** Spielrechner als viertes Item ergänzen. «Abo-Besuche je Sektor» als ersten Datenpunkt nennen: Er entscheidet, ob M3 vom Leuchtturm mit Vorbehalt zur bewertbaren Massnahme wird.
 
+**Update 13.11.2026 (Deck S. 23):** Datenagenda Punkt 1 neu: «**Abo-Besuche je Sektor und Abo-Bestände je Saison** (Abo-No-Show je Saison heute nur als Näherung; Zutrittsfeld «Coding»: Abo/Einzel?)». Punkt 2 ergänzen: «Eintritt je Ticket für 2024/25 (Lücke Juli–Dezember 2024)».
+
 ## Folie 31 (S. 29) – Fazit und Diskussionsfragen
 
 **Kernaussagen:** (1) Faire Vergleichsbasis: Der Spielkontext, vor allem die Anstosszeit, ist herausgerechnet. (2) Die grössten beeinflussbaren Hebel liegen bei Platznutzung und Angebot. (3) Sechs Massnahmen sind auf Wirkung × Aufwand eingeordnet; Quick Wins sind pilotreif.
@@ -425,6 +560,8 @@ Inhalt wie Vorlage. **Sticker-Update:** «Sensitivitätsprüfung noch offen» er
 
 Matrix wie Vorlage, Bezug auf **M1–M6**; Zeile ergänzen: «Bringt eine Abo-Obergrenze zusätzliche Anwesende? → Abo-Besuche je Spiel/Sektor und Nachfrage nach Einzeltickets in D → nicht behaupten: aktuelle Abo-No-Show-Quote je Sektor über alle Saisons.»
 
+**Update 13.11.2026 (Deck S. 30):** Stand M3 neu: «Abo-No-Show je Saison als Näherung 26–29 % (B). Je Sektor nur 4 Spiele 2026/27 – nicht über alle Saisons behaupten.»
+
 ## Anhang 6 (S. 36) – Teilstand 2026/27 und Randfelder
 
 Meisterschaft 4 Spiele: KF 15.86 exkl. MwSt., No-Show 14.9 %; alle Pflichtspiele 7 Spiele: KF 16.90, No-Show 11.2 %. Keine Hochrechnung. **Sticker-Update:** Pfade auf Run 4.
@@ -449,6 +586,15 @@ Wie Vorlage. **Sticker-Update:** Quelle neutral «Ideen-Grundlage, 12 Ausgangsid
 
 Offene Klärungspunkte: um «Bedeutung des Zutrittsfelds ‹Coding› (Abo/Einzel?)» und «Sponsorentickets im Inhouse-Kanal» ergänzen. Glossar: «Anstoss-Slot» und «Spielrechner» ergänzen.
 
+**Update 13.11.2026 (Deck S. 33, 34):**
+- **Klärungspunkte ergänzen:**
+  - Zulässigkeit des Abgleichs über pseudonyme Barcodes (D-006/D-035).
+  - Zutritt und Einzeltickets 2024/25 (Lücke Juli–Dezember 2024).
+  - Erhält ein Zweitmarkt-Ticket einen neuen Barcode?
+  - Abo-Bestände je Saison (davon Hospitality).
+- **Den Punkt «Abo-Besuche je Spiel und Sektor über alle Saisons» umformulieren:** «Abo-Besuche je Sektor (je Saison nur Näherung vorhanden)».
+- **Glossar:** «Nicht-Scan-Quote» ergänzen (Anteil verkaufter Einzeltickets ohne Scan; Obergrenze für No-Show).
+
 ## Anhang 15a–f (ersetzt Folien 26–28 und Anhang 15) – Steckbriefe und Rechenwege M1–M6
 
 Gleiche Struktur je Massnahme: Mechanismus · Befund · Pilot und KPI · Voraussetzung · Rechenweg. **Rechenwege nur mit offengelegter Annahme; die Annahmen (tief/hoch) legt das Team fest.** Keine Gesamtsumme, Cluberlös nur separat.
@@ -467,6 +613,11 @@ Gleiche Struktur je Massnahme: Mechanismus · Befund · Pilot und KPI · Vorauss
 - **M2:** Kontingente nach Nutzung bemessen (Mainz 05, Fanclub-Auswärtskontingente).
 - **M3:** Abo-Obergrenzen bei Bundesligisten (Köln 25'500 bei 50'000 Plätzen) und Entzug bei Nichtnutzung (Köln rund 150 Abos). Fanverträglichere Vorstufe: Mindestnutzung mit Zweitmarkt statt fixer Obergrenze. Härtefallregeln einplanen.
 - **M4:** Fanzonen und Vorprogramm mehrere Stunden vor Anpfiff (Liverpool, Manchester City, OGC Nice). Keine veröffentlichte Umsatzwirkung; der eigene Befund in Sektor D (+22.6 min) ist stärker.
+
+**Update 13.11.2026 (Deck S. 37), Befund M3 neu:**
+- «Belegt als Näherung über vier Saisons: Public-Abo-No-Show 26–29 % gegenüber nicht gescannten Einzeltickets 6–12 % (2022/23–2026/27 ohne 2024/25, B). Nur Näherung je Sektor: D Ø 3'614 Abos, Abo-Anwesenheit 71–74 % (2026/27, 4 Spiele), Ø Abo-Preis D CHF 304.»
+- Gegenprobe ohne Sektorbezug im Rechenweg: «Nutzungsdifferenz 17–22 Pp. je Saison, also 17–22 zusätzliche Anwesende je 100 Abos, gleiche Grössenordnung».
+- Der Hauptrechenweg (17–26 je 100 Abos, CHF 2'800–7'100) bleibt.
 
 **Lesart M3:** Für den Catering-Umsatz ist die Abo-Obergrenze eher klein. Ihr Wert liegt bei Anwesenheit und Stimmung (volle Kurve) und beim Ticketing. Abgeleitet aus W `N7_Tribuene_2627` und P `B10_Abo_Snapshot`; Näherung aus 4 Sommerspielen, deshalb Bandbreite. Auf der Folie als «Illustration» beschriften. Belastbar wird der Rechenweg erst mit Abo-Besuchen je Sektor über mehrere Saisons (Datenagenda Punkt 1).
 
@@ -493,6 +644,8 @@ Gleiche Struktur je Massnahme: Mechanismus · Befund · Pilot und KPI · Vorauss
 | Rechenbausteine | W `R1_Faustwerte`; identisch mit Run 3 |
 | Abo-Obergrenze M3 | W `N7_Tribuene_2627`, P `B10_Abo_Snapshot`; Rechenweg offengelegt, Illustration |
 | Abo vs. Einzel No-Show | M §4 «Ticket-Typ-Näherung», P `B2_Tickettyp_NoShow` (21/22: 9.3 % / 29.4 %, 22/23: 9.6 % / 22.5 %) |
+| Nicht-Scan-Quote und Abo-No-Show (Update 13.11.2026) | B `nicht_scan_quote_einzeltickets_je_saison.csv`, `abo_noshow_naeherung_je_saison.csv`, `validierung_zks_barcode.csv` (SL: 9.6/11.5/6.9/5.7 %; Abo 27.4/28.1/28.8/26.2 %; Validierung 99.2 %) |
+| Rechenbausteine «entspricht KF» (Update 13.11.2026) | 243'989 / 261'924 = 0.93; 37'995 / 261'924 = 0.15 |
 | Ausverkauft vs. nicht | M §4 «No-Show nach Kontext» (35 / 43 Spiele, No-Show 14.0 % / 20.8 %) |
 
 **Verbleibend offen:** 8 vs. 9 Felder (D-049a); Auswahl und Platzierung der Massnahmen (D-049b), inkl. Vorschlag «M3 mit Datenvorbehalt»; Abo-Besuche je Sektor (D-049c); Erfassung von Sponsoren- und Gästekontingenten beim FCSG bestätigen (D-049d ausgewertet); Upgrade per Gebot (Club-Initiative, Public, frei werdender Platz via Zweitmarkt): Messdesign mit dem FCSG abstimmen; historischer Public-Nennerabgleich; Beteiligungssatz Catering; formelle Baseline-Freigabe; Ergänzung des Research-Dossiers durch eigene Team-Benchmarks.
