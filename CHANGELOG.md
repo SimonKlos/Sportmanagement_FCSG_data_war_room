@@ -1,5 +1,9 @@
 # Changelog
 
+## Storyline «zwei Ebenen», Werkzeugkette und Zahlen-Prüfliste – 16.11.2026
+- Folienleitfaden, Abschnitt «Update 16.11.2026»: Auftrag S. 4 in «Vorgabe des FCSG» und «Darauf aufgebaut» teilen; neue Brückenfolie 12a «Zwei Ebenen» (Illustration, keine Prognose); Übergabe S. 25 als Werkzeug-Kreislauf; optionale Spielrechner-Screenshots (nur Demo-Version); Raster für Research-Beispiele vorbereitet.
+- Neues Skript `Rechenkern/scripts/pruefliste_deck.py` und `Deliverables/04_Praesentationskonzept/Zahlen_Pruefliste_Endversion.md`: 134 direkte und 11 abgeleitete Zahlen der Endversion (13.11.) gegen Deck-PDF und Quellen geprüft – alle stimmen. Nur Ergebnistabellen gelesen, keine Rohdaten.
+
 ## Barcode-Abgleich, Abo-No-Show und Folienleitfaden-Abgleich mit Deck «Endversion» – 12./13.11.2026
 - D-052 (Freigabe 12.11.): Skript `Rechenkern/scripts/barcode_abgleich.py` (nur Aggregate, Barcodes nur im Arbeitsspeicher), Lauf `Baseline Analyse Rechnungen/barcode_abgleich_2026-11-13/` (README + 4 Tabellen je Saison), Teamnotiz `team/2026-11-12_barcode_abgleich_noshow.md`. Eintritt je Einzelticket jetzt für 59 Spiele (2022/23–2026/27 ohne 2024/25); Validierung gegen ZKS 2022/23: 99.2 %. Nicht-Scan-Quote SL: 9.6 / 11.5 / 6.9 / 5.7 %.
 - Public-Abo-No-Show als Näherung (Bestand aus SOLL − Einzeltickets + Zweitmarkt, ohne Hospitality und weiterverkaufte Plätze; Besuche = Scans ohne Einzelticket-Treffer und ohne HH-Leser): 27.4 / 28.1 / 28.8 / 26.2 %, eher Untergrenze.

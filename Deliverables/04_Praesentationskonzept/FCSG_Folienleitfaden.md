@@ -71,6 +71,51 @@ Das Team-Deck «FCSG_Abschlusspraesentation_Endversion» (24 Folien + 16 Anhang)
 | 23 Übergabe | Folie 30 | Datenagenda 1: «Abo-Besuche je Sektor; Abo-Bestände je Saison» |
 | 30, 33, 37 Anhang | Anhang 5, 13, 15c | Abo-Aussagen und Klärungspunkte aktualisieren |
 
+### Update 16.11.2026: Storyline «zwei Ebenen» und Werkzeugkette
+
+Anlass: Teamabstimmung zum Deck «Endversion». Die Storyline wirkt zweigleisig: auf der einen Seite den Spielkontext verstehen, auf der anderen Massnahmen, die die Baseline anheben. Die vier Werkzeuge stehen ausserdem als Liste nebeneinander. Lösung: die zwei Ebenen ausdrücklich zeigen und die Werkzeuge als Kreislauf.
+
+**1. Deck S. 4 (Auftrag): Pflicht und Weiterführung trennen**
+- Über den vier Zielen ein Band mit zwei Teilen:
+  - **«Vorgabe des FCSG»**: Ziel 1 (Kontext verstehen) und Ziel 4 (Datenbasis sichern), dazu die Spielkontext-Tabelle als Pflicht-Deliverable.
+  - **«Darauf aufgebaut»**: Ziel 2 (Potenzial bereinigt benennen) und Ziel 3 (Absatzverlauf), daraus Massnahmen und Werkzeuge.
+- Kicker neu: «Erst den Kontext verstehen (Vorgabe), dann das Niveau anheben (unser Beitrag) – bewertet über inkrementellen Umsatz».
+- Leitplanken rechts unverändert.
+
+**2. Neue Brückenfolie 12a (Deck: nach S. 12, vor S. 13): «Zwei Ebenen: Der Kontext erklärt die Unterschiede, Massnahmen heben das Niveau»**
+- **Visual:** drei Balken KF-Index (Samstag 17–19.59 Uhr = 100, Werktagabend ≈ 91, Sonntagnachmittag ≈ 84; aus den Effekten −9.4 % und −15.7 %, S. 10) in Grau «heute». Daneben dieselben drei Balken in Grün, alle um denselben Betrag höher, beschriftet «mit Massnahmen (Illustration)». Keine Zahl auf den grünen Balken.
+- **Links beschriftet:** «Ebene 1 – Unterschiede zwischen Spielen: Anstoss-Slot, Wetter, Ferien, Gegner erklären 82 %. Vorgegeben durch Liga und Wetter, kein Clubhebel.»
+- **Rechts beschriftet:** «Ebene 2 – Niveau aller Spiele: Platznutzung, Angebot, Zeitfenster, Planung. Clubhebel, messbar nur mit Pilot.»
+- **Kicker:** «Der Sonntagnachmittag bleibt das schwächste Spiel – wir heben alle Spiele an».
+- **Label:** «Illustration, keine Prognose».
+- **Sprechnotiz:** Die 82 % stammen aus dem ganzen Kontextmodell. Der Anstoss-Slot allein erklärt 64 % (Anhang 4). Parallelanlässe sind nicht im Modell.
+- **Zeit:** 30 Sekunden. Dafür auf S. 12 die Punkte «Erwartung je Spiel» und «Datenbruch» auf Stichworte kürzen.
+- **Quelle:** T `kontext_effekt_matrix.csv`, `modellguete.csv` (Run 4).
+
+**3. Deck S. 25 (Übergabe): Werkzeuge als Kreislauf statt Liste**
+- Links statt vier Kacheln eine Zeitleiste bzw. ein Kreislauf:
+
+| Wann | Werkzeug | Wofür |
+|---|---|---|
+| Vor der Saison | Spielkontext-Tabelle v5 | Spielplan, Anstoss-Slot, Ferien pflegen (Vorgabe FCSG) |
+| Vor jedem Spiel (T−7) | Spielrechner | erwartete Anwesende, KF, Umsatz → Personal und Ware planen |
+| Nach jedem Spiel | Spielrechner | IST eintragen, Abweichung von der Erwartung sehen |
+| Bei einer Massnahme | Hebel-Rechner (Excel) | Was ist die Massnahme in CHF wert (isolierte Bausteine)? |
+| Nach dem Pilot | Spielrechner + Hebel-Rechner | Wirkung = IST gegenüber Erwartung, in CHF übersetzt |
+
+- «Bericht und Lesehilfe» als Fusszeile «Begleitdokumente: Bericht, Lesehilfe, Glossar».
+- Kicker neu: «Ein Kreislauf statt vier Einzelteile: planen → spielen → vergleichen → bewerten».
+- Datenagenda rechts und Chevron-Leiste unten bleiben.
+
+**4. Spielrechner zeigen (optional, Deck S. 25 oder Anhang)**
+- 2–3 Screenshots der öffentlichen Testversion (Demo-Daten, als Testdaten markiert): Saisonplan, Prognose je Spiel, IST-Vergleich.
+- Live-Demo höchstens 1 Minute in der Diskussion.
+- Die Version mit echten Clubzahlen nie zeigen oder hochladen, sie geht nur über Teams an den FCSG (D-047).
+
+**Vorbereitet, folgt mit weiteren Beispielen aus dem Team (Deck S. 22, Research):** Jedes Beispiel nach demselben Raster einordnen: Mechanismus · passt für den FCSG (ja / mit Anpassung / Warnbeispiel) · Warnsignal · Bezug zu unseren Daten bzw. M1–M6. Warnbeispiele ausdrücklich zeigen (Fast Lane Frankfurt: Gegenwind; Köln: Kündigungen; Loyalty mit E-Commerce-Fokus: passt nicht zum Matchday). Neue Ideen aus dem Team: Stempelkarte, Rabatte.
+
+**Zahlenprüfung:** `Zahlen_Pruefliste_Endversion.md` (gleicher Ordner) prüft 134 direkte und 11 abgeleitete Zahlen der Endversion (Stand 13.11.) gegen Deck-PDF und Quellen. Alle stimmen. Skript: `Rechenkern/scripts/pruefliste_deck.py`.
+
 ---
 
 # Hauptteil
