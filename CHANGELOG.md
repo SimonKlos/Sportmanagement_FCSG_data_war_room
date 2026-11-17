@@ -1,5 +1,8 @@
 # Changelog
 
+## Research-Ergänzung Loyalty, Abo-Nutzung, Stempelkarten – 17.11.2026
+- Neu `Deliverables/06_Research/Research_Ergaenzung_Loyalty_Abo_Nutzung.md`: Quellen-Pool zu den Ergänzungen auf Folie 24b (Eintracht-Dauerkarten-Nutzungsanzeige, Loyalty-Einordnung E-Commerce vs. Stadion mit AC Milan, Liverpool, Bochum; Club Brugge «Road to Gold» als Vorschlag Anhangsfolie; digitale Stempelkarten/Gutscheine; Accenture 12–18 %). `Research_Benchmarks.md` bleibt unverändert. Keine Daten gelesen, keine Rechnung geändert.
+
 ## Storyline «zwei Ebenen», Werkzeugkette und Zahlen-Prüfliste – 16.11.2026
 - Folienleitfaden, Abschnitt «Update 16.11.2026»: Auftrag S. 4 in «Vorgabe des FCSG» und «Darauf aufgebaut» teilen; neue Brückenfolie 12a «Zwei Ebenen» (Illustration, keine Prognose); Übergabe S. 25 als Werkzeug-Kreislauf; optionale Spielrechner-Screenshots (nur Demo-Version); Raster für Research-Beispiele vorbereitet.
 - Neues Skript `Rechenkern/scripts/pruefliste_deck.py` und `Deliverables/04_Praesentationskonzept/Zahlen_Pruefliste_Endversion.md`: 134 direkte und 11 abgeleitete Zahlen der Endversion (13.11.) gegen Deck-PDF und Quellen geprüft – alle stimmen. Nur Ergebnistabellen gelesen, keine Rohdaten.
